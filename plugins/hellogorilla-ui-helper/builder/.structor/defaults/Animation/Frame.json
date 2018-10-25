@@ -1,0 +1,212 @@
+[
+  {
+    "type": "Frame",
+    "variant": "default",
+    "children": [
+      {
+        "type": "OnTap",
+        "variant": "default",
+        "children": [
+          {
+            "type": "button",
+            "variant": "default",
+            "props": {},
+            "children": [
+              {
+                "type": "span",
+                "text": "Button"
+              }
+            ]
+          }
+        ],
+        "namespace": "Animation"
+      },
+      {
+        "type": "Animate",
+        "variant": "default",
+        "children": [
+          {
+            "type": "span",
+            "variant": "default",
+            "props": {},
+            "children": [],
+            "text": "Dummy"
+          }
+        ],
+        "namespace": "Animation",
+        "props": {
+          "to": {
+            "scale": 3
+          }
+        }
+      }
+    ],
+    "namespace": "Animation",
+    "props": {
+      "style": {
+        "textAlign": "right",
+        "position": "relative",
+        "width": "300px"
+      }
+    }
+  },
+  {
+    "type": "Frame",
+    "namespace": "Animation",
+    "variant": "style-01",
+    "props": {
+      "style": {
+        "backgroundColor": "#525ef6",
+        "width": "104.3%",
+        "marginLeft": "-16.5vw",
+        "paddingTop": "105px",
+        "paddingRight": "92px",
+        "paddingBottom": "105px",
+        "paddingLeft": "calc(16.5vw + 7.5vw + 42px + 92px)",
+        "minHeight": "34.76vw",
+        "position": "relative"
+      }
+    },
+    "children": [
+      {
+        "type": "Title",
+        "variant": "default",
+        "children": [],
+        "namespace": "SignUp",
+        "props": {
+          "title": "Follow"
+        }
+      },
+      {
+        "type": "Desc",
+        "variant": "default",
+        "children": [
+          {
+            "type": "span",
+            "variant": "default",
+            "props": {},
+            "children": [],
+            "text": "1주일에 한번"
+          }
+        ],
+        "namespace": "SignUp",
+        "props": {
+          "style": {
+            "right": "0px",
+            "fontSize": "60px",
+            "fontFamily": "NanumMyeongjoWeb",
+            "color": "#eae5e3"
+          }
+        }
+      },
+      {
+        "type": "EmptySpace",
+        "variant": "default",
+        "children": [],
+        "namespace": "Layout",
+        "props": {
+          "height": 65
+        }
+      },
+      {
+        "type": "Desc",
+        "variant": "default",
+        "children": [
+          {
+            "type": "span",
+            "variant": "default",
+            "props": {},
+            "children": [],
+            "text": "개발자, 디자이너의"
+          }
+        ],
+        "namespace": "SignUp",
+        "props": {
+          "style": {
+            "right": "0px",
+            "fontSize": "60px",
+            "fontFamily": "NanumMyeongjoWeb",
+            "color": "#eae5e3",
+            "lineHeight": "120%"
+          }
+        }
+      },
+      {
+        "type": "Desc",
+        "variant": "default",
+        "children": [
+          {
+            "type": "span",
+            "variant": "default",
+            "props": {},
+            "children": [],
+            "text": "라이프 스타일과 IT 트렌드 팔로업"
+          }
+        ],
+        "namespace": "SignUp",
+        "props": {
+          "style": {
+            "right": "0px",
+            "fontSize": "60px",
+            "fontFamily": "NanumMyeongjoWeb",
+            "color": "#eae5e3",
+            "lineHeight": "120%"
+          }
+        }
+      },
+      {
+        "type": "OnTap",
+        "variant": "default",
+        "children": [
+          {
+            "type": "Button",
+            "variant": "default",
+            "children": [
+              {
+                "type": "span",
+                "variant": "default",
+                "props": {},
+                "children": [],
+                "text": "Sign Up"
+              }
+            ],
+            "namespace": "SignUp",
+            "props": {
+              "style": {
+                "border": "none",
+                "cursor": "pointer",
+                "fontSize": "40px",
+                "fontFamily": "Montserrat",
+                "paddingLeft": "55px",
+                "paddingTop": "15px",
+                "paddingRight": "55px",
+                "paddingBottom": "15px",
+                "borderRadius": "50px",
+                "fontWeight": 800,
+                "color": "#525ef6"
+              }
+            }
+          }
+        ],
+        "namespace": "Animation"
+      },
+      {
+        "type": "Animate",
+        "variant": "default",
+        "children": [
+          {
+            "type": "span",
+            "variant": "default",
+            "props": {},
+            "children": [],
+            "text": "Text"
+          }
+        ],
+        "namespace": "Animation",
+        "props": {
+          "scale": 1.7
+        }
+      }
+    ]
+  }
+]

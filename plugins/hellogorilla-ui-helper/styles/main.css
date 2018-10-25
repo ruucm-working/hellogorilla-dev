@@ -1,0 +1,244 @@
+@charset "UTF-8";
+/**
+ *	Import Skel
+ */
+.entry-header {
+  display: none;
+}
+
+#masthead,
+#content,
+footer {
+  margin: 0 auto !important;
+}
+
+#masthead {
+  height: 140px;
+  -webkit-box-shadow: 0px 4px 6.9px 0.1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 4px 6.9px 0.1px rgba(0, 0, 0, 0.2);
+}
+
+#masthead .site-branding {
+  text-align: center;
+  padding: 40px 0 34px 0;
+}
+
+#site-navigation {
+  margin: 0 auto;
+  width: 420px;
+  height: 18px;
+  font-family: TrajanPro;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #021f46;
+}
+
+#site-navigation button {
+  display: none;
+}
+
+#primary-menu li {
+  display: inline;
+  margin: 0 10px;
+}
+
+#primary-menu li a:hover {
+  border-bottom: 1px solid #021f46;
+}
+
+@font-face {
+  font-family: NanumMyeongjo;
+  src: local(※), url("/wordpress/wp-content/plugins/hellogorilla-ui-helper/assets/fonts/NanumMyeongjo/NanumMyeongjo.woff") format("woff");
+}
+
+@font-face {
+  font-family: TrajanPro;
+  src: local(※), url("/wordpress/wp-content/plugins/hellogorilla-ui-helper/assets/fonts/TrajanPro/TrajanPro-Regular.woff") format("woff");
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#row1-text, #row2-text, #row3-text, #row4-text {
+  margin: 0 auto;
+}
+
+#row1-text {
+  position: relative;
+  width: 419px;
+}
+
+#row1-text h2 {
+  font-family: TrajanPro;
+  font-size: 99.5px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.97;
+  letter-spacing: -5px;
+  text-align: center;
+  color: #060606;
+}
+
+#row1-text .wpb_wrapper {
+  position: absolute;
+  top: 450px;
+  width: 419px;
+  z-index: 1;
+}
+
+#row2-text {
+  width: 495px;
+}
+
+#row2-text h2 {
+  font-family: TrajanPro;
+  font-size: 78px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.1;
+  letter-spacing: -3.9px;
+  text-align: center;
+}
+
+#row2-text strong {
+  background-color: #060606;
+  color: #fff;
+  padding: 0 10px;
+}
+
+#row3-text {
+  width: 432px;
+}
+
+#row3-text h2 {
+  font-family: TrajanPro;
+  font-size: 67.5px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.98;
+  letter-spacing: -3.4px;
+  text-align: center;
+  color: #060606;
+}
+
+#row4-text {
+  width: 442px;
+  padding-top: 90px;
+}
+
+#row4-text h2 {
+  font-family: TrajanPro;
+  font-size: 60px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: -3px;
+  text-align: center;
+  color: #060606;
+}
+
+.vc_row {
+  margin: 40px 0;
+}
+
+#brand-story {
+  width: 1400px;
+  height: 1717px;
+  margin: 0 auto;
+}
+
+#brand-title {
+  width: 451px;
+  height: 195px;
+  margin: 217px auto 0 auto;
+}
+
+#brand-title h2 {
+  font-family: TrajanPro;
+  font-size: 107.5px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.02;
+  letter-spacing: -5.4px;
+  text-align: center;
+  color: #ffffff;
+}
+
+#brand-story-text {
+  width: 497px;
+  height: 394px;
+  margin: 77px auto 0 auto;
+}
+
+#brand-story-text p {
+  font-family: NanumMyeongjo;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.7;
+  letter-spacing: -2px;
+  text-align: left;
+  color: #ffffff;
+}
+/*# sourceMappingURL=main.css.map */

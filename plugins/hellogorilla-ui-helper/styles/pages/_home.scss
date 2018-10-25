@@ -1,0 +1,85 @@
+#row1-text, #row2-text, #row3-text, #row4-text {
+  margin: 0 auto;
+}
+
+#row1-text {
+  position: relative;
+  width: 419px;
+}
+
+#row1-text h2{
+  font-family: TrajanPro;
+  font-size: 99.5px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.97;
+  letter-spacing: -5px;
+  text-align: center;
+  color: #060606;
+}
+
+#row1-text .wpb_wrapper {
+  position: absolute;
+  top: 450px;
+  width: 419px;
+  z-index: 1;
+}
+
+#row2-text {
+  width: 495px;
+}
+
+#row2-text h2 {
+  font-family: TrajanPro;
+  font-size: 78px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.1;
+  letter-spacing: -3.9px;
+  text-align: center;
+}
+
+#row2-text strong {
+  background-color: #060606;
+  color: #fff;
+  padding: 0 10px;
+}
+
+#row3-text {
+  width: 432px;
+}
+
+#row3-text h2 {
+  font-family: TrajanPro;
+  font-size: 67.5px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.98;
+  letter-spacing: -3.4px;
+  text-align: center;
+  color: #060606;
+}
+
+#row4-text {
+  width: 442px;
+  padding-top: 90px;
+}
+
+#row4-text h2 {
+  font-family: TrajanPro;
+  font-size: 60px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: -3px;
+  text-align: center;
+  color: #060606;
+}
+
+.vc_row {
+  margin: 40px 0;
+}

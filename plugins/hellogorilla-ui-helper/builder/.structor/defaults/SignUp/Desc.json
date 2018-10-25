@@ -1,0 +1,24 @@
+[
+  {
+    "type": "Desc",
+    "variant": "default",
+    "children": [
+      {
+        "type": "span",
+        "variant": "default",
+        "props": {},
+        "children": [],
+        "text": "라이프 스타일과 IT 트렌드 팔로업"
+      }
+    ],
+    "namespace": "SignUp",
+    "props": {
+      "style": {
+        "right": "0px",
+        "fontSize": "60px",
+        "fontFamily": "NanumMyeongjoWeb",
+        "color": "#eae5e3"
+      }
+    }
+  }
+]

@@ -1,0 +1,47 @@
+.entry-header {
+  display: none;
+}
+
+#masthead,
+#content,
+footer {
+  // width: 1400px;
+  margin: 0 auto !important;
+}
+
+#masthead {
+  height: 140px;
+  box-shadow: 0px 4px 6.9px 0.1px rgba(0, 0, 0, 0.2);
+}
+
+#masthead .site-branding {
+  text-align: center;
+  padding: 40px 0 34px 0;
+}
+
+#site-navigation {
+  margin: 0 auto;
+  width: 420px;
+  height: 18px;
+  font-family: TrajanPro;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #021f46;
+}
+
+#site-navigation button {
+  display: none;
+}
+
+#primary-menu li {
+  display: inline;
+  margin: 0 10px;
+}
+
+#primary-menu li a:hover {
+  border-bottom: 1px solid #021f46;
+}

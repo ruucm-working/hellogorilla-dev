@@ -1,0 +1,58 @@
+// Custom Select
+.Select {
+  &.drop-down {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: _rem(700);
+    margin-top: _rem(40);
+    cursor: pointer;
+    &.is-open {
+      .Select-placeholder, .Select-value {
+        display: none;
+      }
+    }
+    .Select-placeholder, .Select-value {
+      position: absolute;
+      right: 0;
+      bottom: _rem(40);
+      font-size: _rem(20);
+      color: white;
+    }
+    .Select-input {
+      input {
+        width: 100% !important;
+        height: _rem(40);
+        background: transparent;
+        outline: none;
+        border: none;
+        border-bottom: solid 1px white;
+        color : transparent;
+        margin: 0;
+        cursor: pointer;
+        border-radius: 0 !important;
+      }
+    }
+    .Select-clear-zone {
+      display: none;
+    }
+  }
+  
+  .Select-menu-outer {
+    background: _palette(cm, bg-alt);
+    width: 35%;
+    border-top: none;
+    z-index: 999;
+    float: right;
+    .Select-option {
+      color: white;
+      padding: _rem(10) _rem(50);
+      padding-left: _rem(20);
+      line-height: _rem(40);
+      border-bottom: 1px solid #DADDE5;
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+}

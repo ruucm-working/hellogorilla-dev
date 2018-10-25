@@ -1,0 +1,21 @@
+[
+  {
+    "type": "SignUp",
+    "variant": "default",
+    "props": {
+      "style": {
+        "backgroundColor": "#525ef6",
+        "position": "relative",
+        "marginLeft": "-16.5vw",
+        "width": "104.3%",
+        "minHeight": "34.76vw",
+        "paddingLeft": "calc(16.5vw + 7.5vw + 42px + 92px)",
+        "paddingRight": "92px",
+        "paddingTop": "105px",
+        "paddingBottom": "105px"
+      }
+    },
+    "children": [],
+    "namespace": "SignUp"
+  }
+]

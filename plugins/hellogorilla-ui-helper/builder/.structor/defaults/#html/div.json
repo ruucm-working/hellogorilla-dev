@@ -1,0 +1,64 @@
+[
+  {
+    "type": "div",
+    "variant": "default",
+    "props": {},
+    "children": [
+      {
+        "type": "div",
+        "variant": "default",
+        "props": {
+          "style": {
+            "display": "flex",
+            "justifyContent": "center",
+            "height": "100px",
+            "alignItems": "center",
+            "backgroundColor": "#fcecd7",
+            "borderRadius": "4px"
+          }
+        },
+        "children": [
+          {
+            "type": "span",
+            "text": "Empty div",
+            "props": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "div",
+    "variant": "example_centering01",
+    "props": {
+      "style": {
+        "height": "100px",
+        "backgroundColor": "#d39595",
+        "position": "relative"
+      }
+    },
+    "children": [
+      {
+        "type": "Centering",
+        "variant": "default",
+        "props": {
+          "center": "y",
+          "style": {
+            "position": "absolute",
+            "right": "0px"
+          }
+        },
+        "children": [
+          {
+            "type": "span",
+            "variant": "default",
+            "props": {},
+            "children": [],
+            "text": "Text"
+          }
+        ],
+        "namespace": "Centering"
+      }
+    ]
+  }
+]

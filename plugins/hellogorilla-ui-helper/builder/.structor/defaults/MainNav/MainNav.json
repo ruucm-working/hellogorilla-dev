@@ -1,0 +1,206 @@
+[
+  {
+    "type": "MainNav",
+    "variant": "default",
+    "props": {},
+    "children": [],
+    "namespace": "MainNav"
+  },
+  {
+    "type": "MainNav",
+    "namespace": "MainNav",
+    "variant": "style-01",
+    "props": {
+      "style": {
+        "backgroundColor": "#525ef6",
+        "position": "relative",
+        "paddingLeft": "25px"
+      }
+    },
+    "children": [
+      {
+        "type": "Logo",
+        "variant": "default",
+        "children": [
+          {
+            "type": "LogoImage",
+            "variant": "default",
+            "children": [],
+            "namespace": "MainNav",
+            "props": {
+              "style": {
+                "fontSize": "60px",
+                "verticalAlign": "middle"
+              }
+            }
+          },
+          {
+            "type": "LogoText",
+            "variant": "default",
+            "children": [
+              {
+                "type": "span",
+                "variant": "default",
+                "props": {},
+                "children": [],
+                "text": "하버 collecting"
+              }
+            ],
+            "namespace": "MainNav",
+            "props": {
+              "style": {
+                "fontSize": "50px",
+                "color": "#ffffff",
+                "fontFamily": "NanumSquareWeb",
+                "fontWeight": 100,
+                "verticalAlign": "middle",
+                "lineHeight": "116px",
+                "marginLeft": "18px"
+              }
+            }
+          }
+        ],
+        "namespace": "MainNav",
+        "props": {
+          "style": {
+            "display": "inline-block"
+          }
+        }
+      },
+      {
+        "type": "Center",
+        "variant": "default",
+        "children": [
+          {
+            "type": "Menu",
+            "variant": "default",
+            "children": [
+              {
+                "type": "MenuItem",
+                "variant": "default",
+                "children": [
+                  {
+                    "type": "a",
+                    "variant": "default",
+                    "props": {
+                      "href": "#",
+                      "style": {
+                        "textDecoration": "none"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "Hover",
+                        "variant": "default",
+                        "children": [
+                          {
+                            "type": "span",
+                            "text": "mag",
+                            "props": {
+                              "style": {
+                                "fontWeight": 200,
+                                "fontStyle": "italic",
+                                "fontSize": "60px"
+                              }
+                            }
+                          }
+                        ],
+                        "namespace": "Animations",
+                        "props": {
+                          "color": "#ffffff",
+                          "style": {
+                            "color": "#c4c4c4"
+                          },
+                          "transition": {
+                            "target": "color",
+                            "time": 320
+                          },
+                          "transit": {},
+                          "hey": {}
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "namespace": "MainNav",
+                "props": {
+                  "style": {
+                    "display": "inline-block",
+                    "marginRight": "40px"
+                  }
+                }
+              },
+              {
+                "type": "MenuItem",
+                "variant": "default",
+                "children": [
+                  {
+                    "type": "a",
+                    "variant": "default",
+                    "props": {
+                      "href": "#",
+                      "style": {
+                        "textDecoration": "none"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "Hover",
+                        "variant": "default",
+                        "children": [
+                          {
+                            "type": "span",
+                            "text": "school",
+                            "props": {
+                              "style": {
+                                "fontWeight": 200,
+                                "fontStyle": "italic",
+                                "fontSize": "60px"
+                              }
+                            }
+                          }
+                        ],
+                        "namespace": "Animations",
+                        "props": {
+                          "color": "#ffffff",
+                          "style": {
+                            "color": "#c4c4c4"
+                          },
+                          "transition": {
+                            "target": "color",
+                            "time": "320"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "namespace": "MainNav",
+                "props": {
+                  "style": {
+                    "display": "inline-block"
+                  }
+                }
+              }
+            ],
+            "namespace": "MainNav",
+            "props": {
+              "style": {
+                "fontFamily": "Montserrat",
+                "position": "relative"
+              }
+            }
+          }
+        ],
+        "namespace": "Centering",
+        "props": {
+          "axis": "y",
+          "style": {
+            "position": "absolute",
+            "right": "25px"
+          }
+        }
+      }
+    ]
+  }
+]

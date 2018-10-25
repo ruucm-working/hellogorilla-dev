@@ -1,0 +1,916 @@
+{
+  "pages": [
+    {
+      "pageName": "Page86",
+      "pagePath": "/mag-01",
+      "children": [
+        {
+          "type": "MainNav",
+          "namespace": "MainNav",
+          "variant": "style-01",
+          "props": {
+            "style": {
+              "backgroundColor": "#525ef6",
+              "position": "relative",
+              "paddingLeft": "25px"
+            }
+          },
+          "children": [
+            {
+              "type": "Logo",
+              "variant": "default",
+              "children": [
+                {
+                  "type": "LogoImage",
+                  "variant": "default",
+                  "children": [],
+                  "namespace": "MainNav",
+                  "props": {
+                    "style": {
+                      "fontSize": "60px",
+                      "verticalAlign": "middle"
+                    }
+                  }
+                },
+                {
+                  "type": "LogoText",
+                  "variant": "default",
+                  "children": [
+                    {
+                      "type": "span",
+                      "variant": "default",
+                      "props": {},
+                      "children": [],
+                      "text": "하버 collecting"
+                    }
+                  ],
+                  "namespace": "MainNav",
+                  "props": {
+                    "style": {
+                      "fontSize": "50px",
+                      "color": "#ffffff",
+                      "fontFamily": "NanumSquareWeb",
+                      "fontWeight": 100,
+                      "verticalAlign": "middle",
+                      "lineHeight": "116px",
+                      "marginLeft": "18px"
+                    }
+                  }
+                }
+              ],
+              "namespace": "MainNav",
+              "props": {
+                "style": {
+                  "display": "inline-block"
+                }
+              }
+            },
+            {
+              "type": "Center",
+              "variant": "default",
+              "children": [
+                {
+                  "type": "Menu",
+                  "variant": "default",
+                  "children": [
+                    {
+                      "type": "MenuItem",
+                      "variant": "default",
+                      "children": [
+                        {
+                          "type": "a",
+                          "variant": "default",
+                          "props": {
+                            "href": "#",
+                            "style": {
+                              "textDecoration": "none"
+                            }
+                          },
+                          "children": [
+                            {
+                              "type": "Hover",
+                              "variant": "default",
+                              "children": [
+                                {
+                                  "type": "span",
+                                  "text": "mag",
+                                  "props": {
+                                    "style": {
+                                      "fontWeight": 200,
+                                      "fontStyle": "italic",
+                                      "fontSize": "60px"
+                                    }
+                                  }
+                                }
+                              ],
+                              "namespace": "Animation",
+                              "props": {
+                                "style": {
+                                  "color": "#c4c4c4"
+                                },
+                                "color": "#ffffff",
+                                "transition": {
+                                  "target": "color",
+                                  "time": 320
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "namespace": "MainNav",
+                      "props": {
+                        "style": {
+                          "display": "inline-block",
+                          "marginRight": "40px"
+                        }
+                      }
+                    },
+                    {
+                      "type": "MenuItem",
+                      "variant": "default",
+                      "children": [
+                        {
+                          "type": "a",
+                          "variant": "default",
+                          "props": {
+                            "href": "#",
+                            "style": {
+                              "textDecoration": "none"
+                            }
+                          },
+                          "children": [
+                            {
+                              "type": "Hover",
+                              "variant": "default",
+                              "children": [
+                                {
+                                  "type": "span",
+                                  "text": "school",
+                                  "props": {
+                                    "style": {
+                                      "fontWeight": 200,
+                                      "fontStyle": "italic",
+                                      "fontSize": "60px"
+                                    }
+                                  }
+                                }
+                              ],
+                              "namespace": "Animation",
+                              "props": {
+                                "style": {
+                                  "color": "#c4c4c4"
+                                },
+                                "color": "#ffffff",
+                                "transition": {
+                                  "target": "color",
+                                  "time": 320
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "namespace": "MainNav",
+                      "props": {
+                        "style": {
+                          "display": "inline-block"
+                        }
+                      }
+                    }
+                  ],
+                  "namespace": "MainNav",
+                  "props": {
+                    "style": {
+                      "fontFamily": "Montserrat",
+                      "position": "relative"
+                    }
+                  }
+                }
+              ],
+              "namespace": "Centering",
+              "props": {
+                "axis": "y",
+                "style": {
+                  "position": "absolute",
+                  "right": "25px"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "EmptySpace",
+          "variant": "default",
+          "children": [],
+          "namespace": "Layout",
+          "props": {
+            "height": "285"
+          }
+        },
+        {
+          "type": "Post",
+          "variant": "default",
+          "children": [
+            {
+              "type": "Carousel",
+              "variant": "default",
+              "children": [
+                {
+                  "type": "CarouselItem",
+                  "variant": "default",
+                  "children": [],
+                  "namespace": "DataPresenter",
+                  "props": {}
+                }
+              ],
+              "namespace": "DataPresenter",
+              "props": {
+                "title": "collecting",
+                "viewAllLink": "/collecting",
+                "align": "right"
+              }
+            }
+          ],
+          "namespace": "DataContainer",
+          "props": {
+            "postType": "harbor_curation"
+          }
+        },
+        {
+          "type": "EmptySpace",
+          "variant": "default",
+          "children": [],
+          "namespace": "Layout",
+          "props": {
+            "height": 252
+          }
+        },
+        {
+          "type": "WP",
+          "variant": "default",
+          "children": [
+            {
+              "type": "Frame",
+              "namespace": "Animation",
+              "variant": "style-01",
+              "props": {
+                "style": {
+                  "backgroundColor": "#525ef6",
+                  "width": "104.3%",
+                  "marginLeft": "-16.5vw",
+                  "minHeight": "34.76vw",
+                  "position": "relative",
+                  "overflow": "hidden"
+                }
+              },
+              "children": [
+                {
+                  "type": "SignUp",
+                  "variant": "default",
+                  "props": {},
+                  "children": [
+                    {
+                      "type": "Title",
+                      "variant": "default",
+                      "children": [],
+                      "namespace": "SignUp",
+                      "props": {
+                        "title": "Follow",
+                        "style": {
+                          "zIndex": 3
+                        }
+                      }
+                    },
+                    {
+                      "type": "Desc",
+                      "variant": "default",
+                      "children": [
+                        {
+                          "type": "span",
+                          "variant": "default",
+                          "props": {},
+                          "children": [],
+                          "text": "1주일에 한번"
+                        }
+                      ],
+                      "namespace": "SignUp",
+                      "props": {
+                        "style": {
+                          "right": "0px",
+                          "fontSize": "60px",
+                          "fontFamily": "NanumMyeongjoWeb",
+                          "color": "#eae5e3"
+                        }
+                      }
+                    },
+                    {
+                      "type": "EmptySpace",
+                      "variant": "default",
+                      "children": [],
+                      "namespace": "Layout",
+                      "props": {
+                        "height": 65
+                      }
+                    },
+                    {
+                      "type": "Desc",
+                      "variant": "default",
+                      "children": [
+                        {
+                          "type": "span",
+                          "variant": "default",
+                          "props": {},
+                          "children": [],
+                          "text": "개발자, 디자이너의"
+                        }
+                      ],
+                      "namespace": "SignUp",
+                      "props": {
+                        "style": {
+                          "right": "0px",
+                          "fontSize": "60px",
+                          "fontFamily": "NanumMyeongjoWeb",
+                          "color": "#eae5e3",
+                          "lineHeight": "120%"
+                        }
+                      }
+                    },
+                    {
+                      "type": "Desc",
+                      "variant": "default",
+                      "children": [
+                        {
+                          "type": "span",
+                          "variant": "default",
+                          "props": {},
+                          "children": [],
+                          "text": "라이프 스타일과 IT 트렌드 팔로업"
+                        }
+                      ],
+                      "namespace": "SignUp",
+                      "props": {
+                        "style": {
+                          "right": "0px",
+                          "fontSize": "60px",
+                          "fontFamily": "NanumMyeongjoWeb",
+                          "color": "#eae5e3",
+                          "lineHeight": "120%"
+                        }
+                      }
+                    },
+                    {
+                      "type": "OnTap",
+                      "variant": "default",
+                      "children": [
+                        {
+                          "type": "Animate",
+                          "variant": "default",
+                          "children": [
+                            {
+                              "type": "Button",
+                              "variant": "default",
+                              "children": [
+                                {
+                                  "type": "span",
+                                  "variant": "default",
+                                  "props": {},
+                                  "children": [],
+                                  "text": "Sign Up"
+                                }
+                              ],
+                              "namespace": "SignUp",
+                              "props": {
+                                "style": {
+                                  "border": "none",
+                                  "cursor": "pointer",
+                                  "fontSize": "40px",
+                                  "fontFamily": "Montserrat",
+                                  "paddingLeft": "55px",
+                                  "paddingTop": "15px",
+                                  "paddingRight": "55px",
+                                  "paddingBottom": "15px",
+                                  "borderRadius": "50px",
+                                  "fontWeight": 800,
+                                  "color": "#525ef6",
+                                  "outline": "none"
+                                }
+                              }
+                            }
+                          ],
+                          "namespace": "Animation",
+                          "props": {
+                            "to": {
+                              "opacity": 0
+                            },
+                            "options": {
+                              "time": 1,
+                              "delay": 1
+                            }
+                          }
+                        }
+                      ],
+                      "namespace": "Animation",
+                      "props": {
+                        "style": {
+                          "position": "absolute",
+                          "top": "106px",
+                          "right": "88px",
+                          "zIndex": 3
+                        }
+                      }
+                    },
+                    {
+                      "type": "Animate",
+                      "variant": "default",
+                      "children": [
+                        {
+                          "type": "Animate",
+                          "variant": "default",
+                          "children": [],
+                          "namespace": "Animation",
+                          "props": {
+                            "style": {
+                              "width": "23px",
+                              "height": "23px",
+                              "backgroundColor": "#ffffff",
+                              "borderRadius": "30px"
+                            },
+                            "options": {
+                              "time": 1.5
+                            },
+                            "to": {
+                              "scale": 53
+                            }
+                          }
+                        }
+                      ],
+                      "namespace": "Animation",
+                      "props": {
+                        "style": {
+                          "position": "absolute",
+                          "bottom": "74px",
+                          "right": "88px",
+                          "zIndex": 1
+                        },
+                        "options": {
+                          "curve": "Elastic.easeIn.config(1, 0.8)",
+                          "time": 1.5
+                        },
+                        "to": {
+                          "x": "-291",
+                          "y": "-185",
+                          "z": 200,
+                          "options": {
+                            "tim": 1.5,
+                            "time": 1.5,
+                            "a": "d"
+                          },
+                          "transformOrigin": "center center"
+                        }
+                      }
+                    },
+                    {
+                      "type": "Form",
+                      "variant": "default",
+                      "children": [
+                        {
+                          "type": "Wrapper",
+                          "variant": "default",
+                          "children": [
+                            {
+                              "type": "Animate",
+                              "variant": "default",
+                              "children": [
+                                {
+                                  "type": "InputField",
+                                  "variant": "default",
+                                  "children": [],
+                                  "namespace": "SignUp",
+                                  "props": {
+                                    "placeholder": "EMAIL",
+                                    "type": "email",
+                                    "name": "email"
+                                  }
+                                }
+                              ],
+                              "namespace": "Animation",
+                              "props": {
+                                "options": {
+                                  "time": 1,
+                                  "delay": 1.5
+                                },
+                                "style": {
+                                  "opacity": 1,
+                                  "maxWidth": "300px",
+                                  "margin": "0 auto",
+                                  "visibility": "hidden"
+                                },
+                                "from": {
+                                  "opacity": 0,
+                                  "x": "-300"
+                                }
+                              }
+                            },
+                            {
+                              "type": "Animate",
+                              "variant": "default",
+                              "children": [
+                                {
+                                  "type": "InputField",
+                                  "variant": "default",
+                                  "children": [],
+                                  "namespace": "SignUp",
+                                  "props": {
+                                    "placeholder": "PASSWORD",
+                                    "type": "password",
+                                    "name": "password"
+                                  }
+                                }
+                              ],
+                              "namespace": "Animation",
+                              "props": {
+                                "options": {
+                                  "time": 1,
+                                  "delay": 2
+                                },
+                                "style": {
+                                  "opacity": 1,
+                                  "maxWidth": "300px",
+                                  "margin": "0 auto",
+                                  "visibility": "hidden"
+                                },
+                                "from": {
+                                  "x": "-300",
+                                  "opacity": 0
+                                }
+                              }
+                            },
+                            {
+                              "type": "Animate",
+                              "variant": "default",
+                              "children": [
+                                {
+                                  "type": "InputField",
+                                  "variant": "default",
+                                  "children": [],
+                                  "namespace": "SignUp",
+                                  "props": {
+                                    "placeholder": "NAME",
+                                    "type": "text",
+                                    "name": "username"
+                                  }
+                                }
+                              ],
+                              "namespace": "Animation",
+                              "props": {
+                                "options": {
+                                  "time": 1,
+                                  "delay": 2.5
+                                },
+                                "style": {
+                                  "opacity": 1,
+                                  "maxWidth": "300px",
+                                  "margin": "0 auto",
+                                  "visibility": "hidden"
+                                },
+                                "from": {
+                                  "x": "-300",
+                                  "opacity": 0
+                                }
+                              }
+                            }
+                          ],
+                          "namespace": "Animation",
+                          "props": {
+                            "style": {
+                              "position": "absolute",
+                              "top": "50%",
+                              "left": "50%",
+                              "transform": "translateX(-50%) translateY(-50%)"
+                            }
+                          }
+                        },
+                        {
+                          "type": "Animate",
+                          "variant": "default",
+                          "children": [
+                            {
+                              "type": "Button",
+                              "variant": "default",
+                              "children": [
+                                {
+                                  "type": "span",
+                                  "variant": "default",
+                                  "props": {},
+                                  "children": [],
+                                  "text": "Sign Up"
+                                }
+                              ],
+                              "namespace": "SignUp",
+                              "props": {
+                                "style": {
+                                  "border": "none",
+                                  "cursor": "pointer",
+                                  "fontSize": "40px",
+                                  "fontFamily": "Montserrat",
+                                  "paddingLeft": "55px",
+                                  "paddingTop": "15px",
+                                  "paddingRight": "55px",
+                                  "paddingBottom": "15px",
+                                  "borderRadius": "50px",
+                                  "fontWeight": 800,
+                                  "color": "#ffffff",
+                                  "backgroundColor": "#525ef6"
+                                }
+                              }
+                            }
+                          ],
+                          "namespace": "Animation",
+                          "props": {
+                            "options": {
+                              "time": 1,
+                              "delay": 2
+                            },
+                            "style": {
+                              "display": "inline-block",
+                              "position": "absolute",
+                              "right": "88px",
+                              "bottom": "100px",
+                              "visibility": "hidden"
+                            },
+                            "from": {
+                              "y": "-200",
+                              "opacity": 0
+                            }
+                          }
+                        }
+                      ],
+                      "namespace": "SignUp",
+                      "props": {}
+                    }
+                  ],
+                  "namespace": "SignUp"
+                }
+              ]
+            }
+          ],
+          "namespace": "DataContainer",
+          "props": {
+            "wpType": "col_harbor_"
+          }
+        },
+        {
+          "type": "EmptySpace",
+          "variant": "default",
+          "children": [],
+          "namespace": "Layout",
+          "props": {
+            "height": 411
+          }
+        },
+        {
+          "type": "Footer",
+          "variant": "default",
+          "props": {
+            "style": {
+              "textAlign": "right",
+              "fontFamily": "NanumSquareWeb",
+              "color": "#38393C",
+              "fontSize": "20px",
+              "fontWeight": 300,
+              "paddingRight": "70px",
+              "position": "relative",
+              "paddingBottom": "31px"
+            }
+          },
+          "children": [
+            {
+              "type": "Text",
+              "variant": "default",
+              "children": [
+                {
+                  "type": "span",
+                  "variant": "default",
+                  "props": {},
+                  "children": [],
+                  "text": "하버 . 서울시 마포구 독막로19길 12 B1 ."
+                }
+              ],
+              "namespace": "Footer"
+            },
+            {
+              "type": "Text",
+              "variant": "default",
+              "children": [
+                {
+                  "type": "span",
+                  "variant": "default",
+                  "props": {},
+                  "children": [],
+                  "text": "사업자 등록번호: 559-63-00040 ."
+                }
+              ],
+              "namespace": "Footer",
+              "props": {
+                "style": {
+                  "marginTop": "5px"
+                }
+              }
+            },
+            {
+              "type": "Text",
+              "variant": "default",
+              "children": [
+                {
+                  "type": "span",
+                  "variant": "default",
+                  "props": {},
+                  "children": [],
+                  "text": "contact@harbor.school ."
+                }
+              ],
+              "namespace": "Footer",
+              "props": {
+                "style": {
+                  "marginTop": "5px"
+                }
+              }
+            },
+            {
+              "type": "Text",
+              "variant": "default",
+              "children": [
+                {
+                  "type": "span",
+                  "variant": "default",
+                  "props": {},
+                  "children": [],
+                  "text": "Copyright © 2018 Harbor. All rights reserved ."
+                }
+              ],
+              "namespace": "Footer",
+              "props": {
+                "style": {
+                  "marginTop": "37px"
+                }
+              }
+            },
+            {
+              "type": "Deco",
+              "variant": "default",
+              "children": [],
+              "namespace": "Footer",
+              "props": {
+                "style": {
+                  "height": "124px",
+                  "width": "124px",
+                  "backgroundColor": "#525ef6",
+                  "transform": "rotate(45deg)",
+                  "transformOrigin": "bottom left",
+                  "position": "absolute",
+                  "right": "-36px",
+                  "bottom": "0px"
+                }
+              }
+            }
+          ],
+          "namespace": "Footer"
+        }
+      ]
+    },
+    {
+      "pageName": "Page90",
+      "pagePath": "/this-week",
+      "children": [
+        {
+          "type": "div",
+          "props": {
+            "style": {
+              "display": "flex",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "padding": "1em"
+            }
+          },
+          "children": [
+            {
+              "type": "div",
+              "children": [
+                {
+                  "type": "h3",
+                  "props": {
+                    "style": {
+                      "padding": "1em",
+                      "textAlign": "center"
+                    }
+                  },
+                  "children": [
+                    {
+                      "type": "span",
+                      "text": "This Week Page"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pageName": "Page135",
+      "pagePath": "/moa",
+      "children": [
+        {
+          "type": "Post",
+          "variant": "default",
+          "children": [
+            {
+              "type": "Grid",
+              "variant": "default",
+              "props": {},
+              "children": [],
+              "namespace": "Grid"
+            }
+          ],
+          "namespace": "DataContainer",
+          "props": {
+            "postType": "harbor_curation"
+          }
+        }
+      ]
+    },
+    {
+      "pageName": "Page69",
+      "pagePath": "/single-post",
+      "children": [
+        {
+          "type": "Post",
+          "variant": "default",
+          "children": [
+            {
+              "type": "SinglePost",
+              "props": {
+                "postId": 67
+              },
+              "children": [],
+              "namespace": "SinglePost"
+            }
+          ],
+          "namespace": "DataContainer",
+          "props": {
+            "postType": "singlePost"
+          }
+        }
+      ]
+    },
+    {
+      "pageName": "Page72",
+      "pagePath": "/shop",
+      "children": [
+        {
+          "type": "WooCommerce",
+          "variant": "default",
+          "children": [
+            {
+              "type": "ShopGrid",
+              "props": {},
+              "children": [],
+              "namespace": "ShopGrid"
+            }
+          ],
+          "namespace": "DataContainer",
+          "props": {
+            "dataType": "product"
+          }
+        }
+      ]
+    },
+    {
+      "pageName": "Page75",
+      "pagePath": "/single-product",
+      "children": [
+        {
+          "type": "WooCommerce",
+          "variant": "default",
+          "children": [
+            {
+              "type": "Codaddy",
+              "variant": "default",
+              "children": [],
+              "namespace": "Codaddy",
+              "props": {
+                "productId": 21
+              }
+            }
+          ],
+          "namespace": "DataContainer",
+          "props": {
+            "dataType": "singleProduct"
+          }
+        }
+      ]
+    }
+  ]
+}

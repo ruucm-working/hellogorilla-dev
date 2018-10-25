@@ -1,0 +1,45 @@
+[
+  {
+    "type": "ThisWeek",
+    "variant": "default",
+    "children": [],
+    "namespace": "DataContainer"
+  },
+  {
+    "type": "ThisWeek",
+    "namespace": "DataContainer",
+    "variant": "01",
+    "props": {
+      "dataUrl": "http://d-magharbor.test/wp-json/wp/v2/this_week"
+    },
+    "children": [
+      {
+        "type": "Carousel",
+        "variant": "default",
+        "children": [
+          {
+            "type": "CarouselItem",
+            "variant": "default",
+            "children": [],
+            "namespace": "DataPresenter",
+            "props": {
+              "style": {
+                "backgroundColor": "#399eb9"
+              }
+            }
+          }
+        ],
+        "namespace": "DataPresenter",
+        "props": {
+          "title": "This Week",
+          "viewAllLink": "/this-week",
+          "style": {
+            "backgroundColor": "#b95151",
+            "height": "500px",
+            "marginLeft": "237px"
+          }
+        }
+      }
+    ]
+  }
+]

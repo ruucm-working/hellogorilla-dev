@@ -1,0 +1,67 @@
+// Misc.
+$misc: ( z-index-base: 10000,
+overlay-opacity: 0.5,
+lightbox-opacity: 0.75,
+gallery-limit: 32,
+items-limit: 16);
+
+// Duration.
+$duration: (
+	shadow: 520ms,
+	transition: 620ms,
+	select-button: 320ms,
+	fin-card: 1200ms,
+);
+
+// Size.
+$size: ( border-radius: 4px,
+border-radius-alt: 0.5rem,
+border-width: 1px,
+element-height: 2.75rem,
+element-margin: 2rem,
+gutter: 3.5rem,
+inner: 64rem,
+padding: ( default: 7rem,
+xlarge: 5rem,
+large: 4rem,
+medium: 3rem,
+small: 2rem));
+
+// Font.
+$font: ( 
+	family: (NanumSquare, sans-serif),
+	family-fixed: (Montserrat, NanumSquare, sans-serif),
+	weight: 300,
+	weight-bold: 400,
+	kerning: -0.05em,
+	kerning-alt: 0.125em
+);
+
+// Palette.
+$palette: (
+	bg: #000,
+	fg: #000,
+	bg-light: #000,
+	fg-light: #000,
+	border: #000,
+	border-bg: #000, border2:  #000,
+	border2-bg: #000,
+	accent: #000,
+	invert: (
+		bg: #000000,
+		bg-alt: #000,
+		fg: #000,
+		fg-bold: #000,
+		fg-light: #000,
+	),
+	toc: (
+		bg: #FFC1CC,
+		bg-alt: #000,
+		fg: #192CA9,
+		fg-bold: #000,
+		fg-light: #000,
+	),
+	cm: (
+		bg-alt: #1E4AB9,
+	)
+);

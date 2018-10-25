@@ -1,0 +1,76 @@
+/**
+ *  Default Fonts
+ */
+
+ @font-face {
+	font-family: 'NanumSquareWeb';
+	font-style: normal;
+	font-weight: 100;
+	src: local('NanumSquareLight'), url('fonts/NanumSquare/NanumSquareLight.woff2') format('woff2'), url('fonts/NanumSquare/NanumSquareLight.woff') format('woff'), url('fonts/NanumSquare/NanumSquareLight.ttf') format('truetype'), url('fonts/NanumSquare/NanumSquareLight.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+	font-family: 'NanumSquareWeb';
+	font-style: normal;
+	font-weight: 400;
+	src: local('NanumSquareRegular'), url('fonts/NanumSquare/NanumSquareRegular.woff2') format('woff2'), url('fonts/NanumSquare/NanumSquareRegular.woff') format('woff'), url('fonts/NanumSquare/NanumSquareRegular.ttf') format('truetype'), url('fonts/NanumSquare/NanumSquareRegular.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+	font-family: 'NanumSquareWeb';
+	font-style: normal;
+	font-weight: 700;
+	src: local('NanumSquareBold'), url('fonts/NanumSquare/NanumSquareBold.woff2') format('woff2'), url('fonts/NanumSquare/NanumSquareBold.woff') format('woff'), url('fonts/NanumSquare/NanumSquareBold.ttf') format('truetype'), url('fonts/NanumSquare/NanumSquareBold.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+	font-family: 'NanumSquareWeb';
+	font-style: normal;
+	font-weight: 900;
+	src: local('NanumSquareExtraBold'), url('fonts/NanumSquare/NanumSquareExtraBold.woff2') format('woff2'), url('fonts/NanumSquare/NanumSquareExtraBold.woff') format('woff'), url('fonts/NanumSquare/NanumSquareExtraBold.ttf') format('truetype'), url('fonts/NanumSquare/NanumSquareExtraBold.eot?#iefix') format('embedded-opentype');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200i,700,900,900i');
+
+
+@font-face {
+  font-family: 'NanumMyeongjoWeb';
+  font-weight: 900;
+  src: local('NanumMyeongjoExtraBold'),
+  url('fonts/NanumMyeongjo/NanumMyeongjoExtraBold.woff2') format('woff2'),
+  url('fonts/NanumMyeongjo/NanumMyeongjoExtraBold.woff') format('woff'),
+  url('fonts/NanumMyeongjo/NanumMyeongjoExtraBold.ttf') format('truetype');
+}
+
+
+/* @font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 200;
+  src: local('Montserrat ExtraLight Italic'), local('Montserrat-ExtraLightItalic'), url('fonts/Montserrat/Montserrat-ExtraLightItalic.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Montserrat Black Italic'), local('Montserrat-BlackItalic'), url('fonts/Montserrat/Montserrat-ExtraLightItalic.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'), url('fonts/Montserrat/Montserrat-Bold.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Montserrat Black'), local('Montserrat-Black'), url('fonts/Montserrat/Montserrat-Black.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+} */

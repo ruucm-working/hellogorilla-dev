@@ -1,0 +1,113 @@
+[
+  {
+    "type": "Animate",
+    "variant": "default",
+    "children": [],
+    "namespace": "Animation"
+  },
+  {
+    "type": "Animate",
+    "namespace": "Animation",
+    "variant": "form-01",
+    "props": {
+      "options": {},
+      "style": {
+        "position": "absolute",
+        "top": "50%",
+        "transform": "translateY(-50%)"
+      }
+    },
+    "children": [
+      {
+        "type": "Animate",
+        "variant": "default",
+        "children": [
+          {
+            "type": "Input",
+            "variant": "default",
+            "children": [],
+            "namespace": "SignUp",
+            "props": {
+              "placeholder": "EMAIL",
+              "type": "text"
+            }
+          }
+        ],
+        "namespace": "Animation",
+        "props": {
+          "opacity": 1,
+          "style": {
+            "opacity": 0
+          },
+          "options": {
+            "time": 3,
+            "delay": 0,
+            "curve": "Elastic.easeIn.config(1, 0.8)"
+          },
+          "x": 300
+        }
+      },
+      {
+        "type": "Animate",
+        "variant": "default",
+        "children": [
+          {
+            "type": "Input",
+            "variant": "default",
+            "children": [],
+            "namespace": "SignUp",
+            "props": {
+              "placeholder": "PASSWORD",
+              "type": "password"
+            }
+          }
+        ],
+        "namespace": "Animation",
+        "props": {
+          "opacity": 1,
+          "style": {
+            "opacity": 0
+          },
+          "options": {
+            "time": 3,
+            "delay": 1,
+            "curve": "Elastic.easeIn.config(1, 0.8)"
+          },
+          "x": 300
+        }
+      },
+      {
+        "type": "Animate",
+        "variant": "default",
+        "children": [
+          {
+            "type": "Input",
+            "variant": "default",
+            "children": [],
+            "namespace": "SignUp",
+            "props": {
+              "placeholder": "NAME",
+              "type": "text",
+              "options": {
+                "delay": 6
+              }
+            }
+          }
+        ],
+        "namespace": "Animation",
+        "props": {
+          "opacity": 1,
+          "style": {
+            "opacity": 0
+          },
+          "options": {
+            "time": 3,
+            "delay": 2,
+            "curve": "Elastic.easeIn.config(1, 0.8)"
+          },
+          "x": 300
+        }
+      }
+    ]
+  }
+]

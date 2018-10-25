@@ -1,0 +1,12 @@
+[
+  {
+    "type": "Input",
+    "variant": "default",
+    "children": [],
+    "namespace": "SignUp",
+    "props": {
+      "placeholder": "placeholder",
+      "type": "text"
+    }
+  }
+]
