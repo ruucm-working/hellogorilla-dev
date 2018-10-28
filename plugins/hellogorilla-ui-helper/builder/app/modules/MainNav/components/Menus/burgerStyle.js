@@ -20,7 +20,7 @@ const burgerStyle = css`
   .bm-cross-button {
     height: 34px !important;
     top: 24px !important;
-    right: 19px !important;
+    left: 19px !important;
   }
 
   /* Color/shape of close button cross */
