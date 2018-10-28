@@ -489,7 +489,7 @@ register_meta( 'user', 'portfolio_03',
 
 
 /**
- * Login WP API
+ * Login, Logout WP API
  */
 add_action( 'rest_api_init', 'register_api_hooks' );
 // API custom endpoints for WP-REST API
@@ -522,6 +522,25 @@ function getProtectedValue($obj,$name) {
   return $array[$prefix.$name];
 }
 
+add_action( 'rest_api_init', 'register_logout_api_hooks' );
+// API custom endpoints for WP-REST API
+function register_logout_api_hooks() {
+    register_rest_route(
+        'custom', '/logout/',
+        array(
+            'methods'  => 'POST',
+            'callback' => 'logout',
+        )
+		);
+}
+function logout( $param ) {
+	wp_logout();
+}
+
+
+/**
+ * Add Edit author feature for Woocommerce
+ */
 add_action('init', 'wpse_74054_add_author_woocommerce', 999 );
 
 function wpse_74054_add_author_woocommerce() {

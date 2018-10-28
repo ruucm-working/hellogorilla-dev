@@ -72,6 +72,7 @@ const MenuWrapper = styled.div`
 `
 const MenuItem = styled.a`
   padding-left: 40px;
+  cursor: pointer;
   :hover {
     color: #0fb780;
   }
@@ -121,7 +122,7 @@ const MobileLogo = styled.img``
 const MobileCartMenuItem = styled.div``
 const MobileCartItem = styled.div``
 
-const Menus = ({ me, ...props }) => {
+const Menus = ({ me, wpLogout, ...props }) => {
   let contents = props[props.wpType + '_' + props.sort + '_wpData']
   log('props(Menus)', props)
 
@@ -145,7 +146,11 @@ const Menus = ({ me, ...props }) => {
                   </MenuItem>
                 ))}
                 {me ? (
-                  <MenuItem href="">로그아웃</MenuItem>
+                  <MenuItem
+                    onClick={() => wpLogout(() => alert('로그아웃 되었습니다'))}
+                  >
+                    로그아웃
+                  </MenuItem>
                 ) : (
                   <span>
                     <MenuItem href="/login">로그인</MenuItem>

@@ -83,6 +83,13 @@ const enhance = compose(
       ...rest,
     }
   }),
+  mapProps(({ wp, ...rest }) => {
+    wp.logout = wp.registerRoute('custom', '/logout')
+    return {
+      wp: wp,
+      ...rest,
+    }
+  }),
   withHandlers({
     getDatas: ({ nonce, ...props }) => options => {
       log('getDatas')
@@ -199,6 +206,18 @@ const enhance = compose(
         .catch(err => {
           log('err', err)
           afterSuccess(false)
+        })
+    },
+    wpLogout: props => afterSuccess => {
+      const { wp } = props
+      wp.logout()
+        .create()
+        .then(res => {
+          log('res', res)
+          afterSuccess()
+        })
+        .catch(err => {
+          log('err', err)
         })
     },
     wpUpload: props => (data, afterSuccess) => {
