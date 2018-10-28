@@ -22,6 +22,7 @@ import {
 import { log } from 'ruucm-util'
 import { isString } from 'lodash'
 import WPAPI from 'wpapi'
+import axios from 'axios'
 import { DATA_BASE_URL, WP_ADMIN_ID, WP_ADMIN_PW } from '../../consts'
 
 const WP = props => {
@@ -43,9 +44,13 @@ const WP = props => {
 
 // Component redux
 const mapStateToProps = (state, ownProps) => {
+  // make keys
   var key = ownProps.wpType + '_' + ownProps.sort + '_wpData'
   var obj = { name: selectName() }
   obj[key] = selectWPData(ownProps.wpType + '_' + ownProps.sort)
+
+  obj['me'] = selectWPData('me' + '_' + ownProps.sort)
+
   return createStructuredSelector(obj)
 }
 function mapDispatchToProps(dispatch, ownProps) {
@@ -209,6 +214,23 @@ const enhance = compose(
         })
         .catch(err => {
           log('err', err)
+        })
+    },
+
+    getMe: props => () => {
+      const { dispatch, wp } = props
+      log('get Me!', props)
+      // get Current LoggedIn user
+      axios({
+        method: 'post',
+        url: DATA_BASE_URL + 'wp-json/wp/v2/users/me',
+        headers: { 'X-WP-Nonce': props.nonce },
+      })
+        .then(res => {
+          dispatch(getDatas('me' + '_' + props.sort, res))
+        })
+        .catch(err => {
+          log('err(getMe)', err)
         })
     },
   }),

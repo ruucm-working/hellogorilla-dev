@@ -23,7 +23,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
-		<?php echo do_shortcode( '[hellogorilla-main-nav][cosmosfarm_members_account_links][hellogorilla-cart-count][/hellogorilla-main-nav]' ) ?>
+		<?php echo do_shortcode( '[hellogorilla-main-nav][hellogorilla-cart-count][/hellogorilla-main-nav]' ) ?>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

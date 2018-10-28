@@ -11,7 +11,10 @@ import { WP } from '../../../../builder/app/modules/DataContainer'
 
 const MainNavComp = props => {
   return (
-    <MainNav shortcodeChild={props.wpObject.shortcodeChild}>
+    <MainNav
+      shortcodeChild={props.wpObject.shortcodeChild}
+      nonce={props.wpObject.nonce}
+    >
       <WP wpType="menu">
         <Menus />
       </WP>

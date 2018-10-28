@@ -121,8 +121,9 @@ const MobileLogo = styled.img``
 const MobileCartMenuItem = styled.div``
 const MobileCartItem = styled.div``
 
-const Menus = props => {
+const Menus = ({ me, ...props }) => {
   let contents = props[props.wpType + '_' + props.sort + '_wpData']
+  log('props(Menus)', props)
 
   return (
     <div>
@@ -143,11 +144,19 @@ const Menus = props => {
                     {item.title}
                   </MenuItem>
                 ))}
+                {me ? (
+                  <MenuItem href="">로그아웃</MenuItem>
+                ) : (
+                  <span>
+                    <MenuItem href="/login">로그인</MenuItem>
+                    <MenuItem href="/customer-signup">회원가입</MenuItem>
+                  </span>
+                )}
               </MenuWrapper>
-              <MainLogo
+              {/* <MainLogo
                 href="/"
                 className="beerspick beerspick-beerspick_logo_header"
-              />
+              /> */}
 
               <LoginMenuItem
                 dangerouslySetInnerHTML={{ __html: props.shortcodeChild }}
@@ -206,6 +215,8 @@ const enhance = compose(
   lifecycle({
     componentDidMount() {
       this.props.getDatas ? this.props.getDatas() : ''
+
+      this.props.getMe()
     },
   })
 )

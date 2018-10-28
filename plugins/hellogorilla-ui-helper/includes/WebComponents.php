@@ -114,6 +114,7 @@ class WebComponents {
 
 		$object = shortcode_atts( array(
 			'shortcodeChild'       => do_shortcode($content),
+			'nonce' => wp_create_nonce( 'wp_rest' ),
 		), $atts, 'wp-reactivate' );
 
 		wp_localize_script( $this->plugin_slug . '-hellogorilla-webcomponents-script', $object_name, $object );
