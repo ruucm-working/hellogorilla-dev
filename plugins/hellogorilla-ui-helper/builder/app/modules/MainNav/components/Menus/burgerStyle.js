@@ -6,7 +6,7 @@ const burgerStyle = css`
     position: fixed;
     width: 30px;
     height: 30px;
-    right: 19px;
+    left: 19px;
     top: 22px;
   }
 
@@ -39,7 +39,7 @@ const burgerStyle = css`
   }
   .bm-menu-wrap {
     top: 0;
-    width: 339px !important;
+    width: 100vw !important;
     overflow: scroll;
   }
 
