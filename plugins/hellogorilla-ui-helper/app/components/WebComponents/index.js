@@ -23,6 +23,7 @@ import ProductDesc from './ProductDesc'
 import UserList from './UserList'
 import UserProfile from './UserProfile'
 
+import Login from './Login'
 import SignUp from './SignUp'
 import NewArtist from './NewArtist'
 import MyPage from './MyPage'
@@ -63,6 +64,9 @@ document.addEventListener('DOMContentLoaded', function() {
     '.hellogorilla-user-profile'
   )
 
+  const shortcode_logIn_containers = document.querySelectorAll(
+    '.hellogorilla-login'
+  )
   const shortcode_signUp_containers = document.querySelectorAll(
     '.hellogorilla-signup'
   )
@@ -177,6 +181,18 @@ document.addEventListener('DOMContentLoaded', function() {
         <UserProfile wpObject={window[objectId]} />
       </Provider>,
       shortcode_userProfile_containers[i]
+    )
+  }
+
+  for (let i = 0; i < shortcode_logIn_containers.length; ++i) {
+    const objectId = shortcode_logIn_containers[i].getAttribute(
+      'data-object-id'
+    )
+    ReactDOM.render(
+      <Provider store={store}>
+        <Login wpObject={window[objectId]} />
+      </Provider>,
+      shortcode_logIn_containers[i]
     )
   }
 

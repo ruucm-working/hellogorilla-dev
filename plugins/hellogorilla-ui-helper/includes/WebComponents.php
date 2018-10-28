@@ -94,6 +94,7 @@ class WebComponents {
 		add_shortcode( 'hellogorilla-user-list', array( $this, 'print_user_list' ) );
 		add_shortcode( 'hellogorilla-user-profile', array( $this, 'print_user_profile' ) );
 
+		add_shortcode( 'hellogorilla-login', array( $this, 'print_login' ) );
 		add_shortcode( 'hellogorilla-signup', array( $this, 'print_signup' ) );
 		add_shortcode( 'hellogorilla-new-artist', array( $this, 'print_new_artist' ) );
 		add_shortcode( 'hellogorilla-mypage', array( $this, 'print_mypage' ) );
@@ -304,6 +305,19 @@ class WebComponents {
 		return $shortcode;
 	}
 
+	public function print_login( $atts ) {
+		wp_register_script( $this->plugin_slug . '-hellogorilla-webcomponents-script', plugins_url( 'assets/js/WebComponents.js', dirname( __FILE__ ) ), array( 'jquery' ), $this->version );
+		wp_enqueue_script( $this->plugin_slug . '-hellogorilla-webcomponents-script' );
+		$object_name = 'wpr_object_' . uniqid();
+
+		$object = shortcode_atts( array(
+			'nonce' => wp_create_nonce( 'wp_rest' ),
+		), $atts, 'wp-reactivate' );
+
+		wp_localize_script( $this->plugin_slug . '-hellogorilla-webcomponents-script', $object_name, $object );
+		$shortcode = '<div class="hellogorilla-login" data-object-id="' . $object_name . '"></div>';
+		return $shortcode;
+	}
 
 	public function print_signup( $atts ) {
 		wp_register_script( $this->plugin_slug . '-hellogorilla-webcomponents-script', plugins_url( 'assets/js/WebComponents.js', dirname( __FILE__ ) ), array( 'jquery' ), $this->version );
