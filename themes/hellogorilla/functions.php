@@ -347,6 +347,22 @@ function create_api_user_posts_field() {
 }
 
 
+/**
+ * Add Meta fields to WC Products API
+ */
+add_filter( 'woocommerce_rest_prepare_product_object', 'custom_products_api_data', 90, 2 );
+
+function custom_products_api_data( $response, $post ) {
+
+	$response->data['vendor_id'] = get_post_field( 'post_author', $response->data['id']);
+	$response->data['vendor_nickname'] = get_the_author_meta( 'nickname', $response->data['vendor_id']);
+	$response->data['vendor_img_profile'] = get_the_author_meta( 'img_profile', $response->data['vendor_id']);
+	$response->data['vendor_short_desc'] = get_the_author_meta( 'short_desc', $response->data['vendor_id']);
+
+  return $response;
+}
+
+
 
 
 /**

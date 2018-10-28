@@ -188,7 +188,7 @@ const Artist = styled.div`
   color: #533c97;
   font-weight: 500;
 `
-const More = styled.div`
+const More = styled.a`
   position: absolute;
   right: 0;
   margin-top: ${wem2(12)};
@@ -370,14 +370,12 @@ const ProductSummary = ({
             </OrderButton>
 
             <ArtistBox>
-              <Mask src={contents.images[0].src} />
-
-              <Artist>김나무</Artist>
-              <More>More ></More>
-              <Text>
-                우리 주변 사물을 재해석하여 나무로 위트있게 표현합니다. 포근한
-                색감이 특징이며, 국내외에서 활발하게 활동중입니다.
-              </Text>
+              <Mask src={contents.vendor_img_profile} />
+              <Artist>{contents.vendor_nickname}</Artist>
+              <More href={'/user-profile/?id=' + contents.vendor_id}>
+                More >
+              </More>
+              <Text>{contents.vendor_short_desc}</Text>
             </ArtistBox>
           </DesktopOnly>
         </Right>

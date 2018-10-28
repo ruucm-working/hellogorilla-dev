@@ -20,3 +20,67 @@ Stack trace:
 #6 /srv/www/hellogorilla/public_html/wp-includes/template.php(690): require('/srv/www/hellog...')
 #7 /srv/www/hellogorilla/public_html/
 
+2018-10-28T20:22:57+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_REST_Response as array in /srv/www/hellogorilla/public_html/wp-content/themes/hellogorilla/functions.php:371
+Stack trace:
+#0 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(288): custom_products_api_data(Object(WP_REST_Response), Object(WC_Product_Simple))
+#1 /srv/www/hellogorilla/public_html/wp-includes/plugin.php(203): WP_Hook->apply_filters(Object(WP_REST_Response), Array)
+#2 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/api/class-wc-rest-products-controller.php(181): apply_filters('woocommerce_res...', Object(WP_REST_Response), Object(WC_Product_Simple), Object(WP_REST_Request))
+#3 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-rest-crud-controller.php(143): WC_REST_Products_Controller->prepare_object_for_response(Object(WC_Product_Simple), Object(WP_REST_Request))
+#4 /srv/www/hellogorilla/public_html/wp-includes/rest-api/class-wp-rest-server.php(936): WC_REST_CRUD_Cont
+
+2018-10-28T20:22:58+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_REST_Response as array in /srv/www/hellogorilla/public_html/wp-content/themes/hellogorilla/functions.php:371
+Stack trace:
+#0 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(288): custom_products_api_data(Object(WP_REST_Response), Object(WC_Product_Simple))
+#1 /srv/www/hellogorilla/public_html/wp-includes/plugin.php(203): WP_Hook->apply_filters(Object(WP_REST_Response), Array)
+#2 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/api/class-wc-rest-products-controller.php(181): apply_filters('woocommerce_res...', Object(WP_REST_Response), Object(WC_Product_Simple), Object(WP_REST_Request))
+#3 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-rest-crud-controller.php(143): WC_REST_Products_Controller->prepare_object_for_response(Object(WC_Product_Simple), Object(WP_REST_Request))
+#4 /srv/www/hellogorilla/public_html/wp-includes/rest-api/class-wp-rest-server.php(936): WC_REST_CRUD_Cont
+
+2018-10-28T20:23:48+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_REST_Response as array in /srv/www/hellogorilla/public_html/wp-content/themes/hellogorilla/functions.php:371
+Stack trace:
+#0 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(288): custom_products_api_data(Object(WP_REST_Response), Object(WC_Product_Simple))
+#1 /srv/www/hellogorilla/public_html/wp-includes/plugin.php(203): WP_Hook->apply_filters(Object(WP_REST_Response), Array)
+#2 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/api/class-wc-rest-products-controller.php(181): apply_filters('woocommerce_res...', Object(WP_REST_Response), Object(WC_Product_Simple), Object(WP_REST_Request))
+#3 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-rest-crud-controller.php(143): WC_REST_Products_Controller->prepare_object_for_response(Object(WC_Product_Simple), Object(WP_REST_Request))
+#4 /srv/www/hellogorilla/public_html/wp-includes/rest-api/class-wp-rest-server.php(936): WC_REST_CRUD_Cont
+
+2018-10-28T20:23:49+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_REST_Response as array in /srv/www/hellogorilla/public_html/wp-content/themes/hellogorilla/functions.php:371
+Stack trace:
+#0 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(288): custom_products_api_data(Object(WP_REST_Response), Object(WC_Product_Simple))
+#1 /srv/www/hellogorilla/public_html/wp-includes/plugin.php(203): WP_Hook->apply_filters(Object(WP_REST_Response), Array)
+#2 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/api/class-wc-rest-products-controller.php(181): apply_filters('woocommerce_res...', Object(WP_REST_Response), Object(WC_Product_Simple), Object(WP_REST_Request))
+#3 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-rest-crud-controller.php(143): WC_REST_Products_Controller->prepare_object_for_response(Object(WC_Product_Simple), Object(WP_REST_Request))
+#4 /srv/www/hellogorilla/public_html/wp-includes/rest-api/class-wp-rest-server.php(936): WC_REST_CRUD_Cont
+
+2018-10-28T20:24:08+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_REST_Response as array in /srv/www/hellogorilla/public_html/wp-content/themes/hellogorilla/functions.php:371
+Stack trace:
+#0 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(288): custom_products_api_data(Object(WP_REST_Response), Object(WC_Product_Simple))
+#1 /srv/www/hellogorilla/public_html/wp-includes/plugin.php(203): WP_Hook->apply_filters(Object(WP_REST_Response), Array)
+#2 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/api/class-wc-rest-products-controller.php(181): apply_filters('woocommerce_res...', Object(WP_REST_Response), Object(WC_Product_Simple), Object(WP_REST_Request))
+#3 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-rest-crud-controller.php(143): WC_REST_Products_Controller->prepare_object_for_response(Object(WC_Product_Simple), Object(WP_REST_Request))
+#4 /srv/www/hellogorilla/public_html/wp-includes/rest-api/class-wp-rest-server.php(936): WC_REST_CRUD_Cont
+
+2018-10-28T20:24:09+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_REST_Response as array in /srv/www/hellogorilla/public_html/wp-content/themes/hellogorilla/functions.php:371
+Stack trace:
+#0 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(288): custom_products_api_data(Object(WP_REST_Response), Object(WC_Product_Simple))
+#1 /srv/www/hellogorilla/public_html/wp-includes/plugin.php(203): WP_Hook->apply_filters(Object(WP_REST_Response), Array)
+#2 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/api/class-wc-rest-products-controller.php(181): apply_filters('woocommerce_res...', Object(WP_REST_Response), Object(WC_Product_Simple), Object(WP_REST_Request))
+#3 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-rest-crud-controller.php(143): WC_REST_Products_Controller->prepare_object_for_response(Object(WC_Product_Simple), Object(WP_REST_Request))
+#4 /srv/www/hellogorilla/public_html/wp-includes/rest-api/class-wp-rest-server.php(936): WC_REST_CRUD_Cont
+
+2018-10-28T20:24:49+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_REST_Response as array in /srv/www/hellogorilla/public_html/wp-content/themes/hellogorilla/functions.php:377
+Stack trace:
+#0 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(288): custom_products_api_data(Object(WP_REST_Response), Object(WC_Product_Simple))
+#1 /srv/www/hellogorilla/public_html/wp-includes/plugin.php(203): WP_Hook->apply_filters(Object(WP_REST_Response), Array)
+#2 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/api/class-wc-rest-products-controller.php(181): apply_filters('woocommerce_res...', Object(WP_REST_Response), Object(WC_Product_Simple), Object(WP_REST_Request))
+#3 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-rest-crud-controller.php(143): WC_REST_Products_Controller->prepare_object_for_response(Object(WC_Product_Simple), Object(WP_REST_Request))
+#4 /srv/www/hellogorilla/public_html/wp-includes/rest-api/class-wp-rest-server.php(936): WC_REST_CRUD_Cont
+
+2018-10-28T20:24:51+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_REST_Response as array in /srv/www/hellogorilla/public_html/wp-content/themes/hellogorilla/functions.php:377
+Stack trace:
+#0 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(288): custom_products_api_data(Object(WP_REST_Response), Object(WC_Product_Simple))
+#1 /srv/www/hellogorilla/public_html/wp-includes/plugin.php(203): WP_Hook->apply_filters(Object(WP_REST_Response), Array)
+#2 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/api/class-wc-rest-products-controller.php(181): apply_filters('woocommerce_res...', Object(WP_REST_Response), Object(WC_Product_Simple), Object(WP_REST_Request))
+#3 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-rest-crud-controller.php(143): WC_REST_Products_Controller->prepare_object_for_response(Object(WC_Product_Simple), Object(WP_REST_Request))
+#4 /srv/www/hellogorilla/public_html/wp-includes/rest-api/class-wp-rest-server.php(936): WC_REST_CRUD_Cont
+
