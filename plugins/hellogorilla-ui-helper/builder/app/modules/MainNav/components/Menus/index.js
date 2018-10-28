@@ -182,7 +182,6 @@ const MobileCartItem = styled.div`
 `
 const Menus = ({ me, wpLogout, ...props }) => {
   let contents = props[props.wpType + '_' + props.sort + '_wpData']
-  log('props(Menus)', props)
 
   return (
     <div>
