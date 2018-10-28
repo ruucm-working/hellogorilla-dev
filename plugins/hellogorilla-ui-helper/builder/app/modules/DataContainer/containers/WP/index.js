@@ -282,6 +282,7 @@ const enhance = compose(
           })
           .catch(err => {
             log('err', err)
+            alert('err - ' + err.message)
           })
       } else if (role == 'editor') {
         wp.users()

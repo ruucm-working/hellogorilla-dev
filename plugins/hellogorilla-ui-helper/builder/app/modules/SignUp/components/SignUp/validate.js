@@ -1,12 +1,6 @@
 import { SubmissionError } from 'redux-form'
 
-const validate = (values, signUpOption) => {
-  if (signUpOption == 'premium' && !values.gift) {
-    // only check if 프리미엄 멤버쉽
-    throw new SubmissionError({
-      _error: '웰컴팩을 선택해주세요',
-    })
-  }
+const validate = values => {
   if (!values.phone) {
     throw new SubmissionError({
       _error: '전화번호는 필수 필드 입니다',
@@ -37,17 +31,6 @@ const validate = (values, signUpOption) => {
   if (values.password != values.password_match) {
     throw new SubmissionError({
       _error: '비밀번호가 같지 않습니다',
-    })
-  }
-
-  if (!values.agree01) {
-    throw new SubmissionError({
-      _error: '이용약관 동의는 필수 입니다',
-    })
-  }
-  if (!values.agree02) {
-    throw new SubmissionError({
-      _error: '개인정보 보호 동의는 필수 입니다',
     })
   }
 
