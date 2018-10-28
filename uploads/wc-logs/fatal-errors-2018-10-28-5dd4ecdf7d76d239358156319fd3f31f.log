@@ -1,0 +1,22 @@
+2018-10-28T13:12:41+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/templates/single-product/title.php:25
+Stack trace:
+#0 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(210): include()
+#1 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1430): wc_get_template('single-product/...')
+#2 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(286): woocommerce_template_single_title('')
+#3 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#4 /srv/www/hellogorilla/public_html/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#5 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/templates/content-single-product.php(58): do_action('woocommerce_sin...')
+#6 /srv/www/hellogorilla/public_html/wp-includes/template.php(690): require('/srv/www/hellog...')
+#7 /srv/www/hellogorilla/public_html/
+
+2018-10-28T13:12:59+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/templates/single-product/title.php:25
+Stack trace:
+#0 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(210): include()
+#1 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1430): wc_get_template('single-product/...')
+#2 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(286): woocommerce_template_single_title('')
+#3 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#4 /srv/www/hellogorilla/public_html/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#5 /srv/www/hellogorilla/public_html/wp-content/plugins/woocommerce/templates/content-single-product.php(58): do_action('woocommerce_sin...')
+#6 /srv/www/hellogorilla/public_html/wp-includes/template.php(690): require('/srv/www/hellog...')
+#7 /srv/www/hellogorilla/public_html/
+

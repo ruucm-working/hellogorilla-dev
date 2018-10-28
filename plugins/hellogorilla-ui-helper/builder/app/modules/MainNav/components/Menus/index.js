@@ -4,22 +4,22 @@
  *
  */
 
-import React from "react";
-import { compose, lifecycle } from "recompose";
-import { log } from "ruucm-util";
-import { map } from "lodash";
-import { Row, Column, EmptySpace } from "ruucm-blocks/layouts";
-import media from "ruucm-blocks/tools/media";
-import styled, { css } from "styled-components";
-import { centerIconA, wem, wem2, center } from "ruucm-blocks/tools/mixins";
+import React from 'react'
+import { compose, lifecycle } from 'recompose'
+import { log } from 'ruucm-util'
+import { map } from 'lodash'
+import { Row, Column, EmptySpace } from 'ruucm-blocks/layouts'
+import media from 'ruucm-blocks/tools/media'
+import styled, { css } from 'styled-components'
+import { centerIconA, wem, wem2, center } from 'ruucm-blocks/tools/mixins'
 
-import { slide as Menu } from "react-burger-menu";
-import burgerStyle from "./burgerStyle";
+import { slide as Menu } from 'react-burger-menu'
+import burgerStyle from './burgerStyle'
 // import mobileLogo from '../../assets/mobile-logo.png'
-import Contact from "./Contact";
+import Contact from './Contact'
 
 const Desktop = styled.div`
-  font-family: "NanumSquareRound", sans-serif;
+  font-family: 'NanumSquareRound', sans-serif;
   font-size: 15px;
   line-height: 15px;
   position: relative;
@@ -27,13 +27,13 @@ const Desktop = styled.div`
   background: #533c97;
   width: 100%;
   color: white;
-`;
+`
 
 const Header = styled.div`
   /* max-width: 960px; */
   padding-left: ${wem2(240)};
   padding-right: ${wem2(240)};
-`;
+`
 
 const Centering = styled.div`
   position: absolute;
@@ -41,14 +41,14 @@ const Centering = styled.div`
   transform: translateY(-50%);
   /* max-width: 960px; */
   width: 66.66%;
-`;
+`
 
 const Logo = styled.div`
   font-size: 61px;
   .hellogorilla-logo {
     vertical-align: super;
   }
-`;
+`
 const Right = styled.div`
   position: absolute;
   top: 50%;
@@ -62,24 +62,24 @@ const Right = styled.div`
       color: #0fb780;
     }
   }
-`;
+`
 
 const MenuWrapper = styled.div`
   color: white;
   font-size: 15px;
   line-height: 15px;
   display: inline-block;
-`;
+`
 const MenuItem = styled.a`
   padding-left: 40px;
   :hover {
     color: #0fb780;
   }
-`;
+`
 
 const MainLogo = styled.a`
   padding-left: 40px;
-`;
+`
 
 const LoginMenuItem = styled.div`
   display: inline-block;
@@ -109,20 +109,20 @@ const LoginMenuItem = styled.div`
   .cosmosfarm-members-account-link {
     display: inline-block;
   }
-`;
+`
 
 const CartIcon = styled.span`
   padding-left: 40px;
   display: inline-block;
-`;
+`
 
-const Mobile = styled.div``;
-const MobileLogo = styled.img``;
-const MobileCartMenuItem = styled.div``;
-const MobileCartItem = styled.div``;
+const Mobile = styled.div``
+const MobileLogo = styled.img``
+const MobileCartMenuItem = styled.div``
+const MobileCartItem = styled.div``
 
 const Menus = props => {
-  let contents = props[props.wpType + "_" + props.sort + "_wpData"];
+  let contents = props[props.wpType + '_' + props.sort + '_wpData']
 
   return (
     <div>
@@ -152,10 +152,11 @@ const Menus = props => {
               <LoginMenuItem
                 dangerouslySetInnerHTML={{ __html: props.shortcodeChild }}
               />
-              <span className="hellogorilla hellogorilla-cart" />
+              <a href="/cart">
+                <span className="hellogorilla hellogorilla-icon-cart-61" />
+              </a>
             </Right>
             {/* <a href="/my-account">카트</a> */}
-            {/* <CartIcon className="hellogorilla hellogorilla-cart" /> */}
 
             {/* <IconMenuItem href="https://www.instagram.com/beers_pick/">
                 <span className="beerspick beerspick-instagram_logo" />
@@ -197,16 +198,16 @@ const Menus = props => {
         </Menu>
       </Mobile> */}
     </div>
-  );
-};
+  )
+}
 
 // Component enhancer
 const enhance = compose(
   lifecycle({
     componentDidMount() {
-      this.props.getDatas ? this.props.getDatas() : "";
-    }
+      this.props.getDatas ? this.props.getDatas() : ''
+    },
   })
-);
+)
 
-export default enhance(Menus);
+export default enhance(Menus)
