@@ -147,7 +147,12 @@ const Menus = ({ me, wpLogout, ...props }) => {
                 ))}
                 {me ? (
                   <MenuItem
-                    onClick={() => wpLogout(() => alert('로그아웃 되었습니다'))}
+                    onClick={() =>
+                      wpLogout(() => {
+                        alert('로그아웃 되었습니다')
+                        window.location = '/'
+                      })
+                    }
                   >
                     로그아웃
                   </MenuItem>
