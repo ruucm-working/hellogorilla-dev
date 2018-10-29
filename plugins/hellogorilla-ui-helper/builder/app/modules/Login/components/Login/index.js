@@ -92,8 +92,10 @@ const SignupButton = styled(CommonButtonStyle)`
   font-size: ${wem2(13)};
   color: #231f20;
   cursor: pointer;
-  font-weight: 500;
+  font-family: "NanumSquareRound", sans-serif;
+  font-weight: 500 !important;
   background: white;
+  padding: 0;
   :hover {
     color: #805de9;
   }
