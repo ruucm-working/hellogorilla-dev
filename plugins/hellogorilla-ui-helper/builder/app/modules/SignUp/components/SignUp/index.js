@@ -57,7 +57,7 @@ const WriteField = styled.input`
 `;
 const PhoneWriteField = styled.input`
   margin-top: ${wem2(10)};
-  width: ${wem2(332)};
+  width: ${wem2(104)};
   height: ${wem2(52)};
   border-radius: 2px;
   border: solid 1px #231f20;
@@ -175,6 +175,8 @@ const passwordmatchField = ({
 );
 const phoneField = ({
   input,
+  input02,
+  input03,
   label,
   placeholder,
   type,
@@ -183,6 +185,8 @@ const phoneField = ({
   <div>
     <RenderFieldLabel>{label}</RenderFieldLabel>
     <PhoneWriteField input {...input} placeholder={placeholder} type={type} />
+    <PhoneWriteField input {...input02} placeholder={placeholder} type={type} />
+    <PhoneWriteField input {...input03} placeholder={placeholder} type={type} />
     <PassButton>
       <PassText>인증번호 전송</PassText>
     </PassButton>
