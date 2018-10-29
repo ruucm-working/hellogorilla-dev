@@ -1,21 +1,28 @@
-import React from 'react'
+import React from "react";
 
-import { compose, withState, lifecycle, withHandlers } from 'recompose'
-import styled, { css } from 'styled-components'
-import { Field, reduxForm } from 'redux-form'
-import { log } from 'ruucm-util'
-import validate from './validate'
-import LoadingSpinner from '../../../shared/LoadingSpinner'
+import { compose, withState, lifecycle, withHandlers } from "recompose";
+import styled, { css } from "styled-components";
+import { wem, wem2 } from "ruucm-blocks/tools/mixins";
+
+import { Field, reduxForm } from "redux-form";
+import { log } from "ruucm-util";
+import validate from "./validate";
+import LoadingSpinner from "../../../shared/LoadingSpinner";
 
 const Wrap = styled.div`
+  margin-top: ${wem2(96)};
+  margin-left: ${wem2(480)};
+  margin-right: ${wem2(480)};
+`;
+const Title = styled.h1`
   text-align: center;
-  width: 440px;
-  margin: 0 auto;
-`
+  font-size: ${wem2(24)};
+  color: #231f20;
+`;
+
 const ErrorWrapper = styled.div`
   color: #ee4230;
-`
-const Title = styled.h1``
+`;
 const Info = styled.div`
   font-family: NanumBarunGothicWeb;
   font-size: 18px;
@@ -23,9 +30,9 @@ const Info = styled.div`
   color: #050505;
   margin-bottom: 35px;
   font-weight: 700;
-`
-const UserEmail = styled.div``
-const HelloText = styled.div``
+`;
+const UserEmail = styled.div``;
+const HelloText = styled.div``;
 
 const CommonButtonStyle = styled.button`
   font-family: NanumBarunGothicWeb;
@@ -39,16 +46,16 @@ const CommonButtonStyle = styled.button`
   background-color: #0054a6;
   border: none;
   cursor: pointer;
-`
+`;
 
 const LoginButtons = styled.div`
   margin: 10px 0;
-`
+`;
 
 const LoginButton = styled(CommonButtonStyle)`
   width: 100px;
   margin-right: 10px;
-`
+`;
 
 const SignupButton = styled(CommonButtonStyle)`
   width: 100px;
@@ -57,7 +64,7 @@ const SignupButton = styled(CommonButtonStyle)`
     css`
       width: 250px;
     `};
-`
+`;
 
 const LoginField = styled.input`
   width: 440px;
@@ -66,19 +73,19 @@ const LoginField = styled.input`
   margin-bottom: 10px;
   font-size: 18px;
   padding-left: 10px;
-`
+`;
 
 const renderField = ({
   input,
   label,
   placeholder,
   type,
-  meta: { touched, error },
+  meta: { touched, error }
 }) => (
   <div>
     <LoginField {...input} placeholder={placeholder} type={type} />
   </div>
-)
+);
 
 const LoginForm = ({
   // from parent
@@ -103,13 +110,14 @@ const LoginForm = ({
   return (
     <Wrap>
       {/* <Info>{label}</Info> */}
+      <Title>로그인</Title>
       <form
         onSubmit={handleSubmit(values => {
           if (validate(values))
             return wpLogin(values, res => {
-              alert('로그인 성공')
-              window.location = '/'
-            })
+              alert("로그인 성공");
+              window.location = "/";
+            });
         })}
       >
         <div className="input-fields">
@@ -139,19 +147,19 @@ const LoginForm = ({
             onClick={() => back()}
             direactLogin={direactLogin}
           >
-            {direactLogin ? '회원 가입하기' : '뒤로'}
+            {direactLogin ? "회원 가입하기" : "뒤로"}
           </SignupButton>
         </LoginButtons>
       </form>
     </Wrap>
-  )
-}
+  );
+};
 
 // Component enhancer
-const enhance = compose()
+const enhance = compose();
 // withState('submitSuccessed', 'setsubmitSuccess', '')
 export default enhance(
   reduxForm({
-    form: 'LOGIN_FORM',
+    form: "LOGIN_FORM"
   })(LoginForm)
-)
+);
