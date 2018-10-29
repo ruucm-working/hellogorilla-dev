@@ -61,7 +61,7 @@ const Label = styled.div`
 `;
 const Title = styled.h1`
   font-size: 28px;
-  padding-bottom: 32px;
+  /* padding-bottom: 32px; */
 `;
 
 const Price = styled.div`
@@ -74,10 +74,11 @@ const Price = styled.div`
   }
   ins {
     margin-top: ${wem2(12)};
-    font-family: .HelveticaNeueDeskInterface;
+    font-family: HelveticaNeueDeskInterface;
     font-size: ${wem2(28)};
     color: #533c97;
     display: block;
+    text-decoration: none;
   }
 `;
 
@@ -333,11 +334,6 @@ const ProductSummary = ({
             />
             <Price
               dangerouslySetInnerHTML={{
-                __html: contents.price_html
-              }}
-            />
-            <Price
-              dangerouslyInnerHTML={{
                 __html: contents.price_html
               }}
             />
