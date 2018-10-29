@@ -18,6 +18,7 @@ const Title = styled.h1`
   text-align: center;
   font-size: ${wem2(24)};
   color: #231f20;
+  font-weight: 500;
 `;
 
 const EmailField = styled.input`
@@ -29,6 +30,7 @@ const EmailField = styled.input`
   color: #231f20;
   padding-left: ${wem2(20)};
   font-size: ${wem2(14)};
+  background-color: #ffffff;
 `;
 const PasswordField = styled.input`
   width: ${wem2(480)};
@@ -39,6 +41,7 @@ const PasswordField = styled.input`
   color: #b7b5b6;
   padding-left: ${wem2(20)};
   font-size: ${wem2(14)};
+  background-color: #ffffff;
 `;
 
 const LoginButtons = styled.div`
@@ -48,7 +51,10 @@ const ErrorWrapper = styled.div`
   color: #ee4230;
 `;
 
-const CommonButtonStyle = styled.button``;
+const CommonButtonStyle = styled.button`
+  text-decoration: none;
+  border-color: white;
+`;
 
 const LoginButton = styled(CommonButtonStyle)`
   width: ${wem2(480)};
@@ -57,23 +63,50 @@ const LoginButton = styled(CommonButtonStyle)`
   background-color: #805de9;
   font-size: ${wem2(14)};
   color: #ffffff;
+  cursor: pointer;
+`;
+
+const Bottom = styled.div`
+  margin-top: ${wem2(48)};
+  text-align: center;
+`;
+const FindID = styled.span`
+  font-size: ${wem2(13)};
+  color: #231f20;
+  cursor: pointer;
+  font-weight: 500;
+  :hover {
+    color: #805de9;
+  }
+`;
+const FindPassword = styled.span`
+  font-size: ${wem2(13)};
+  color: #231f20;
+  cursor: pointer;
+  font-weight: 500;
+  :hover {
+    color: #805de9;
+  }
 `;
 const SignupButton = styled(CommonButtonStyle)`
-  width: 100px;
-  ${props =>
-    props.direactLogin &&
-    css`
-      width: 250px;
-    `};
+  font-size: ${wem2(13)};
+  color: #231f20;
+  cursor: pointer;
+  font-weight: 500;
+  background: white;
+  :hover {
+    color: #805de9;
+  }
+  ${props => props.direactLogin && css``};
 `;
-const Info = styled.div`
-  font-family: NanumBarunGothicWeb;
-  font-size: 18px;
-  line-height: 0.89;
-  color: #050505;
-  margin-bottom: 35px;
-  font-weight: 700;
+const Bar = styled.span`
+  font-size: ${wem2(13)};
+  color: #231f20;
+  margin-left: ${wem2(16)};
+  margin-right: ${wem2(16)};
 `;
+
+const Info = styled.div``;
 const UserEmail = styled.div``;
 const HelloText = styled.div``;
 
@@ -155,13 +188,19 @@ const LoginForm = ({
             로그인
           </LoginButton>
 
-          <SignupButton
-            type="button"
-            onClick={() => back()}
-            direactLogin={direactLogin}
-          >
-            {direactLogin ? "회원 가입하기" : "뒤로"}
-          </SignupButton>
+          <Bottom>
+            <FindID>아이디 찾기</FindID>
+            <Bar>|</Bar>
+            <FindPassword>비밀번호 찾기</FindPassword>
+            <Bar>|</Bar>
+            <SignupButton
+              type="button"
+              onClick={() => back()}
+              direactLogin={direactLogin}
+            >
+              {direactLogin ? "뒤로" : "가입하기"}
+            </SignupButton>
+          </Bottom>
         </LoginButtons>
       </form>
     </Wrap>
