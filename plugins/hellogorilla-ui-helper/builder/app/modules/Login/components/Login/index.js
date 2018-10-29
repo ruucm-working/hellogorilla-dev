@@ -20,52 +20,6 @@ const Title = styled.h1`
   color: #231f20;
 `;
 
-const ErrorWrapper = styled.div`
-  color: #ee4230;
-`;
-const Info = styled.div`
-  font-family: NanumBarunGothicWeb;
-  font-size: 18px;
-  line-height: 0.89;
-  color: #050505;
-  margin-bottom: 35px;
-  font-weight: 700;
-`;
-const UserEmail = styled.div``;
-const HelloText = styled.div``;
-
-const CommonButtonStyle = styled.button`
-  font-family: NanumBarunGothicWeb;
-  font-size: 18px;
-  line-height: 2.7;
-  text-align: center;
-  color: #ffffff;
-
-  height: 50px;
-  border-radius: 24px;
-  background-color: #0054a6;
-  border: none;
-  cursor: pointer;
-`;
-
-const LoginButtons = styled.div`
-  margin: 10px 0;
-`;
-
-const LoginButton = styled(CommonButtonStyle)`
-  width: 100px;
-  margin-right: 10px;
-`;
-
-const SignupButton = styled(CommonButtonStyle)`
-  width: 100px;
-  ${props =>
-    props.direactLogin &&
-    css`
-      width: 250px;
-    `};
-`;
-
 const EmailField = styled.input`
   margin-top: ${wem2(40)};
   width: ${wem2(480)};
@@ -86,6 +40,42 @@ const PasswordField = styled.input`
   padding-left: ${wem2(20)};
   font-size: ${wem2(14)};
 `;
+
+const LoginButtons = styled.div`
+  margin-top: ${wem2(20)};
+`;
+const ErrorWrapper = styled.div`
+  color: #ee4230;
+`;
+
+const CommonButtonStyle = styled.button``;
+
+const LoginButton = styled(CommonButtonStyle)`
+  width: ${wem2(480)};
+  height: ${wem2(52)};
+  border-radius: 2px;
+  background-color: #805de9;
+  font-size: ${wem2(14)};
+  color: #ffffff;
+`;
+const SignupButton = styled(CommonButtonStyle)`
+  width: 100px;
+  ${props =>
+    props.direactLogin &&
+    css`
+      width: 250px;
+    `};
+`;
+const Info = styled.div`
+  font-family: NanumBarunGothicWeb;
+  font-size: 18px;
+  line-height: 0.89;
+  color: #050505;
+  margin-bottom: 35px;
+  font-weight: 700;
+`;
+const UserEmail = styled.div``;
+const HelloText = styled.div``;
 
 const emailField = ({
   input,
