@@ -66,16 +66,28 @@ const SignupButton = styled(CommonButtonStyle)`
     `};
 `;
 
-const LoginField = styled.input`
-  width: 440px;
-  height: 50px;
-  border: solid 0.5px #000000;
-  margin-bottom: 10px;
-  font-size: 18px;
-  padding-left: 10px;
+const EmailField = styled.input`
+  margin-top: ${wem2(40)};
+  width: ${wem2(480)};
+  height: ${wem2(52)};
+  border-radius: 2px;
+  border: solid 1px #231f20;
+  color: #231f20;
+  padding-left: ${wem2(20)};
+  font-size: ${wem2(14)};
+`;
+const PasswordField = styled.input`
+  width: ${wem2(480)};
+  height: ${wem2(52)};
+  border-radius: 2px;
+  border: solid 1px #b7b5b6;
+  margin-top: ${wem2(16)};
+  color: #b7b5b6;
+  padding-left: ${wem2(20)};
+  font-size: ${wem2(14)};
 `;
 
-const renderField = ({
+const emailField = ({
   input,
   label,
   placeholder,
@@ -83,7 +95,18 @@ const renderField = ({
   meta: { touched, error }
 }) => (
   <div>
-    <LoginField {...input} placeholder={placeholder} type={type} />
+    <EmailField {...input} placeholder={placeholder} type={type} />
+  </div>
+);
+const passwordField = ({
+  input,
+  label,
+  placeholder,
+  type,
+  meta: { touched, error }
+}) => (
+  <div>
+    <PasswordField {...input} placeholder={placeholder} type={type} />
   </div>
 );
 
@@ -124,14 +147,14 @@ const LoginForm = ({
           <Field
             name="username"
             type="text"
-            placeholder="이메일 (email@gmail.com)"
-            component={renderField}
+            placeholder="ddoooodd@gmail.com"
+            component={emailField}
           />
           <Field
             name="password"
             type="password"
-            placeholder="비밀번호"
-            component={renderField}
+            placeholder="비밀번호를 입력해주세요."
+            component={passwordField}
           />
         </div>
 
