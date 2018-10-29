@@ -108,6 +108,13 @@ const HR = styled.hr``;
 const SelectAll = styled.input``;
 const SelectAllLabel = styled.span``;
 
+const TimeRemain = styled.div`
+  font-size: ${wem2(11)};
+  margin-top: ${wem2(12)};
+  margin-left: ${wem2(20)};
+  color: #0eb780;
+`;
+
 const Agree = styled.div`
   text-align: center;
   font-size: 13px;
@@ -328,6 +335,7 @@ const SignUp = ({
             component={phoneMatchField}
           />
         </div>
+        <TimeRemain>남은 시간 02:33</TimeRemain>
 
         <Agree>
           가입 버튼을 누름과 동시에 이용약관에 동의한 것으로 간주합니다.
