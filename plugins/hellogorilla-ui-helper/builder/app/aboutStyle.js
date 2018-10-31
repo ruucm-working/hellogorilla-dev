@@ -53,7 +53,7 @@ injectGlobal`
 
 
 
-.hello-gorilla {
+.hello-gorilla-first-row {
   margin-top: ${wem2(94)};
 }
 .hello-gorilla-left {
@@ -61,6 +61,7 @@ injectGlobal`
 }
 .hello-gorilla-right {
     /* margin-top: ${wem2(94)};  */
+    max-width: 528px;
 }
 .hello-gorilla-title {
   /* font-family: Lato; */
@@ -84,5 +85,8 @@ injectGlobal`
   margin: unset;  
 }
 
+.hello-gorilla-second-row {
+  margin-top: ${wem2(192)};
+}
   
 `;
