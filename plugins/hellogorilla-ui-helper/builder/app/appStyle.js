@@ -1,18 +1,18 @@
-import { injectGlobal } from 'styled-components'
+import { injectGlobal } from "styled-components";
 
-import normalize from 'ruucm-blocks/libs/normalize'
+import normalize from "ruucm-blocks/libs/normalize";
 
-import NanumSquare from 'ruucm-blocks/css-patterns/fonts/NanumSquare'
-import Montserrat from 'ruucm-blocks/css-patterns/fonts/Montserrat'
-import NanumMyeongjo from 'ruucm-blocks/css-patterns/fonts/NanumMyeongjo'
-import HarborMagazineIcon from 'ruucm-blocks/css-patterns/icons/HarborMagazineIcon'
-import HarborSchoolIcon from 'ruucm-blocks/css-patterns/icons/HarborSchoolIcon'
-import PortfolioClassIcon from 'ruucm-blocks/css-patterns/icons/PortfolioClassIcon'
-import HelloGorillaIcon from 'ruucm-blocks/css-patterns/icons/HelloGorillaIcon'
+import NanumSquare from "ruucm-blocks/css-patterns/fonts/NanumSquare";
+import Montserrat from "ruucm-blocks/css-patterns/fonts/Montserrat";
+import NanumMyeongjo from "ruucm-blocks/css-patterns/fonts/NanumMyeongjo";
+import HarborMagazineIcon from "ruucm-blocks/css-patterns/icons/HarborMagazineIcon";
+import HarborSchoolIcon from "ruucm-blocks/css-patterns/icons/HarborSchoolIcon";
+import PortfolioClassIcon from "ruucm-blocks/css-patterns/icons/PortfolioClassIcon";
+import HelloGorillaIcon from "ruucm-blocks/css-patterns/icons/HelloGorillaIcon";
 
-import { wem2 } from 'ruucm-blocks/tools/mixins'
+import { wem2 } from "ruucm-blocks/tools/mixins";
 
-import { checkoutStyle, payaginStyle, thankStyle } from './WooCommerceStyles'
+import { checkoutStyle, payaginStyle, thankStyle } from "./WooCommerceStyles";
 
 // App Styles
 injectGlobal`
@@ -27,6 +27,8 @@ injectGlobal`
 
 
   @import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
+  @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
   body {
     font-family: "NanumSquareRound", sans-serif;
     font-weight: 300;
@@ -212,4 +214,4 @@ injectGlobal`
     /* font-size: ${wem2(240)};
     float: right; */
   }
-`
+`;

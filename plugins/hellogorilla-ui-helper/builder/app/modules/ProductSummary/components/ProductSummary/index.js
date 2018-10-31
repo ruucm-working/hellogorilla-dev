@@ -65,16 +65,22 @@ const Title = styled.h1`
 `;
 
 const Price = styled.div`
+  margin-top: ${wem2(32)};
+  font-size: ${wem2(28)};
+  color: #231f20;
+  display: block;
+  font-weight: 400;
+  /* color: red; */
   del {
     margin-top: ${wem2(32)};
-    font-family: Lato;
+    font-family: "Lato", sans-serif;
     font-size: ${wem2(20)};
     color: #b7b5b6;
     display: block;
+    font-weight: 300;
   }
   ins {
     margin-top: ${wem2(12)};
-    font-family: HelveticaNeueDeskInterface;
     font-size: ${wem2(28)};
     color: #533c97;
     display: block;
