@@ -214,4 +214,36 @@ injectGlobal`
     /* font-size: ${wem2(240)};
     float: right; */
   }
+
+
+.hello-gorilla {
+  margin-top: ${wem2(94)};
+}
+.hello-gorilla-left {
+    /* margin-top: ${wem2(94)}; */
+}
+.hello-gorilla-right {
+    /* margin-top: ${wem2(94)};  */
+}
+.hello-gorilla-title {
+  /* font-family: Lato; */
+  font-size: ${wem2(32)}
+  font-weight: 300;
+  line-height: 1.5;
+  color: #231f20;
+  }
+.hello-gorilla-sub-title {
+  font-size: ${wem2(20)};
+  color: #533c97;
+  margin: unset;
+}
+.hello-gorilla-text {
+  font-size: ${wem2(16)};
+  line-height: 1.75;
+  color: #231f20;
+  margin: unset;
+}
+.hello-gorilla-img {
+  margin: unset;  
+}
 `;
