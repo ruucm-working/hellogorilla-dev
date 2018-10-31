@@ -14,6 +14,7 @@ import { wem2 } from "ruucm-blocks/tools/mixins";
 
 import { checkoutStyle, payaginStyle, thankStyle } from "./WooCommerceStyles";
 import aboutStyle from "./aboutStyle";
+import programStyle from "./programStyle";
 
 // App Styles
 injectGlobal`
@@ -24,7 +25,9 @@ injectGlobal`
   ${Montserrat}
   /* Icons */
   ${HelloGorillaIcon}
+  
   ${aboutStyle}
+  ${programStyle}
   /* Body Styles */
 
 

@@ -51,72 +51,46 @@ injectGlobal`
   /* WooCommerce */
 
 
-
-
-.hello-gorilla-first-row {
-  margin-top: 94px
-}
-.hello-gorilla-left {
-    /* margin-top: 94px */
-}
-.hello-gorilla-right {
-    /* margin-top: 94px  */
-    max-width: 528px;
-}
-.hello-gorilla-title {
-  /* font-family: Lato; */
-  font-size: 32px;  
-  font-weight: 300;
-  line-height: 1.5;
+  .program-header {
+    margin-top: 96px;
+  }
+  .program-sub-title {
+  font-size: 16px;
   color: #231f20;
   }
-.hello-gorilla-sub-title {
-  font-size: 20px;
-  color: #533c97;
-  margin: unset;
-}
-.hello-gorilla-text {
-  font-size: 16px;
-  line-height: 1.75;
+  .program-title {
+  margin-top: 24px;
+  font-size: 32px;
   color: #231f20;
-  margin: unset;
-}
-.hello-gorilla-img {
-  margin: unset;  
-}
+  }
 
-.hello-gorilla-second-row {
-  margin-top: 192px;
-}
+  .program-left {
+    /* margin-top: 72px; */
+    text-align:center;
+    padding-right: 24px;
+  }
+  .program-left-title {
+    margin-top: 20px;
+    font-size: 28px;
+    color: #533c97;
+  }
 
-.hello-gorilla-third-row {
-  margin-top: 144px;
-}
+  .program-right {
+    /* margin-top: 72px; */
+    text-align:center;
+    padding-left:24px;
+  }
+  .program-right-title {
+    margin-top: 20px;
+    font-size: 28px;
+    color: #0eb780;
+  }
+  .program-text {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #231f20;
+  height: 144px;
+  }
 
-.hello-gorilla-button {
-  width: 144px;
-  height: 48px;
-  border-radius: 2px;
-  background-color: #805de9;
-  left: 50%;
-  position: relative;
-  transform: translateX(-50%);
-  color: white;
-  margin-top: 37px;
-  cursor:pointer;
-}
-.hello-gorilla-button-text {
-  position:absolute;
-  left: 50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  font-size:16px
-}
-
-.hello-gorilla-fourth-row {
-  margin-top: 157px;
-}
-.hello-gorilla-fifth-row {
-  margin-top: 192px;
-}
 `;
