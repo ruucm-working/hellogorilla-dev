@@ -10,6 +10,8 @@ import validate from "./validate";
 import LoadingSpinner from "../../../shared/LoadingSpinner";
 
 import Find_ID from "../FindID_Temp";
+import FindID_Login from "../FindID_Login_Temp";
+
 import Find_Password from "../FindPassword_Temp";
 
 const Wrap = styled.div`
@@ -210,8 +212,9 @@ const LoginForm = ({
           </LoginButtons>
         </form>
       </Wrap>
-      <Find_ID />
-      <Find_Password />
+      {/* <Find_ID /> */}
+      <FindID_Login />
+      {/* <Find_Password /> */}
     </div>
   );
 };
