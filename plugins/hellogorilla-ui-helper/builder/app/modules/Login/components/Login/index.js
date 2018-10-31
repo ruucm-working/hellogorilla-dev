@@ -9,8 +9,8 @@ import { log } from "ruucm-util";
 import validate from "./validate";
 import LoadingSpinner from "../../../shared/LoadingSpinner";
 
-import Find_ID from "../Temp_FindID";
-import Find_Password from "../Temp_FindIPassword";
+import Find_ID from "../FindID_Temp";
+import Find_Password from "../FindPassword_Temp";
 
 const Wrap = styled.div`
   margin-top: ${wem2(96)};
