@@ -9,6 +9,8 @@ import { log } from "ruucm-util";
 import validate from "./validate";
 import LoadingSpinner from "../../../shared/LoadingSpinner";
 
+import Find_ID from "../Temp_FindID";
+
 const Wrap = styled.div`
   margin-top: ${wem2(96)};
   margin-left: ${wem2(480)};
@@ -207,6 +209,7 @@ const LoginForm = ({
           </LoginButtons>
         </form>
       </Wrap>
+      <Find_ID />
     </div>
   );
 };
