@@ -60,6 +60,11 @@ const PassButton = styled.div`
   cursor: pointer;
   position: relative;
   vertical-align: middle;
+  ${props =>
+    props.purple &&
+    css`
+      background-color: #533c97;
+    `};
 `;
 const PassText = styled.div`
   white-space: nowrap;
@@ -112,7 +117,7 @@ const phoneMatchField = ({
   <div>
     {/* <RenderFieldLabel /> */}
     <PhoneMatchField input {...input} placeholder={placeholder} type={type} />
-    <PassButton>
+    <PassButton purple>
       <PassText>인증번호 확인</PassText>
     </PassButton>
   </div>
@@ -130,7 +135,6 @@ const Find_ID = props => {
         </Title>
 
         <Field name="phone" type="tel" label="휴대폰" component={phoneField} />
-
         <Field
           name="phone_match"
           type="tel"

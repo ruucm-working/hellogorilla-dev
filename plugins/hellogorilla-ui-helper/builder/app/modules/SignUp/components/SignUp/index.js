@@ -167,7 +167,6 @@ const renderField = ({
     <WriteField input {...input} placeholder={placeholder} type={type} />
   </div>
 );
-
 const passwordmatchField = ({
   input,
   label,
