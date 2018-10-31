@@ -6,6 +6,8 @@
 
 import React from "react";
 import { compose, lifecycle } from "recompose";
+import Select from "react-select";
+
 import styled, { css } from "styled-components";
 import media from "ruucm-blocks/tools/media";
 import { wem2 } from "ruucm-blocks/tools/mixins";
