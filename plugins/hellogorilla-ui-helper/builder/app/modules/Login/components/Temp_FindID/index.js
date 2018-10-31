@@ -75,12 +75,20 @@ const PassText = styled.div`
   top: 50%;
   transform: translate(-50%, -50%);
 `;
+
+const Alarm = styled.div`
+  margin-top: ${wem2(12)};
+  margin-left: ${wem2(20)};
+  font-size: ${wem2(11)};
+  color: #0eb780;
+`;
+
 const PhoneMatchField = styled.input`
   margin-top: ${wem2(12)};
   width: ${wem2(332)};
   height: ${wem2(52)};
   border-radius: 2px;
-  border: solid 1px #231f20;
+  border: solid 1px #b7b5b6;
   font-size: ${wem2(14)};
   padding-left: ${wem2(20)};
   color: #b7b5b6;
@@ -135,6 +143,7 @@ const Find_ID = props => {
         </Title>
 
         <Field name="phone" type="tel" label="휴대폰" component={phoneField} />
+        <Alarm>가입 시 입력한 휴대폰 번호를 다시 확인해주세요.</Alarm>
         <Field
           name="phone_match"
           type="tel"
