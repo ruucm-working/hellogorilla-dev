@@ -183,10 +183,11 @@ const ArtistBox = styled.div`
 `;
 const Mask = styled.img`
   width: ${wem2(72)};
-  height: ${wem2(70)};
-  border-radius: 2px;
+  height: 100%;
+  /* border-radius: 2px; */
   /* background-color: beige; */
   display: inline-block;
+  object-fit: cover;
 `;
 
 const Artist = styled.div`
