@@ -143,62 +143,64 @@ const UserProducts = styled.div`
 const Contents = ({ getDatas, ...props }) => {
   let contents = props[props.wpType + "_" + props.sort + "_wpData"];
   return (
-    <Wrapper>
-      <Search>
-        <SearchTitle>헬로고릴라 아티스트를 소개합니다</SearchTitle>
-        <SearchBar>
-          <SearchInput
-            type="text"
-            onChange={e => {
-              log("e.target.value", e.target.value);
-              getDatas({
-                role: "editor",
-                search: e.target.value
-              });
-            }}
-          />
-          <SearchBtn>
-            <Icon className="hellogorilla hellogorilla-icon-search-24" />
-          </SearchBtn>
-        </SearchBar>
-      </Search>
+    <div>
+      <Wrapper>
+        <Search>
+          <SearchTitle>헬로고릴라 아티스트를 소개합니다</SearchTitle>
+          <SearchBar>
+            <SearchInput
+              type="text"
+              onChange={e => {
+                log("e.target.value", e.target.value);
+                getDatas({
+                  role: "editor",
+                  search: e.target.value
+                });
+              }}
+            />
+            <SearchBtn>
+              <Icon className="hellogorilla hellogorilla-icon-search-24" />
+            </SearchBtn>
+          </SearchBar>
+        </Search>
 
-      <ArtistWrap>
-        <Row>
-          {map(contents, (item, id) => (
-            <StyledColumn col="3" key={id}>
-              <UserWrap>
-                <User href={"/user-profile/?id=" + item.id}>
-                  <UserImage
-                    src={
-                      item.meta.img_profile
-                        ? item.meta.img_profile
-                        : profileDefault
-                    }
-                  />
+        <ArtistWrap>
+          <Row>
+            {map(contents, (item, id) => (
+              <StyledColumn col="3" key={id}>
+                <UserWrap>
+                  <User href={"/user-profile/?id=" + item.id}>
+                    <UserImage
+                      src={
+                        item.meta.img_profile
+                          ? item.meta.img_profile
+                          : profileDefault
+                      }
+                    />
 
-                  <Overlay>
-                    <UserInfo>
-                      <UserName>{item.name}</UserName>
+                    <Overlay>
+                      <UserInfo>
+                        <UserName>{item.name}</UserName>
 
-                      <UserProducts>
-                        {item.user_products[0]
-                          ? item.user_products[0].post_title
-                          : ""}
+                        <UserProducts>
+                          {item.user_products[0]
+                            ? item.user_products[0].post_title
+                            : ""}
 
-                        {item.user_products[1]
-                          ? " 외 " + (item.user_products.length - 1) + "점"
-                          : ""}
-                      </UserProducts>
-                    </UserInfo>
-                  </Overlay>
-                </User>
-              </UserWrap>
-            </StyledColumn>
-          ))}
-        </Row>
-      </ArtistWrap>
-    </Wrapper>
+                          {item.user_products[1]
+                            ? " 외 " + (item.user_products.length - 1) + "점"
+                            : ""}
+                        </UserProducts>
+                      </UserInfo>
+                    </Overlay>
+                  </User>
+                </UserWrap>
+              </StyledColumn>
+            ))}
+          </Row>
+        </ArtistWrap>
+      </Wrapper>
+    </div>
   );
 };
 

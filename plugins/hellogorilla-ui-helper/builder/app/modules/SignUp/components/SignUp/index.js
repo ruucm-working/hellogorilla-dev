@@ -275,82 +275,84 @@ const SignUp = ({
   ...props
 }) => {
   return (
-    <Wrap>
-      <Title>회원가입</Title>
+    <div>
+      <Wrap>
+        <Title>회원가입</Title>
 
-      <Form
-        onSubmit={handleSubmit(values => {
-          log("values", values);
-          if (validate(values)) {
-            wpSignUp(values, "customer", res => {
-              log("res", res);
-              alert("회원가입을 축하 합니다.\n홈으로 이동합니다. ");
-              window.location = "/";
-            });
-          }
-        })}
-      >
-        <div>
-          <Field
-            name="email"
-            type="email"
-            label="이메일"
-            placeholder="이메일 (email@gmail.com) "
-            component={renderField}
-          />
-          <Field
-            name="username"
-            type="text"
-            label="이름"
-            component={renderField}
-          />
+        <Form
+          onSubmit={handleSubmit(values => {
+            log("values", values);
+            if (validate(values)) {
+              wpSignUp(values, "customer", res => {
+                log("res", res);
+                alert("회원가입을 축하 합니다.\n홈으로 이동합니다. ");
+                window.location = "/";
+              });
+            }
+          })}
+        >
+          <div>
+            <Field
+              name="email"
+              type="email"
+              label="이메일"
+              placeholder="이메일 (email@gmail.com) "
+              component={renderField}
+            />
+            <Field
+              name="username"
+              type="text"
+              label="이름"
+              component={renderField}
+            />
 
-          <Field
-            name="password"
-            type="password"
-            label="비밀번호"
-            placeholder="8-20자 이내로 입력해주세요."
-            component={renderField}
-          />
-          <Field
-            name="password_match"
-            type="password"
-            // label="비밀번호(확인)"
-            placeholder="비밀번호 확인을 위해 재입력해주세요."
-            component={passwordmatchField}
-          />
+            <Field
+              name="password"
+              type="password"
+              label="비밀번호"
+              placeholder="8-20자 이내로 입력해주세요."
+              component={renderField}
+            />
+            <Field
+              name="password_match"
+              type="password"
+              // label="비밀번호(확인)"
+              placeholder="비밀번호 확인을 위해 재입력해주세요."
+              component={passwordmatchField}
+            />
 
-          <Field
-            name="phone"
-            type="tel"
-            label="휴대폰"
-            component={phoneField}
-          />
+            <Field
+              name="phone"
+              type="tel"
+              label="휴대폰"
+              component={phoneField}
+            />
 
-          <Field
-            name="phone_match"
-            type="tel"
-            // label="인증번호를 입력해주세요."
-            placeholder="인증번호를 입력해주세요."
-            component={phoneMatchField}
-          />
-        </div>
-        <TimeRemain>남은 시간 02:33</TimeRemain>
+            <Field
+              name="phone_match"
+              type="tel"
+              // label="인증번호를 입력해주세요."
+              placeholder="인증번호를 입력해주세요."
+              component={phoneMatchField}
+            />
+          </div>
+          <TimeRemain>남은 시간 02:33</TimeRemain>
 
-        <Agree>
-          가입 버튼을 누름과 동시에 이용약관에 동의한 것으로 간주합니다.
-        </Agree>
-        <div>
-          {error && <ErrorWrapper>{error}</ErrorWrapper>}
+          <Agree>
+            가입 버튼을 누름과 동시에 이용약관에 동의한 것으로 간주합니다.
+          </Agree>
+          <div>
+            {error && <ErrorWrapper>{error}</ErrorWrapper>}
 
-          <Button type="submit" disabled={submitting}>
-            <Next>가입하기</Next>
-          </Button>
-        </div>
+            <Button type="submit" disabled={submitting}>
+              <Next>가입하기</Next>
+            </Button>
+          </div>
 
-        <Already>이미 계정이 있으신가요?</Already>
-      </Form>
-    </Wrap>
+          <Already>이미 계정이 있으신가요?</Already>
+        </Form>
+      </Wrap>
+    </div>
   );
 };
 

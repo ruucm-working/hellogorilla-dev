@@ -156,56 +156,58 @@ const LoginForm = ({
   ...props
 }) => {
   return (
-    <Wrap>
-      {/* <Info>{label}</Info> */}
-      <Title>로그인</Title>
-      <form
-        onSubmit={handleSubmit(values => {
-          if (validate(values))
-            return wpLogin(values, res => {
-              alert("로그인 성공");
-              window.location = "/";
-            });
-        })}
-      >
-        <div className="input-fields">
-          <Field
-            name="username"
-            type="text"
-            placeholder="ddoooodd@gmail.com"
-            component={emailField}
-          />
-          <Field
-            name="password"
-            type="password"
-            placeholder="비밀번호를 입력해주세요."
-            component={passwordField}
-          />
-        </div>
+    <div>
+      <Wrap>
+        {/* <Info>{label}</Info> */}
+        <Title>로그인</Title>
+        <form
+          onSubmit={handleSubmit(values => {
+            if (validate(values))
+              return wpLogin(values, res => {
+                alert("로그인 성공");
+                window.location = "/";
+              });
+          })}
+        >
+          <div className="input-fields">
+            <Field
+              name="username"
+              type="text"
+              placeholder="ddoooodd@gmail.com"
+              component={emailField}
+            />
+            <Field
+              name="password"
+              type="password"
+              placeholder="비밀번호를 입력해주세요."
+              component={passwordField}
+            />
+          </div>
 
-        <LoginButtons>
-          {error && <ErrorWrapper>{error}</ErrorWrapper>}
+          <LoginButtons>
+            {error && <ErrorWrapper>{error}</ErrorWrapper>}
 
-          <LoginButton type="submit" disabled={submitting}>
-            로그인
-          </LoginButton>
+            <LoginButton type="submit" disabled={submitting}>
+              로그인
+            </LoginButton>
 
-          <Bottom>
-            <FindID>아이디 찾기</FindID>
-            <Bar>|</Bar>
-            <FindPassword>비밀번호 찾기</FindPassword>
-            <Bar>|</Bar>
-            <SignupButton
-              type="button"
-              onClick={() => back()}
-              direactLogin={direactLogin}
-            >
-              {direactLogin ? "뒤로" : "가입하기"}
-            </SignupButton>
-          </Bottom>
-        </LoginButtons>
-      </form>
-    </Wrap>
+            <Bottom>
+              <FindID>아이디 찾기</FindID>
+              <Bar>|</Bar>
+              <FindPassword>비밀번호 찾기</FindPassword>
+              <Bar>|</Bar>
+              <SignupButton
+                type="button"
+                onClick={() => back()}
+                direactLogin={direactLogin}
+              >
+                {direactLogin ? "뒤로" : "가입하기"}
+              </SignupButton>
+            </Bottom>
+          </LoginButtons>
+        </form>
+      </Wrap>
+    </div>
   );
 };
 
