@@ -13,6 +13,7 @@ import Find_ID from "../FindID_Temp";
 import FindID_Login from "../FindID_Login_Temp";
 
 import Find_Password from "../FindPassword_Temp";
+import ResetPassword from "../ResetPassword_Temp";
 
 const Wrap = styled.div`
   margin-top: ${wem2(96)};
@@ -215,6 +216,7 @@ const LoginForm = ({
       {/* <Find_ID /> */}
       <FindID_Login />
       {/* <Find_Password /> */}
+      <ResetPassword />
     </div>
   );
 };
