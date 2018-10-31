@@ -10,6 +10,7 @@ import validate from "./validate";
 import LoadingSpinner from "../../../shared/LoadingSpinner";
 
 import Find_ID from "../Temp_FindID";
+import Find_Password from "../Temp_FindIPassword";
 
 const Wrap = styled.div`
   margin-top: ${wem2(96)};
@@ -210,6 +211,7 @@ const LoginForm = ({
         </form>
       </Wrap>
       <Find_ID />
+      <Find_Password />
     </div>
   );
 };

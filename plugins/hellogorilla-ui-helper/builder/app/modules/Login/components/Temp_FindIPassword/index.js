@@ -18,7 +18,7 @@ const Title = styled.div`
 `;
 const Email = styled.span`
   font-size: ${wem2(24)};
-  color: #805de9;
+  color: #231f20;
   cursor: pointer;
 `;
 const Bar = styled.span`
@@ -29,8 +29,8 @@ const Bar = styled.span`
 `;
 const Password = styled.span`
   font-size: ${wem2(24)};
-  color: #231f20;
   cursor: pointer;
+  color: #805de9;
 `;
 
 const RenderFieldLabel = styled.div`
@@ -38,6 +38,21 @@ const RenderFieldLabel = styled.div`
   font-size: ${wem2(11)};
   color: #231f20;
   margin-top: ${wem2(24)};
+  ${props =>
+    props.email &&
+    css`
+      margin-top: ${wem2(48)};
+    `};
+`;
+const WriteField = styled.input`
+  margin-top: ${wem2(10)};
+  width: ${wem2(480)};
+  height: ${wem2(52)};
+  border-radius: 2px;
+  border: solid 1px #231f20;
+  font-size: ${wem2(14)};
+  padding-left: ${wem2(20)};
+  color: #b7b5b6;
 `;
 const PhoneWriteField = styled.input`
   margin-top: ${wem2(10)};
@@ -57,15 +72,10 @@ const PassButton = styled.div`
   width: ${wem2(136)};
   height: ${wem2(52)};
   border-radius: 2px;
-  background-color: #805de9;
+  background-color: #533c97;
   cursor: pointer;
   position: relative;
   vertical-align: middle;
-  ${props =>
-    props.purple &&
-    css`
-      background-color: #533c97;
-    `};
 `;
 const PassText = styled.div`
   white-space: nowrap;
@@ -97,6 +107,18 @@ const PhoneMatchField = styled.input`
   margin-right: ${wem2(10)};
 `;
 
+const emailField = ({
+  input,
+  label,
+  placeholder,
+  type,
+  meta: { touched, error }
+}) => (
+  <div>
+    <RenderFieldLabel email>{label}</RenderFieldLabel>
+    <WriteField input {...input} placeholder={placeholder} type={type} />
+  </div>
+);
 const phoneField = ({
   input,
   input02,
@@ -132,7 +154,7 @@ const phoneMatchField = ({
   </div>
 );
 
-const Find_ID = props => {
+const Find_Password = props => {
   return (
     <div>
       <EmptySpace height="96" />
@@ -143,8 +165,18 @@ const Find_ID = props => {
           <Password>비밀번호 찾기</Password>
         </Title>
 
+        <Field
+          name="email"
+          type="email"
+          label="이메일"
+          placeholder="gorilla@gmail.com"
+          component={emailField}
+        />
+        <Alarm>가입 시 입력한 이메일을 다시 확인해주세요.</Alarm>
+
         <Field name="phone" type="tel" label="휴대폰" component={phoneField} />
         <Alarm>가입 시 입력한 휴대폰 번호를 다시 확인해주세요.</Alarm>
+
         <Field
           name="phone_match"
           type="tel"
@@ -152,9 +184,10 @@ const Find_ID = props => {
           placeholder="인증번호를 입력해주세요."
           component={phoneMatchField}
         />
+        <Alarm>남은 시간 02:33</Alarm>
       </Wrap>
     </div>
   );
 };
 
-export default Find_ID;
+export default Find_Password;
