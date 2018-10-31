@@ -194,18 +194,18 @@ const Product = props => {
         <Desc dangerouslySetInnerHTML={{ __html: data.short_description }} />
       </TextWrapper>
 
-      <SalePercentage show={data.sale_price}>
-        <SaleText>{(data.sale_price / data.price) * 100} %</SaleText>
-
-        <SaleText small>OFF</SaleText>
-      </SalePercentage>
-
       <Price>
         <RegularPrice show={data.sale_price}>
           ￦{commaPipe(data.regular_price)}
         </RegularPrice>
         <SalePrice>￦{commaPipe(data.price)}</SalePrice>
       </Price>
+
+      <SalePercentage show={data.sale_price}>
+        <SaleText>{(data.sale_price / data.price) * 100} %</SaleText>
+
+        <SaleText small>OFF</SaleText>
+      </SalePercentage>
 
       <NewLabel show={data.tags.length}>
         <NewLabelText>{data.tags[0] ? data.tags[0].name : ""}</NewLabelText>
