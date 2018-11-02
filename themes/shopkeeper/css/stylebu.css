@@ -1176,7 +1176,23 @@ a.has-hover-img:hover span.menu-hover-img {
 
 .row {
   padding: 0 20px;
-  max-width: 112.5rem; }
+  max-width: 112.5rem;
+}
 
 .row .row {
-  padding: 0; }
+  padding: 0;
+}
+
+a {
+  line-height: inherit;
+  color: #1779ba;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover,
+a:focus {
+  color: #1468a0;
+}
+a img {
+  border: 0;
+}

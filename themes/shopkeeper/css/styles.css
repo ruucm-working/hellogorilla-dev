@@ -1835,15 +1835,7 @@ h6, .h6 {
   h6, .h6 {
     font-size: 1rem; } }
 
-a {
-  line-height: inherit;
-  color: #1779ba;
-  text-decoration: none;
-  cursor: pointer; }
-  a:hover, a:focus {
-    color: #1468a0; }
-  a img {
-    border: 0; }
+
 
 hr {
   clear: both;

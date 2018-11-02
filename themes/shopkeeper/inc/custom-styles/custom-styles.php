@@ -320,7 +320,7 @@ if ( !function_exists ('shopkeeper_custom_styles') ) {
 			/***************************************************************/
 			
 			<?php //if ( (isset($shopkeeper_theme_options['main_font'])) && (trim($shopkeeper_theme_options['main_font']) != "" ) ) : ?>			
-				h1, h2, h3, h4, h5, h6,
+				
 				.comments-title,
 				.comment-author,
 				#reply-title,
@@ -690,11 +690,11 @@ if ( !function_exists ('shopkeeper_custom_styles') ) {
 
 					?> 
 
-					h1, .woocommerce h1, .woocommerce-page h1 { font-size: <?php echo $h1_size_mobile; ?>px; }
-					h2, .woocommerce h2, .woocommerce-page h2 { font-size: <?php echo $h2_size_mobile; ?>px; }
-					h3, .woocommerce h3, .woocommerce-page h3 { font-size: <?php echo $h3_size_mobile; ?>px; } 
-					h4, .woocommerce h4, .woocommerce-page h4 { font-size: <?php echo $h4_size_mobile; ?>px; }
-					h5, .woocommerce h5, .woocommerce-page h5 { font-size: <?php echo $h5_size_mobile; ?>px; }
+					.woocommerce h1, .woocommerce-page h1 { font-size: <?php echo $h1_size_mobile; ?>px; }
+					.woocommerce h2, .woocommerce-page h2 { font-size: <?php echo $h2_size_mobile; ?>px; }
+					.woocommerce h3, .woocommerce-page h3 { font-size: <?php echo $h3_size_mobile; ?>px; } 
+					.woocommerce h4, .woocommerce-page h4 { font-size: <?php echo $h4_size_mobile; ?>px; }
+					.woocommerce h5, .woocommerce-page h5 { font-size: <?php echo $h5_size_mobile; ?>px; }
 
 					.page-title.blog-listing,
 					.woocommerce .page-title,
@@ -743,11 +743,11 @@ if ( !function_exists ('shopkeeper_custom_styles') ) {
 
 					@media only screen and (min-width: 768px) {
 
-						h1, .woocommerce h1, .woocommerce-page h1 { font-size: <?php echo $h1_size; ?>px; }
-						h2, .woocommerce h2, .woocommerce-page h2 { font-size: <?php echo $h2_size; ?>px; }
-						h3, .woocommerce h3, .woocommerce-page h3 { font-size: <?php echo $h3_size; ?>px; } 
-						h4, .woocommerce h4, .woocommerce-page h4 { font-size: <?php echo $h4_size; ?>px; }
-						h5, .woocommerce h5, .woocommerce-page h5 { font-size: <?php echo $h5_size; ?>px; }
+						.woocommerce h1, .woocommerce-page h1 { font-size: <?php echo $h1_size; ?>px; }
+						.woocommerce h2, .woocommerce-page h2 { font-size: <?php echo $h2_size; ?>px; }
+						.woocommerce h3, .woocommerce-page h3 { font-size: <?php echo $h3_size; ?>px; } 
+						.woocommerce h4, .woocommerce-page h4 { font-size: <?php echo $h4_size; ?>px; }
+						.woocommerce h5, .woocommerce-page h5 { font-size: <?php echo $h5_size; ?>px; }
 
 						.page-title.blog-listing,
 						.woocommerce .page-title,
@@ -1298,7 +1298,6 @@ if ( !function_exists ('shopkeeper_custom_styles') ) {
 			<?php endif; ?>
 			
 			<?php if ( (isset($shopkeeper_theme_options['headings_color'])) && (trim($shopkeeper_theme_options['headings_color']) != "" ) ) : ?>
-			h1, h2, h3, h4, h5, h6,
 			.entry-title-archive a,
 			.woocommerce #content div.product .woocommerce-tabs ul.tabs li.active a,
 			.woocommerce div.product .woocommerce-tabs ul.tabs li.active a,
@@ -1454,8 +1453,6 @@ if ( !function_exists ('shopkeeper_custom_styles') ) {
 			
 			<?php if ( (isset($shopkeeper_theme_options['main_color'])) && (trim($shopkeeper_theme_options['main_color']) != "" ) ) : ?>
 			
-			a,
-			a:hover, a:focus,
 			.woocommerce #respond input#submit:hover, 
 			.woocommerce a.button:hover, 
 			.woocommerce input.button:hover,
