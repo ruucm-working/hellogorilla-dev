@@ -24,32 +24,11 @@ global $post;
 
 $short_description = apply_filters( 'woocommerce_short_description', $post->post_excerpt );
 
-if ( ! $short_description ) { ?>
+if ( ! $short_description ) {
+	return;
+}
 
-	<div class="woocommerce-product-details__short-description">
-   
-    <?php if(get_field(size_fit, $post->ID)) { ?>
-	<p class="product-custom-field-title">SIZE/FIT</p>
-	<p class="product-custom-field-content"><?php echo get_field(size_fit, $post->ID ); ?></p>
-	<?php } ?>
-	<?php if(get_field(detail_care, $post->ID)) { ?>
-	<p class="product-custom-field-title">DETAIL & CARE</p>
-	<p class="product-custom-field-content"> <?php echo get_field(detail_care, $post->ID ); ?></p>
-	<?php } ?>
-	</div>
-<?php } else { ?>
-
-<div class="woocommerce-product-details__short-description">	
-	<p class="product-custom-field-title" >PRODUCT INFORMATION</p>
-	<p class="product-custom-field-content"><?php echo $short_description; // WPCS: XSS ok. ?></p>
-	<?php if(get_field(size_fit, $post->ID )) { ?>
-	<p class="product-custom-field-title" >SIZE/FIT</p>
-	<p class="product-custom-field-content"><?php echo get_field(size_fit, $post->ID ); ?></p>
-	<?php } ?>
-	<?php if(get_field(detail_care, $post->ID )) { ?>
-	<p class="product-custom-field-title">DETAIL & CARE</p>
-	<p class="product-custom-field-content"><?php echo get_field(detail_care, $post->ID ); ?></p>
-	<?php } ?>
+?>
+<div class="woocommerce-product-details__short-description">
+	<?php echo $short_description; // WPCS: XSS ok. ?>
 </div>
-
-<?php }

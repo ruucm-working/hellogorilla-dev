@@ -45,8 +45,9 @@ const Centering = styled.div`
   width: 66.66%;
 `
 
-const Logo = styled.div`
+const Logo = styled.a`
   font-size: 61px;
+  display: block;
   .hellogorilla-logo {
     vertical-align: super;
   }
@@ -188,7 +189,7 @@ const Menus = ({ me, wpLogout, ...props }) => {
       <Desktop>
         <Header>
           <Centering>
-            <Logo>
+            <Logo href="/">
               <span className="hellogorilla hellogorilla-logo">
                 <span className="path1" />
                 <span className="path2" />

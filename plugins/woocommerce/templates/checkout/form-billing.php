@@ -60,10 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
 					<input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="createaccount" <?php checked( ( true === $checkout->get_value( 'createaccount' ) || ( true === apply_filters( 'woocommerce_create_account_default_checked', false ) ) ), true ) ?> type="checkbox" name="createaccount" value="1" /> <span><?php _e( 'Create an account?', 'woocommerce' ); ?></span>
 				</label>
-                <br />
-                <span class="create-account">간단히 개인 비밀번호만 추가 하시면 회원가입은 물론, 즉시 사용가능한 2000 포인트 지급과 적립금 등 다양한 혜택을 받으실 수 있습니다.</span>
 			</p>
-
 
 		<?php endif; ?>
 

@@ -20,18 +20,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-
-
-if(get_field('item_color') ) {
-    echo '<h1 class="product_title entry-title">' . get_the_title() . '<span class="sub-color"> / ' . get_field('item_color') . '</span></h1>';
-} else {
-    the_title( '<h1 class="product_title entry-title">', '</h1>' );
-}
-
-if(get_field('korean_title') ) {
-    echo '<p class="korea-title">' . get_field('korean_title') . '</p>';
-}
-
-
-
-
+the_title( '<h1 class="product_title entry-title">', '</h1>' );
