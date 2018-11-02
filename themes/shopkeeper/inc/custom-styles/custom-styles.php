@@ -350,7 +350,6 @@ if ( !function_exists ('shopkeeper_custom_styles') ) {
 				input[type="button"],
 				input[type="reset"],
 				input[type="submit"],
-				button[type="submit"],
 				.woocommerce a.button,
 				.woocommerce-page a.button,
 				.woocommerce button.button,

@@ -19040,8 +19040,7 @@ li.display_buttons .product_after_shop_loop .product_after_shop_loop_switcher {
   .button,
   input[type="button"],
   input[type="reset"],
-  input[type="submit"],
-  button[type="submit"] {
+  input[type="submit"] {
     width: auto; }
   .woocommerce .woocommerce-ordering,
   .woocommerce-page .woocommerce-ordering {
