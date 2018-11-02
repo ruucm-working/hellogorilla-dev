@@ -823,7 +823,6 @@ if ( !function_exists ('shopkeeper_custom_styles') ) {
 					?> 
 
 					@media only screen and (min-width: 1025px) { 
-						p,
 						.woocommerce table.shop_attributes th,
 						.woocommerce-page table.shop_attributes th,
 						.woocommerce table.shop_attributes td,
