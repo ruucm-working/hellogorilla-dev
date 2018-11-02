@@ -12925,8 +12925,8 @@ select.wcml_currency_switcher,
 [class*="vc_row"][class*="column"] + [class*="vc_row"][class*="column"]:last-child {
   float: initial; }
 
-.wpb_text_column {
-  float: inherit !important; }
+/* .wpb_text_column {
+  float: inherit !important; } */
 
 .st-container {
   overflow-x: hidden; }
