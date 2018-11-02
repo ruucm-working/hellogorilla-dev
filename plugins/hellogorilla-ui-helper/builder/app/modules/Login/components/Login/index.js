@@ -216,9 +216,9 @@ const LoginForm = ({
         </form>
       </Wrap>
       {/* <Find_ID /> */}
-      <FindID_Login />
+      {/* <FindID_Login /> */}
       {/* <Find_Password /> */}
-      <ResetPassword />
+      {/* <ResetPassword /> */}
     </div>
   )
 }
