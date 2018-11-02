@@ -57,11 +57,13 @@ injectGlobal`
   .program-sub-title {
   font-size: 16px;
   color: #231f20;
+  text-align: center;
   }
   .program-title {
   margin-top: 24px;
   font-size: 32px;
   color: #231f20;
+  text-align: center;
   }
 
   .program-left {
@@ -102,4 +104,28 @@ injectGlobal`
     }
   }
 
+.program-artist-right {
+  height: ${wem2(352)};
+  position: relative;
+}
+  .program-artist {
+  font-size: 16px;
+  color: #533c97;
+  margin-top: 24px;
+  margin-bottom: unset;
+  }
+.program-artist-name {
+  font-size: 20px;
+  color: #231f20;
+  margin-top: 10px;
+  margin-bottom: unset;
+}
+.program-artist-info {
+  font-size: 14px;
+  line-height: 2;
+  color: #231f20;
+  margin-bottom: unset;
+  position: absolute;
+  bottom: 0;
+}
 `;
