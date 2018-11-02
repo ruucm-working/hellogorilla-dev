@@ -101,6 +101,7 @@ class WebComponents {
 		add_shortcode( 'hellogorilla-checkout', array( $this, 'print_checkout' ) );
 
 
+		add_shortcode( 'hellogorilla-page-banner', array( $this, 'print_page_banner' ) );
 
 
 	}
@@ -375,6 +376,24 @@ class WebComponents {
 		wp_localize_script( $this->plugin_slug . '-hellogorilla-webcomponents-script', $object_name, $object );
 
 		$shortcode = '<div class="hellogorilla-checkout" data-object-id="' . $object_name . '"></div>';
+		return $shortcode;
+	}
+
+
+	public function print_page_banner( $atts, $content = null ) {
+		wp_register_script( $this->plugin_slug . '-hellogorilla-webcomponents-script', plugins_url( 'assets/js/WebComponents.js', dirname( __FILE__ ) ), array( 'jquery' ), $this->version );
+		wp_enqueue_script( $this->plugin_slug . '-hellogorilla-webcomponents-script' );
+
+		$object_name = 'wpr_object_' . uniqid();
+
+		$object = shortcode_atts( array(
+			'banner_text'       => '안녕하세요',
+		), $atts, 'wp-reactivate' );
+
+		wp_localize_script( $this->plugin_slug . '-hellogorilla-webcomponents-script', $object_name, $object );
+
+		$shortcode = '<div class="hellogorilla-page-banner" data-object-id="' . $object_name . '"></div>';
+
 		return $shortcode;
 	}
 	

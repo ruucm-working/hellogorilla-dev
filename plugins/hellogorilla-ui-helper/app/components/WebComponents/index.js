@@ -28,6 +28,7 @@ import SignUp from './SignUp'
 import NewArtist from './NewArtist'
 import MyPage from './MyPage'
 import Checkout from './Checkout'
+import PageBanner from './PageBanner'
 
 document.addEventListener('DOMContentLoaded', function() {
   // Redux
@@ -78,6 +79,10 @@ document.addEventListener('DOMContentLoaded', function() {
   )
   const shortcode_checkout_containers = document.querySelectorAll(
     '.hellogorilla-checkout'
+  )
+
+  const shortcode_pageBanner_containers = document.querySelectorAll(
+    '.hellogorilla-page-banner'
   )
 
   for (let i = 0; i < shortcode_mainNav_containers.length; ++i) {
@@ -238,6 +243,16 @@ document.addEventListener('DOMContentLoaded', function() {
         <Checkout wpObject={window[objectId]} />
       </Provider>,
       shortcode_checkout_containers[i]
+    )
+  }
+
+  for (let i = 0; i < shortcode_pageBanner_containers.length; ++i) {
+    const objectId = shortcode_pageBanner_containers[i].getAttribute(
+      'data-object-id'
+    )
+    ReactDOM.render(
+      <PageBanner wpObject={window[objectId]} />,
+      shortcode_pageBanner_containers[i]
     )
   }
 })
