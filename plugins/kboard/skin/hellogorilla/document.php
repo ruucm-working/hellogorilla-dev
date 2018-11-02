@@ -4,8 +4,9 @@
 			<div class="kboard-title" itemprop="name">
 				<h1><?php echo $content->title?></h1>
 			</div>
+			<div class="detail-value"><?php echo date('Y-m-d H:i', strtotime($content->date))?></div>
 			
-			<div class="kboard-detail">
+			<!-- <div class="kboard-detail">
 				<?php if($content->category1):?>
 				<div class="detail-attr detail-category1">
 					<div class="detail-name"><?php echo $content->category1?></div>
@@ -28,7 +29,7 @@
 					<div class="detail-name"><?php echo __('Views', 'kboard')?></div>
 					<div class="detail-value"><?php echo $content->view?></div>
 				</div>
-			</div>
+			</div> -->
 			
 			<div class="kboard-content" itemprop="description">
 				<div class="content-view">
@@ -36,7 +37,7 @@
 				</div>
 			</div>
 			
-			<div class="kboard-document-action">
+			<!-- <div class="kboard-document-action">
 				<div class="left">
 					<button type="button" class="kboard-button-action kboard-button-like" onclick="kboard_document_like(this)" data-uid="<?php echo $content->uid?>" title="<?php echo __('Like', 'kboard')?>"><?php echo __('Like', 'kboard')?> <span class="kboard-document-like-count"><?php echo intval($content->like)?></span></button>
 					<button type="button" class="kboard-button-action kboard-button-unlike" onclick="kboard_document_unlike(this)" data-uid="<?php echo $content->uid?>" title="<?php echo __('Unlike', 'kboard')?>"><?php echo __('Unlike', 'kboard')?> <span class="kboard-document-unlike-count"><?php echo intval($content->unlike)?></span></button>
@@ -44,7 +45,7 @@
 				<div class="right">
 					<button type="button" class="kboard-button-action kboard-button-print" onclick="kboard_document_print('<?php echo $url->getDocumentPrint($content->uid)?>')" title="<?php echo __('Print', 'kboard')?>"><?php echo __('Print', 'kboard')?></button>
 				</div>
-			</div>
+			</div> -->
 			
 			<?php if($content->isAttached()):?>
 			<div class="kboard-attach">
@@ -92,7 +93,7 @@
 		<div class="kboard-control">
 			<div class="left">
 				<a href="<?php echo $url->set('mod', 'list')->toString()?>" class="kboard-default-button-small"><?php echo __('List', 'kboard')?></a>
-				<?php if($board->isReply() && !$content->notice):?><a href="<?php echo $url->set('parent_uid', $content->uid)->set('mod', 'editor')->toString()?>" class="kboard-default-button-small"><?php echo __('Reply', 'kboard')?></a><?php endif?>
+				<!-- <?php if($board->isReply() && !$content->notice):?><a href="<?php echo $url->set('parent_uid', $content->uid)->set('mod', 'editor')->toString()?>" class="kboard-default-button-small"><?php echo __('Reply', 'kboard')?></a><?php endif?> -->
 			</div>
 			<?php if($content->isEditor() || $board->permission_write=='all'):?>
 			<div class="right">
@@ -103,9 +104,9 @@
 		</div>
 		
 		<?php if(!$board->meta->always_view_list):?>
-		<div class="kboard-default-poweredby">
+		<!-- <div class="kboard-default-poweredby">
 			<a href="http://www.cosmosfarm.com/products/kboard" onclick="window.open(this.href);return false;" title="<?php echo __('KBoard is the best community software available for WordPress', 'kboard')?>">Powered by KBoard</a>
 		</div>
-		<?php endif?>
+		<?php endif?> -->
 	</div>
 </div>

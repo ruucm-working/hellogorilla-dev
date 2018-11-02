@@ -8,7 +8,7 @@
 			</div>
 		<?php endif?>
 		
-		<div class="kboard-sort">
+		<!-- <div class="kboard-sort">
 			<form id="kboard-sort-form-<?php echo $board->id?>" method="get" action="<?php echo $url->toString()?>">
 				<?php echo $url->set('pageid', '1')->set('category1', '')->set('category2', '')->set('target', '')->set('keyword', '')->set('mod', 'list')->set('kboard_list_sort_remember', $board->id)->toInput()?>
 				
@@ -20,7 +20,7 @@
 				</select>
 			</form>
 		</div>
-	</div>
+	</div> -->
 	<!-- 게시판 정보 끝 -->
 	
 	<?php if($board->use_category == 'yes'):?>
@@ -80,22 +80,22 @@
 		<table>
 			<thead>
 				<tr>
-					<td class="kboard-list-uid"><?php echo __('Number', 'kboard')?></td>
+					<!-- <td class="kboard-list-uid"><?php echo __('Number', 'kboard')?></td> -->
 					<td class="kboard-list-title"><?php echo __('Title', 'kboard')?></td>
-					<td class="kboard-list-user"><?php echo __('Author', 'kboard')?></td>
+					<!-- <td class="kboard-list-user"><?php echo __('Author', 'kboard')?></td> -->
 					<td class="kboard-list-date"><?php echo __('Date', 'kboard')?></td>
-					<td class="kboard-list-vote"><?php echo __('Votes', 'kboard')?></td>
-					<td class="kboard-list-view"><?php echo __('Views', 'kboard')?></td>
+					<!-- <td class="kboard-list-vote"><?php echo __('Votes', 'kboard')?></td> -->
+					<!-- <td class="kboard-list-view"><?php echo __('Views', 'kboard')?></td> -->
 				</tr>
 			</thead>
 			<tbody>
 				<?php while($content = $list->hasNextNotice()):?>
 				<tr class="kboard-list-notice<?php if($content->uid == kboard_uid()):?> kboard-list-selected<?php endif?>">
-					<td class="kboard-list-uid"><?php echo __('Notice', 'kboard')?></td>
+					<!-- <td class="kboard-list-uid"><?php echo __('Notice', 'kboard')?></td> -->
 					<td class="kboard-list-title">
 						<a href="<?php echo $url->set('uid', $content->uid)->set('mod', 'document')->toString()?>">
 							<div class="kboard-default-cut-strings">
-								<?php if($content->isNew()):?><span class="kboard-default-new-notify">New</span><?php endif?>
+								<!-- <?php if($content->isNew()):?><span class="kboard-default-new-notify">New</span><?php endif?> -->
 								<?php if($content->secret):?><img src="<?php echo $skin_path?>/images/icon-lock.png" alt="<?php echo __('Secret', 'kboard')?>"><?php endif?>
 								<?php echo $content->title?>
 								<span class="kboard-comments-count"><?php echo $content->getCommentsCount()?></span>
@@ -111,15 +111,15 @@
 							<span class="contents-item kboard-view"><?php echo __('Views', 'kboard')?> <?php echo $content->view?></span>
 						</div>
 					</td>
-					<td class="kboard-list-user"><?php echo apply_filters('kboard_user_display', $content->member_display, $content->member_uid, $content->member_display, 'kboard', $boardBuilder)?></td>
+					<!-- <td class="kboard-list-user"><?php echo apply_filters('kboard_user_display', $content->member_display, $content->member_uid, $content->member_display, 'kboard', $boardBuilder)?></td> -->
 					<td class="kboard-list-date"><?php echo $content->getDate()?></td>
-					<td class="kboard-list-vote"><?php echo $content->vote?></td>
-					<td class="kboard-list-view"><?php echo $content->view?></td>
+					<!-- <td class="kboard-list-vote"><?php echo $content->vote?></td> -->
+					<!-- <td class="kboard-list-view"><?php echo $content->view?></td> -->
 				</tr>
 				<?php endwhile?>
 				<?php while($content = $list->hasNext()):?>
 				<tr class="<?php if($content->uid == kboard_uid()):?>kboard-list-selected<?php endif?>">
-					<td class="kboard-list-uid"><?php echo $list->index()?></td>
+					<!-- <td class="kboard-list-uid"><?php echo $list->index()?></td> -->
 					<td class="kboard-list-title">
 						<a href="<?php echo $url->set('uid', $content->uid)->set('mod', 'document')->toString()?>">
 							<div class="kboard-default-cut-strings">
@@ -139,10 +139,10 @@
 							<span class="contents-item kboard-view"><?php echo __('Views', 'kboard')?> <?php echo $content->view?></span>
 						</div>
 					</td>
-					<td class="kboard-list-user"><?php echo apply_filters('kboard_user_display', $content->member_display, $content->member_uid, $content->member_display, 'kboard', $boardBuilder)?></td>
+					<!-- <td class="kboard-list-user"><?php echo apply_filters('kboard_user_display', $content->member_display, $content->member_uid, $content->member_display, 'kboard', $boardBuilder)?></td> -->
 					<td class="kboard-list-date"><?php echo $content->getDate()?></td>
-					<td class="kboard-list-vote"><?php echo $content->vote?></td>
-					<td class="kboard-list-view"><?php echo $content->view?></td>
+					<!-- <td class="kboard-list-vote"><?php echo $content->vote?></td> -->
+					<!-- <td class="kboard-list-view"><?php echo $content->view?></td> -->
 				</tr>
 				<?php $boardBuilder->builderReply($content->uid)?>
 				<?php endwhile?>
@@ -160,7 +160,7 @@
 	<!-- 페이징 끝 -->
 	
 	<!-- 검색폼 시작 -->
-	<div class="kboard-search">
+	<!-- <div class="kboard-search">
 		<form id="kboard-search-form-<?php echo $board->id?>" method="get" action="<?php echo $url->toString()?>">
 			<?php echo $url->set('pageid', '1')->set('target', '')->set('keyword', '')->set('mod', 'list')->toInput()?>
 			
@@ -173,7 +173,7 @@
 			<input type="text" name="keyword" value="<?php echo kboard_keyword()?>">
 			<button type="submit" class="kboard-default-button-small"><?php echo __('Search', 'kboard')?></button>
 		</form>
-	</div>
+	</div> -->
 	<!-- 검색폼 끝 -->
 	
 	<?php if($board->isWriter()):?>
@@ -184,7 +184,7 @@
 	<!-- 버튼 끝 -->
 	<?php endif?>
 	
-	<div class="kboard-default-poweredby">
+	<!-- <div class="kboard-default-poweredby">
 		<a href="http://www.cosmosfarm.com/products/kboard" onclick="window.open(this.href);return false;" title="<?php echo __('KBoard is the best community software available for WordPress', 'kboard')?>">Powered by KBoard</a>
-	</div>
+	</div> -->
 </div>

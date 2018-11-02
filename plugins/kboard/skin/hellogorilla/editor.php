@@ -129,13 +129,13 @@
 		
 		<div class="kboard-attr-row">
 			<label class="attr-name" for="kboard-select-wordpress-search"><?php echo __('WP Search', 'kboard')?></label>
-			<div class="attr-value">
+			<!-- <div class="attr-value">
 				<select id="kboard-select-wordpress-search" name="wordpress_search">
 					<option value="1"<?php if($content->search == '1'):?> selected<?php endif?>><?php echo __('Public', 'kboard')?></option>
 					<option value="2"<?php if($content->search == '2'):?> selected<?php endif?>><?php echo __('Only title (secret document)', 'kboard')?></option>
 					<option value="3"<?php if($content->search == '3'):?> selected<?php endif?>><?php echo __('Exclusion', 'kboard')?></option>
 				</select>
-			</div>
+			</div> -->
 		</div>
 		
 		<div class="kboard-control">

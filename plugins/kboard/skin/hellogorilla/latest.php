@@ -25,3 +25,5 @@
 		</tbody>
 	</table>
 </div>
+
+<a href="<?php echo $board_url?>">+더보기</a>
