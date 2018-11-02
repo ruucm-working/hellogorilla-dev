@@ -92,5 +92,14 @@ injectGlobal`
   color: #231f20;
   height: 144px;
   }
+  .program-info {
+  font-size: 14px;
+  line-height: 1.71;
+  color: #231f20;
+  text-align:left;
+    .program-info-bold {
+      font-weight: 500;
+    }
+  }
 
 `;
