@@ -374,9 +374,11 @@ function login( $param ) {
 	);
 
 	$user = wp_signon( $creds, false );
-	if ( is_wp_error( $user ) ) {
-			echo $user->get_error_message();
-	}
+	logw('$user : ');
+	logw_a($user);
+	// if ( is_wp_error( $user ) ) {
+	// 		return $user->get_error_message();
+	// }
 	return $user;
 }
 function getProtectedValue($obj,$name) {

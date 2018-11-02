@@ -1,0 +1,211 @@
+$user : 
+WP_Error Object
+(
+    [errors] => Array
+        (
+            [incorrect_password] => Array
+                (
+                    [0] => <strong>오류</strong>: 사용자명 <strong>test1</strong>에 대한 비밀번호가 틀립니다. <a href="http://d-hellogorilla.test/my-account/lost-password/">암호를 분실하셨나요?</a>
+                )
+
+        )
+
+    [error_data] => Array
+        (
+        )
+
+)
+
+$user : 
+WP_Error Object
+(
+    [errors] => Array
+        (
+            [incorrect_password] => Array
+                (
+                    [0] => <strong>오류</strong>: 사용자명 <strong>test1</strong>에 대한 비밀번호가 틀립니다. <a href="http://d-hellogorilla.test/my-account/lost-password/">암호를 분실하셨나요?</a>
+                )
+
+        )
+
+    [error_data] => Array
+        (
+        )
+
+)
+
+$user : 
+WP_Error Object
+(
+    [errors] => Array
+        (
+            [incorrect_password] => Array
+                (
+                    [0] => <strong>오류</strong>: 사용자명 <strong>test1</strong>에 대한 비밀번호가 틀립니다. <a href="http://d-hellogorilla.test/my-account/lost-password/">암호를 분실하셨나요?</a>
+                )
+
+        )
+
+    [error_data] => Array
+        (
+        )
+
+)
+
+$user : 
+WP_Error Object
+(
+    [errors] => Array
+        (
+            [incorrect_password] => Array
+                (
+                    [0] => <strong>오류</strong>: 사용자명 <strong>test1</strong>에 대한 비밀번호가 틀립니다. <a href="http://d-hellogorilla.test/my-account/lost-password/">암호를 분실하셨나요?</a>
+                )
+
+        )
+
+    [error_data] => Array
+        (
+        )
+
+)
+
+$user : 
+WP_Error Object
+(
+    [errors] => Array
+        (
+            [incorrect_password] => Array
+                (
+                    [0] => <strong>오류</strong>: 사용자명 <strong>test1</strong>에 대한 비밀번호가 틀립니다. <a href="http://d-hellogorilla.test/my-account/lost-password/">암호를 분실하셨나요?</a>
+                )
+
+        )
+
+    [error_data] => Array
+        (
+        )
+
+)
+
+$user : 
+WP_Error Object
+(
+    [errors] => Array
+        (
+            [incorrect_password] => Array
+                (
+                    [0] => <strong>오류</strong>: 사용자명 <strong>test1</strong>에 대한 비밀번호가 틀립니다. <a href="http://d-hellogorilla.test/my-account/lost-password/">암호를 분실하셨나요?</a>
+                )
+
+        )
+
+    [error_data] => Array
+        (
+        )
+
+)
+
+$user : 
+WP_Error Object
+(
+    [errors] => Array
+        (
+            [incorrect_password] => Array
+                (
+                    [0] => <strong>오류</strong>: 사용자명 <strong>test1</strong>에 대한 비밀번호가 틀립니다. <a href="http://d-hellogorilla.test/my-account/lost-password/">암호를 분실하셨나요?</a>
+                )
+
+        )
+
+    [error_data] => Array
+        (
+        )
+
+)
+
+$user : 
+WP_User Object
+(
+    [data] => stdClass Object
+        (
+            [ID] => 3
+            [user_login] => test1
+            [user_pass] => $P$BdgTThZKBzFLDPLX4CKtKgvjB4COBt1
+            [user_nicename] => test1
+            [user_email] => sdaf@asdf.co
+            [user_url] => 
+            [user_registered] => 2018-10-11 16:26:07
+            [user_activation_key] => 
+            [user_status] => 0
+            [display_name] => test1
+        )
+
+    [ID] => 3
+    [caps] => Array
+        (
+            [editor] => 1
+        )
+
+    [cap_key] => wp_capabilities
+    [roles] => Array
+        (
+            [0] => editor
+        )
+
+    [allcaps] => Array
+        (
+            [moderate_comments] => 1
+            [manage_categories] => 1
+            [manage_links] => 1
+            [upload_files] => 1
+            [unfiltered_html] => 1
+            [edit_posts] => 1
+            [edit_others_posts] => 1
+            [edit_published_posts] => 1
+            [publish_posts] => 1
+            [edit_pages] => 1
+            [read] => 1
+            [level_7] => 1
+            [level_6] => 1
+            [level_5] => 1
+            [level_4] => 1
+            [level_3] => 1
+            [level_2] => 1
+            [level_1] => 1
+            [level_0] => 1
+            [edit_others_pages] => 1
+            [edit_published_pages] => 1
+            [publish_pages] => 1
+            [delete_pages] => 1
+            [delete_others_pages] => 1
+            [delete_published_pages] => 1
+            [delete_posts] => 1
+            [delete_others_posts] => 1
+            [delete_published_posts] => 1
+            [delete_private_posts] => 1
+            [edit_private_posts] => 1
+            [read_private_posts] => 1
+            [delete_private_pages] => 1
+            [edit_private_pages] => 1
+            [read_private_pages] => 1
+            [edit_blocks] => 1
+            [edit_others_blocks] => 1
+            [publish_blocks] => 1
+            [read_private_blocks] => 1
+            [read_blocks] => 1
+            [delete_blocks] => 1
+            [delete_private_blocks] => 1
+            [delete_published_blocks] => 1
+            [delete_others_blocks] => 1
+            [edit_private_blocks] => 1
+            [edit_published_blocks] => 1
+            [create_blocks] => 1
+            [copy_posts] => 1
+            [editor] => 1
+        )
+
+    [filter] => 
+    [site_id:WP_User:private] => 1
+)
+

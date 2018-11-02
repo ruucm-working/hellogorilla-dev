@@ -1,31 +1,31 @@
-import React from "react";
+import React from 'react'
 
-import { compose, withState, lifecycle, withHandlers } from "recompose";
-import styled, { css } from "styled-components";
-import { wem, wem2 } from "ruucm-blocks/tools/mixins";
+import { compose, withState, lifecycle, withHandlers } from 'recompose'
+import styled, { css } from 'styled-components'
+import { wem, wem2 } from 'ruucm-blocks/tools/mixins'
 
-import { Field, reduxForm } from "redux-form";
-import { log } from "ruucm-util";
-import validate from "./validate";
-import LoadingSpinner from "../../../shared/LoadingSpinner";
+import { Field, reduxForm } from 'redux-form'
+import { log } from 'ruucm-util'
+import validate from './validate'
+import LoadingSpinner from '../../../shared/LoadingSpinner'
 
-import Find_ID from "../FindID_Temp";
-import FindID_Login from "../FindID_Login_Temp";
+import Find_ID from '../FindID_Temp'
+import FindID_Login from '../FindID_Login_Temp'
 
-import Find_Password from "../FindPassword_Temp";
-import ResetPassword from "../ResetPassword_Temp";
+import Find_Password from '../FindPassword_Temp'
+import ResetPassword from '../ResetPassword_Temp'
 
 const Wrap = styled.div`
   margin-top: ${wem2(96)};
   margin-left: ${wem2(480)};
   margin-right: ${wem2(480)};
-`;
+`
 const Title = styled.h1`
   text-align: center;
   font-size: ${wem2(24)};
   color: #231f20;
   font-weight: 500;
-`;
+`
 
 const EmailField = styled.input`
   margin-top: ${wem2(40)};
@@ -37,7 +37,7 @@ const EmailField = styled.input`
   padding-left: ${wem2(20)};
   font-size: ${wem2(14)};
   background-color: #ffffff;
-`;
+`
 const PasswordField = styled.input`
   width: ${wem2(480)};
   height: ${wem2(52)};
@@ -48,19 +48,19 @@ const PasswordField = styled.input`
   padding-left: ${wem2(20)};
   font-size: ${wem2(14)};
   background-color: #ffffff;
-`;
+`
 
 const LoginButtons = styled.div`
   margin-top: ${wem2(20)};
-`;
+`
 const ErrorWrapper = styled.div`
   color: #ee4230;
-`;
+`
 
 const CommonButtonStyle = styled.button`
   text-decoration: none;
   border-color: white;
-`;
+`
 
 const LoginButton = styled(CommonButtonStyle)`
   width: ${wem2(480)};
@@ -70,12 +70,12 @@ const LoginButton = styled(CommonButtonStyle)`
   font-size: ${wem2(14)};
   color: #ffffff;
   cursor: pointer;
-`;
+`
 
 const Bottom = styled.div`
   margin-top: ${wem2(48)};
   text-align: center;
-`;
+`
 const FindID = styled.span`
   font-size: ${wem2(13)};
   color: #231f20;
@@ -84,7 +84,7 @@ const FindID = styled.span`
   :hover {
     color: #805de9;
   }
-`;
+`
 const FindPassword = styled.span`
   font-size: ${wem2(13)};
   color: #231f20;
@@ -93,12 +93,12 @@ const FindPassword = styled.span`
   :hover {
     color: #805de9;
   }
-`;
+`
 const SignupButton = styled(CommonButtonStyle)`
   font-size: ${wem2(13)};
   color: #231f20;
   cursor: pointer;
-  font-family: "NanumSquareRound", sans-serif;
+  font-family: 'NanumSquareRound', sans-serif;
   font-weight: 500 !important;
   background: white;
   padding: 0;
@@ -106,40 +106,40 @@ const SignupButton = styled(CommonButtonStyle)`
     color: #805de9;
   }
   ${props => props.direactLogin && css``};
-`;
+`
 const Bar = styled.span`
   font-size: ${wem2(13)};
   color: #231f20;
   margin-left: ${wem2(16)};
   margin-right: ${wem2(16)};
-`;
+`
 
-const Info = styled.div``;
-const UserEmail = styled.div``;
-const HelloText = styled.div``;
+const Info = styled.div``
+const UserEmail = styled.div``
+const HelloText = styled.div``
 
 const emailField = ({
   input,
   label,
   placeholder,
   type,
-  meta: { touched, error }
+  meta: { touched, error },
 }) => (
   <div>
     <EmailField {...input} placeholder={placeholder} type={type} />
   </div>
-);
+)
 const passwordField = ({
   input,
   label,
   placeholder,
   type,
-  meta: { touched, error }
+  meta: { touched, error },
 }) => (
   <div>
     <PasswordField {...input} placeholder={placeholder} type={type} />
   </div>
-);
+)
 
 const LoginForm = ({
   // from parent
@@ -170,9 +170,11 @@ const LoginForm = ({
           onSubmit={handleSubmit(values => {
             if (validate(values))
               return wpLogin(values, res => {
-                alert("로그인 성공");
-                window.location = "/";
-              });
+                if (res) {
+                  alert('환영 합니다')
+                  window.location = '/'
+                }
+              })
           })}
         >
           <div className="input-fields">
@@ -207,7 +209,7 @@ const LoginForm = ({
                 onClick={() => back()}
                 direactLogin={direactLogin}
               >
-                {direactLogin ? "뒤로" : "가입하기"}
+                {direactLogin ? '뒤로' : '가입하기'}
               </SignupButton>
             </Bottom>
           </LoginButtons>
@@ -218,14 +220,14 @@ const LoginForm = ({
       {/* <Find_Password /> */}
       <ResetPassword />
     </div>
-  );
-};
+  )
+}
 
 // Component enhancer
-const enhance = compose();
+const enhance = compose()
 // withState('submitSuccessed', 'setsubmitSuccess', '')
 export default enhance(
   reduxForm({
-    form: "LOGIN_FORM"
+    form: 'LOGIN_FORM',
   })(LoginForm)
-);
+)

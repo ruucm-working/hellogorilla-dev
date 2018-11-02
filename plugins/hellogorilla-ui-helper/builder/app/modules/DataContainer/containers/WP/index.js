@@ -201,11 +201,9 @@ const enhance = compose(
         })
         .then(res => {
           afterSuccess(res)
-          // dispatch(getDatas(props.wcType + '_' + props.sort, res))
         })
         .catch(err => {
-          log('err', err)
-          afterSuccess(false)
+          alert('에러 - ' + err.code)
         })
     },
     wpLogout: props => afterSuccess => {
