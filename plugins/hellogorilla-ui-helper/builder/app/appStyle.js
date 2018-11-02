@@ -1,20 +1,20 @@
-import { injectGlobal } from "styled-components";
+import { injectGlobal } from 'styled-components'
 
-import normalize from "ruucm-blocks/libs/normalize";
+import normalize from 'ruucm-blocks/libs/normalize'
 
-import NanumSquare from "ruucm-blocks/css-patterns/fonts/NanumSquare";
-import Montserrat from "ruucm-blocks/css-patterns/fonts/Montserrat";
-import NanumMyeongjo from "ruucm-blocks/css-patterns/fonts/NanumMyeongjo";
-import HarborMagazineIcon from "ruucm-blocks/css-patterns/icons/HarborMagazineIcon";
-import HarborSchoolIcon from "ruucm-blocks/css-patterns/icons/HarborSchoolIcon";
-import PortfolioClassIcon from "ruucm-blocks/css-patterns/icons/PortfolioClassIcon";
-import HelloGorillaIcon from "ruucm-blocks/css-patterns/icons/HelloGorillaIcon";
+import NanumSquare from 'ruucm-blocks/css-patterns/fonts/NanumSquare'
+import Montserrat from 'ruucm-blocks/css-patterns/fonts/Montserrat'
+import NanumMyeongjo from 'ruucm-blocks/css-patterns/fonts/NanumMyeongjo'
+import HarborMagazineIcon from 'ruucm-blocks/css-patterns/icons/HarborMagazineIcon'
+import HarborSchoolIcon from 'ruucm-blocks/css-patterns/icons/HarborSchoolIcon'
+import PortfolioClassIcon from 'ruucm-blocks/css-patterns/icons/PortfolioClassIcon'
+import HelloGorillaIcon from 'ruucm-blocks/css-patterns/icons/HelloGorillaIcon'
 
-import { wem2 } from "ruucm-blocks/tools/mixins";
+import { wem2 } from 'ruucm-blocks/tools/mixins'
 
-import { checkoutStyle, payaginStyle, thankStyle } from "./WooCommerceStyles";
-import aboutStyle from "./aboutStyle";
-import programStyle from "./programStyle";
+import { checkoutStyle, payaginStyle, thankStyle } from './WooCommerceStyles'
+import aboutStyle from './VCStyles/aboutStyle'
+import programStyle from './programStyle'
 
 // App Styles
 injectGlobal`
@@ -26,7 +26,6 @@ injectGlobal`
   /* Icons */
   ${HelloGorillaIcon}
   
-  ${aboutStyle}
   ${programStyle}
   /* Body Styles */
 
@@ -220,4 +219,8 @@ injectGlobal`
     float: right; */
   }
 
-`;
+  /* Visual Composer Styles */
+  ${aboutStyle}
+
+
+`
