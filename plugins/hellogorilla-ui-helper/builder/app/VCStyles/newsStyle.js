@@ -15,12 +15,6 @@ const newsStyle = css`
     font-size: ${wem2(15)};
     color: #231f20;
   }
-  thead {
-    display: none;
-  }
-  tbody {
-    margin-top: ${wem2(48)};
-  }
 `;
 
 export default newsStyle;
