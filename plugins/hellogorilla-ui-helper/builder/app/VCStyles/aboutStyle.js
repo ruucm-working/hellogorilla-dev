@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
 
-import { wem, center } from 'ruucm-blocks/tools/mixins'
+import { wem, wem2, center } from 'ruucm-blocks/tools/mixins'
 import media from 'ruucm-blocks/tools/media'
 
 const style = css`

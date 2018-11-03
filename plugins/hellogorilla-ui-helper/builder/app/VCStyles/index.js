@@ -1,3 +1,4 @@
-import aboutStyle from './aboutStyle'
+import aboutStyle from "./aboutStyle";
+import programStyle from "./programStyle";
 
-export { aboutStyle }
+export { aboutStyle, programStyle };
