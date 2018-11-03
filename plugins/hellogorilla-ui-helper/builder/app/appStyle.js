@@ -15,6 +15,7 @@ import { wem2 } from "ruucm-blocks/tools/mixins";
 import { checkoutStyle, payaginStyle, thankStyle } from "./WooCommerceStyles";
 import aboutStyle from "./VCStyles/aboutStyle";
 import programStyle from "./VCStyles/programStyle";
+import newsStyle from "./VCStyles/newsStyle";
 
 // App Styles
 injectGlobal`
@@ -224,5 +225,6 @@ injectGlobal`
 
 
   ${programStyle}
+  ${newsStyle}
 
 `;
