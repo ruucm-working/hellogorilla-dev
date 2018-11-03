@@ -15,6 +15,37 @@ const newsStyle = css`
     font-size: ${wem2(15)};
     color: #231f20;
   }
+
+  .kboard-list {
+    margin-top: ${wem2(49)};
+  }
+  table {
+    width: 100%;
+  }
+  thead {
+    display: none;
+  }
+  tr {
+    /* position: relative; */
+  }
+  .kboard-list-notice {
+    /* width: ${wem2(960)}; */
+    height: ${wem2(55)};
+    background-color: #f9f9f9;
+  }
+
+  .kboard-mobile-contents {
+    display: none;
+  }
+  .kboard-list-title {
+    position: relative;
+  }
+  .kboard-default-cut-strings {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: max-content;
+  }
 `;
 
 export default newsStyle;

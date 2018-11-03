@@ -155,7 +155,7 @@ var _media2 = _interopRequireDefault(_media);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // App Styles
-var newsStyle = (0, _styledComponents.css)([".kboard-list-header{margin-left:", ";margin-right:", ";margin-top:", ";}.kboard-total-count{margin-left:", ";font-size:", ";color:#231f20;}"], (0, _mixins.wem2)(240), (0, _mixins.wem2)(240), (0, _mixins.wem2)(96), (0, _mixins.wem2)(48), (0, _mixins.wem2)(15));
+var newsStyle = (0, _styledComponents.css)([".kboard-list-header{margin-left:", ";margin-right:", ";margin-top:", ";}.kboard-total-count{margin-left:", ";font-size:", ";color:#231f20;}.kboard-list{margin-top:", ";}table{width:100%;}thead{display:none;}tr{}.kboard-list-notice{height:", ";background-color:#f9f9f9;}.kboard-mobile-contents{display:none;}.kboard-list-title{position:relative;}.kboard-default-cut-strings{position:absolute;top:50%;transform:translateY(-50%);width:max-content;}"], (0, _mixins.wem2)(240), (0, _mixins.wem2)(240), (0, _mixins.wem2)(96), (0, _mixins.wem2)(48), (0, _mixins.wem2)(15), (0, _mixins.wem2)(49), (0, _mixins.wem2)(55));
 
 exports.default = newsStyle;
 
