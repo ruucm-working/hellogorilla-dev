@@ -39,12 +39,24 @@ const newsStyle = css`
   }
   .kboard-list-title {
     position: relative;
+    font-size: ${wem2(15)};
+    color: #533c97;
   }
   .kboard-default-cut-strings {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: max-content;
+    vertical-align:middle;
+    line-height: 1;
+  }
+  .kboard-list-date {
+    font-size: ${wem2(16)};
+    color: #533c97;
+    float:right;
+    margin-top: ${wem2(20)};
+    /* vertical-align:middle; */
+    line-height: 1;
   }
 `;
 
