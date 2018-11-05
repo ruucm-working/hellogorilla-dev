@@ -32,6 +32,8 @@ const newsStyle = css`
   }
   tr {
     height: ${wem2(55)};
+    border-top: 1px solid #e9e8e8;
+    border-bottom: 1px solid #e9e8e8;
   }
   td {
     color: unset !important;
