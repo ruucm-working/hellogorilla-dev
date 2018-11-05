@@ -84,6 +84,26 @@ const newsStyle = css`
     padding-bottom: ${wem2(20)};
     padding-left: ${wem2(48)};
   }
+  .detail-value {
+  }
+  .kboard-content {
+    height: ${wem2(625)};
+    padding-top: ${wem2(21)};
+    font-size: ${wem2(14)};
+    line-height: 1.86;
+    color: #231f20;
+    border-bottom: 1px solid #e9e8e8;
+  }
+  .content-view {
+    margin-left: ${wem2(48)};
+    margin-right: ${wem2(48)};
+  }
+  .kboard-document-navi {
+    display: none;
+  }
+  .kboard-control {
+    display: none;
+  }
 `;
 
 export default newsStyle;
