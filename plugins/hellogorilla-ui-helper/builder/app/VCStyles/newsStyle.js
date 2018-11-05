@@ -1,4 +1,5 @@
 import { css } from "styled-components";
+import React from "react";
 
 import { wem, wem2, center } from "ruucm-blocks/tools/mixins";
 import media from "ruucm-blocks/tools/media";
@@ -21,17 +22,24 @@ const newsStyle = css`
   }
   table {
     width: 100%;
+    /* color: #231f20; */
   }
   thead {
     display: none;
   }
+  tbody {
+    color: #231f20;
+  }
   tr {
-    /* position: relative; */
+    height: ${wem2(55)};
+  }
+  td {
+    color: unset !important;
   }
   .kboard-list-notice {
-    /* width: ${wem2(960)}; */
     height: ${wem2(55)};
     background-color: #f9f9f9;
+    color: #533c97;
   }
 
   .kboard-mobile-contents {
@@ -40,23 +48,22 @@ const newsStyle = css`
   .kboard-list-title {
     position: relative;
     font-size: ${wem2(15)};
-    color: #533c97;
   }
   .kboard-default-cut-strings {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: max-content;
-    vertical-align:middle;
+    vertical-align: middle;
     line-height: 1;
+    margin-left: ${wem2(48)};
   }
   .kboard-list-date {
     font-size: ${wem2(16)};
-    color: #533c97;
-    float:right;
+    float: right;
     margin-top: ${wem2(20)};
-    /* vertical-align:middle; */
     line-height: 1;
+    margin-right: ${wem2(48)};
   }
 `;
 
