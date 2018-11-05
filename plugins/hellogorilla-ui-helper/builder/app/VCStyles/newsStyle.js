@@ -1,5 +1,4 @@
 import { css } from "styled-components";
-import React from "react";
 
 import { wem, wem2, center } from "ruucm-blocks/tools/mixins";
 import media from "ruucm-blocks/tools/media";
@@ -66,6 +65,24 @@ const newsStyle = css`
     margin-top: ${wem2(20)};
     line-height: 1;
     margin-right: ${wem2(48)};
+  }
+
+  /* New2 css */
+  #kboard-document {
+    margin-left: ${wem2(240)};
+    margin-right: ${wem2(240)};
+    margin-top: ${wem2(96)};
+  }
+  .kboard-title {
+    height: ${wem2(55)};
+    font-size: ${wem2(15)};
+    line-height: 1;
+    color: #231f20;
+    border-top: 1px solid #e9e8e8;
+    border-bottom: 1px solid #e9e8e8;
+    padding-top: ${wem2(20)};
+    padding-bottom: ${wem2(20)};
+    padding-left: ${wem2(48)};
   }
 `;
 
