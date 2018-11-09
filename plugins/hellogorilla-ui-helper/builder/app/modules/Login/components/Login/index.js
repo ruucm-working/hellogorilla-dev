@@ -184,7 +184,7 @@ const LoginForm = ({
                 if (validate(values))
                   return wpLogin(values, res => {
                     if (res) {
-                      alert('환영 합니다')
+                      alert('로그인에 성공 하였습니다')
                       window.location = '/'
                     }
                   })
