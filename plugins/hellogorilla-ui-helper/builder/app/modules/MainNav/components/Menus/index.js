@@ -58,7 +58,7 @@ const Right = styled.div`
   transform: translateY(-50%);
   right: 0;
   .hellogorilla-icon-cart-61 {
-    margin-left: 40px;
+    margin-left: ${wem2(40)};
     font-size: 27px;
     vertical-align: middle;
     cursor: pointer;
@@ -75,7 +75,7 @@ const MenuWrapper = styled.div`
   display: inline-block;
 `;
 const MenuItem = styled.a`
-  padding-left: 40px;
+  padding-left: ${wem2(40)};
   cursor: pointer;
   :hover {
     color: #0fb780;
@@ -90,7 +90,7 @@ const MenuItem = styled.a`
 `;
 
 const MainLogo = styled.a`
-  padding-left: 40px;
+  padding-left: ${wem2(40)};
 `;
 
 const LoginMenuItem = styled.div`
@@ -98,7 +98,7 @@ const LoginMenuItem = styled.div`
   position: relative;
   .cosmosfarm-members-loginout-link {
     display: inline-block;
-    padding-left: 40px;
+    padding-left: ${wem2(40)};
     :hover {
       color: #0fb780;
     }
@@ -120,7 +120,6 @@ const LoginMenuItem = styled.div`
   } */
   .hellogorilla-cart-count {
     position: absolute;
-    padding-left: unset;
     font-size: 10px;
     width: 14px;
     height: 14px;
@@ -128,7 +127,7 @@ const LoginMenuItem = styled.div`
     text-align: center;
     color: #533c97;
     border-radius: 50%;
-    left: 59px;
+    margin-left: ${wem2(59)};
     top: -22px;
   }
   .cosmosfarm-members-account-links {
@@ -140,7 +139,7 @@ const LoginMenuItem = styled.div`
 `;
 
 const CartIcon = styled.span`
-  padding-left: 40px;
+  padding-left: ${wem2(40)};
   display: inline-block;
 `;
 
@@ -173,7 +172,6 @@ const Mobile = styled.div`
     position: fixed;
     z-index: 2;
     width: 100vw;
-
     height: 70px;
     background: #efede2;
     box-shadow: 0px 4px 23.8px 0.2px rgba(0, 0, 0, 0.18);
@@ -266,7 +264,6 @@ const Menus = ({ me, wpLogout, isActivePage, ...props }) => {
                 href="/"
                 className="beerspick beerspick-beerspick_logo_header"
               /> */}
-
               <LoginMenuItem
                 dangerouslySetInnerHTML={{ __html: props.shortcodeChild }}
               />

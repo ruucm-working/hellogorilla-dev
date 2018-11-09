@@ -33,6 +33,10 @@ const newsStyle = css`
     height: ${wem2(55)};
     border-top: 1px solid #e9e8e8;
     border-bottom: 1px solid #e9e8e8;
+    :hover {
+      background-color: #533c97;
+      color: white;
+    }
   }
   td {
     color: unset !important;
