@@ -5725,20 +5725,25 @@ var _taggedTemplateLiteral2 = __webpack_require__(/*! babel-runtime/helpers/tagg
 
 var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  /**\n  *  NanumMyeongjo ExtraBold\n  */\n  @font-face {\n    font-family: \'NanumMyeongjoWeb\';\n    font-style: normal;\n    font-weight: 900;\n    src: local(\'NanumMyeongjoExtraBold\'),\n      url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'),\n      url(', ') format(\'truetype\');\n  }\n'], ['\n  /**\n  *  NanumMyeongjo ExtraBold\n  */\n  @font-face {\n    font-family: \'NanumMyeongjoWeb\';\n    font-style: normal;\n    font-weight: 900;\n    src: local(\'NanumMyeongjoExtraBold\'),\n      url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'),\n      url(', ') format(\'truetype\');\n  }\n']);
-// import fontLightTTF from './fontFiles/NanumMyeongjoLight.ttf'
-// import fontLightWOFF from './fontFiles/NanumMyeongjoLight.woff'
-// import fontLightWOFF2 from './fontFiles/NanumMyeongjoLight.woff'
-
-// import fontRegularTTF from './fontFiles/NanumMyeongjoRegular.ttf'
-// import fontRegularWOFF from './fontFiles/NanumMyeongjoRegular.woff'
-// import fontRegularWOFF2 from './fontFiles/NanumMyeongjoRegular.woff'
-
-// import fontBoldTTF from './fontFiles/NanumMyeongjoBold.ttf'
-// import fontBoldWOFF from './fontFiles/NanumMyeongjoBold.woff'
-// import fontBoldWOFF2 from './fontFiles/NanumMyeongjoBold.woff'
+var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  /**\n  *  NanumMyeongjo\n  */\n  @font-face {\n    font-family: \'NanumMyeongjoWeb\';\n    font-style: normal;\n    font-weight: 400;\n    src: local(\'NanumMyeongjoRegular\'), url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'),\n      url(', ') format(\'truetype\');\n  }\n  /**\n  *  NanumMyeongjo Bold\n  */\n  @font-face {\n    font-family: \'NanumMyeongjoWeb\';\n    font-style: normal;\n    font-weight: 700;\n    src: local(\'NanumMyeongjoBold\'), url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'),\n      url(', ') format(\'truetype\');\n  }\n\n  /**\n  *  NanumMyeongjo ExtraBold\n  */\n  @font-face {\n    font-family: \'NanumMyeongjoWeb\';\n    font-style: normal;\n    font-weight: 900;\n    src: local(\'NanumMyeongjoExtraExtraBold\'),\n      url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'),\n      url(', ') format(\'truetype\');\n  }\n'], ['\n  /**\n  *  NanumMyeongjo\n  */\n  @font-face {\n    font-family: \'NanumMyeongjoWeb\';\n    font-style: normal;\n    font-weight: 400;\n    src: local(\'NanumMyeongjoRegular\'), url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'),\n      url(', ') format(\'truetype\');\n  }\n  /**\n  *  NanumMyeongjo Bold\n  */\n  @font-face {\n    font-family: \'NanumMyeongjoWeb\';\n    font-style: normal;\n    font-weight: 700;\n    src: local(\'NanumMyeongjoBold\'), url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'),\n      url(', ') format(\'truetype\');\n  }\n\n  /**\n  *  NanumMyeongjo ExtraBold\n  */\n  @font-face {\n    font-family: \'NanumMyeongjoWeb\';\n    font-style: normal;\n    font-weight: 900;\n    src: local(\'NanumMyeongjoExtraExtraBold\'),\n      url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'),\n      url(', ') format(\'truetype\');\n  }\n']);
 
 var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
+
+var _NanumMyeongjo = __webpack_require__(/*! ./fontFiles/NanumMyeongjo.ttf */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjo.ttf");
+
+var _NanumMyeongjo2 = _interopRequireDefault(_NanumMyeongjo);
+
+var _NanumMyeongjo3 = __webpack_require__(/*! ./fontFiles/NanumMyeongjo.woff */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjo.woff");
+
+var _NanumMyeongjo4 = _interopRequireDefault(_NanumMyeongjo3);
+
+var _NanumMyeongjoBold = __webpack_require__(/*! ./fontFiles/NanumMyeongjoBold.ttf */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoBold.ttf");
+
+var _NanumMyeongjoBold2 = _interopRequireDefault(_NanumMyeongjoBold);
+
+var _NanumMyeongjoBold3 = __webpack_require__(/*! ./fontFiles/NanumMyeongjoBold.woff */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoBold.woff");
+
+var _NanumMyeongjoBold4 = _interopRequireDefault(_NanumMyeongjoBold3);
 
 var _NanumMyeongjoExtraBold = __webpack_require__(/*! ./fontFiles/NanumMyeongjoExtraBold.ttf */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoExtraBold.ttf");
 
@@ -5750,48 +5755,53 @@ var _NanumMyeongjoExtraBold4 = _interopRequireDefault(_NanumMyeongjoExtraBold3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var NanumMyeongjo = (0, _styledComponents.css)(_templateObject, _NanumMyeongjoExtraBold4.default, _NanumMyeongjoExtraBold4.default, _NanumMyeongjoExtraBold2.default);
+var NanumMyeongjo = (0, _styledComponents.css)(_templateObject, _NanumMyeongjo4.default, _NanumMyeongjo4.default, _NanumMyeongjo2.default, _NanumMyeongjoBold4.default, _NanumMyeongjoBold4.default, _NanumMyeongjoExtraBold2.default, _NanumMyeongjoExtraBold4.default, _NanumMyeongjoExtraBold4.default, _NanumMyeongjoExtraBold2.default);
 
 exports.default = NanumMyeongjo;
 
-/**
- *  NanumMyeongjo Light
- */
-/* @font-face {
-    font-family: 'NanumMyeongjoWeb';
-    font-style: normal;
-    font-weight: 100;
-    src: local('NanumMyeongjoLight'), url(${fontLightWOFF2}) format('woff2'),
-      url(${fontLightWOFF}) format('woff'),
-      url(${fontLightTTF}) format('truetype'),
-      url(${fontLightEOT}) format('embedded-opentype');
-  } */
+/***/ }),
 
-/**
- *  NanumMyeongjo Regular
- */
-/* @font-face {
-    font-family: 'NanumMyeongjoWeb';
-    font-style: normal;
-    font-weight: 400;
-    src: local('NanumMyeongjoRegular'), url(${fontRegularWOFF2}) format('woff2'),
-      url(${fontRegularWOFF}) format('woff'),
-      url(${fontRegularTTF}) format('truetype'),
-      url(${fontRegularEOT}) format('embedded-opentype');
-  } */
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjo.ttf":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjo.ttf ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-/**
- *  NanumMyeongjo Bold
- */
-/* @font-face {
-    font-family: 'NanumMyeongjoWeb';
-    font-style: normal;
-    font-weight: 400;
-    src: local('NanumMyeongjoBold'), url(${fontBoldWOFF2}) format('woff2'),
-      url(${fontBoldWOFF}) format('woff'),
-      url(${fontBoldTTF}) format('truetype'),
-      url(${fontBoldEOT}) format('embedded-opentype');
-  } */
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/a61eb06dc8ec6bd8a44768a5d4022e82.ttf";
+
+/***/ }),
+
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjo.woff":
+/*!*************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjo.woff ***!
+  \*************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/4411820810b6c6a6ccdd19e3ad1e1465.woff";
+
+/***/ }),
+
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoBold.ttf":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoBold.ttf ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/feb26d095d82c07952541c2098c74b75.ttf";
+
+/***/ }),
+
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoBold.woff":
+/*!*****************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoBold.woff ***!
+  \*****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/215eac2eaffc8a300c9fe871227b2a32.woff";
 
 /***/ }),
 
@@ -6395,7 +6405,7 @@ var _taggedTemplateLiteral2 = __webpack_require__(/*! babel-runtime/helpers/tagg
 
 var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  .hellogorilla {\n    /* use !important to prevent issues with browser extensions that change fonts */\n    font-family: \'hellogorilla\' !important;\n    speak: none;\n    font-style: normal;\n    font-weight: normal;\n    font-variant: normal;\n    text-transform: none;\n    line-height: 1;\n\n    /* Better Font Rendering =========== */\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n\n  .hellogorilla-icon-search-24:before {\n    content: \'\\e911\';\n    color: #fff;\n  }\n  .hellogorilla-a-s-p-image:before {\n    content: \'\\e912\';\n    color: #fff;\n  }\n  .hellogorilla-about-image:before {\n    content: \'\\e913\';\n    color: #fefefe;\n  }\n  .hellogorilla-cart:before {\n    content: \'\\e914\';\n    color: #fff;\n  }\n  .hellogorilla-slider-not-selected:before {\n    content: \'\\e915\';\n    color: #fff;\n  }\n  .hellogorilla-slider-selected:before {\n    content: \'\\e916\';\n    color: #533c97;\n  }\n  .hellogorilla-arrow-left-selected:before {\n    content: \'\\e900\';\n    color: #805de9;\n  }\n  .hellogorilla-arrow-left:before {\n    content: \'\\e901\';\n    color: #e9e8e8;\n  }\n  .hellogorilla-arrow-right-selected:before {\n    content: \'\\e902\';\n    color: #805de9;\n  }\n  .hellogorilla-arrow-right:before {\n    content: \'\\e903\';\n    color: #e9e8e8;\n  }\n  .hellogorilla-icon-cart-61:before {\n    content: \'\\e904\';\n    color: #fff;\n  }\n  .hellogorilla-icon-facebook-24 .path1:before {\n    content: \'\\e905\';\n    color: rgb(35, 31, 32);\n  }\n  .hellogorilla-icon-facebook-24 .path2:before {\n    content: \'\\e906\';\n    margin-left: -1em;\n    color: rgb(255, 255, 255);\n  }\n  .hellogorilla-icon-facebook-hover-24 .path1:before {\n    content: \'\\e907\';\n    color: rgb(128, 93, 233);\n  }\n  .hellogorilla-icon-facebook-hover-24 .path2:before {\n    content: \'\\e908\';\n    margin-left: -1em;\n    color: rgb(255, 255, 255);\n  }\n  .hellogorilla-icon-instagram-24:before {\n    content: \'\\e909\';\n  }\n  .hellogorilla-icon-instagram-hover-24:before {\n    content: \'\\e90a\';\n    color: #805de9;\n  }\n  .hellogorilla-icon-play:before {\n    content: \'\\e90b\';\n    color: #805de9;\n  }\n  .hellogorilla-icon-website-32:before {\n    content: \'\\e90c\';\n  }\n  .hellogorilla-icon-website-hover-32:before {\n    content: \'\\e90d\';\n    color: #805de9;\n  }\n  .hellogorilla-logo .path1:before {\n    content: \'\\e90e\';\n    color: rgb(83, 60, 151);\n  }\n  .hellogorilla-logo .path2:before {\n    content: \'\\e90f\';\n    margin-left: -2.376953125em;\n    color: rgb(254, 254, 254);\n  }\n  .hellogorilla-logo .path3:before {\n    content: \'\\e910\';\n    margin-left: -2.376953125em;\n    color: rgb(254, 254, 254);\n  }\n'], ['\n  .hellogorilla {\n    /* use !important to prevent issues with browser extensions that change fonts */\n    font-family: \'hellogorilla\' !important;\n    speak: none;\n    font-style: normal;\n    font-weight: normal;\n    font-variant: normal;\n    text-transform: none;\n    line-height: 1;\n\n    /* Better Font Rendering =========== */\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n\n  .hellogorilla-icon-search-24:before {\n    content: \'\\\\e911\';\n    color: #fff;\n  }\n  .hellogorilla-a-s-p-image:before {\n    content: \'\\\\e912\';\n    color: #fff;\n  }\n  .hellogorilla-about-image:before {\n    content: \'\\\\e913\';\n    color: #fefefe;\n  }\n  .hellogorilla-cart:before {\n    content: \'\\\\e914\';\n    color: #fff;\n  }\n  .hellogorilla-slider-not-selected:before {\n    content: \'\\\\e915\';\n    color: #fff;\n  }\n  .hellogorilla-slider-selected:before {\n    content: \'\\\\e916\';\n    color: #533c97;\n  }\n  .hellogorilla-arrow-left-selected:before {\n    content: \'\\\\e900\';\n    color: #805de9;\n  }\n  .hellogorilla-arrow-left:before {\n    content: \'\\\\e901\';\n    color: #e9e8e8;\n  }\n  .hellogorilla-arrow-right-selected:before {\n    content: \'\\\\e902\';\n    color: #805de9;\n  }\n  .hellogorilla-arrow-right:before {\n    content: \'\\\\e903\';\n    color: #e9e8e8;\n  }\n  .hellogorilla-icon-cart-61:before {\n    content: \'\\\\e904\';\n    color: #fff;\n  }\n  .hellogorilla-icon-facebook-24 .path1:before {\n    content: \'\\\\e905\';\n    color: rgb(35, 31, 32);\n  }\n  .hellogorilla-icon-facebook-24 .path2:before {\n    content: \'\\\\e906\';\n    margin-left: -1em;\n    color: rgb(255, 255, 255);\n  }\n  .hellogorilla-icon-facebook-hover-24 .path1:before {\n    content: \'\\\\e907\';\n    color: rgb(128, 93, 233);\n  }\n  .hellogorilla-icon-facebook-hover-24 .path2:before {\n    content: \'\\\\e908\';\n    margin-left: -1em;\n    color: rgb(255, 255, 255);\n  }\n  .hellogorilla-icon-instagram-24:before {\n    content: \'\\\\e909\';\n  }\n  .hellogorilla-icon-instagram-hover-24:before {\n    content: \'\\\\e90a\';\n    color: #805de9;\n  }\n  .hellogorilla-icon-play:before {\n    content: \'\\\\e90b\';\n    color: #805de9;\n  }\n  .hellogorilla-icon-website-32:before {\n    content: \'\\\\e90c\';\n  }\n  .hellogorilla-icon-website-hover-32:before {\n    content: \'\\\\e90d\';\n    color: #805de9;\n  }\n  .hellogorilla-logo .path1:before {\n    content: \'\\\\e90e\';\n    color: rgb(83, 60, 151);\n  }\n  .hellogorilla-logo .path2:before {\n    content: \'\\\\e90f\';\n    margin-left: -2.376953125em;\n    color: rgb(254, 254, 254);\n  }\n  .hellogorilla-logo .path3:before {\n    content: \'\\\\e910\';\n    margin-left: -2.376953125em;\n    color: rgb(254, 254, 254);\n  }\n']);
+var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  .hellogorilla {\n    /* use !important to prevent issues with browser extensions that change fonts */\n    font-family: \'hellogorilla\' !important;\n    speak: none;\n    font-style: normal;\n    font-weight: normal;\n    font-variant: normal;\n    text-transform: none;\n    line-height: 1;\n\n    /* Better Font Rendering =========== */\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n\n  .hellogorilla-youtube:before {\n    content: \'\\e914\';\n  }\n  .hellogorilla-icon-search-24:before {\n    content: \'\\e911\';\n    color: #fff;\n  }\n  .hellogorilla-a-s-p-image:before {\n    content: \'\\e912\';\n    color: #fff;\n  }\n  .hellogorilla-about-image:before {\n    content: \'\\e913\';\n    color: #fefefe;\n  }\n  .hellogorilla-slider-not-selected:before {\n    content: \'\\e915\';\n    color: #fff;\n  }\n  .hellogorilla-slider-selected:before {\n    content: \'\\e916\';\n    color: #533c97;\n  }\n  .hellogorilla-arrow-left-selected:before {\n    content: \'\\e900\';\n    color: #805de9;\n  }\n  .hellogorilla-arrow-left:before {\n    content: \'\\e901\';\n    color: #e9e8e8;\n  }\n  .hellogorilla-arrow-right-selected:before {\n    content: \'\\e902\';\n    color: #805de9;\n  }\n  .hellogorilla-arrow-right:before {\n    content: \'\\e903\';\n    color: #e9e8e8;\n  }\n  .hellogorilla-icon-cart-61:before {\n    content: \'\\e904\';\n    color: #fff;\n  }\n  .hellogorilla-icon-facebook-24 .path1:before {\n    content: \'\\e905\';\n    color: rgb(35, 31, 32);\n  }\n  .hellogorilla-icon-facebook-24 .path2:before {\n    content: \'\\e906\';\n    margin-left: -1em;\n    color: rgb(255, 255, 255);\n  }\n  .hellogorilla-icon-facebook-hover-24 .path1:before {\n    content: \'\\e907\';\n    color: rgb(128, 93, 233);\n  }\n  .hellogorilla-icon-facebook-hover-24 .path2:before {\n    content: \'\\e908\';\n    margin-left: -1em;\n    color: rgb(255, 255, 255);\n  }\n  .hellogorilla-icon-instagram-24:before {\n    content: \'\\e909\';\n  }\n  .hellogorilla-icon-instagram-hover-24:before {\n    content: \'\\e90a\';\n    color: #805de9;\n  }\n  .hellogorilla-icon-play:before {\n    content: \'\\e90b\';\n    color: #805de9;\n  }\n  .hellogorilla-icon-website-32:before {\n    content: \'\\e90c\';\n  }\n  .hellogorilla-icon-website-hover-32:before {\n    content: \'\\e90d\';\n    color: #805de9;\n  }\n  .hellogorilla-logo .path1:before {\n    content: \'\\e90e\';\n    color: rgb(83, 60, 151);\n  }\n  .hellogorilla-logo .path2:before {\n    content: \'\\e90f\';\n    margin-left: -2.376953125em;\n    color: rgb(254, 254, 254);\n  }\n  .hellogorilla-logo .path3:before {\n    content: \'\\e910\';\n    margin-left: -2.376953125em;\n    color: rgb(254, 254, 254);\n  }\n'], ['\n  .hellogorilla {\n    /* use !important to prevent issues with browser extensions that change fonts */\n    font-family: \'hellogorilla\' !important;\n    speak: none;\n    font-style: normal;\n    font-weight: normal;\n    font-variant: normal;\n    text-transform: none;\n    line-height: 1;\n\n    /* Better Font Rendering =========== */\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n\n  .hellogorilla-youtube:before {\n    content: \'\\\\e914\';\n  }\n  .hellogorilla-icon-search-24:before {\n    content: \'\\\\e911\';\n    color: #fff;\n  }\n  .hellogorilla-a-s-p-image:before {\n    content: \'\\\\e912\';\n    color: #fff;\n  }\n  .hellogorilla-about-image:before {\n    content: \'\\\\e913\';\n    color: #fefefe;\n  }\n  .hellogorilla-slider-not-selected:before {\n    content: \'\\\\e915\';\n    color: #fff;\n  }\n  .hellogorilla-slider-selected:before {\n    content: \'\\\\e916\';\n    color: #533c97;\n  }\n  .hellogorilla-arrow-left-selected:before {\n    content: \'\\\\e900\';\n    color: #805de9;\n  }\n  .hellogorilla-arrow-left:before {\n    content: \'\\\\e901\';\n    color: #e9e8e8;\n  }\n  .hellogorilla-arrow-right-selected:before {\n    content: \'\\\\e902\';\n    color: #805de9;\n  }\n  .hellogorilla-arrow-right:before {\n    content: \'\\\\e903\';\n    color: #e9e8e8;\n  }\n  .hellogorilla-icon-cart-61:before {\n    content: \'\\\\e904\';\n    color: #fff;\n  }\n  .hellogorilla-icon-facebook-24 .path1:before {\n    content: \'\\\\e905\';\n    color: rgb(35, 31, 32);\n  }\n  .hellogorilla-icon-facebook-24 .path2:before {\n    content: \'\\\\e906\';\n    margin-left: -1em;\n    color: rgb(255, 255, 255);\n  }\n  .hellogorilla-icon-facebook-hover-24 .path1:before {\n    content: \'\\\\e907\';\n    color: rgb(128, 93, 233);\n  }\n  .hellogorilla-icon-facebook-hover-24 .path2:before {\n    content: \'\\\\e908\';\n    margin-left: -1em;\n    color: rgb(255, 255, 255);\n  }\n  .hellogorilla-icon-instagram-24:before {\n    content: \'\\\\e909\';\n  }\n  .hellogorilla-icon-instagram-hover-24:before {\n    content: \'\\\\e90a\';\n    color: #805de9;\n  }\n  .hellogorilla-icon-play:before {\n    content: \'\\\\e90b\';\n    color: #805de9;\n  }\n  .hellogorilla-icon-website-32:before {\n    content: \'\\\\e90c\';\n  }\n  .hellogorilla-icon-website-hover-32:before {\n    content: \'\\\\e90d\';\n    color: #805de9;\n  }\n  .hellogorilla-logo .path1:before {\n    content: \'\\\\e90e\';\n    color: rgb(83, 60, 151);\n  }\n  .hellogorilla-logo .path2:before {\n    content: \'\\\\e90f\';\n    margin-left: -2.376953125em;\n    color: rgb(254, 254, 254);\n  }\n  .hellogorilla-logo .path3:before {\n    content: \'\\\\e910\';\n    margin-left: -2.376953125em;\n    color: rgb(254, 254, 254);\n  }\n']);
 
 var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
 
@@ -6417,7 +6427,7 @@ exports.default = Style;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/6a0d93b5b25425aff072a596aa4d6d05.eot";
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/1f168ab65a38c245cf6e97bd7d2173d0.eot";
 
 /***/ }),
 
@@ -6428,7 +6438,7 @@ module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/6a0d
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/8adcffbdd8496dcf28577ba4ddbbcd5a.svg";
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/eb05c76f3b1e8d948edbb4a8fd8ac356.svg";
 
 /***/ }),
 
@@ -6439,7 +6449,7 @@ module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/8adc
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/1865076fcf28fd61533db3e1e28b8f47.ttf";
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/34f7f843e61af8b132ac4598310e9845.ttf";
 
 /***/ }),
 
@@ -6450,7 +6460,7 @@ module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/1865
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/5679772d7c21a7ff919708b49297a29f.woff";
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/a54b9b73962626eb7cf3fc3562dda7d2.woff";
 
 /***/ }),
 
@@ -6732,7 +6742,7 @@ exports.isTablet = isTablet;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.wem2 = exports.wem = exports.centerIconA = exports.transition = exports.center = undefined;
+exports.mem = exports.fem2 = exports.wem2 = exports.wem = exports.centerIconA = exports.transition = exports.center = undefined;
 
 var _taggedTemplateLiteral2 = __webpack_require__(/*! babel-runtime/helpers/taggedTemplateLiteral */ "./node_modules/babel-runtime/helpers/taggedTemplateLiteral.js");
 
@@ -6772,6 +6782,22 @@ var wem2 = exports.wem2 = function wem2(pxSize) {
   var baseScreenSize = 1440;
 
   if (screen.width > _media.sizes.phone) return pxSize / baseScreenSize * 100 + 'vw';else return pxSize / baseScreenSize * 2.5 * 100 + 'vw';
+};
+
+var fem2 = exports.fem2 = function fem2(pxSize) {
+  var baseScreenSize = 1400;
+
+  if (screen.width > baseScreenSize) return pxSize + 'px';
+  // srceen is bigger than 1400, return original pixel sizes
+  else if (screen.width > _media.sizes.phone) return pxSize / baseScreenSize * 100 + 'vw';else return pxSize / baseScreenSize * 5.181 * 100 + 'vw'; // cnyttan project only
+};
+
+var mem = exports.mem = function mem(pxSize) {
+  var mBaseScreenSize = 375;
+
+  if (screen.width > _media.sizes.tablet) return pxSize + 'px';
+  // srceen is bigger than 1400, return original pixel sizes
+  else return pxSize / mBaseScreenSize * 100 + 'vw'; // cnyttan project only
 };
 
 /***/ }),
