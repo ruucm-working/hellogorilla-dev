@@ -13112,7 +13112,7 @@ input[type="search"],
 input[type="time"], input[type="url"],
 textarea,
 select {
-  font-size: 0.875rem;
+  /* font-size: 0.875rem;
   color: #444;
   background-color: #fff;
   border-width: 1px;
@@ -13120,7 +13120,8 @@ select {
   height: 2.5rem;
   outline: none;
   font-weight: 900;
-  margin: 0; }
+  margin: 0;  */
+}
 
 select {
   background-image: url("../images/down.svg");
