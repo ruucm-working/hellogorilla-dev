@@ -1,37 +1,37 @@
-import React from "react";
+import React from 'react'
 
-import { compose, withState, lifecycle, withHandlers } from "recompose";
-import styled, { css } from "styled-components";
-import { wem, wem2 } from "ruucm-blocks/tools/mixins";
-import { Field, reduxForm } from "redux-form";
-import { log } from "ruucm-util";
-import EmptySpace from "ruucm-blocks/layouts/EmptySpace";
+import { compose, withState, lifecycle, withHandlers } from 'recompose'
+import styled, { css } from 'styled-components'
+import { wem, wem2 } from 'ruucm-blocks/tools/mixins'
+import { Field, reduxForm } from 'redux-form'
+import { log } from 'ruucm-util'
+import EmptySpace from 'ruucm-blocks/layouts/EmptySpace'
 
 const Wrap = styled.div`
   margin-left: ${wem2(480)};
   margin-right: ${wem2(480)};
-`;
+`
 
 const Title = styled.div`
   text-align: center;
   font-weight: 500;
-`;
+`
 const Email = styled.span`
   font-size: ${wem2(24)};
   color: #231f20;
   cursor: pointer;
-`;
+`
 const Bar = styled.span`
   font-size: ${wem2(24)};
   color: #231f20;
   margin-left: ${wem2(40)};
   margin-right: ${wem2(40)};
-`;
+`
 const Password = styled.span`
   font-size: ${wem2(24)};
   cursor: pointer;
   color: #805de9;
-`;
+`
 
 const RenderFieldLabel = styled.div`
   display: block;
@@ -43,7 +43,7 @@ const RenderFieldLabel = styled.div`
     css`
       margin-top: ${wem2(48)};
     `};
-`;
+`
 const WriteField = styled.input`
   margin-top: ${wem2(10)};
   width: ${wem2(480)};
@@ -53,7 +53,7 @@ const WriteField = styled.input`
   font-size: ${wem2(14)};
   padding-left: ${wem2(20)};
   color: #b7b5b6;
-`;
+`
 const PhoneWriteField = styled.input`
   margin-top: ${wem2(10)};
   width: ${wem2(104)};
@@ -65,7 +65,7 @@ const PhoneWriteField = styled.input`
   color: #b7b5b6;
   display: inline-block;
   margin-right: ${wem2(10)};
-`;
+`
 
 const PassButton = styled.div`
   display: inline-block;
@@ -76,7 +76,7 @@ const PassButton = styled.div`
   cursor: pointer;
   position: relative;
   vertical-align: middle;
-`;
+`
 const PassText = styled.div`
   white-space: nowrap;
   font-size: ${wem2(14)};
@@ -85,14 +85,14 @@ const PassText = styled.div`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-`;
+`
 
 const Alarm = styled.div`
   margin-top: ${wem2(12)};
   margin-left: ${wem2(20)};
   font-size: ${wem2(11)};
   color: #0eb780;
-`;
+`
 
 const PhoneMatchField = styled.input`
   margin-top: ${wem2(12)};
@@ -106,20 +106,20 @@ const PhoneMatchField = styled.input`
   font-weight: 100;
   display: inline-block;
   margin-right: ${wem2(10)};
-`;
+`
 
 const emailField = ({
   input,
   label,
   placeholder,
   type,
-  meta: { touched, error }
+  meta: { touched, error },
 }) => (
   <div>
     <RenderFieldLabel email>{label}</RenderFieldLabel>
     <WriteField input {...input} placeholder={placeholder} type={type} />
   </div>
-);
+)
 const phoneField = ({
   input,
   input02,
@@ -127,7 +127,7 @@ const phoneField = ({
   label,
   placeholder,
   type,
-  meta: { touched, error }
+  meta: { touched, error },
 }) => (
   <div>
     <RenderFieldLabel>{label}</RenderFieldLabel>
@@ -138,13 +138,13 @@ const phoneField = ({
       <PassText>인증번호 전송</PassText>
     </PassButton>
   </div>
-);
+)
 const phoneMatchField = ({
   input,
   label,
   placeholder,
   type,
-  meta: { touched, error }
+  meta: { touched, error },
 }) => (
   <div>
     {/* <RenderFieldLabel /> */}
@@ -153,15 +153,19 @@ const phoneMatchField = ({
       <PassText>인증번호 확인</PassText>
     </PassButton>
   </div>
-);
+)
 
-const FindPassword = props => {
+const FindPassword = ({
+  // local
+  setCurrentView,
+  ...props
+}) => {
   return (
     <div>
       <EmptySpace height="96" />
       <Wrap>
         <Title>
-          <Email>이메일 찾기</Email>
+          <Email onClick={() => setCurrentView('find-id')}>이메일 찾기</Email>
           <Bar>|</Bar>
           <Password>비밀번호 찾기</Password>
         </Title>
@@ -188,7 +192,7 @@ const FindPassword = props => {
         <Alarm>남은 시간 02:33</Alarm>
       </Wrap>
     </div>
-  );
-};
+  )
+}
 
-export default FindPassword;
+export default FindPassword
