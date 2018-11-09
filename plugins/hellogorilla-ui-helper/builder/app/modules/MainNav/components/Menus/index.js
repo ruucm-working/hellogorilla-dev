@@ -4,21 +4,21 @@
  *
  */
 
-import React from 'react'
-import { compose, lifecycle, withHandlers } from 'recompose'
-import { log } from 'ruucm-util'
-import { map } from 'lodash'
-import { Row, Column, EmptySpace } from 'ruucm-blocks/layouts'
-import media from 'ruucm-blocks/tools/media'
-import styled, { css } from 'styled-components'
-import { centerIconA, wem, wem2, center } from 'ruucm-blocks/tools/mixins'
+import React from "react";
+import { compose, lifecycle, withHandlers } from "recompose";
+import { log } from "ruucm-util";
+import { map } from "lodash";
+import { Row, Column, EmptySpace } from "ruucm-blocks/layouts";
+import media from "ruucm-blocks/tools/media";
+import styled, { css } from "styled-components";
+import { centerIconA, wem, wem2, center } from "ruucm-blocks/tools/mixins";
 
-import { slide as Menu } from 'react-burger-menu'
-import burgerStyle from './burgerStyle'
+import { slide as Menu } from "react-burger-menu";
+import burgerStyle from "./burgerStyle";
 // import mobileLogo from '../../assets/mobile-logo.png'
 
 const Desktop = styled.div`
-  font-family: 'NanumSquareRound', sans-serif;
+  font-family: "NanumSquareRound", sans-serif;
   font-size: 15px;
   line-height: 15px;
   position: relative;
@@ -29,13 +29,13 @@ const Desktop = styled.div`
   ${media.tablet`
     display: none;
   `};
-`
+`;
 
 const Header = styled.div`
   /* max-width: 960px; */
   padding-left: ${wem2(240)};
   padding-right: ${wem2(240)};
-`
+`;
 
 const Centering = styled.div`
   position: absolute;
@@ -43,7 +43,7 @@ const Centering = styled.div`
   transform: translateY(-50%);
   /* max-width: 960px; */
   width: 66.66%;
-`
+`;
 
 const Logo = styled.a`
   font-size: 61px;
@@ -51,28 +51,29 @@ const Logo = styled.a`
   .hellogorilla-logo {
     vertical-align: super;
   }
-`
+`;
 const Right = styled.div`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 0;
-  .hellogorilla-cart {
+  .hellogorilla-icon-cart-61 {
+    margin-left: 40px;
+    font-size: 27px;
     vertical-align: middle;
-    font-size: 22px;
     cursor: pointer;
     :hover {
       color: #0fb780;
     }
   }
-`
+`;
 
 const MenuWrapper = styled.div`
   color: white;
   font-size: 15px;
   line-height: 15px;
   display: inline-block;
-`
+`;
 const MenuItem = styled.a`
   padding-left: 40px;
   cursor: pointer;
@@ -86,14 +87,15 @@ const MenuItem = styled.a`
       color: #0fb780;
       font-weight: 700;
     `};
-`
+`;
 
 const MainLogo = styled.a`
   padding-left: 40px;
-`
+`;
 
 const LoginMenuItem = styled.div`
   display: inline-block;
+  position: relative;
   .cosmosfarm-members-loginout-link {
     display: inline-block;
     padding-left: 40px;
@@ -107,12 +109,27 @@ const LoginMenuItem = styled.div`
       color: #0fb780;
     }
   }
-  .hellogorilla-cart-count {
+  /* .hellogorilla-cart-count {
     display: inline-block;
     padding-left: 40px;
+    font-size: 22px;
+    vertical-align: middle;
     :hover {
       color: #0fb780;
     }
+  } */
+  .hellogorilla-cart-count {
+    position: absolute;
+    padding-left: unset;
+    font-size: 10px;
+    width: 14px;
+    height: 14px;
+    background-color: #ffffff;
+    text-align: center;
+    color: #533c97;
+    border-radius: 50%;
+    left: 59px;
+    top: -22px;
   }
   .cosmosfarm-members-account-links {
     display: inline-block;
@@ -120,12 +137,12 @@ const LoginMenuItem = styled.div`
   .cosmosfarm-members-account-link {
     display: inline-block;
   }
-`
+`;
 
 const CartIcon = styled.span`
   padding-left: 40px;
   display: inline-block;
-`
+`;
 
 const Mobile = styled.div`
   display: none;
@@ -161,7 +178,7 @@ const Mobile = styled.div`
     background: #efede2;
     box-shadow: 0px 4px 23.8px 0.2px rgba(0, 0, 0, 0.18);
   `};
-`
+`;
 const MobileLogo = styled.img`
   width: 53 ${wem2(0.8)};
   margin-top: ${wem2(12)};
@@ -170,7 +187,7 @@ const MobileLogo = styled.img`
   ${media.tablet`
   display: inline-block;
 `};
-`
+`;
 const MobileCartMenuItem = styled.div`
   display: inline-block;
   line-height: ${wem2(59)};
@@ -180,16 +197,16 @@ const MobileCartMenuItem = styled.div`
   ${CartIcon} {
     font-size: ${wem2(25)};
   }
-`
+`;
 const MobileCartItem = styled.div`
   display: inline-block;
   .login-menu-item,
   .signup-menu-item {
     display: none;
   }
-`
+`;
 const Menus = ({ me, wpLogout, isActivePage, ...props }) => {
-  let contents = props[props.wpType + '_' + props.sort + '_wpData']
+  let contents = props[props.wpType + "_" + props.sort + "_wpData"];
 
   return (
     <div>
@@ -227,18 +244,18 @@ const Menus = ({ me, wpLogout, isActivePage, ...props }) => {
                   // </MenuItem>
                   <MenuItem
                     href="/my-account"
-                    current={isActivePage('/my-account/')}
+                    current={isActivePage("/my-account/")}
                   >
                     마이페이지
                   </MenuItem>
                 ) : (
                   <span>
-                    <MenuItem href="/login" current={isActivePage('/login/')}>
+                    <MenuItem href="/login" current={isActivePage("/login/")}>
                       로그인
                     </MenuItem>
                     <MenuItem
                       href="/customer-signup"
-                      current={isActivePage('/customer-signup/')}
+                      current={isActivePage("/customer-signup/")}
                     >
                       회원가입
                     </MenuItem>
@@ -302,23 +319,23 @@ const Menus = ({ me, wpLogout, isActivePage, ...props }) => {
         </Menu>
       </Mobile>
     </div>
-  )
-}
+  );
+};
 
 // Component enhancer
 const enhance = compose(
   withHandlers({
     isActivePage: ({ ...props }) => url => {
-      return url == location.href || url == location.pathname ? true : false
-    },
+      return url == location.href || url == location.pathname ? true : false;
+    }
   }),
   lifecycle({
     componentDidMount() {
-      this.props.getDatas ? this.props.getDatas() : ''
+      this.props.getDatas ? this.props.getDatas() : "";
 
-      this.props.getMe()
-    },
+      this.props.getMe();
+    }
   })
-)
+);
 
-export default enhance(Menus)
+export default enhance(Menus);
