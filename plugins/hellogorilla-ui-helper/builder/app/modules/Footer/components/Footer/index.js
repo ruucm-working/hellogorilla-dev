@@ -21,6 +21,7 @@ const Content = styled.div`
   padding-left: ${wem2(240)};
   padding-right: ${wem2(240)};
   font-size: 15px;
+  margin-bottom: 96px;
 `;
 
 const FooterLine = styled.div`
