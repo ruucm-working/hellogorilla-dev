@@ -215,20 +215,33 @@ const Menus = ({ me, wpLogout, isActivePage, ...props }) => {
                   </MenuItem>
                 ))}
                 {me ? (
+                  // <MenuItem
+                  //   onClick={() =>
+                  //     wpLogout(() => {
+                  //       alert('로그아웃 되었습니다')
+                  //       window.location = '/'
+                  //     })
+                  //   }
+                  // >
+                  //   로그아웃
+                  // </MenuItem>
                   <MenuItem
-                    onClick={() =>
-                      wpLogout(() => {
-                        alert('로그아웃 되었습니다')
-                        window.location = '/'
-                      })
-                    }
+                    href="/my-account"
+                    current={isActivePage('/my-account/')}
                   >
-                    로그아웃
+                    마이페이지
                   </MenuItem>
                 ) : (
                   <span>
-                    <MenuItem href="/login">로그인</MenuItem>
-                    <MenuItem href="/customer-signup">회원가입</MenuItem>
+                    <MenuItem href="/login" current={isActivePage('/login/')}>
+                      로그인
+                    </MenuItem>
+                    <MenuItem
+                      href="/customer-signup"
+                      current={isActivePage('/customer-signup/')}
+                    >
+                      회원가입
+                    </MenuItem>
                   </span>
                 )}
               </MenuWrapper>
@@ -296,7 +309,7 @@ const Menus = ({ me, wpLogout, isActivePage, ...props }) => {
 const enhance = compose(
   withHandlers({
     isActivePage: ({ ...props }) => url => {
-      return url == location.href ? true : false
+      return url == location.href || url == location.pathname ? true : false
     },
   }),
   lifecycle({
