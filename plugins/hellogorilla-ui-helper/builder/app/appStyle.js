@@ -1,40 +1,33 @@
-import { injectGlobal } from "styled-components";
+import { injectGlobal } from 'styled-components'
 
-import normalize from "ruucm-blocks/libs/normalize";
+import normalize from 'ruucm-blocks/libs/normalize'
 
-import NanumSquare from "ruucm-blocks/css-patterns/fonts/NanumSquare";
-import Montserrat from "ruucm-blocks/css-patterns/fonts/Montserrat";
-import NanumMyeongjo from "ruucm-blocks/css-patterns/fonts/NanumMyeongjo";
-import HarborMagazineIcon from "ruucm-blocks/css-patterns/icons/HarborMagazineIcon";
-import HarborSchoolIcon from "ruucm-blocks/css-patterns/icons/HarborSchoolIcon";
-import PortfolioClassIcon from "ruucm-blocks/css-patterns/icons/PortfolioClassIcon";
-import HelloGorillaIcon from "ruucm-blocks/css-patterns/icons/HelloGorillaIcon";
+// import NanumSquare from 'ruucm-blocks/css-patterns/fonts/NanumSquare'
+// import Montserrat from 'ruucm-blocks/css-patterns/fonts/Montserrat'
+// import NanumMyeongjo from 'ruucm-blocks/css-patterns/fonts/NanumMyeongjo'
+import NanumSquareRound from 'ruucm-blocks/css-patterns/fonts/NanumSquareRound'
 
-import { wem2 } from "ruucm-blocks/tools/mixins";
+import HelloGorillaIcon from 'ruucm-blocks/css-patterns/icons/HelloGorillaIcon'
 
-import { checkoutStyle, payaginStyle, thankStyle } from "./WooCommerceStyles";
-import aboutStyle from "./VCStyles/aboutStyle";
-import programStyle from "./VCStyles/programStyle";
-import newsStyle from "./VCStyles/newsStyle";
+import { wem2 } from 'ruucm-blocks/tools/mixins'
+
+import aboutStyle from './VCStyles/aboutStyle'
+import programStyle from './VCStyles/programStyle'
+import newsStyle from './VCStyles/newsStyle'
 
 // App Styles
 injectGlobal`
   ${normalize}
   /* Fonts */
-  ${NanumSquare}
-  ${NanumMyeongjo}
-  ${Montserrat}
+  ${NanumSquareRound}
+  @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
   /* Icons */
   ${HelloGorillaIcon}
   
   /* Body Styles */
 
-
-  @import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
-  @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-
   body {
-    font-family: "NanumSquareRound", sans-serif;
+    font-family: "NanumSquareRoundWeb", sans-serif;
     font-weight: 300;
   }
   /* Content Styles */
@@ -239,4 +232,4 @@ injectGlobal`
   ${programStyle}
   ${newsStyle}
 
-`;
+`

@@ -94,8 +94,9 @@ const FindPassword = styled.span`
     color: #805de9;
   }
 `
-const SignupButton = styled(CommonButtonStyle)`
+const SignupButton = styled.a`
   font-size: ${wem2(13)};
+  border: none;
   color: #231f20;
   cursor: pointer;
   font-family: 'NanumSquareRound', sans-serif;
@@ -204,13 +205,7 @@ const LoginForm = ({
               <Bar>|</Bar>
               <FindPassword>비밀번호 찾기</FindPassword>
               <Bar>|</Bar>
-              <SignupButton
-                type="button"
-                onClick={() => back()}
-                direactLogin={direactLogin}
-              >
-                {direactLogin ? '뒤로' : '가입하기'}
-              </SignupButton>
+              <SignupButton href="/customer-signup">가입하기</SignupButton>
             </Bottom>
           </LoginButtons>
         </form>
