@@ -16,13 +16,11 @@ import { log } from 'ruucm-util'
 import profileDefault from '../../assets/profile-default.jpg'
 import bannerImg from '../../assets/banner.png'
 
+import { PageBanner } from '../../../PageBanner'
+
 const Wrapper = styled.div``
 
-const Search = styled.div`
-  background: center / cover no-repeat url(${bannerImg});
-  height: 288px;
-  position: relative;
-`
+const Search = styled.div``
 const SearchTitle = styled.div`
   font-size: 28px;
   text-align: center;
@@ -141,29 +139,35 @@ const UserProducts = styled.div`
   text-align: center;
 `
 
+const SearchComp = () => {
+  return (
+    <Search>
+      <SearchTitle>헬로고릴라 아티스트를 소개합니다</SearchTitle>
+      <SearchBar>
+        <SearchInput
+          type="text"
+          onChange={e => {
+            log('e.target.value', e.target.value)
+            getDatas({
+              role: 'editor',
+              search: e.target.value,
+            })
+          }}
+        />
+        <SearchBtn>
+          <Icon className="hellogorilla hellogorilla-icon-search-24" />
+        </SearchBtn>
+      </SearchBar>
+    </Search>
+  )
+}
+
 const Contents = ({ getDatas, ...props }) => {
   let contents = props[props.wpType + '_' + props.sort + '_wpData']
   return (
     <div>
       <Wrapper>
-        <Search>
-          <SearchTitle>헬로고릴라 아티스트를 소개합니다</SearchTitle>
-          <SearchBar>
-            <SearchInput
-              type="text"
-              onChange={e => {
-                log('e.target.value', e.target.value)
-                getDatas({
-                  role: 'editor',
-                  search: e.target.value,
-                })
-              }}
-            />
-            <SearchBtn>
-              <Icon className="hellogorilla hellogorilla-icon-search-24" />
-            </SearchBtn>
-          </SearchBar>
-        </Search>
+        <PageBanner bannerText={<SearchComp />} />
 
         <ArtistWrap>
           <Row>

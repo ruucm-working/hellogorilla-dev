@@ -221,6 +221,18 @@ injectGlobal`
 
   /* Visual Composer Styles */
   ${aboutStyle}
+  .single {
+    p {
+      line-height: 1.7em;
+    }
+  }
+  .woocommerce-account {
+    #content {
+      padding: 200px 0;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+  }
 
 
 

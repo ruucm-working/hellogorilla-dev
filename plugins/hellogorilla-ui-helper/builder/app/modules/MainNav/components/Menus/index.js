@@ -5,7 +5,7 @@
  */
 
 import React from 'react'
-import { compose, lifecycle } from 'recompose'
+import { compose, lifecycle, withHandlers } from 'recompose'
 import { log } from 'ruucm-util'
 import { map } from 'lodash'
 import { Row, Column, EmptySpace } from 'ruucm-blocks/layouts'
@@ -79,6 +79,13 @@ const MenuItem = styled.a`
   :hover {
     color: #0fb780;
   }
+
+  ${props =>
+    props.current &&
+    css`
+      color: #0fb780;
+      font-weight: 700;
+    `};
 `
 
 const MainLogo = styled.a`
@@ -181,7 +188,7 @@ const MobileCartItem = styled.div`
     display: none;
   }
 `
-const Menus = ({ me, wpLogout, ...props }) => {
+const Menus = ({ me, wpLogout, isActivePage, ...props }) => {
   let contents = props[props.wpType + '_' + props.sort + '_wpData']
 
   return (
@@ -199,25 +206,42 @@ const Menus = ({ me, wpLogout, ...props }) => {
             <Right>
               <MenuWrapper>
                 {map(contents, (item, id) => (
-                  <MenuItem key={id} href={item.url}>
+                  <MenuItem
+                    key={id}
+                    href={item.url}
+                    current={isActivePage(item.url)}
+                  >
                     {item.title}
                   </MenuItem>
                 ))}
                 {me ? (
+                  // <MenuItem
+                  //   onClick={() =>
+                  //     wpLogout(() => {
+                  //       alert('로그아웃 되었습니다')
+                  //       window.location = '/'
+                  //     })
+                  //   }
+                  // >
+                  //   로그아웃
+                  // </MenuItem>
                   <MenuItem
-                    onClick={() =>
-                      wpLogout(() => {
-                        alert('로그아웃 되었습니다')
-                        window.location = '/'
-                      })
-                    }
+                    href="/my-account"
+                    current={isActivePage('/my-account/')}
                   >
-                    로그아웃
+                    마이페이지
                   </MenuItem>
                 ) : (
                   <span>
-                    <MenuItem href="/login">로그인</MenuItem>
-                    <MenuItem href="/customer-signup">회원가입</MenuItem>
+                    <MenuItem href="/login" current={isActivePage('/login/')}>
+                      로그인
+                    </MenuItem>
+                    <MenuItem
+                      href="/customer-signup"
+                      current={isActivePage('/customer-signup/')}
+                    >
+                      회원가입
+                    </MenuItem>
                   </span>
                 )}
               </MenuWrapper>
@@ -283,6 +307,11 @@ const Menus = ({ me, wpLogout, ...props }) => {
 
 // Component enhancer
 const enhance = compose(
+  withHandlers({
+    isActivePage: ({ ...props }) => url => {
+      return url == location.href || url == location.pathname ? true : false
+    },
+  }),
   lifecycle({
     componentDidMount() {
       this.props.getDatas ? this.props.getDatas() : ''

@@ -102,9 +102,9 @@ const ShopGrid = ({ active, setActive, ...props }) => {
   let contents = props[props.dataType + '_' + props.category]
   return (
     <div>
-      <Search>
+      {/* <Search>
         <SearchTitle>헬로고릴라 아티스트를 소개합니다</SearchTitle>
-      </Search>
+      </Search> */}
 
       <Wrap>
         <Category>

@@ -1,0 +1,1263 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Shopkeeper\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-09 08:07+0000\n"
+"PO-Revision-Date: 2018-11-09 08:07+0000\n"
+"Last-Translator: admin <admin@local.test>\n"
+"Language-Team: \n"
+"Language: ko_KR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: functions.php:39
+msgid ""
+"The <strong>GetBowtied Tools</strong> plugin is no longer required. You can "
+"deactivate and delete it. use the <strong>Envato Market</strong> plugin for "
+"future updates."
+msgstr ""
+
+#: functions.php:40
+msgid "Read More"
+msgstr ""
+
+#: functions.php:296
+msgid "Top Bar Navigation"
+msgstr ""
+
+#: functions.php:297
+msgid "Main Navigation"
+msgstr ""
+
+#: functions.php:298
+msgid "Footer Navigation"
+msgstr ""
+
+#: functions.php:335
+msgid "Secondary Navigation (Off-Canvas)"
+msgstr ""
+
+#: functions.php:341
+msgid "Centered Header - Left Navigation"
+msgstr ""
+
+#: functions.php:342
+msgid "Centered Header - Right Navigation"
+msgstr ""
+
+#: functions.php:504
+msgid "Load More Items"
+msgstr ""
+
+#: functions.php:505
+msgid "Loading"
+msgstr ""
+
+#: functions.php:506
+msgid "No more items available."
+msgstr ""
+
+#: functions.php:610
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:620
+msgid "Footer Widget Area"
+msgstr ""
+
+#: functions.php:630
+msgid "Shop Sidebar"
+msgstr ""
+
+#: functions.php:640
+msgid "Right Offcanvas Sidebar"
+msgstr ""
+
+#: functions.php:826
+msgid "Share this product"
+msgstr ""
+
+#: 404.php:14
+msgid "Oops 404 again! That page can't be found."
+msgstr ""
+
+#: 404.php:19
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: index-layout-1.php:50 index-layout-3.php:55 index-layout-2.php:53
+msgid "Category Archives"
+msgstr ""
+
+#: index-layout-1.php:120 index-layout-3.php:125 index-layout-2.php:123
+msgid "All"
+msgstr ""
+
+#: index-layout-1.php:176 index-layout-1.php:180 index-layout-1.php:184
+#: index-layout-3.php:200 index-layout-2.php:199
+msgid "Continue Reading"
+msgstr ""
+
+#: content-none.php:10
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:15
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:17
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: content-none.php:20
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: comments.php:21
+#, php-format
+msgid "One reply on “%2$s“"
+msgid_plural "%1$s replies on “%2$s“"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:28 comments.php:48
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:29 comments.php:49
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:30 comments.php:50
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:60
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:72
+msgid "Leave a Reply"
+msgstr ""
+
+#: comments.php:76
+msgid "Name"
+msgstr ""
+
+#: comments.php:78
+msgid "Email Address"
+msgstr ""
+
+#: comments.php:80
+msgid "Website"
+msgstr ""
+
+#: comments.php:86
+msgid "Message"
+msgstr ""
+
+#: search.php:10
+#, php-format
+msgid "Search Results for %s"
+msgstr ""
+
+#: sidebar.php:13
+msgid "Archives"
+msgstr ""
+
+#: sidebar.php:20
+msgid "Meta"
+msgstr ""
+
+#: image.php:27
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" "
+"datetime=\"%1$s\">%2$s</time></span>. Size: <i class=\"fa fa-picture-o\"></i>"
+" <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in "
+"<i class=\"fa fa-folder-open\"></i> <a href=\"%6$s\" title=\"Return to "
+"%7$s\" rel=\"gallery\">%7$s</a>"
+msgstr ""
+
+#: image.php:42
+msgid "Previous"
+msgstr ""
+
+#: image.php:46
+msgid "Next"
+msgstr ""
+
+#: searchform.php:2
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:3
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:4 settings/kirki.config.php:301
+msgid "Search"
+msgstr ""
+
+#: settings/kirki.config.php:11
+#: inc/addons/woocommerce-header-category-image.php:25
+#: inc/addons/woocommerce-header-category-image.php:121
+#: inc/addons/woocommerce-header-category-image.php:233
+msgid "Header"
+msgstr ""
+
+#: settings/kirki.config.php:18
+msgid "Shop"
+msgstr ""
+
+#: settings/kirki.config.php:24
+msgid "Blog"
+msgstr ""
+
+#: settings/kirki.config.php:266
+msgid "Header Styles"
+msgstr ""
+
+#: settings/kirki.config.php:273
+msgid "Header Elements"
+msgstr ""
+
+#: settings/kirki.config.php:280
+msgid "Logo"
+msgstr ""
+
+#: settings/kirki.config.php:287 settings/kirki.config.php:1050
+msgid "Top Bar"
+msgstr ""
+
+#: settings/kirki.config.php:294 settings/kirki.config.php:1224
+msgid "Sticky Header"
+msgstr ""
+
+#: settings/kirki.config.php:308
+msgid "Footer"
+msgstr ""
+
+#: settings/kirki.config.php:317
+msgid "Blog Posts Archive"
+msgstr ""
+
+#: settings/kirki.config.php:324
+msgid "Single Post"
+msgstr ""
+
+#: settings/kirki.config.php:334
+msgid "Shop Layout"
+msgstr ""
+
+#: settings/kirki.config.php:341
+msgid "Product Card"
+msgstr ""
+
+#: settings/kirki.config.php:348
+msgid "Shop Notifications"
+msgstr ""
+
+#: settings/kirki.config.php:355
+msgid "Product Badges"
+msgstr ""
+
+#: settings/kirki.config.php:362
+msgid "Mobile Settings"
+msgstr ""
+
+#: settings/kirki.config.php:369 settings/kirki.config.php:1851
+msgid "Catalog Mode"
+msgstr ""
+
+#: settings/kirki.config.php:376
+msgid "Product Page"
+msgstr ""
+
+#: settings/kirki.config.php:382
+msgid "Styling"
+msgstr ""
+
+#: settings/kirki.config.php:388
+msgid "Fonts"
+msgstr ""
+
+#: settings/kirki.config.php:394
+msgid "Social Media"
+msgstr ""
+
+#: settings/kirki.config.php:400
+msgid "Custom Code"
+msgstr ""
+
+#: settings/kirki.config.php:419
+msgid "Header Layout"
+msgstr ""
+
+#: settings/kirki.config.php:442
+msgid "Navigation Font Size"
+msgstr ""
+
+#: settings/kirki.config.php:455
+msgid "Navigation Font Color"
+msgstr ""
+
+#: settings/kirki.config.php:470
+msgid "Header Background Color"
+msgstr ""
+
+#: settings/kirki.config.php:486
+msgid "Spacing Above the Logo"
+msgstr ""
+
+#: settings/kirki.config.php:500
+msgid "Spacing Below the Logo"
+msgstr ""
+
+#: settings/kirki.config.php:521
+msgid "Header Width"
+msgstr ""
+
+#: settings/kirki.config.php:534
+msgid "Custom Max Width"
+msgstr ""
+
+#: settings/kirki.config.php:564
+msgid "Transparent Header"
+msgstr ""
+
+#: settings/kirki.config.php:574
+msgid "Default Transparency Color Scheme"
+msgstr ""
+
+#: settings/kirki.config.php:596 settings/kirki.config.php:622
+msgid "Text / Icon Color"
+msgstr ""
+
+#: settings/kirki.config.php:605
+msgid "Logo Light"
+msgstr ""
+
+#: settings/kirki.config.php:631
+msgid "Logo Dark"
+msgstr ""
+
+#: settings/kirki.config.php:648
+msgid "Product Categories Transparency"
+msgstr ""
+
+#: settings/kirki.config.php:674
+msgid "Wishlist Icon"
+msgstr ""
+
+#: settings/kirki.config.php:699
+msgid "Custom Wishlist Icon"
+msgstr ""
+
+#: settings/kirki.config.php:723
+msgid "Shopping Cart Icon"
+msgstr ""
+
+#: settings/kirki.config.php:747
+msgid "Custom Shopping Cart Icon"
+msgstr ""
+
+#: settings/kirki.config.php:777
+msgid "Cart Icon Function"
+msgstr ""
+
+#: settings/kirki.config.php:782
+msgid "Mini Cart"
+msgstr ""
+
+#: settings/kirki.config.php:783
+msgid "Link"
+msgstr ""
+
+#: settings/kirki.config.php:797
+msgid "Open Mini Cart On"
+msgstr ""
+
+#: settings/kirki.config.php:802
+msgid "Click"
+msgstr ""
+
+#: settings/kirki.config.php:803
+msgid "Hover"
+msgstr ""
+
+#: settings/kirki.config.php:817
+msgid "Mini Cart Message"
+msgstr ""
+
+#: settings/kirki.config.php:846
+msgid "My Account Icon"
+msgstr ""
+
+#: settings/kirki.config.php:870
+msgid "Custom My Account Icon"
+msgstr ""
+
+#: settings/kirki.config.php:894
+msgid "Search Icon"
+msgstr ""
+
+#: settings/kirki.config.php:918
+msgid "Custom Search Icon"
+msgstr ""
+
+#: settings/kirki.config.php:942
+msgid "Off-Canvas Drawer"
+msgstr ""
+
+#: settings/kirki.config.php:966
+msgid "Custom Off-Canvas Icon"
+msgstr ""
+
+#: settings/kirki.config.php:983
+msgid "Your Logo"
+msgstr ""
+
+#: settings/kirki.config.php:987
+msgid ""
+"<span class=\"dashicons dashicons-editor-help\"></span>Applied on Non-"
+"Transparent Headers. To upload a logo for a Tansparent Background go to "
+"<strong>Header Layout & Style</strong> section."
+msgstr ""
+
+#: settings/kirki.config.php:1000
+msgid "Alternative Logo"
+msgstr ""
+
+#: settings/kirki.config.php:1004
+msgid ""
+"<span class=\"dashicons dashicons-editor-help\"></span>Used on the <strong>"
+"Sticky Header</strong> and <strong>Mobile Devices</strong>."
+msgstr ""
+
+#: settings/kirki.config.php:1017
+msgid "Logo Container Min Width"
+msgstr ""
+
+#: settings/kirki.config.php:1031
+msgid "Logo Container Height"
+msgstr ""
+
+#: settings/kirki.config.php:1074
+msgid "Top Bar Background Color"
+msgstr ""
+
+#: settings/kirki.config.php:1108
+msgid "Top Bar Text Color"
+msgstr ""
+
+#: settings/kirki.config.php:1139
+msgid "Top Bar Text"
+msgstr ""
+
+#: settings/kirki.config.php:1170
+msgid "Top Bar Navigation Position"
+msgstr ""
+
+#: settings/kirki.config.php:1206
+msgid "Top Bar Social Icons"
+msgstr ""
+
+#: settings/kirki.config.php:1248
+msgid "Sticky Header Background Color"
+msgstr ""
+
+#: settings/kirki.config.php:1279
+msgid "Sticky Header Color"
+msgstr ""
+
+#: settings/kirki.config.php:1300
+msgid "Footer Background Color"
+msgstr ""
+
+#: settings/kirki.config.php:1320
+msgid "Footer Text"
+msgstr ""
+
+#: settings/kirki.config.php:1336
+msgid "Footer Links"
+msgstr ""
+
+#: settings/kirki.config.php:1352
+msgid "Social Networking Icons"
+msgstr ""
+
+#: settings/kirki.config.php:1368
+msgid "Copyright Footnote"
+msgstr ""
+
+#: settings/kirki.config.php:1384
+msgid "Collapsed Widget Area on Mobiles"
+msgstr ""
+
+#: settings/kirki.config.php:1400
+msgid "Back To Top Button"
+msgstr ""
+
+#: settings/kirki.config.php:1414
+msgid "Blog Layout"
+msgstr ""
+
+#: settings/kirki.config.php:1435
+msgid "Blog Sidebar"
+msgstr ""
+
+#: settings/kirki.config.php:1467
+msgid "Blog Pagination Style"
+msgstr ""
+
+#: settings/kirki.config.php:1488
+msgid "Portfolio Item Slug"
+msgstr ""
+
+#: settings/kirki.config.php:1491
+msgid ""
+"<span class=\"dashicons dashicons-editor-help\"></span>Default slug is "
+"\"portfolio-item\". Enter a custom one to overwrite it. <br/><b>You need to "
+"regenerate your permalinks if you modify this!</b>"
+msgstr ""
+
+#: settings/kirki.config.php:1500
+msgid "Content Width"
+msgstr ""
+
+#: settings/kirki.config.php:1536
+msgid "Author"
+msgstr ""
+
+#: settings/kirki.config.php:1552
+msgid "Date"
+msgstr ""
+
+#: settings/kirki.config.php:1568
+msgid "Categories"
+msgstr ""
+
+#: settings/kirki.config.php:1582
+msgid "Breadcrumbs"
+msgstr ""
+
+#: settings/kirki.config.php:1598
+msgid "Sidebar Style"
+msgstr ""
+
+#: settings/kirki.config.php:1604
+msgid "On Page"
+msgstr ""
+
+#: settings/kirki.config.php:1605
+msgid "Off-Canvas"
+msgstr ""
+
+#: settings/kirki.config.php:1619
+msgid "Pagination Style"
+msgstr ""
+
+#: settings/kirki.config.php:1641
+msgid "Category Display Style"
+msgstr ""
+
+#: settings/kirki.config.php:1647
+msgid "Categories Grid"
+msgstr ""
+
+#: settings/kirki.config.php:1648
+msgid "Thumbs"
+msgstr ""
+
+#: settings/kirki.config.php:1670
+msgid "Display Number of Products on Categories Grid"
+msgstr ""
+
+#: settings/kirki.config.php:1688
+msgid "Product Title Font Size (px)"
+msgstr ""
+
+#: settings/kirki.config.php:1711
+msgid "2<sup>nd</sup> Product Image on Hover"
+msgstr ""
+
+#: settings/kirki.config.php:1727
+msgid "Rating Stars"
+msgstr ""
+
+#: settings/kirki.config.php:1743
+msgid "Add to Cart Button Display"
+msgstr ""
+
+#: settings/kirki.config.php:1749
+msgid "When Hovering"
+msgstr ""
+
+#: settings/kirki.config.php:1750
+msgid "At all Times"
+msgstr ""
+
+#: settings/kirki.config.php:1764 inc/woocommerce/quick_view.php:45
+msgid "Quick View"
+msgstr ""
+
+#: settings/kirki.config.php:1775
+msgid "Notification Style"
+msgstr ""
+
+#: settings/kirki.config.php:1781
+msgid "Animated"
+msgstr ""
+
+#: settings/kirki.config.php:1782
+msgid "Classic"
+msgstr ""
+
+#: settings/kirki.config.php:1789
+msgid "Animation"
+msgstr ""
+
+#: settings/kirki.config.php:1795
+msgid "Slide Out"
+msgstr ""
+
+#: settings/kirki.config.php:1796
+msgid "Always Visible"
+msgstr ""
+
+#: settings/kirki.config.php:1812
+msgid "Out of Stock Label"
+msgstr ""
+
+#: settings/kirki.config.php:1813 settings/kirki.config.php:1823
+msgid ""
+"If you're using a multi language plugin we recommend leaving the default "
+"value."
+msgstr ""
+
+#: settings/kirki.config.php:1822
+msgid "Sale Label"
+msgstr ""
+
+#: settings/kirki.config.php:1834
+msgid "Number of Columns on Mobile"
+msgstr ""
+
+#: settings/kirki.config.php:1854
+msgid ""
+"<span class=\"dashicons dashicons-editor-help\"></span>When enabled, the "
+"feature Turns Off the shopping functionality of WooCommerce."
+msgstr ""
+
+#: settings/kirki.config.php:1861
+msgid "Predictive Search"
+msgstr ""
+
+#: settings/kirki.config.php:1875
+msgid "Product Page Layout"
+msgstr ""
+
+#: settings/kirki.config.php:1897
+msgid "Product Quantity Style"
+msgstr ""
+
+#: settings/kirki.config.php:1917
+msgid "Product Gallery Zoom"
+msgstr ""
+
+#: settings/kirki.config.php:1933
+msgid "Product Gallery Lightbox"
+msgstr ""
+
+#: settings/kirki.config.php:1949
+msgid "Related Products"
+msgstr ""
+
+#: settings/kirki.config.php:1958
+msgid "Number of Related Products"
+msgstr ""
+
+#: settings/kirki.config.php:1988
+msgid "Social Sharing Options"
+msgstr ""
+
+#: settings/kirki.config.php:2004
+msgid "Review Tab"
+msgstr ""
+
+#: settings/kirki.config.php:2020
+msgid "AJAX Add to Cart"
+msgstr ""
+
+#: settings/kirki.config.php:2022
+msgid ""
+"<span class=\"dashicons dashicons-editor-help\"></span>The option is "
+"available for simple products.<div class=\"ajax-error\"><span "
+"class=\"dashicons dashicons-warning\"></span>Functionality turned off "
+"automatically due to incompatibility with:<span class=\"woo-addons\">"
+"WooCommerce Product Add-Ons</span><span class=\"m-price-calculator\">WC "
+"Measurement Price Calculator</span><span class=\"fields-factory\">WC Fields "
+"Factory</span></div>"
+msgstr ""
+
+#: settings/kirki.config.php:2035
+msgid "Body Text Color"
+msgstr ""
+
+#: settings/kirki.config.php:2051
+msgid "Headings Color"
+msgstr ""
+
+#: settings/kirki.config.php:2067
+msgid "Accent Color"
+msgstr ""
+
+#: settings/kirki.config.php:2083
+msgid "Body Background"
+msgstr ""
+
+#: settings/kirki.config.php:2099
+msgid "Smooth Transition Between Pages"
+msgstr ""
+
+#: settings/kirki.config.php:2115
+msgid "Off-Canvas Background Color"
+msgstr ""
+
+#: settings/kirki.config.php:2131
+msgid "Off-Canvas Headings Color"
+msgstr ""
+
+#: settings/kirki.config.php:2147
+msgid "Off-Canvas Text Color"
+msgstr ""
+
+#: settings/kirki.config.php:2161
+msgid "Main Font"
+msgstr ""
+
+#: settings/kirki.config.php:2162
+msgid ""
+"<span class=\"dashicons dashicons-editor-help\"></span>Used for titles and "
+"Headings."
+msgstr ""
+
+#: settings/kirki.config.php:2180
+msgid "Headings Font Size (px)"
+msgstr ""
+
+#: settings/kirki.config.php:2203
+msgid "Secondary Font"
+msgstr ""
+
+#: settings/kirki.config.php:2219
+msgid "Body Font Size (px)"
+msgstr ""
+
+#: settings/kirki.config.php:2240
+msgid "Facebook"
+msgstr ""
+
+#: settings/kirki.config.php:2249
+msgid "Twitter"
+msgstr ""
+
+#: settings/kirki.config.php:2258
+msgid "Pinterest"
+msgstr ""
+
+#: settings/kirki.config.php:2267
+msgid "LinkedIn"
+msgstr ""
+
+#: settings/kirki.config.php:2276
+msgid "Google+"
+msgstr ""
+
+#: settings/kirki.config.php:2285
+msgid "RSS"
+msgstr ""
+
+#: settings/kirki.config.php:2294
+msgid "Tumblr"
+msgstr ""
+
+#: settings/kirki.config.php:2303
+msgid "Instagram"
+msgstr ""
+
+#: settings/kirki.config.php:2312
+msgid "Youtube"
+msgstr ""
+
+#: settings/kirki.config.php:2321
+msgid "Vimeo"
+msgstr ""
+
+#: settings/kirki.config.php:2330
+msgid "Behance"
+msgstr ""
+
+#: settings/kirki.config.php:2339
+msgid "Dribbble"
+msgstr ""
+
+#: settings/kirki.config.php:2348
+msgid "Flickr"
+msgstr ""
+
+#: settings/kirki.config.php:2357
+msgid "Git"
+msgstr ""
+
+#: settings/kirki.config.php:2366
+msgid "Skype"
+msgstr ""
+
+#: settings/kirki.config.php:2375
+msgid "Weibo"
+msgstr ""
+
+#: settings/kirki.config.php:2384
+msgid "Foursquare"
+msgstr ""
+
+#: settings/kirki.config.php:2393
+msgid "Soundcloud"
+msgstr ""
+
+#: settings/kirki.config.php:2402
+msgid "VK"
+msgstr ""
+
+#: settings/kirki.config.php:2411
+msgid "Houzz"
+msgstr ""
+
+#: settings/kirki.config.php:2420
+msgid "Naver LINE"
+msgstr ""
+
+#: settings/kirki.config.php:2429
+msgid "TripAdvisor"
+msgstr ""
+
+#: settings/kirki.config.php:2438
+msgid "WeChat"
+msgstr ""
+
+#: settings/kirki.config.php:2447
+msgid "WhatsApp"
+msgstr ""
+
+#: settings/kirki.config.php:2456
+msgid "Telegram"
+msgstr ""
+
+#: settings/kirki.config.php:2465
+msgid "Viber"
+msgstr ""
+
+#: settings/kirki.config.php:2474
+msgid "Spotify"
+msgstr ""
+
+#: settings/kirki.config.php:2483
+msgid "Bandcamp"
+msgstr ""
+
+#: settings/kirki.config.php:2498
+msgid "Custom CSS"
+msgstr ""
+
+#: settings/kirki.config.php:2519
+msgid "Header JavaScript Code"
+msgstr ""
+
+#: settings/kirki.config.php:2540
+msgid "Footer JavaScript Code"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:10 inc/custom-posts/portfolio.php:22
+msgid "Portfolio"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:11
+msgid "Portfolio Item"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:12
+msgid "Add New"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:13
+msgid "Add New Portfolio item"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:14
+msgid "Edit Portfolio item"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:15
+msgid "New Portfolio item"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:16
+msgid "All Portfolio items"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:17
+msgid "View Portfolio item"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:18
+msgid "Search Portfolio item"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:19
+msgid "No Portfolio item found"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:20
+msgid "No Portfolio item found in Trash"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:55 inc/custom-posts/portfolio.php:68
+msgid "Portfolio Categories"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:56
+msgid "Portfolio Category"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:57
+msgid "Search Portfolio Categories"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:58
+msgid "Popular Portfolio Categories"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:59
+msgid "All Portfolio Categories"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:60
+msgid "Edit Portfolio Category"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:61
+msgid "Update Portfolio Category"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:62
+msgid "Add New Portfolio Category"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:63
+msgid "New Portfolio Category Name"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:64
+msgid "Separate Portfolio Categories with commas"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:65
+msgid "Add or remove Portfolio Categories"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:66
+msgid "Choose from the most used Portfolio Categories"
+msgstr ""
+
+#: inc/custom-posts/portfolio.php:67
+msgid "No Portfolio Category found."
+msgstr ""
+
+#: inc/addons/woocommerce-header-category-image.php:29
+#: inc/addons/woocommerce-header-category-image.php:126
+msgid "Upload/Add image"
+msgstr ""
+
+#: inc/addons/woocommerce-header-category-image.php:30
+#: inc/addons/woocommerce-header-category-image.php:127
+msgid "Remove image"
+msgstr ""
+
+#: inc/addons/woocommerce-header-category-image.php:54
+#: inc/addons/woocommerce-header-category-image.php:153
+msgid "Choose an image"
+msgstr ""
+
+#: inc/addons/woocommerce-header-category-image.php:56
+#: inc/addons/woocommerce-header-category-image.php:155
+msgid "Use image"
+msgstr ""
+
+#: inc/addons/woocommerce-header-category-image.php:232
+msgid "Image"
+msgstr ""
+
+#: inc/shortcodes/google-map.php:13
+msgid "Get Directions"
+msgstr ""
+
+#: inc/shortcodes/portfolio.php:71
+msgid "Show all"
+msgstr ""
+
+#: inc/templates/post-meta.php:10 inc/templates/post-meta.php:45
+msgid "Sticky"
+msgstr ""
+
+#: inc/templates/post-meta.php:15 inc/templates/post-meta.php:49
+msgid " by "
+msgstr ""
+
+#: inc/templates/post-meta.php:17 inc/templates/post-meta.php:51
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#. used between list items, there is a space after the comma.
+#: inc/templates/post-meta.php:33
+msgid " in "
+msgstr ""
+
+#. used between list items, there is a space after the comma.
+#: inc/templates/post-meta.php:77 inc/templates/post-meta.php:98
+#, php-format
+msgctxt "1: post format name. 2: date"
+msgid "%1$s on %2$s"
+msgstr ""
+
+#: inc/templates/post-meta.php:81
+msgid " on "
+msgstr ""
+
+#: inc/templates/post-meta.php:83 inc/templates/post-meta.php:104
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: inc/templates/template-tags.php:66
+msgid "Previous Reading"
+msgstr ""
+
+#: inc/templates/template-tags.php:70
+msgid "Next Reading"
+msgstr ""
+
+#: inc/templates/template-tags.php:80
+msgid "Older posts"
+msgstr ""
+
+#: inc/templates/template-tags.php:86
+msgid "Newer posts"
+msgstr ""
+
+#: inc/templates/template-tags.php:143
+msgid "Pingback:"
+msgstr ""
+
+#: inc/templates/template-tags.php:143 inc/templates/template-tags.php:183
+msgid "Edit"
+msgstr ""
+
+#: inc/templates/template-tags.php:158
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/templates/template-tags.php:161
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: inc/templates/template-tags.php:166
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#. Base ID
+#: inc/widgets/social-media.php:14
+msgid "Shopkeeper Social Media Profiles"
+msgstr ""
+
+#: inc/widgets/social-media.php:15
+msgid "A widget that displays Social Media Profiles"
+msgstr ""
+
+#: inc/widgets/social-media.php:51
+msgid "Get Connected"
+msgstr ""
+
+#: inc/widgets/social-media.php:56
+msgid "Title:"
+msgstr ""
+
+#: inc/metaboxes/product.php:13
+msgid "Product Options"
+msgstr ""
+
+#: inc/metaboxes/product.php:46
+msgid "Fullscreen Description"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:32
+#: inc/admin/wizard/class-gbt-install-wizard.php:33
+msgid "Theme Setup"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:53
+msgid "Introduction"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:239
+msgid "'s"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:239
+msgid "Theme Setup Wizard"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:244
+msgid "The quickest way to setup the theme"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:244
+msgid "and start working on your site."
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:259
+msgid "Plugin Installation"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:260
+msgid "Install the required plugins before importing the demo content."
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:270
+msgid "Required"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:305
+msgid "Install Now"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:306
+msgid "Update Now"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:307
+msgid "Activate"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:312
+msgid "Active"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:325
+#: inc/admin/wizard/class-gbt-install-wizard.php:357
+msgid "Skip"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:326
+#: inc/admin/wizard/class-gbt-install-wizard.php:359
+msgid "Install"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:344
+msgid "Demo Content Import"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:345
+msgid "Start with pre-built page layouts, dummy product pages,"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:345
+msgid "blog posts and widgets."
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:352
+msgid ""
+"Please make sure <b>Visual Composer</b> and <b>WooCommerce</b> are installed "
+"and activated before importing the demo content."
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:361
+msgid "Go back"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:366
+msgid "Importing, please wait!"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:386
+msgid "Setup has been<br/> completed successfully!"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:387
+msgid "View Site"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:388
+msgid "You should be able to start working on your site now."
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:389
+msgid "Best of luck with your project!"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:394
+msgid "What's next?"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:401
+msgid "Customize the theme"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:407
+msgid "WooCommerce Setup Wizard"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:423
+msgid "Activate Theme Updates"
+msgstr ""
+
+#: inc/admin/wizard/class-gbt-install-wizard.php:426
+msgid "Help Center / Support"
+msgstr ""
+
+#. Name of the theme
+msgid "Shopkeeper"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"When you start with an awesome product you can create amazing things! Built "
+"with the eCommerce functionality in mind, Shopkeeper is a fully responsive "
+"Premium WooCommerce Theme with great design and extensive functionality."
+msgstr ""
+
+#. URI of the theme
+msgid "https://shopkeeper.wp-theme.design/"
+msgstr ""
+
+#. Author of the theme
+msgid "Get Bowtied"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://www.getbowtied.com/"
+msgstr ""

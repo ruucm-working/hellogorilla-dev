@@ -105,8 +105,9 @@ const enhance = compose(
             log('err', err)
           })
       } else if (props.wpType == 'user') {
-        wp.users()
-          .setHeaders('X-WP-Nonce', nonce)
+        log('nonce', nonce)
+        wp.setHeaders('X-WP-Nonce', nonce)
+          .users()
           .param('roles', options.role)
           .param('search', options.search)
           .then(datas => {
