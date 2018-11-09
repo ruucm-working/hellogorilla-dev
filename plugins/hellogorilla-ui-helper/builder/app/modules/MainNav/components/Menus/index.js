@@ -5,7 +5,7 @@
  */
 
 import React from 'react'
-import { compose, lifecycle } from 'recompose'
+import { compose, lifecycle, withHandlers } from 'recompose'
 import { log } from 'ruucm-util'
 import { map } from 'lodash'
 import { Row, Column, EmptySpace } from 'ruucm-blocks/layouts'
@@ -79,6 +79,13 @@ const MenuItem = styled.a`
   :hover {
     color: #0fb780;
   }
+
+  ${props =>
+    props.current &&
+    css`
+      color: #0fb780;
+      font-weight: 700;
+    `};
 `
 
 const MainLogo = styled.a`
@@ -181,7 +188,7 @@ const MobileCartItem = styled.div`
     display: none;
   }
 `
-const Menus = ({ me, wpLogout, ...props }) => {
+const Menus = ({ me, wpLogout, isActivePage, ...props }) => {
   let contents = props[props.wpType + '_' + props.sort + '_wpData']
 
   return (
@@ -199,7 +206,11 @@ const Menus = ({ me, wpLogout, ...props }) => {
             <Right>
               <MenuWrapper>
                 {map(contents, (item, id) => (
-                  <MenuItem key={id} href={item.url}>
+                  <MenuItem
+                    key={id}
+                    href={item.url}
+                    current={isActivePage(item.url)}
+                  >
                     {item.title}
                   </MenuItem>
                 ))}
@@ -283,6 +294,11 @@ const Menus = ({ me, wpLogout, ...props }) => {
 
 // Component enhancer
 const enhance = compose(
+  withHandlers({
+    isActivePage: ({ ...props }) => url => {
+      return url == location.href ? true : false
+    },
+  }),
   lifecycle({
     componentDidMount() {
       this.props.getDatas ? this.props.getDatas() : ''

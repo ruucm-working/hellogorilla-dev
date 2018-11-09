@@ -221,6 +221,11 @@ injectGlobal`
 
   /* Visual Composer Styles */
   ${aboutStyle}
+  .single {
+    p {
+      line-height: 1.7em;
+    }
+  }
 
 
 `
