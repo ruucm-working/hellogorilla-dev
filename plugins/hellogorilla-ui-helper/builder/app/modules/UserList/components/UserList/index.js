@@ -164,6 +164,7 @@ const SearchComp = () => {
 
 const Contents = ({ getDatas, ...props }) => {
   let contents = props[props.wpType + '_' + props.sort + '_wpData']
+  log('contents', contents)
   return (
     <div>
       <Wrapper>
@@ -187,12 +188,13 @@ const Contents = ({ getDatas, ...props }) => {
                       <UserInfo>
                         <UserName>{item.name}</UserName>
 
+                        {log('item', item)}
                         <UserProducts>
-                          {item.user_products[0]
+                          {item.user_products
                             ? item.user_products[0].post_title
                             : ''}
 
-                          {item.user_products[1]
+                          {item.user_products && item.user_products.length > 1
                             ? ' 외 ' + (item.user_products.length - 1) + '점'
                             : ''}
                         </UserProducts>

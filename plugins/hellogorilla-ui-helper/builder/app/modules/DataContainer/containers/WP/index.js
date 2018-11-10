@@ -63,7 +63,7 @@ function mapDispatchToProps(dispatch, ownProps) {
 const enhance = compose(
   withProps({
     wp: new WPAPI({
-      endpoint: DATA_BASE_URL + 'wp-json/',
+      endpoint: DATA_BASE_URL + 'wp-json',
       // This assumes you are using basic auth, as described further below
       username: WP_ADMIN_ID,
       password: WP_ADMIN_PW,
@@ -105,8 +105,19 @@ const enhance = compose(
             log('err', err)
           })
       } else if (props.wpType == 'user') {
+        log('wp', wp)
         log('nonce', nonce)
-        wp.setHeaders('X-WP-Nonce', nonce)
+
+        var newWp = new WPAPI({
+          endpoint: DATA_BASE_URL + 'wp-json',
+          // This assumes you are using basic auth, as described further below
+          username: WP_ADMIN_ID,
+          password: WP_ADMIN_PW,
+        })
+
+        log('newWp', newWp)
+        // .setHeaders('X-WP-Nonce', nonce)
+        newWp
           .users()
           .param('roles', options.role)
           .param('search', options.search)
