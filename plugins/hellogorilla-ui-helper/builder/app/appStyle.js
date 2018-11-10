@@ -226,7 +226,21 @@ injectGlobal`
       margin: 0 auto;
     }
   }
-
+  .woocommerce-cart  {
+    .hellogorilla-page-banner {
+      margin-bottom: 80px;
+    }
+    .return-to-shop {
+      display: none;
+    }
+  }
+ 
+  .woocommerce-checkout  {
+    .hellogorilla-page-banner {
+      margin-bottom: 80px;
+    }
+  }
+ 
 
 
   ${programStyle}
