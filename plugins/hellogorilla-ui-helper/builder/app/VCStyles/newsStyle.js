@@ -77,9 +77,16 @@ const newsStyle = css`
     margin-right: ${wem2(240)};
     margin-top: ${wem2(96)};
   }
+  .kboard-document-wrap {
+    position: relative;
+  }
   .kboard-title {
     height: ${wem2(55)};
     font-size: ${wem2(15)};
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
     line-height: 1;
     color: #231f20;
     border-top: 1px solid #e9e8e8;
@@ -89,6 +96,16 @@ const newsStyle = css`
     padding-left: ${wem2(48)};
   }
   .detail-value {
+    position: absolute;
+    top: ${wem2(20)};
+    right: ${wem2(48)};
+    font-size: ${wem2(16)};
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #231f20;
   }
   .kboard-content {
     height: ${wem2(625)};
