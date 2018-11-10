@@ -1139,7 +1139,7 @@ if ( !function_exists ('shopkeeper_custom_styles') ) {
 			.state_select.select2-container,
 			#coupon_code
 			{
-				border-color: rgba(<?php echo getbowtied_hex2rgb($shopkeeper_theme_options['body_color']); ?>,0.1) !important;
+				/* border-color: rgba(<?php echo getbowtied_hex2rgb($shopkeeper_theme_options['body_color']); ?>,0.1) !important; */
 			}
 			
 			input[type="text"]:focus, input[type="password"]:focus,

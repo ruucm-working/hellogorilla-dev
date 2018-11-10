@@ -192,139 +192,6 @@ exports.default = prgramStyle;
 
 /***/ }),
 
-/***/ "./builder/app/WooCommerceStyles/checkoutStyle.js":
-/*!********************************************************!*\
-  !*** ./builder/app/WooCommerceStyles/checkoutStyle.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _taggedTemplateLiteral2 = __webpack_require__(/*! babel-runtime/helpers/taggedTemplateLiteral */ "./node_modules/babel-runtime/helpers/taggedTemplateLiteral.js");
-
-var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
-
-var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n      width: 90vw;\n      padding-bottom: 100px;\n    '], ['\n      width: 90vw;\n      padding-bottom: 100px;\n    ']),
-    _templateObject2 = (0, _taggedTemplateLiteral3.default)(['\n      > p {\n        font-size: 10px;\n        line-height: 1.6em;\n      }\n      input[type=\'submit\'] {\n        margin-top: 20px;\n        text-align: right;\n      }\n    '], ['\n      > p {\n        font-size: 10px;\n        line-height: 1.6em;\n      }\n      input[type=\'submit\'] {\n        margin-top: 20px;\n        text-align: right;\n      }\n    ']),
-    _templateObject3 = (0, _taggedTemplateLiteral3.default)(['\n      width: 100%;\n    '], ['\n      width: 100%;\n    ']);
-
-var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
-
-var _mixins = __webpack_require__(/*! ruucm-blocks/tools/mixins */ "./node_modules/ruucm-blocks/tools/mixins.js");
-
-var _media = __webpack_require__(/*! ruucm-blocks/tools/media */ "./node_modules/ruucm-blocks/tools/media.js");
-
-var _media2 = _interopRequireDefault(_media);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var style = (0, _styledComponents.css)(['.entry-content .woocommerce{width:60vw;margin:0 auto;', ';}form.woocommerce-form-login{.form-row-first{margin-top:', ';margin-bottom:', ';}h3{font-weight:900;font-size:', ';margin-bottom:', ';}label{width:', ';line-height:', ';font-size:', ';color:black;display:inline-block;}input{border:none;border-bottom:', ' solid black;background:transparent;line-height:', ';width:', ';outline:none;border-radius:0;color:black;font-size:', ';margin-left:', ';&::placeholder{color:black;font-size:', ';}}input[type=\'submit\']{font-size:', ';color:#284ea2;font-weight:900;border:none;background:transparent;float:right;padding:0;}.woocommerce-form__label-for-checkbox,.lost_password{display:none;}', ';}form.woocommerce-form-login,form.woocommerce-checkout{background:white;color:black;border-radius:', ';padding:', ';padding-bottom:', ';', ';position:relative;width:100%;min-height:', ';box-shadow:rgba(0,0,0,0.3) ', ' ', ' ', ' 0;margin-top:', ';', ';.required{display:none;}}.woocommerce-info{font-weight:900;font-size:', ';margin-top:', ';margin-bottom:', ';}.checkout_coupon{input{border:none;border-bottom:', ' solid black;background:transparent;line-height:', ';width:', ';outline:none;border-radius:0;color:black;font-size:', ';margin-left:', ';&::placeholder{color:black;font-size:', ';}}}.woocommerce-message{margin-top:', ';}.woocommerce-error{color:red;margin-bottom:', ';}.woocommerce-billing-fields{h3{font-weight:900;font-size:', ';margin-bottom:', ';}label{width:', ';line-height:', ';font-size:', ';color:black;display:inline-block;}input{border:none;border-bottom:', ' solid black;background:transparent;line-height:', ';width:', ';outline:none;border-radius:0;color:black;font-size:', ';margin-left:', ';&::placeholder{color:black;font-size:', ';}}}.woocommerce-additional-fields,.woocommerce-account-fields{padding-top:', ';padding-bottom:', ';h3{font-weight:900;font-size:', ';margin-bottom:', ';}label{width:', ';line-height:', ';font-size:', ';color:black;display:inline-block;}input{border:none;border-bottom:', ' solid black;background:transparent;line-height:', ';width:', ';outline:none;border-radius:0;color:black;font-size:', ';margin-left:', ';&::placeholder{color:black;font-size:', ';}}}#order_review_heading{font-weight:900;font-size:', ';margin-bottom:', ';}#order_review{table{th{line-height:', ';font-size:', ';color:black;text-align:left;padding:', ' ', ';}td{line-height:', ';font-size:', ';color:black;padding:', ' ', ';}}}.quantity{input[type=\'number\']{border:none;border-bottom:', ' solid black;background:transparent;line-height:', ';width:', ';outline:none;border-radius:0;color:black;font-size:', ';margin-left:', ';&::placeholder{color:black;font-size:', ';}}}input[type=\'submit\']{font-size:', ';color:#284ea2;font-weight:900;border:none;background:transparent;float:right;padding:0;}'], _media2.default.phone(_templateObject), (0, _mixins.wem)(50), (0, _mixins.wem)(30), (0, _mixins.wem)(32), (0, _mixins.wem)(50), (0, _mixins.wem)(200), (0, _mixins.wem)(51), (0, _mixins.wem)(28), (0, _mixins.wem)(1), (0, _mixins.wem)(40), (0, _mixins.wem)(300), (0, _mixins.wem)(20), (0, _mixins.wem)(50), (0, _mixins.wem)(13), (0, _mixins.wem)(30), _media2.default.phone(_templateObject2), (0, _mixins.wem)(6), (0, _mixins.wem)(52), (0, _mixins.wem)(80), (0, _mixins.center)('x'), (0, _mixins.wem)(450), (0, _mixins.wem)(5), (0, _mixins.wem)(10), (0, _mixins.wem)(100), (0, _mixins.wem)(150), _media2.default.phone(_templateObject3), (0, _mixins.wem)(32), (0, _mixins.wem)(50), (0, _mixins.wem)(50), (0, _mixins.wem)(1), (0, _mixins.wem)(40), (0, _mixins.wem)(300), (0, _mixins.wem)(20), (0, _mixins.wem)(50), (0, _mixins.wem)(13), (0, _mixins.wem)(50), (0, _mixins.wem)(50), (0, _mixins.wem)(32), (0, _mixins.wem)(50), (0, _mixins.wem)(200), (0, _mixins.wem)(51), (0, _mixins.wem)(28), (0, _mixins.wem)(1), (0, _mixins.wem)(40), (0, _mixins.wem)(300), (0, _mixins.wem)(20), (0, _mixins.wem)(50), (0, _mixins.wem)(13), (0, _mixins.wem)(100), (0, _mixins.wem)(100), (0, _mixins.wem)(32), (0, _mixins.wem)(50), (0, _mixins.wem)(200), (0, _mixins.wem)(51), (0, _mixins.wem)(28), (0, _mixins.wem)(1), (0, _mixins.wem)(40), (0, _mixins.wem)(300), (0, _mixins.wem)(20), (0, _mixins.wem)(50), (0, _mixins.wem)(13), (0, _mixins.wem)(32), (0, _mixins.wem)(50), (0, _mixins.wem)(51), (0, _mixins.wem)(28), (0, _mixins.wem)(10), (0, _mixins.wem)(20), (0, _mixins.wem)(51), (0, _mixins.wem)(28), (0, _mixins.wem)(10), (0, _mixins.wem)(20), (0, _mixins.wem)(1), (0, _mixins.wem)(40), (0, _mixins.wem)(300), (0, _mixins.wem)(20), (0, _mixins.wem)(50), (0, _mixins.wem)(13), (0, _mixins.wem)(30));
-
-exports.default = style;
-
-/***/ }),
-
-/***/ "./builder/app/WooCommerceStyles/index.js":
-/*!************************************************!*\
-  !*** ./builder/app/WooCommerceStyles/index.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.thankStyle = exports.payaginStyle = exports.checkoutStyle = undefined;
-
-var _checkoutStyle = __webpack_require__(/*! ./checkoutStyle */ "./builder/app/WooCommerceStyles/checkoutStyle.js");
-
-var _checkoutStyle2 = _interopRequireDefault(_checkoutStyle);
-
-var _payaginStyle = __webpack_require__(/*! ./payaginStyle */ "./builder/app/WooCommerceStyles/payaginStyle.js");
-
-var _payaginStyle2 = _interopRequireDefault(_payaginStyle);
-
-var _thankStyle = __webpack_require__(/*! ./thankStyle */ "./builder/app/WooCommerceStyles/thankStyle.js");
-
-var _thankStyle2 = _interopRequireDefault(_thankStyle);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.checkoutStyle = _checkoutStyle2.default;
-exports.payaginStyle = _payaginStyle2.default;
-exports.thankStyle = _thankStyle2.default;
-
-/***/ }),
-
-/***/ "./builder/app/WooCommerceStyles/payaginStyle.js":
-/*!*******************************************************!*\
-  !*** ./builder/app/WooCommerceStyles/payaginStyle.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _taggedTemplateLiteral2 = __webpack_require__(/*! babel-runtime/helpers/taggedTemplateLiteral */ "./node_modules/babel-runtime/helpers/taggedTemplateLiteral.js");
-
-var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
-
-var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n      width: 90%;\n    '], ['\n      width: 90%;\n    ']);
-
-var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
-
-var _mixins = __webpack_require__(/*! ruucm-blocks/tools/mixins */ "./node_modules/ruucm-blocks/tools/mixins.js");
-
-var _media = __webpack_require__(/*! ruucm-blocks/tools/media */ "./node_modules/ruucm-blocks/tools/media.js");
-
-var _media2 = _interopRequireDefault(_media);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var style = (0, _styledComponents.css)(['label[for=\'payment_method_iamport_pay_again\']{font-weight:900;font-size:', ';margin-bottom:', ';margin-top:', ';display:block;}#wc-iamport_pay_again-cc-form{width:50vw;min-height:', ';margin:0 auto;border-radius:', ';padding:', ' ', ';font-family:NanumSquareWeb;border:1px solid black;margin-bottom:', ';> p{color:black;font-weight:900;font-size:', ';margin-bottom:', ';}.checkout-input-row1{label{width:35%;line-height:', ';font-size:', ';color:black;display:inline-block;}input{border:none;background:transparent;font-size:', ';line-height:', ';color:black;width:60%;}}.checkout-input-row2{.col{display:block;}label{width:35%;line-height:', ';font-size:', ';color:black;display:inline-block;}input{border:none;background:transparent;font-size:', ';line-height:', ';color:black;width:60%;}}', ';}'], (0, _mixins.wem)(32), (0, _mixins.wem)(50), (0, _mixins.wem)(100), (0, _mixins.wem)(450), (0, _mixins.wem)(6), (0, _mixins.wem)(59), (0, _mixins.wem)(55), (0, _mixins.wem)(50), (0, _mixins.wem)(18), (0, _mixins.wem)(50), (0, _mixins.wem)(51), (0, _mixins.wem)(28), (0, _mixins.wem)(28), (0, _mixins.wem)(51), (0, _mixins.wem)(51), (0, _mixins.wem)(28), (0, _mixins.wem)(28), (0, _mixins.wem)(51), _media2.default.phone(_templateObject));
-
-exports.default = style;
-
-/***/ }),
-
-/***/ "./builder/app/WooCommerceStyles/thankStyle.js":
-/*!*****************************************************!*\
-  !*** ./builder/app/WooCommerceStyles/thankStyle.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
-
-var _mixins = __webpack_require__(/*! ruucm-blocks/tools/mixins */ "./node_modules/ruucm-blocks/tools/mixins.js");
-
-var style = (0, _styledComponents.css)(['.woocommerce-order-received{.woocommerce-order-details{display:none;}.woocommerce-notice--success{text-align:center;}.woocommerce-order{text-align:center;margin-top:', ';font-size:', ';line-height:', ';}}.cart-empty{text-align:center;margin-top:', ';font-size:', ';line-height:', ';}.return-to-shop{display:none;}'], (0, _mixins.wem)(100), (0, _mixins.wem)(25), (0, _mixins.wem)(50), (0, _mixins.wem)(100), (0, _mixins.wem)(25), (0, _mixins.wem)(50));
-
-exports.default = style;
-
-/***/ }),
-
 /***/ "./builder/app/appStyle.js":
 /*!*********************************!*\
   !*** ./builder/app/appStyle.js ***!
@@ -339,7 +206,12 @@ var _taggedTemplateLiteral2 = __webpack_require__(/*! babel-runtime/helpers/tagg
 
 var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(["\n  ", "\n  /* Fonts */\n  ", "\n  ", "\n  ", "\n  /* Icons */\n  ", "\n  \n  /* Body Styles */\n\n\n  @import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');\n  @import url('https://fonts.googleapis.com/css?family=Lato:400,700');\n\n  body {\n    font-family: \"NanumSquareRound\", sans-serif;\n    font-weight: 300;\n  }\n  /* Content Styles */\n  #content {\n    overflow-x: hidden;\n  }\n  \n\n\n  /* Basic Typo */\n  *, h1, h2, h3, p, a {\n    /* font-family: NanumSquareWeb */\n  }\n  a {\n    text-decoration: none;\n    color: inherit;\n  }\n  /* WooCommerce */\n\n  .has-very-dark-gray-color {\n    color: #231f20;\n    font-size: 14px;\n    line-height: 1.71;\n    padding-bottom:32px;\n  }\n\n  .has-cyan-bluish-gray-color {\n  color: #918f8f;\n  padding-bottom: 32px;\n  }\n\n  .has-small-font-size{\n  font-size: 11px;\n  line-height: 1.73;\n  }\n\n  .wp-block-image {\n    padding-bottom: 32px;\n    width: 100%;\n  }\n  .wp-block-video {\n    padding-bottom: 32px;\n  }\n  img {\n    width: 100%;\n    height: auto;\n  }\n\n  .item {\n    padding-left: ", ";\n    padding-right: ", ";\n    margin-top: ", ";\n  }\n  .item-header {\n    text-align: center;\n    font-size: ", ";\n    color: #231f20;\n    margin-bottom: ", ";\n  }\n  .item-img {\n    cursor: pointer;\n    margin-bottom:", ";\n  }\n  .item-title {\n    /* width: 288px;\n    height: 18px; */\n    font-size: ", ";\n    text-align: center;\n    color: #231f20;\n    margin-bottom: ", ";\n  }\n  .item-text {\n    /* width: 288px;\n    height: 44px; */\n    font-size: ", ";\n    line-height: 1.57;\n    text-align: center;\n    color: #918f8f;\n    margin-bottom: ", ";\n  }\n  .item-price {\n    /* width: 288px;\n    height: 18px; */\n    font-size: ", ";\n    text-align: center;\n    color: #231f20;\n    margin-bottom:0;\n  }\n  .item-more {\n    margin-top: ", ";\n    width: ", ";\n    height: ", ";\n    border-radius: 2px;\n    border: solid 1px #533c97;\n    background-color: #ffffff;\n    position: relative;\n    left: 50%;\n    transform: translateX(-50%);\n    cursor: pointer;\n  }\n\n\n\n  .artist {\n    padding-left: ", ";\n    padding-right: ", ";\n    margin-top: ", ";\n  }\n  .artist-header {\n    /* width: 199px;\n    height: 32px; */\n    font-size: ", ";\n    color: #231f20;\n    margin-bottom: ", ";\n  }\n  .artist-img {\n    cursor:pointer;\n    margin-bottom:0;\n  }\n  .artist-more {\n    width: ", ";\n    height: ", ";\n    border-radius: 2px;\n    border: solid 1px #533c97;\n    background-color: #ffffff;\n    margin-top: ", ";\n    position: relative;\n    left: 50%;\n    transform: translateX(-50%);\n    margin-bottom:", ";\n    cursor: pointer;\n  }\n  .more-text {\n   position: absolute;\n   left: 50%;\n   top: 50%;\n   transform: translate(-50%, -50%);\n   font-size: ", ";\n   color: #533c97;\n  }\n\n\n\n  .banner01 {\n    padding-left: 240px;\n    padding-right: 240px;\n    height: ", ";\n    background-color: #533c97;\n  }\n  .banner02 {\n    padding-left: 240px;\n    padding-right: 240px;\n    height: ", ";\n    background-color: #0eb780;\n  }\n  .banner-title {\n    color:white;\n    font-size: ", ";\n    line-height: 1.5;\n  }\n  .banner-more {\n    font-size: ", ";\n    color: #ffffff;\n    cursor: pointer;\n  }\n  .banner-label {\n    color: #ffffff;\n    font-size: ", ";\n    white-space: nowrap;\n  }\n  .banner-text {\n    font-size: ", ";\n    line-height: 1.71;\n    color: #ffffff;\n  }\n  .banner-img {\n    font-size: ", ";\n    float: right;\n  }\n  .hellogorilla-about-image {\n    /* font-size: ", ";\n    float: right; */\n  }\n\n  /* Visual Composer Styles */\n  ", "\n  .single {\n    p {\n      line-height: 1.7em;\n    }\n  }\n  .woocommerce-account {\n    #content {\n      padding: 200px 0;\n      max-width: 960px;\n      margin: 0 auto;\n    }\n  }\n\n\n\n  ", "\n  ", "\n\n"], ["\n  ", "\n  /* Fonts */\n  ", "\n  ", "\n  ", "\n  /* Icons */\n  ", "\n  \n  /* Body Styles */\n\n\n  @import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');\n  @import url('https://fonts.googleapis.com/css?family=Lato:400,700');\n\n  body {\n    font-family: \"NanumSquareRound\", sans-serif;\n    font-weight: 300;\n  }\n  /* Content Styles */\n  #content {\n    overflow-x: hidden;\n  }\n  \n\n\n  /* Basic Typo */\n  *, h1, h2, h3, p, a {\n    /* font-family: NanumSquareWeb */\n  }\n  a {\n    text-decoration: none;\n    color: inherit;\n  }\n  /* WooCommerce */\n\n  .has-very-dark-gray-color {\n    color: #231f20;\n    font-size: 14px;\n    line-height: 1.71;\n    padding-bottom:32px;\n  }\n\n  .has-cyan-bluish-gray-color {\n  color: #918f8f;\n  padding-bottom: 32px;\n  }\n\n  .has-small-font-size{\n  font-size: 11px;\n  line-height: 1.73;\n  }\n\n  .wp-block-image {\n    padding-bottom: 32px;\n    width: 100%;\n  }\n  .wp-block-video {\n    padding-bottom: 32px;\n  }\n  img {\n    width: 100%;\n    height: auto;\n  }\n\n  .item {\n    padding-left: ", ";\n    padding-right: ", ";\n    margin-top: ", ";\n  }\n  .item-header {\n    text-align: center;\n    font-size: ", ";\n    color: #231f20;\n    margin-bottom: ", ";\n  }\n  .item-img {\n    cursor: pointer;\n    margin-bottom:", ";\n  }\n  .item-title {\n    /* width: 288px;\n    height: 18px; */\n    font-size: ", ";\n    text-align: center;\n    color: #231f20;\n    margin-bottom: ", ";\n  }\n  .item-text {\n    /* width: 288px;\n    height: 44px; */\n    font-size: ", ";\n    line-height: 1.57;\n    text-align: center;\n    color: #918f8f;\n    margin-bottom: ", ";\n  }\n  .item-price {\n    /* width: 288px;\n    height: 18px; */\n    font-size: ", ";\n    text-align: center;\n    color: #231f20;\n    margin-bottom:0;\n  }\n  .item-more {\n    margin-top: ", ";\n    width: ", ";\n    height: ", ";\n    border-radius: 2px;\n    border: solid 1px #533c97;\n    background-color: #ffffff;\n    position: relative;\n    left: 50%;\n    transform: translateX(-50%);\n    cursor: pointer;\n  }\n\n\n\n  .artist {\n    padding-left: ", ";\n    padding-right: ", ";\n    margin-top: ", ";\n  }\n  .artist-header {\n    /* width: 199px;\n    height: 32px; */\n    font-size: ", ";\n    color: #231f20;\n    margin-bottom: ", ";\n  }\n  .artist-img {\n    cursor:pointer;\n    margin-bottom:0;\n  }\n  .artist-more {\n    width: ", ";\n    height: ", ";\n    border-radius: 2px;\n    border: solid 1px #533c97;\n    background-color: #ffffff;\n    margin-top: ", ";\n    position: relative;\n    left: 50%;\n    transform: translateX(-50%);\n    margin-bottom:", ";\n    cursor: pointer;\n  }\n  .more-text {\n   position: absolute;\n   left: 50%;\n   top: 50%;\n   transform: translate(-50%, -50%);\n   font-size: ", ";\n   color: #533c97;\n  }\n\n\n\n  .banner01 {\n    padding-left: 240px;\n    padding-right: 240px;\n    height: ", ";\n    background-color: #533c97;\n  }\n  .banner02 {\n    padding-left: 240px;\n    padding-right: 240px;\n    height: ", ";\n    background-color: #0eb780;\n  }\n  .banner-title {\n    color:white;\n    font-size: ", ";\n    line-height: 1.5;\n  }\n  .banner-more {\n    font-size: ", ";\n    color: #ffffff;\n    cursor: pointer;\n  }\n  .banner-label {\n    color: #ffffff;\n    font-size: ", ";\n    white-space: nowrap;\n  }\n  .banner-text {\n    font-size: ", ";\n    line-height: 1.71;\n    color: #ffffff;\n  }\n  .banner-img {\n    font-size: ", ";\n    float: right;\n  }\n  .hellogorilla-about-image {\n    /* font-size: ", ";\n    float: right; */\n  }\n\n  /* Visual Composer Styles */\n  ", "\n  .single {\n    p {\n      line-height: 1.7em;\n    }\n  }\n  .woocommerce-account {\n    #content {\n      padding: 200px 0;\n      max-width: 960px;\n      margin: 0 auto;\n    }\n  }\n\n\n\n  ", "\n  ", "\n\n"]);
+var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  ', '\n  /* Fonts */\n  ', '\n  @import url(\'https://fonts.googleapis.com/css?family=Lato:400,700\');\n  /* Icons */\n  ', '\n  \n  /* Body Styles */\n\n  body {\n    font-family: "NanumSquareRoundWeb", sans-serif;\n    font-weight: 300;\n  }\n  /* Content Styles */\n  #content {\n    overflow-x: hidden;\n  }\n  \n\n\n  /* Basic Typo */\n  *, h1, h2, h3, p, a {\n    /* font-family: NanumSquareWeb */\n  }\n  a {\n    text-decoration: none;\n    color: inherit;\n  }\n  /* WooCommerce */\n\n  .has-very-dark-gray-color {\n    color: #231f20;\n    font-size: 14px;\n    line-height: 1.71;\n    padding-bottom:32px;\n  }\n\n  .has-cyan-bluish-gray-color {\n  color: #918f8f;\n  padding-bottom: 32px;\n  }\n\n  .has-small-font-size{\n  font-size: 11px;\n  line-height: 1.73;\n  }\n\n  .wp-block-image {\n    padding-bottom: 32px;\n    width: 100%;\n  }\n  .wp-block-video {\n    padding-bottom: 32px;\n  }\n  img {\n    width: 100%;\n    height: auto;\n  }\n\n  .item {\n    padding-left: ', ';\n    padding-right: ', ';\n    margin-top: ', ';\n  }\n  .item-header {\n    text-align: center;\n    font-size: ', ';\n    color: #231f20;\n    margin-bottom: ', ';\n  }\n  .item-img {\n    cursor: pointer;\n    margin-bottom:', ';\n  }\n  .item-title {\n    /* width: 288px;\n    height: 18px; */\n    font-size: ', ';\n    text-align: center;\n    color: #231f20;\n    margin-bottom: ', ';\n  }\n  .item-text {\n    /* width: 288px;\n    height: 44px; */\n    font-size: ', ';\n    line-height: 1.57;\n    text-align: center;\n    color: #918f8f;\n    margin-bottom: ', ';\n  }\n  .item-price {\n    /* width: 288px;\n    height: 18px; */\n    font-size: ', ';\n    text-align: center;\n    color: #231f20;\n    margin-bottom:0;\n  }\n  .item-more {\n    margin-top: ', ';\n    width: ', ';\n    height: ', ';\n    border-radius: 2px;\n    border: solid 1px #533c97;\n    background-color: #ffffff;\n    position: relative;\n    left: 50%;\n    transform: translateX(-50%);\n    cursor: pointer;\n  }\n\n\n\n  .artist {\n    padding-left: ', ';\n    padding-right: ', ';\n    margin-top: ', ';\n  }\n  .artist-header {\n    /* width: 199px;\n    height: 32px; */\n    font-size: ', ';\n    color: #231f20;\n    margin-bottom: ', ';\n  }\n  .artist-img {\n    cursor:pointer;\n    margin-bottom:0;\n  }\n  .artist-more {\n    width: ', ';\n    height: ', ';\n    border-radius: 2px;\n    border: solid 1px #533c97;\n    background-color: #ffffff;\n    margin-top: ', ';\n    position: relative;\n    left: 50%;\n    transform: translateX(-50%);\n    margin-bottom:', ';\n    cursor: pointer;\n  }\n  .more-text {\n   position: absolute;\n   left: 50%;\n   top: 50%;\n   transform: translate(-50%, -50%);\n   font-size: ', ';\n   color: #533c97;\n  }\n\n\n\n  .banner01 {\n    padding-left: 240px;\n    padding-right: 240px;\n    height: ', ';\n    background-color: #533c97;\n  }\n  .banner02 {\n    padding-left: 240px;\n    padding-right: 240px;\n    height: ', ';\n    background-color: #0eb780;\n  }\n  .banner-title {\n    color:white;\n    font-size: ', ';\n    line-height: 1.5;\n  }\n  .banner-more {\n    font-size: ', ';\n    color: #ffffff;\n    cursor: pointer;\n  }\n  .banner-label {\n    color: #ffffff;\n    font-size: ', ';\n    white-space: nowrap;\n  }\n  .banner-text {\n    font-size: ', ';\n    line-height: 1.71;\n    color: #ffffff;\n  }\n  .banner-img {\n    font-size: ', ';\n    float: right;\n  }\n  .hellogorilla-about-image {\n    /* font-size: ', ';\n    float: right; */\n  }\n\n  /* Visual Composer Styles */\n  ', '\n  .single {\n    p {\n      line-height: 1.7em;\n    }\n  }\n  .woocommerce-account {\n    #content {\n      padding: 200px 0;\n      max-width: 960px;\n      margin: 0 auto;\n    }\n  }\n\n\n\n  ', '\n  ', '\n\n'], ['\n  ', '\n  /* Fonts */\n  ', '\n  @import url(\'https://fonts.googleapis.com/css?family=Lato:400,700\');\n  /* Icons */\n  ', '\n  \n  /* Body Styles */\n\n  body {\n    font-family: "NanumSquareRoundWeb", sans-serif;\n    font-weight: 300;\n  }\n  /* Content Styles */\n  #content {\n    overflow-x: hidden;\n  }\n  \n\n\n  /* Basic Typo */\n  *, h1, h2, h3, p, a {\n    /* font-family: NanumSquareWeb */\n  }\n  a {\n    text-decoration: none;\n    color: inherit;\n  }\n  /* WooCommerce */\n\n  .has-very-dark-gray-color {\n    color: #231f20;\n    font-size: 14px;\n    line-height: 1.71;\n    padding-bottom:32px;\n  }\n\n  .has-cyan-bluish-gray-color {\n  color: #918f8f;\n  padding-bottom: 32px;\n  }\n\n  .has-small-font-size{\n  font-size: 11px;\n  line-height: 1.73;\n  }\n\n  .wp-block-image {\n    padding-bottom: 32px;\n    width: 100%;\n  }\n  .wp-block-video {\n    padding-bottom: 32px;\n  }\n  img {\n    width: 100%;\n    height: auto;\n  }\n\n  .item {\n    padding-left: ', ';\n    padding-right: ', ';\n    margin-top: ', ';\n  }\n  .item-header {\n    text-align: center;\n    font-size: ', ';\n    color: #231f20;\n    margin-bottom: ', ';\n  }\n  .item-img {\n    cursor: pointer;\n    margin-bottom:', ';\n  }\n  .item-title {\n    /* width: 288px;\n    height: 18px; */\n    font-size: ', ';\n    text-align: center;\n    color: #231f20;\n    margin-bottom: ', ';\n  }\n  .item-text {\n    /* width: 288px;\n    height: 44px; */\n    font-size: ', ';\n    line-height: 1.57;\n    text-align: center;\n    color: #918f8f;\n    margin-bottom: ', ';\n  }\n  .item-price {\n    /* width: 288px;\n    height: 18px; */\n    font-size: ', ';\n    text-align: center;\n    color: #231f20;\n    margin-bottom:0;\n  }\n  .item-more {\n    margin-top: ', ';\n    width: ', ';\n    height: ', ';\n    border-radius: 2px;\n    border: solid 1px #533c97;\n    background-color: #ffffff;\n    position: relative;\n    left: 50%;\n    transform: translateX(-50%);\n    cursor: pointer;\n  }\n\n\n\n  .artist {\n    padding-left: ', ';\n    padding-right: ', ';\n    margin-top: ', ';\n  }\n  .artist-header {\n    /* width: 199px;\n    height: 32px; */\n    font-size: ', ';\n    color: #231f20;\n    margin-bottom: ', ';\n  }\n  .artist-img {\n    cursor:pointer;\n    margin-bottom:0;\n  }\n  .artist-more {\n    width: ', ';\n    height: ', ';\n    border-radius: 2px;\n    border: solid 1px #533c97;\n    background-color: #ffffff;\n    margin-top: ', ';\n    position: relative;\n    left: 50%;\n    transform: translateX(-50%);\n    margin-bottom:', ';\n    cursor: pointer;\n  }\n  .more-text {\n   position: absolute;\n   left: 50%;\n   top: 50%;\n   transform: translate(-50%, -50%);\n   font-size: ', ';\n   color: #533c97;\n  }\n\n\n\n  .banner01 {\n    padding-left: 240px;\n    padding-right: 240px;\n    height: ', ';\n    background-color: #533c97;\n  }\n  .banner02 {\n    padding-left: 240px;\n    padding-right: 240px;\n    height: ', ';\n    background-color: #0eb780;\n  }\n  .banner-title {\n    color:white;\n    font-size: ', ';\n    line-height: 1.5;\n  }\n  .banner-more {\n    font-size: ', ';\n    color: #ffffff;\n    cursor: pointer;\n  }\n  .banner-label {\n    color: #ffffff;\n    font-size: ', ';\n    white-space: nowrap;\n  }\n  .banner-text {\n    font-size: ', ';\n    line-height: 1.71;\n    color: #ffffff;\n  }\n  .banner-img {\n    font-size: ', ';\n    float: right;\n  }\n  .hellogorilla-about-image {\n    /* font-size: ', ';\n    float: right; */\n  }\n\n  /* Visual Composer Styles */\n  ', '\n  .single {\n    p {\n      line-height: 1.7em;\n    }\n  }\n  .woocommerce-account {\n    #content {\n      padding: 200px 0;\n      max-width: 960px;\n      margin: 0 auto;\n    }\n  }\n\n\n\n  ', '\n  ', '\n\n']);
+
+// import NanumSquare from 'ruucm-blocks/css-patterns/fonts/NanumSquare'
+// import Montserrat from 'ruucm-blocks/css-patterns/fonts/Montserrat'
+// import NanumMyeongjo from 'ruucm-blocks/css-patterns/fonts/NanumMyeongjo'
+
 
 var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
 
@@ -347,37 +219,15 @@ var _normalize = __webpack_require__(/*! ruucm-blocks/libs/normalize */ "./node_
 
 var _normalize2 = _interopRequireDefault(_normalize);
 
-var _NanumSquare = __webpack_require__(/*! ruucm-blocks/css-patterns/fonts/NanumSquare */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/index.js");
+var _NanumSquareRound = __webpack_require__(/*! ruucm-blocks/css-patterns/fonts/NanumSquareRound */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/index.js");
 
-var _NanumSquare2 = _interopRequireDefault(_NanumSquare);
-
-var _Montserrat = __webpack_require__(/*! ruucm-blocks/css-patterns/fonts/Montserrat */ "./node_modules/ruucm-blocks/css-patterns/fonts/Montserrat/index.js");
-
-var _Montserrat2 = _interopRequireDefault(_Montserrat);
-
-var _NanumMyeongjo = __webpack_require__(/*! ruucm-blocks/css-patterns/fonts/NanumMyeongjo */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/index.js");
-
-var _NanumMyeongjo2 = _interopRequireDefault(_NanumMyeongjo);
-
-var _HarborMagazineIcon = __webpack_require__(/*! ruucm-blocks/css-patterns/icons/HarborMagazineIcon */ "./node_modules/ruucm-blocks/css-patterns/icons/HarborMagazineIcon/index.js");
-
-var _HarborMagazineIcon2 = _interopRequireDefault(_HarborMagazineIcon);
-
-var _HarborSchoolIcon = __webpack_require__(/*! ruucm-blocks/css-patterns/icons/HarborSchoolIcon */ "./node_modules/ruucm-blocks/css-patterns/icons/HarborSchoolIcon/index.js");
-
-var _HarborSchoolIcon2 = _interopRequireDefault(_HarborSchoolIcon);
-
-var _PortfolioClassIcon = __webpack_require__(/*! ruucm-blocks/css-patterns/icons/PortfolioClassIcon */ "./node_modules/ruucm-blocks/css-patterns/icons/PortfolioClassIcon/index.js");
-
-var _PortfolioClassIcon2 = _interopRequireDefault(_PortfolioClassIcon);
+var _NanumSquareRound2 = _interopRequireDefault(_NanumSquareRound);
 
 var _HelloGorillaIcon = __webpack_require__(/*! ruucm-blocks/css-patterns/icons/HelloGorillaIcon */ "./node_modules/ruucm-blocks/css-patterns/icons/HelloGorillaIcon/index.js");
 
 var _HelloGorillaIcon2 = _interopRequireDefault(_HelloGorillaIcon);
 
 var _mixins = __webpack_require__(/*! ruucm-blocks/tools/mixins */ "./node_modules/ruucm-blocks/tools/mixins.js");
-
-var _WooCommerceStyles = __webpack_require__(/*! ./WooCommerceStyles */ "./builder/app/WooCommerceStyles/index.js");
 
 var _aboutStyle = __webpack_require__(/*! ./VCStyles/aboutStyle */ "./builder/app/VCStyles/aboutStyle.js");
 
@@ -394,7 +244,7 @@ var _newsStyle2 = _interopRequireDefault(_newsStyle);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // App Styles
-(0, _styledComponents.injectGlobal)(_templateObject, _normalize2.default, _NanumSquare2.default, _NanumMyeongjo2.default, _Montserrat2.default, _HelloGorillaIcon2.default, (0, _mixins.wem2)(240), (0, _mixins.wem2)(240), (0, _mixins.wem2)(96), (0, _mixins.wem2)(32), (0, _mixins.wem2)(72), (0, _mixins.wem2)(24), (0, _mixins.wem2)(18), (0, _mixins.wem2)(12), (0, _mixins.wem2)(14), (0, _mixins.wem2)(12), (0, _mixins.wem2)(18), (0, _mixins.wem2)(72), (0, _mixins.wem2)(144), (0, _mixins.wem2)(48), (0, _mixins.wem2)(240), (0, _mixins.wem2)(240), (0, _mixins.wem2)(144), (0, _mixins.wem2)(32), (0, _mixins.wem2)(72), (0, _mixins.wem2)(116), (0, _mixins.wem2)(48), (0, _mixins.wem2)(72), (0, _mixins.wem2)(144), (0, _mixins.wem2)(16), (0, _mixins.wem2)(336), (0, _mixins.wem2)(336), (0, _mixins.wem2)(32), (0, _mixins.wem2)(14), (0, _mixins.wem2)(16), (0, _mixins.wem2)(14), (0, _mixins.wem2)(240), (0, _mixins.wem2)(240), _aboutStyle2.default, _programStyle2.default, _newsStyle2.default);
+(0, _styledComponents.injectGlobal)(_templateObject, _normalize2.default, _NanumSquareRound2.default, _HelloGorillaIcon2.default, (0, _mixins.wem2)(240), (0, _mixins.wem2)(240), (0, _mixins.wem2)(96), (0, _mixins.wem2)(32), (0, _mixins.wem2)(72), (0, _mixins.wem2)(24), (0, _mixins.wem2)(18), (0, _mixins.wem2)(12), (0, _mixins.wem2)(14), (0, _mixins.wem2)(12), (0, _mixins.wem2)(18), (0, _mixins.wem2)(72), (0, _mixins.wem2)(144), (0, _mixins.wem2)(48), (0, _mixins.wem2)(240), (0, _mixins.wem2)(240), (0, _mixins.wem2)(144), (0, _mixins.wem2)(32), (0, _mixins.wem2)(72), (0, _mixins.wem2)(116), (0, _mixins.wem2)(48), (0, _mixins.wem2)(72), (0, _mixins.wem2)(144), (0, _mixins.wem2)(16), (0, _mixins.wem2)(336), (0, _mixins.wem2)(336), (0, _mixins.wem2)(32), (0, _mixins.wem2)(14), (0, _mixins.wem2)(16), (0, _mixins.wem2)(14), (0, _mixins.wem2)(240), (0, _mixins.wem2)(240), _aboutStyle2.default, _programStyle2.default, _newsStyle2.default);
 
 /***/ }),
 
@@ -5658,10 +5508,10 @@ module.exports = __webpack_require__(/*! ./lib/React */ "./node_modules/react/li
 
 /***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/Montserrat/Montserrat.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/Montserrat/Montserrat.js ***!
-  \*******************************************************************************/
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/NanumSquareRound.js":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/NanumSquareRound.js ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5676,193 +5526,136 @@ var _taggedTemplateLiteral2 = __webpack_require__(/*! babel-runtime/helpers/tagg
 
 var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  @import url(\'https://fonts.googleapis.com/css?family=Montserrat:200i,700,800,900,900i\');\n'], ['\n  @import url(\'https://fonts.googleapis.com/css?family=Montserrat:200i,700,800,900,900i\');\n']);
+var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  /**\n  *  NanumSquareRound L\n  */\n  @font-face {\n    font-family: \'NanumSquareRoundWeb\';\n    font-style: normal;\n    font-weight: 300;\n    src: local(\'NanumSquareRoundWebL\'), url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'), url(', ') format(\'truetype\'),\n      url(', ') format(\'embedded-opentype\');\n  }\n\n  /**\n  *  NanumSquareRound R\n  */\n  @font-face {\n    font-family: \'NanumSquareRoundWeb\';\n    font-style: normal;\n    font-weight: 400;\n    src: local(\'NanumSquareRoundWeb\'), url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'), url(', ') format(\'truetype\'),\n      url(', ') format(\'embedded-opentype\');\n  }\n\n  /**\n  *  NanumSquareRound B\n  */\n  @font-face {\n    font-family: \'NanumSquareRoundWeb\';\n    font-style: normal;\n    font-weight: 700;\n    src: local(\'NanumSquareRoundWebB\'), url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'), url(', ') format(\'truetype\'),\n      url(', ') format(\'embedded-opentype\');\n  }\n\n  /**\n  *  NanumEBarunGothic EB\n  */\n  @font-face {\n    font-family: \'NanumEBarunGothicWeb\';\n    font-style: normal;\n    font-weight: 900;\n    src: local(\'NanumEBarunGothicWebEB\'), url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'), url(', ') format(\'truetype\'),\n      url(', ') format(\'embedded-opentype\');\n  }\n'], ['\n  /**\n  *  NanumSquareRound L\n  */\n  @font-face {\n    font-family: \'NanumSquareRoundWeb\';\n    font-style: normal;\n    font-weight: 300;\n    src: local(\'NanumSquareRoundWebL\'), url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'), url(', ') format(\'truetype\'),\n      url(', ') format(\'embedded-opentype\');\n  }\n\n  /**\n  *  NanumSquareRound R\n  */\n  @font-face {\n    font-family: \'NanumSquareRoundWeb\';\n    font-style: normal;\n    font-weight: 400;\n    src: local(\'NanumSquareRoundWeb\'), url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'), url(', ') format(\'truetype\'),\n      url(', ') format(\'embedded-opentype\');\n  }\n\n  /**\n  *  NanumSquareRound B\n  */\n  @font-face {\n    font-family: \'NanumSquareRoundWeb\';\n    font-style: normal;\n    font-weight: 700;\n    src: local(\'NanumSquareRoundWebB\'), url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'), url(', ') format(\'truetype\'),\n      url(', ') format(\'embedded-opentype\');\n  }\n\n  /**\n  *  NanumEBarunGothic EB\n  */\n  @font-face {\n    font-family: \'NanumEBarunGothicWeb\';\n    font-style: normal;\n    font-weight: 900;\n    src: local(\'NanumEBarunGothicWebEB\'), url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'), url(', ') format(\'truetype\'),\n      url(', ') format(\'embedded-opentype\');\n  }\n']);
 
 var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
+<<<<<<< HEAD
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+=======
+>>>>>>> 8cefc19c44b649bd69eb2096e471db58e30a6ab3
 
-var Montserrat = (0, _styledComponents.css)(_templateObject);
+var _NanumSquareRoundOTFL = __webpack_require__(/*! ./fontFiles/NanumSquareRoundOTFL/NanumSquareRoundOTFL.eot */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFL/NanumSquareRoundOTFL.eot");
 
-exports.default = Montserrat;
+var _NanumSquareRoundOTFL2 = _interopRequireDefault(_NanumSquareRoundOTFL);
 
-/***/ }),
+var _NanumSquareRoundOTFL3 = __webpack_require__(/*! ./fontFiles/NanumSquareRoundOTFL/NanumSquareRoundOTFL.ttf */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFL/NanumSquareRoundOTFL.ttf");
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/Montserrat/index.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/Montserrat/index.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+var _NanumSquareRoundOTFL4 = _interopRequireDefault(_NanumSquareRoundOTFL3);
 
-"use strict";
+var _NanumSquareRoundOTFL5 = __webpack_require__(/*! ./fontFiles/NanumSquareRoundOTFL/NanumSquareRoundOTFL.woff */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFL/NanumSquareRoundOTFL.woff");
 
+var _NanumSquareRoundOTFL6 = _interopRequireDefault(_NanumSquareRoundOTFL5);
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+var _NanumSquareRoundOTFL7 = __webpack_require__(/*! ./fontFiles/NanumSquareRoundOTFL/NanumSquareRoundOTFL.woff2 */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFL/NanumSquareRoundOTFL.woff2");
 
-var _Montserrat = __webpack_require__(/*! ./Montserrat */ "./node_modules/ruucm-blocks/css-patterns/fonts/Montserrat/Montserrat.js");
+var _NanumSquareRoundOTFL8 = _interopRequireDefault(_NanumSquareRoundOTFL7);
 
-var _Montserrat2 = _interopRequireDefault(_Montserrat);
+var _NanumSquareRoundOTFR = __webpack_require__(/*! ./fontFiles/NanumSquareRoundOTFR/NanumSquareRoundOTFR.eot */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFR/NanumSquareRoundOTFR.eot");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _NanumSquareRoundOTFR2 = _interopRequireDefault(_NanumSquareRoundOTFR);
 
-exports.default = _Montserrat2.default;
+var _NanumSquareRoundOTFR3 = __webpack_require__(/*! ./fontFiles/NanumSquareRoundOTFR/NanumSquareRoundOTFR.ttf */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFR/NanumSquareRoundOTFR.ttf");
 
-/***/ }),
+var _NanumSquareRoundOTFR4 = _interopRequireDefault(_NanumSquareRoundOTFR3);
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/NanumMyeongjo.js":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/NanumMyeongjo.js ***!
-  \*************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+var _NanumSquareRoundOTFR5 = __webpack_require__(/*! ./fontFiles/NanumSquareRoundOTFR/NanumSquareRoundOTFR.woff */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFR/NanumSquareRoundOTFR.woff");
 
-"use strict";
+var _NanumSquareRoundOTFR6 = _interopRequireDefault(_NanumSquareRoundOTFR5);
 
+var _NanumSquareRoundOTFR7 = __webpack_require__(/*! ./fontFiles/NanumSquareRoundOTFR/NanumSquareRoundOTFR.woff2 */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFR/NanumSquareRoundOTFR.woff2");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+var _NanumSquareRoundOTFR8 = _interopRequireDefault(_NanumSquareRoundOTFR7);
 
+<<<<<<< HEAD
 var _taggedTemplateLiteral2 = __webpack_require__(/*! babel-runtime/helpers/taggedTemplateLiteral */ "./node_modules/babel-runtime/helpers/taggedTemplateLiteral.js");
+=======
+var _NanumSquareRoundOTFB = __webpack_require__(/*! ./fontFiles/NanumSquareRoundOTFB/NanumSquareRoundOTFB.eot */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFB/NanumSquareRoundOTFB.eot");
+>>>>>>> 8cefc19c44b649bd69eb2096e471db58e30a6ab3
 
-var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
+var _NanumSquareRoundOTFB2 = _interopRequireDefault(_NanumSquareRoundOTFB);
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  /**\n  *  NanumMyeongjo\n  */\n  @font-face {\n    font-family: \'NanumMyeongjoWeb\';\n    font-style: normal;\n    font-weight: 400;\n    src: local(\'NanumMyeongjoRegular\'), url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'),\n      url(', ') format(\'truetype\');\n  }\n  /**\n  *  NanumMyeongjo Bold\n  */\n  @font-face {\n    font-family: \'NanumMyeongjoWeb\';\n    font-style: normal;\n    font-weight: 700;\n    src: local(\'NanumMyeongjoBold\'), url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'),\n      url(', ') format(\'truetype\');\n  }\n\n  /**\n  *  NanumMyeongjo ExtraBold\n  */\n  @font-face {\n    font-family: \'NanumMyeongjoWeb\';\n    font-style: normal;\n    font-weight: 900;\n    src: local(\'NanumMyeongjoExtraExtraBold\'),\n      url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'),\n      url(', ') format(\'truetype\');\n  }\n'], ['\n  /**\n  *  NanumMyeongjo\n  */\n  @font-face {\n    font-family: \'NanumMyeongjoWeb\';\n    font-style: normal;\n    font-weight: 400;\n    src: local(\'NanumMyeongjoRegular\'), url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'),\n      url(', ') format(\'truetype\');\n  }\n  /**\n  *  NanumMyeongjo Bold\n  */\n  @font-face {\n    font-family: \'NanumMyeongjoWeb\';\n    font-style: normal;\n    font-weight: 700;\n    src: local(\'NanumMyeongjoBold\'), url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'),\n      url(', ') format(\'truetype\');\n  }\n\n  /**\n  *  NanumMyeongjo ExtraBold\n  */\n  @font-face {\n    font-family: \'NanumMyeongjoWeb\';\n    font-style: normal;\n    font-weight: 900;\n    src: local(\'NanumMyeongjoExtraExtraBold\'),\n      url(', ') format(\'woff2\'),\n      url(', ') format(\'woff\'),\n      url(', ') format(\'truetype\');\n  }\n']);
+var _NanumSquareRoundOTFB3 = __webpack_require__(/*! ./fontFiles/NanumSquareRoundOTFB/NanumSquareRoundOTFB.ttf */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFB/NanumSquareRoundOTFB.ttf");
 
+<<<<<<< HEAD
 var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
+=======
+var _NanumSquareRoundOTFB4 = _interopRequireDefault(_NanumSquareRoundOTFB3);
+>>>>>>> 8cefc19c44b649bd69eb2096e471db58e30a6ab3
 
-var _NanumMyeongjo = __webpack_require__(/*! ./fontFiles/NanumMyeongjo.ttf */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjo.ttf");
+var _NanumSquareRoundOTFB5 = __webpack_require__(/*! ./fontFiles/NanumSquareRoundOTFB/NanumSquareRoundOTFB.woff */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFB/NanumSquareRoundOTFB.woff");
 
-var _NanumMyeongjo2 = _interopRequireDefault(_NanumMyeongjo);
+var _NanumSquareRoundOTFB6 = _interopRequireDefault(_NanumSquareRoundOTFB5);
 
-var _NanumMyeongjo3 = __webpack_require__(/*! ./fontFiles/NanumMyeongjo.woff */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjo.woff");
+var _NanumSquareRoundOTFB7 = __webpack_require__(/*! ./fontFiles/NanumSquareRoundOTFB/NanumSquareRoundOTFB.woff2 */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFB/NanumSquareRoundOTFB.woff2");
 
-var _NanumMyeongjo4 = _interopRequireDefault(_NanumMyeongjo3);
+var _NanumSquareRoundOTFB8 = _interopRequireDefault(_NanumSquareRoundOTFB7);
 
-var _NanumMyeongjoBold = __webpack_require__(/*! ./fontFiles/NanumMyeongjoBold.ttf */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoBold.ttf");
+var _NanumSquareRoundOTFEB = __webpack_require__(/*! ./fontFiles/NanumSquareRoundOTFEB/NanumSquareRoundOTFEB.eot */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFEB/NanumSquareRoundOTFEB.eot");
 
-var _NanumMyeongjoBold2 = _interopRequireDefault(_NanumMyeongjoBold);
+var _NanumSquareRoundOTFEB2 = _interopRequireDefault(_NanumSquareRoundOTFEB);
 
-var _NanumMyeongjoBold3 = __webpack_require__(/*! ./fontFiles/NanumMyeongjoBold.woff */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoBold.woff");
+var _NanumSquareRoundOTFEB3 = __webpack_require__(/*! ./fontFiles/NanumSquareRoundOTFEB/NanumSquareRoundOTFEB.ttf */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFEB/NanumSquareRoundOTFEB.ttf");
 
-var _NanumMyeongjoBold4 = _interopRequireDefault(_NanumMyeongjoBold3);
+var _NanumSquareRoundOTFEB4 = _interopRequireDefault(_NanumSquareRoundOTFEB3);
 
-var _NanumMyeongjoExtraBold = __webpack_require__(/*! ./fontFiles/NanumMyeongjoExtraBold.ttf */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoExtraBold.ttf");
+var _NanumSquareRoundOTFEB5 = __webpack_require__(/*! ./fontFiles/NanumSquareRoundOTFEB/NanumSquareRoundOTFEB.woff */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFEB/NanumSquareRoundOTFEB.woff");
 
-var _NanumMyeongjoExtraBold2 = _interopRequireDefault(_NanumMyeongjoExtraBold);
+var _NanumSquareRoundOTFEB6 = _interopRequireDefault(_NanumSquareRoundOTFEB5);
 
-var _NanumMyeongjoExtraBold3 = __webpack_require__(/*! ./fontFiles/NanumMyeongjoExtraBold.woff */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoExtraBold.woff");
+var _NanumSquareRoundOTFEB7 = __webpack_require__(/*! ./fontFiles/NanumSquareRoundOTFEB/NanumSquareRoundOTFEB.woff2 */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFEB/NanumSquareRoundOTFEB.woff2");
 
-var _NanumMyeongjoExtraBold4 = _interopRequireDefault(_NanumMyeongjoExtraBold3);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var NanumMyeongjo = (0, _styledComponents.css)(_templateObject, _NanumMyeongjo4.default, _NanumMyeongjo4.default, _NanumMyeongjo2.default, _NanumMyeongjoBold4.default, _NanumMyeongjoBold4.default, _NanumMyeongjoExtraBold2.default, _NanumMyeongjoExtraBold4.default, _NanumMyeongjoExtraBold4.default, _NanumMyeongjoExtraBold2.default);
-
-exports.default = NanumMyeongjo;
-
-/***/ }),
-
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjo.ttf":
-/*!************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjo.ttf ***!
-  \************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/a61eb06dc8ec6bd8a44768a5d4022e82.ttf";
-
-/***/ }),
-
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjo.woff":
-/*!*************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjo.woff ***!
-  \*************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/4411820810b6c6a6ccdd19e3ad1e1465.woff";
-
-/***/ }),
-
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoBold.ttf":
-/*!****************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoBold.ttf ***!
-  \****************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/feb26d095d82c07952541c2098c74b75.ttf";
-
-/***/ }),
-
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoBold.woff":
-/*!*****************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoBold.woff ***!
-  \*****************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/215eac2eaffc8a300c9fe871227b2a32.woff";
-
-/***/ }),
-
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoExtraBold.ttf":
-/*!*********************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoExtraBold.ttf ***!
-  \*********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/f42569c5619acc659073802a2476b386.ttf";
-
-/***/ }),
-
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoExtraBold.woff":
-/*!**********************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/fontFiles/NanumMyeongjoExtraBold.woff ***!
-  \**********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/5f9988b1674d51f80796f9aa8316368a.woff";
-
-/***/ }),
-
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/index.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/index.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _NanumMyeongjo = __webpack_require__(/*! ./NanumMyeongjo */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumMyeongjo/NanumMyeongjo.js");
-
-var _NanumMyeongjo2 = _interopRequireDefault(_NanumMyeongjo);
+var _NanumSquareRoundOTFEB8 = _interopRequireDefault(_NanumSquareRoundOTFEB7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _NanumMyeongjo2.default;
+var NanumSquareRound = (0, _styledComponents.css)(_templateObject, _NanumSquareRoundOTFL8.default, _NanumSquareRoundOTFL6.default, _NanumSquareRoundOTFL4.default, _NanumSquareRoundOTFL2.default, _NanumSquareRoundOTFR8.default, _NanumSquareRoundOTFR6.default, _NanumSquareRoundOTFR4.default, _NanumSquareRoundOTFR2.default, _NanumSquareRoundOTFB8.default, _NanumSquareRoundOTFB6.default, _NanumSquareRoundOTFB4.default, _NanumSquareRoundOTFB2.default, _NanumSquareRoundOTFEB8.default, _NanumSquareRoundOTFEB6.default, _NanumSquareRoundOTFEB4.default, _NanumSquareRoundOTFEB2.default);
+
+exports.default = NanumSquareRound;
 
 /***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/NanumSquare.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/NanumSquare.js ***!
-  \*********************************************************************************/
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFB/NanumSquareRoundOTFB.eot":
+/*!*******************************************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFB/NanumSquareRoundOTFB.eot ***!
+  \*******************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/0d32a168ce9b217c91c7e544c4b481bc.eot";
+
+/***/ }),
+
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFB/NanumSquareRoundOTFB.ttf":
+/*!*******************************************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFB/NanumSquareRoundOTFB.ttf ***!
+  \*******************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/3aca9ccf98d7608ae01bfdcdaaa9dc61.ttf";
+
+/***/ }),
+
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFB/NanumSquareRoundOTFB.woff":
+/*!********************************************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFB/NanumSquareRoundOTFB.woff ***!
+  \********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/6b276f21efae5ff7223c5916604e0f25.woff";
+
+/***/ }),
+
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFB/NanumSquareRoundOTFB.woff2":
+/*!*********************************************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFB/NanumSquareRoundOTFB.woff2 ***!
+  \*********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+<<<<<<< HEAD
 "use strict";
 
 
@@ -5931,145 +5724,148 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var NanumSquare = (0, _styledComponents.css)(_templateObject, _NanumSquareLight6.default, _NanumSquareLight6.default, _NanumSquareLight4.default, _NanumSquareLight2.default, _NanumSquareRegular6.default, _NanumSquareRegular6.default, _NanumSquareRegular4.default, _NanumSquareRegular2.default, _NanumSquareBold6.default, _NanumSquareBold6.default, _NanumSquareBold4.default, _NanumSquareBold2.default, _NanumSquareExtraBold6.default, _NanumSquareExtraBold6.default, _NanumSquareExtraBold4.default, _NanumSquareExtraBold2.default);
 
 exports.default = NanumSquare;
+=======
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/da0f8c68560294b3ca754970f80c0913.woff2";
+>>>>>>> 8cefc19c44b649bd69eb2096e471db58e30a6ab3
 
 /***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareBold.eot":
-/*!************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareBold.eot ***!
-  \************************************************************************************************/
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFEB/NanumSquareRoundOTFEB.eot":
+/*!*********************************************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFEB/NanumSquareRoundOTFEB.eot ***!
+  \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/0bf91c1306ce2000de4a4343077a1c84.eot";
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/87c1f4ebb26a74d972a047a5adb4fda8.eot";
 
 /***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareBold.ttf":
-/*!************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareBold.ttf ***!
-  \************************************************************************************************/
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFEB/NanumSquareRoundOTFEB.ttf":
+/*!*********************************************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFEB/NanumSquareRoundOTFEB.ttf ***!
+  \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/86083b6b2e7722e5556e817f787c33ea.ttf";
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/3632eba8957da3e0cbdba28356fbff99.ttf";
 
 /***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareBold.woff":
-/*!*************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareBold.woff ***!
-  \*************************************************************************************************/
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFEB/NanumSquareRoundOTFEB.woff":
+/*!**********************************************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFEB/NanumSquareRoundOTFEB.woff ***!
+  \**********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/d96df983c918a2ca467fef2c13bbedf5.woff";
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/9add698462a92ab09ce97d11608a153a.woff";
 
 /***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareExtraBold.eot":
-/*!*****************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareExtraBold.eot ***!
-  \*****************************************************************************************************/
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFEB/NanumSquareRoundOTFEB.woff2":
+/*!***********************************************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFEB/NanumSquareRoundOTFEB.woff2 ***!
+  \***********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/1a2925ea5cbd8e2a2c80dcd8551ca4b3.eot";
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/e20c8f4e5ac984db8518eeab7d84aac9.woff2";
 
 /***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareExtraBold.ttf":
-/*!*****************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareExtraBold.ttf ***!
-  \*****************************************************************************************************/
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFL/NanumSquareRoundOTFL.eot":
+/*!*******************************************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFL/NanumSquareRoundOTFL.eot ***!
+  \*******************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/fc6ea694f70a93b99f09c3cfb79534b2.ttf";
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/c45970c21bfe8964efb14b8548cf1a01.eot";
 
 /***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareExtraBold.woff":
-/*!******************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareExtraBold.woff ***!
-  \******************************************************************************************************/
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFL/NanumSquareRoundOTFL.ttf":
+/*!*******************************************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFL/NanumSquareRoundOTFL.ttf ***!
+  \*******************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/9b697db6ede49cd6ead598c692adf263.woff";
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/dac176977d002a179b4bdcff0f16c1fc.ttf";
 
 /***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareLight.eot":
-/*!*************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareLight.eot ***!
-  \*************************************************************************************************/
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFL/NanumSquareRoundOTFL.woff":
+/*!********************************************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFL/NanumSquareRoundOTFL.woff ***!
+  \********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/5ae0f64f90a9cb2ed9f6dd34f9d6384d.eot";
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/55d9598267271d7254bc3b5962c3b5a5.woff";
 
 /***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareLight.ttf":
-/*!*************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareLight.ttf ***!
-  \*************************************************************************************************/
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFL/NanumSquareRoundOTFL.woff2":
+/*!*********************************************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFL/NanumSquareRoundOTFL.woff2 ***!
+  \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/aece34051c5e185c8201f6c4da0418a6.ttf";
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/18c2608649e92dbce89282fd2341f541.woff2";
 
 /***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareLight.woff":
-/*!**************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareLight.woff ***!
-  \**************************************************************************************************/
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFR/NanumSquareRoundOTFR.eot":
+/*!*******************************************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFR/NanumSquareRoundOTFR.eot ***!
+  \*******************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/343bcc4147b9e5b97ef67a2742f0193b.woff";
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/fe30aae909ee3367b6cfc013612aa649.eot";
 
 /***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareRegular.eot":
-/*!***************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareRegular.eot ***!
-  \***************************************************************************************************/
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFR/NanumSquareRoundOTFR.ttf":
+/*!*******************************************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFR/NanumSquareRoundOTFR.ttf ***!
+  \*******************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/482740536e1a0ef115b4e3c3ddf8c846.eot";
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/cc284efa7ca26d1e38c3379a93666a2c.ttf";
 
 /***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareRegular.ttf":
-/*!***************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareRegular.ttf ***!
-  \***************************************************************************************************/
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFR/NanumSquareRoundOTFR.woff":
+/*!********************************************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFR/NanumSquareRoundOTFR.woff ***!
+  \********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/b9dc5e6aa1079d22000a01f6218e0517.ttf";
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/8bc13c9bf0716a68315cac04363d5d44.woff";
 
 /***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareRegular.woff":
-/*!****************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/fontFiles/NanumSquareRegular.woff ***!
-  \****************************************************************************************************/
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFR/NanumSquareRoundOTFR.woff2":
+/*!*********************************************************************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/fontFiles/NanumSquareRoundOTFR/NanumSquareRoundOTFR.woff2 ***!
+  \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/3531fe9705ae6901c845d47a3b9da006.woff";
+module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/afafe29b995a12011df1fe813686e020.woff2";
 
 /***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/index.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/index.js ***!
-  \***************************************************************************/
+/***/ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/index.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/index.js ***!
+  \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6080,20 +5876,20 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _NanumSquare = __webpack_require__(/*! ./NanumSquare */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquare/NanumSquare.js");
+var _NanumSquareRound = __webpack_require__(/*! ./NanumSquareRound */ "./node_modules/ruucm-blocks/css-patterns/fonts/NanumSquareRound/NanumSquareRound.js");
 
-var _NanumSquare2 = _interopRequireDefault(_NanumSquare);
+var _NanumSquareRound2 = _interopRequireDefault(_NanumSquareRound);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _NanumSquare2.default;
+exports.default = _NanumSquareRound2.default;
 
 /***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/icons/HarborMagazineIcon/HarborMagazineIcon.js":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/icons/HarborMagazineIcon/HarborMagazineIcon.js ***!
-  \***********************************************************************************************/
+/***/ "./node_modules/ruucm-blocks/css-patterns/icons/HelloGorillaIcon/Style.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/ruucm-blocks/css-patterns/icons/HelloGorillaIcon/Style.js ***!
+  \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6108,6 +5904,7 @@ var _taggedTemplateLiteral2 = __webpack_require__(/*! babel-runtime/helpers/tagg
 
 var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
 
+<<<<<<< HEAD
 var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  /**\n  *  Harbor Icons\n  */\n  @font-face {\n    font-family: \'magharbor\';\n    src: url(', ');\n    src: url(', ') format(\'embedded-opentype\'),\n      url(', ') format(\'truetype\'), url(', ') format(\'woff\'),\n      url(', ') format(\'svg\');\n    font-weight: normal;\n    font-style: normal;\n  }\n  ', ' /* @import \'harbor-icons\'; */;\n'], ['\n  /**\n  *  Harbor Icons\n  */\n  @font-face {\n    font-family: \'magharbor\';\n    src: url(', ');\n    src: url(', ') format(\'embedded-opentype\'),\n      url(', ') format(\'truetype\'), url(', ') format(\'woff\'),\n      url(', ') format(\'svg\');\n    font-weight: normal;\n    font-style: normal;\n  }\n  ', ' /* @import \'harbor-icons\'; */;\n']);
 
 var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
@@ -6129,17 +5926,24 @@ var _magharbor5 = __webpack_require__(/*! ./fontFiles/magharbor.woff */ "./node_
 var _magharbor6 = _interopRequireDefault(_magharbor5);
 
 var _magharbor7 = __webpack_require__(/*! ./fontFiles/magharbor.svg */ "./node_modules/ruucm-blocks/css-patterns/icons/HarborMagazineIcon/fontFiles/magharbor.svg");
+=======
+var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  .hellogorilla {\n    /* use !important to prevent issues with browser extensions that change fonts */\n    font-family: \'hellogorilla\' !important;\n    speak: none;\n    font-style: normal;\n    font-weight: normal;\n    font-variant: normal;\n    text-transform: none;\n    line-height: 1;\n\n    /* Better Font Rendering =========== */\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n\n  .hellogorilla-youtube:before {\n    content: \'\\e914\';\n  }\n  .hellogorilla-icon-search-24:before {\n    content: \'\\e911\';\n    color: #fff;\n  }\n  .hellogorilla-a-s-p-image:before {\n    content: \'\\e912\';\n    color: #fff;\n  }\n  .hellogorilla-about-image:before {\n    content: \'\\e913\';\n    color: #fefefe;\n  }\n  .hellogorilla-slider-not-selected:before {\n    content: \'\\e915\';\n    color: #fff;\n  }\n  .hellogorilla-slider-selected:before {\n    content: \'\\e916\';\n    color: #533c97;\n  }\n  .hellogorilla-arrow-left-selected:before {\n    content: \'\\e900\';\n    color: #805de9;\n  }\n  .hellogorilla-arrow-left:before {\n    content: \'\\e901\';\n    color: #e9e8e8;\n  }\n  .hellogorilla-arrow-right-selected:before {\n    content: \'\\e902\';\n    color: #805de9;\n  }\n  .hellogorilla-arrow-right:before {\n    content: \'\\e903\';\n    color: #e9e8e8;\n  }\n  .hellogorilla-icon-cart-61:before {\n    content: \'\\e904\';\n    color: #fff;\n  }\n  .hellogorilla-icon-facebook-24 .path1:before {\n    content: \'\\e905\';\n    color: rgb(35, 31, 32);\n  }\n  .hellogorilla-icon-facebook-24 .path2:before {\n    content: \'\\e906\';\n    margin-left: -1em;\n    color: rgb(255, 255, 255);\n  }\n  .hellogorilla-icon-facebook-hover-24 .path1:before {\n    content: \'\\e907\';\n    color: rgb(128, 93, 233);\n  }\n  .hellogorilla-icon-facebook-hover-24 .path2:before {\n    content: \'\\e908\';\n    margin-left: -1em;\n    color: rgb(255, 255, 255);\n  }\n  .hellogorilla-icon-instagram-24:before {\n    content: \'\\e909\';\n  }\n  .hellogorilla-icon-instagram-hover-24:before {\n    content: \'\\e90a\';\n    color: #805de9;\n  }\n  .hellogorilla-icon-play:before {\n    content: \'\\e90b\';\n    color: #805de9;\n  }\n  .hellogorilla-icon-website-32:before {\n    content: \'\\e90c\';\n  }\n  .hellogorilla-icon-website-hover-32:before {\n    content: \'\\e90d\';\n    color: #805de9;\n  }\n  .hellogorilla-logo .path1:before {\n    content: \'\\e90e\';\n    color: rgb(83, 60, 151);\n  }\n  .hellogorilla-logo .path2:before {\n    content: \'\\e90f\';\n    margin-left: -2.376953125em;\n    color: rgb(254, 254, 254);\n  }\n  .hellogorilla-logo .path3:before {\n    content: \'\\e910\';\n    margin-left: -2.376953125em;\n    color: rgb(254, 254, 254);\n  }\n'], ['\n  .hellogorilla {\n    /* use !important to prevent issues with browser extensions that change fonts */\n    font-family: \'hellogorilla\' !important;\n    speak: none;\n    font-style: normal;\n    font-weight: normal;\n    font-variant: normal;\n    text-transform: none;\n    line-height: 1;\n\n    /* Better Font Rendering =========== */\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n\n  .hellogorilla-youtube:before {\n    content: \'\\\\e914\';\n  }\n  .hellogorilla-icon-search-24:before {\n    content: \'\\\\e911\';\n    color: #fff;\n  }\n  .hellogorilla-a-s-p-image:before {\n    content: \'\\\\e912\';\n    color: #fff;\n  }\n  .hellogorilla-about-image:before {\n    content: \'\\\\e913\';\n    color: #fefefe;\n  }\n  .hellogorilla-slider-not-selected:before {\n    content: \'\\\\e915\';\n    color: #fff;\n  }\n  .hellogorilla-slider-selected:before {\n    content: \'\\\\e916\';\n    color: #533c97;\n  }\n  .hellogorilla-arrow-left-selected:before {\n    content: \'\\\\e900\';\n    color: #805de9;\n  }\n  .hellogorilla-arrow-left:before {\n    content: \'\\\\e901\';\n    color: #e9e8e8;\n  }\n  .hellogorilla-arrow-right-selected:before {\n    content: \'\\\\e902\';\n    color: #805de9;\n  }\n  .hellogorilla-arrow-right:before {\n    content: \'\\\\e903\';\n    color: #e9e8e8;\n  }\n  .hellogorilla-icon-cart-61:before {\n    content: \'\\\\e904\';\n    color: #fff;\n  }\n  .hellogorilla-icon-facebook-24 .path1:before {\n    content: \'\\\\e905\';\n    color: rgb(35, 31, 32);\n  }\n  .hellogorilla-icon-facebook-24 .path2:before {\n    content: \'\\\\e906\';\n    margin-left: -1em;\n    color: rgb(255, 255, 255);\n  }\n  .hellogorilla-icon-facebook-hover-24 .path1:before {\n    content: \'\\\\e907\';\n    color: rgb(128, 93, 233);\n  }\n  .hellogorilla-icon-facebook-hover-24 .path2:before {\n    content: \'\\\\e908\';\n    margin-left: -1em;\n    color: rgb(255, 255, 255);\n  }\n  .hellogorilla-icon-instagram-24:before {\n    content: \'\\\\e909\';\n  }\n  .hellogorilla-icon-instagram-hover-24:before {\n    content: \'\\\\e90a\';\n    color: #805de9;\n  }\n  .hellogorilla-icon-play:before {\n    content: \'\\\\e90b\';\n    color: #805de9;\n  }\n  .hellogorilla-icon-website-32:before {\n    content: \'\\\\e90c\';\n  }\n  .hellogorilla-icon-website-hover-32:before {\n    content: \'\\\\e90d\';\n    color: #805de9;\n  }\n  .hellogorilla-logo .path1:before {\n    content: \'\\\\e90e\';\n    color: rgb(83, 60, 151);\n  }\n  .hellogorilla-logo .path2:before {\n    content: \'\\\\e90f\';\n    margin-left: -2.376953125em;\n    color: rgb(254, 254, 254);\n  }\n  .hellogorilla-logo .path3:before {\n    content: \'\\\\e910\';\n    margin-left: -2.376953125em;\n    color: rgb(254, 254, 254);\n  }\n']);
+>>>>>>> 8cefc19c44b649bd69eb2096e471db58e30a6ab3
 
-var _magharbor8 = _interopRequireDefault(_magharbor7);
+var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var HarborMagazineIcon = (0, _styledComponents.css)(_templateObject, _magharbor2.default, _magharbor2.default, _magharbor4.default, _magharbor6.default, _magharbor8.default, _Style2.default);
+/**
+ * Should add one more \, cause it's javascript !
+ */
+var Style = (0, _styledComponents.css)(_templateObject);
 
-exports.default = HarborMagazineIcon;
+exports.default = Style;
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./node_modules/ruucm-blocks/css-patterns/icons/HarborMagazineIcon/Style.js":
 /*!**********************************************************************************!*\
   !*** ./node_modules/ruucm-blocks/css-patterns/icons/HarborMagazineIcon/Style.js ***!
@@ -6425,6 +6229,8 @@ exports.default = Style;
 
 /***/ }),
 
+=======
+>>>>>>> 8cefc19c44b649bd69eb2096e471db58e30a6ab3
 /***/ "./node_modules/ruucm-blocks/css-patterns/icons/HelloGorillaIcon/fontFiles/hellogorilla.eot":
 /*!**************************************************************************************************!*\
   !*** ./node_modules/ruucm-blocks/css-patterns/icons/HelloGorillaIcon/fontFiles/hellogorilla.eot ***!
@@ -6519,10 +6325,10 @@ exports.default = HelloGorillaIcon;
 
 /***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/icons/PortfolioClassIcon/Style.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/icons/PortfolioClassIcon/Style.js ***!
-  \**********************************************************************************/
+/***/ "./node_modules/ruucm-blocks/libs/normalize.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/ruucm-blocks/libs/normalize.js ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6537,52 +6343,41 @@ var _taggedTemplateLiteral2 = __webpack_require__(/*! babel-runtime/helpers/tagg
 
 var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  .portfolio-class {\n    /* use !important to prevent issues with browser extensions that change fonts */\n    font-family: \'portfolio-class\' !important;\n    speak: none;\n    font-style: normal;\n    font-weight: normal;\n    font-variant: normal;\n    text-transform: none;\n    line-height: 1;\n\n    /* Better Font Rendering =========== */\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n\n  .portfolio-class-back-icon:before {\n    content: \'\\e90e\';\n  }\n  .portfolio-class-Arrow:before {\n    content: \'\\e90c\';\n    color: #fff;\n  }\n  .portfolio-class-logo_main:before {\n    content: \'\\e90d\';\n    color: #fdd388;\n  }\n  .portfolio-class-list:before {\n    content: \'\\e900\';\n    color: #595959;\n  }\n  .portfolio-class-calendar:before {\n    content: \'\\e901\';\n    color: #284ea2;\n  }\n  .portfolio-class-pc-logo:before {\n    content: \'\\e902\';\n    color: #fdd388;\n  }\n  .portfolio-class-web:before {\n    content: \'\\e903\';\n    color: #fff;\n  }\n  .portfolio-class-group:before {\n    content: \'\\e904\';\n    color: #fff;\n  }\n  .portfolio-class-editor:before {\n    content: \'\\e905\';\n    color: #fff;\n  }\n  .portfolio-class-flag:before {\n    content: \'\\e906\';\n    color: #fff;\n  }\n  .portfolio-class-designer:before {\n    content: \'\\e907\';\n    color: #fff;\n  }\n  .portfolio-class-not-good:before {\n    content: \'\\e908\';\n    color: #2348a7;\n  }\n  .portfolio-class-fb-logo .path1:before {\n    content: \'\\e909\';\n    color: rgb(66, 103, 178);\n  }\n  .portfolio-class-fb-logo .path2:before {\n    content: \'\\e90a\';\n    margin-left: -1em;\n    color: rgb(255, 255, 255);\n  }\n  .portfolio-class-question:before {\n    content: \'\\e90b\';\n    color: #2348a7;\n  }\n'], ['\n  .portfolio-class {\n    /* use !important to prevent issues with browser extensions that change fonts */\n    font-family: \'portfolio-class\' !important;\n    speak: none;\n    font-style: normal;\n    font-weight: normal;\n    font-variant: normal;\n    text-transform: none;\n    line-height: 1;\n\n    /* Better Font Rendering =========== */\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n\n  .portfolio-class-back-icon:before {\n    content: \'\\\\e90e\';\n  }\n  .portfolio-class-Arrow:before {\n    content: \'\\\\e90c\';\n    color: #fff;\n  }\n  .portfolio-class-logo_main:before {\n    content: \'\\\\e90d\';\n    color: #fdd388;\n  }\n  .portfolio-class-list:before {\n    content: \'\\\\e900\';\n    color: #595959;\n  }\n  .portfolio-class-calendar:before {\n    content: \'\\\\e901\';\n    color: #284ea2;\n  }\n  .portfolio-class-pc-logo:before {\n    content: \'\\\\e902\';\n    color: #fdd388;\n  }\n  .portfolio-class-web:before {\n    content: \'\\\\e903\';\n    color: #fff;\n  }\n  .portfolio-class-group:before {\n    content: \'\\\\e904\';\n    color: #fff;\n  }\n  .portfolio-class-editor:before {\n    content: \'\\\\e905\';\n    color: #fff;\n  }\n  .portfolio-class-flag:before {\n    content: \'\\\\e906\';\n    color: #fff;\n  }\n  .portfolio-class-designer:before {\n    content: \'\\\\e907\';\n    color: #fff;\n  }\n  .portfolio-class-not-good:before {\n    content: \'\\\\e908\';\n    color: #2348a7;\n  }\n  .portfolio-class-fb-logo .path1:before {\n    content: \'\\\\e909\';\n    color: rgb(66, 103, 178);\n  }\n  .portfolio-class-fb-logo .path2:before {\n    content: \'\\\\e90a\';\n    margin-left: -1em;\n    color: rgb(255, 255, 255);\n  }\n  .portfolio-class-question:before {\n    content: \'\\\\e90b\';\n    color: #2348a7;\n  }\n']);
+var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  html,\n  body,\n  div,\n  span,\n  applet,\n  object,\n  iframe,\n  h1,\n  h2,\n  h3,\n  h4,\n  h5,\n  h6,\n  p,\n  blockquote,\n  pre,\n  a,\n  abbr,\n  acronym,\n  address,\n  big,\n  cite,\n  code,\n  del,\n  dfn,\n  em,\n  img,\n  ins,\n  kbd,\n  q,\n  s,\n  samp,\n  small,\n  strike,\n  strong,\n  sub,\n  sup,\n  tt,\n  var,\n  b,\n  u,\n  i,\n  center,\n  dl,\n  dt,\n  dd,\n  ol,\n  ul,\n  li,\n  fieldset,\n  form,\n  label,\n  legend,\n  table,\n  caption,\n  tbody,\n  tfoot,\n  thead,\n  tr,\n  th,\n  td,\n  article,\n  aside,\n  canvas,\n  details,\n  embed,\n  figure,\n  figcaption,\n  footer,\n  header,\n  hgroup,\n  menu,\n  nav,\n  output,\n  ruby,\n  section,\n  summary,\n  time,\n  mark,\n  audio,\n  video {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    font: inherit;\n    vertical-align: baseline;\n  }\n\n  button,\n  input[type=\'button\'],\n  input[type=\'submit\'],\n  input[type=\'reset\'],\n  input[type=\'file\'] {\n    border-radius: 0;\n  }\n\n  input[type=\'text\']::-ms-clear {\n    display: none;\n  }\n\n  /* HTML5 display-role reset for older browsers */\n  article,\n  aside,\n  details,\n  figcaption,\n  figure,\n  footer,\n  header,\n  hgroup,\n  menu,\n  nav,\n  section {\n    display: block;\n  }\n\n  body {\n    line-height: 1;\n  }\n\n  sup {\n    vertical-align: super;\n  }\n\n  sub {\n    vertical-align: sub;\n  }\n\n  ol,\n  ul {\n    list-style: none;\n  }\n\n  blockquote,\n  q {\n    quotes: none;\n  }\n\n  blockquote:before,\n  blockquote:after,\n  q:before,\n  q:after {\n    content: \'\';\n    content: none;\n  }\n\n  table {\n    border-collapse: collapse;\n    border-spacing: 0;\n  }\n\n  * {\n    box-sizing: border-box;\n  }\n'], ['\n  html,\n  body,\n  div,\n  span,\n  applet,\n  object,\n  iframe,\n  h1,\n  h2,\n  h3,\n  h4,\n  h5,\n  h6,\n  p,\n  blockquote,\n  pre,\n  a,\n  abbr,\n  acronym,\n  address,\n  big,\n  cite,\n  code,\n  del,\n  dfn,\n  em,\n  img,\n  ins,\n  kbd,\n  q,\n  s,\n  samp,\n  small,\n  strike,\n  strong,\n  sub,\n  sup,\n  tt,\n  var,\n  b,\n  u,\n  i,\n  center,\n  dl,\n  dt,\n  dd,\n  ol,\n  ul,\n  li,\n  fieldset,\n  form,\n  label,\n  legend,\n  table,\n  caption,\n  tbody,\n  tfoot,\n  thead,\n  tr,\n  th,\n  td,\n  article,\n  aside,\n  canvas,\n  details,\n  embed,\n  figure,\n  figcaption,\n  footer,\n  header,\n  hgroup,\n  menu,\n  nav,\n  output,\n  ruby,\n  section,\n  summary,\n  time,\n  mark,\n  audio,\n  video {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    font: inherit;\n    vertical-align: baseline;\n  }\n\n  button,\n  input[type=\'button\'],\n  input[type=\'submit\'],\n  input[type=\'reset\'],\n  input[type=\'file\'] {\n    border-radius: 0;\n  }\n\n  input[type=\'text\']::-ms-clear {\n    display: none;\n  }\n\n  /* HTML5 display-role reset for older browsers */\n  article,\n  aside,\n  details,\n  figcaption,\n  figure,\n  footer,\n  header,\n  hgroup,\n  menu,\n  nav,\n  section {\n    display: block;\n  }\n\n  body {\n    line-height: 1;\n  }\n\n  sup {\n    vertical-align: super;\n  }\n\n  sub {\n    vertical-align: sub;\n  }\n\n  ol,\n  ul {\n    list-style: none;\n  }\n\n  blockquote,\n  q {\n    quotes: none;\n  }\n\n  blockquote:before,\n  blockquote:after,\n  q:before,\n  q:after {\n    content: \'\';\n    content: none;\n  }\n\n  table {\n    border-collapse: collapse;\n    border-spacing: 0;\n  }\n\n  * {\n    box-sizing: border-box;\n  }\n']);
 
 var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Should add one more \, cause it's javascript !
- */
-var Style = (0, _styledComponents.css)(_templateObject);
+var normalize = (0, _styledComponents.css)(_templateObject);
 
-exports.default = Style;
+exports.default = normalize;
 
 /***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/icons/PortfolioClassIcon/fontFiles/portfolio-class.eot":
-/*!*******************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/icons/PortfolioClassIcon/fontFiles/portfolio-class.eot ***!
-  \*******************************************************************************************************/
+/***/ "./node_modules/ruucm-blocks/tools/media.js":
+/*!**************************************************!*\
+  !*** ./node_modules/ruucm-blocks/tools/media.js ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/cf660f873347bdcf4ffca699a50894b9.eot";
+"use strict";
 
-/***/ }),
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/icons/PortfolioClassIcon/fontFiles/portfolio-class.svg":
-/*!*******************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/icons/PortfolioClassIcon/fontFiles/portfolio-class.svg ***!
-  \*******************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.isTablet = exports.isMobile = exports.sizes = undefined;
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/8cc838db1b0dbd7e88a6847b05e74fbe.svg";
+var _taggedTemplateLiteral2 = __webpack_require__(/*! babel-runtime/helpers/taggedTemplateLiteral */ "./node_modules/babel-runtime/helpers/taggedTemplateLiteral.js");
 
-/***/ }),
+var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
 
-/***/ "./node_modules/ruucm-blocks/css-patterns/icons/PortfolioClassIcon/fontFiles/portfolio-class.ttf":
-/*!*******************************************************************************************************!*\
-  !*** ./node_modules/ruucm-blocks/css-patterns/icons/PortfolioClassIcon/fontFiles/portfolio-class.ttf ***!
-  \*******************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n    @media (max-width: ', 'em) {\n      ', ';\n    }\n  '], ['\n    @media (max-width: ', 'em) {\n      ', ';\n    }\n  ']); // these sizes are arbitrary and you can set them to whatever you wish
 
-module.exports = __webpack_require__.p + "../../../../wp-content/dist/fonts/1041dd8f4e0bb726735592eb4aea2b87.ttf";
 
+<<<<<<< HEAD
 /***/ }),
 
 /***/ "./node_modules/ruucm-blocks/css-patterns/icons/PortfolioClassIcon/fontFiles/portfolio-class.woff":
@@ -6698,6 +6493,8 @@ var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
 var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n    @media (max-width: ', 'em) {\n      ', ';\n    }\n  '], ['\n    @media (max-width: ', 'em) {\n      ', ';\n    }\n  ']); // these sizes are arbitrary and you can set them to whatever you wish
 
 
+=======
+>>>>>>> 8cefc19c44b649bd69eb2096e471db58e30a6ab3
 var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
