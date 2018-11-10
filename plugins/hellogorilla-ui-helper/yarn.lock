@@ -7171,7 +7171,7 @@ run-queue@^1.0.0, run-queue@^1.0.3:
 
 "ruucm-blocks@https://github.com/ruucm/ruucm-blocks":
   version "0.5.0"
-  resolved "https://github.com/ruucm/ruucm-blocks#6dfd1080f08272e4dc2b5203cafec60e677dde81"
+  resolved "https://github.com/ruucm/ruucm-blocks#015ce6d0fc30e2f4916563dd946a6af72a1a4088"
   dependencies:
     babel-plugin-file-loader "^1.0.0"
     gsap "^2.0.2"
