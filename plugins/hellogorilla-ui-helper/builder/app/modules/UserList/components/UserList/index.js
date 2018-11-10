@@ -25,18 +25,15 @@ const SearchTitle = styled.div`
   font-size: 28px;
   text-align: center;
   color: #533c97;
-  padding-top: 90px;
 `
 const SearchBar = styled.div`
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: ${wem2(24)};
 `
 const SearchInput = styled.input`
   width: ${wem2(409)};
   height: ${wem2(48)};
-  margin-top: 32px;
   display: inline-block;
+  vertical-align: top;
 `
 const SearchBtn = styled.div`
   width: ${wem2(48)};
@@ -45,7 +42,6 @@ const SearchBtn = styled.div`
   border-top-right-radius: 2px;
   background-color: #805de9;
   display: inline-block;
-  vertical-align: middle;
   position: relative;
 `
 const Icon = styled.div`
