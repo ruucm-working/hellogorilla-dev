@@ -385,7 +385,7 @@ const ProductSummary = ({
               onClick={() => orderButtonClicked(selectedOption)}
             >
               <OrderCenter>
-                <Cart className="hellogorilla hellogorilla-cart" />
+                <Cart className="hellogorilla hellogorilla-icon-cart-61" />
                 <Order>카트에 담기</Order>
               </OrderCenter>
             </OrderButton>
