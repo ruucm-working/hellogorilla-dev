@@ -1,31 +1,31 @@
-import React from 'react'
+import React from "react";
 
-import { compose, withState, lifecycle, withHandlers } from 'recompose'
-import styled, { css } from 'styled-components'
-import { wem, wem2 } from 'ruucm-blocks/tools/mixins'
+import { compose, withState, lifecycle, withHandlers } from "recompose";
+import styled, { css } from "styled-components";
+import { wem, wem2 } from "ruucm-blocks/tools/mixins";
 
-import { Field, reduxForm } from 'redux-form'
-import { log } from 'ruucm-util'
-import validate from './validate'
-import LoadingSpinner from '../../../shared/LoadingSpinner'
+import { Field, reduxForm } from "redux-form";
+import { log } from "ruucm-util";
+import validate from "./validate";
+import LoadingSpinner from "../../../shared/LoadingSpinner";
 
-import Find_ID from '../FindID'
+import Find_ID from "../FindID";
 // import FindID_Login from '../FindID_Login'
 
-import Find_Password from '../FindPassword'
+import Find_Password from "../FindPassword";
 // import ResetPassword from '../ResetPassword'
 
 const Wrap = styled.div`
   margin-top: ${wem2(96)};
   margin-left: ${wem2(480)};
   margin-right: ${wem2(480)};
-`
+`;
 const Title = styled.h1`
   text-align: center;
   font-size: ${wem2(24)};
   color: #231f20;
   font-weight: 500;
-`
+`;
 
 const EmailField = styled.input`
   margin-top: ${wem2(40)};
@@ -40,7 +40,7 @@ const EmailField = styled.input`
   :focus {
     border-color: #231f20;
   }
-`
+`;
 const PasswordField = styled.input`
   width: ${wem2(480)};
   height: ${wem2(52)};
@@ -54,19 +54,19 @@ const PasswordField = styled.input`
   :focus {
     border-color: #231f20;
   }
-`
+`;
 
 const LoginButtons = styled.div`
   margin-top: ${wem2(20)};
-`
+`;
 const ErrorWrapper = styled.div`
   color: #ee4230;
-`
+`;
 
 const CommonButtonStyle = styled.button`
   text-decoration: none;
   border-color: white;
-`
+`;
 
 const LoginButton = styled(CommonButtonStyle)`
   width: ${wem2(480)};
@@ -76,12 +76,12 @@ const LoginButton = styled(CommonButtonStyle)`
   font-size: ${wem2(14)};
   color: #ffffff;
   cursor: pointer;
-`
+`;
 
 const Bottom = styled.div`
   margin-top: ${wem2(48)};
   text-align: center;
-`
+`;
 const FindID = styled.a`
   font-size: ${wem2(13)};
   color: #231f20;
@@ -90,7 +90,7 @@ const FindID = styled.a`
   :hover {
     color: #805de9;
   }
-`
+`;
 const FindPassword = styled.a`
   font-size: ${wem2(13)};
   color: #231f20;
@@ -99,13 +99,13 @@ const FindPassword = styled.a`
   :hover {
     color: #805de9;
   }
-`
+`;
 const SignupButton = styled.a`
   font-size: ${wem2(13)};
   border: none;
   color: #231f20;
   cursor: pointer;
-  font-family: 'NanumSquareRound', sans-serif;
+  font-family: "NanumSquareRound", sans-serif;
   font-weight: 500 !important;
   background: white;
   padding: 0;
@@ -113,40 +113,36 @@ const SignupButton = styled.a`
     color: #805de9;
   }
   ${props => props.direactLogin && css``};
-`
+`;
 const Bar = styled.span`
   font-size: ${wem2(13)};
   color: #231f20;
   margin-left: ${wem2(16)};
   margin-right: ${wem2(16)};
-`
-
-const Info = styled.div``
-const UserEmail = styled.div``
-const HelloText = styled.div``
+`;
 
 const emailField = ({
   input,
   label,
   placeholder,
   type,
-  meta: { touched, error },
+  meta: { touched, error }
 }) => (
   <div>
     <EmailField {...input} placeholder={placeholder} type={type} />
   </div>
-)
+);
 const passwordField = ({
   input,
   label,
   placeholder,
   type,
-  meta: { touched, error },
+  meta: { touched, error }
 }) => (
   <div>
     <PasswordField {...input} placeholder={placeholder} type={type} />
   </div>
-)
+);
 
 const LoginForm = ({
   // from parent
@@ -174,7 +170,7 @@ const LoginForm = ({
 }) => {
   return (() => {
     switch (currentView) {
-      case 'login':
+      case "login":
         return (
           <Wrap>
             {/* <Info>{label}</Info> */}
@@ -184,10 +180,10 @@ const LoginForm = ({
                 if (validate(values))
                   return wpLogin(values, res => {
                     if (res) {
-                      alert('로그인에 성공 하였습니다')
-                      window.location = '/'
+                      alert("로그인에 성공 하였습니다");
+                      window.location = "/";
                     }
-                  })
+                  });
               })}
             >
               <div className="input-fields">
@@ -213,11 +209,11 @@ const LoginForm = ({
                 </LoginButton>
 
                 <Bottom>
-                  <FindID onClick={() => setCurrentView('find-id')}>
+                  <FindID onClick={() => setCurrentView("find-id")}>
                     아이디 찾기
                   </FindID>
                   <Bar>|</Bar>
-                  <FindPassword onClick={() => setCurrentView('find-pw')}>
+                  <FindPassword onClick={() => setCurrentView("find-pw")}>
                     비밀번호 찾기
                   </FindPassword>
                   <Bar>|</Bar>
@@ -226,22 +222,22 @@ const LoginForm = ({
               </LoginButtons>
             </form>
           </Wrap>
-        )
-      case 'find-id':
-        return <Find_ID setCurrentView={setCurrentView} />
-      case 'find-pw':
-        return <Find_Password setCurrentView={setCurrentView} />
+        );
+      case "find-id":
+        return <Find_ID setCurrentView={setCurrentView} />;
+      case "find-pw":
+        return <Find_Password setCurrentView={setCurrentView} />;
       default:
-        break
+        break;
     }
-  })()
-}
+  })();
+};
 
 // Component enhancer
-const enhance = compose(withState('currentView', 'setCurrentView', 'login'))
+const enhance = compose(withState("currentView", "setCurrentView", "login"));
 // withState('submitSuccessed', 'setsubmitSuccess', '')
 export default enhance(
   reduxForm({
-    form: 'LOGIN_FORM',
+    form: "LOGIN_FORM"
   })(LoginForm)
-)
+);
