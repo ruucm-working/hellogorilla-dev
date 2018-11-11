@@ -63,7 +63,7 @@ class HelloGorilla {
 	 * @since 	0.8.0
 	 */
 	private function do_hooks() {
-		// add_action( 'wp_enqueue_scripts', array( $this, 'register_frontend_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'register_frontend_scripts' ) );
 	}
 
 	/**
@@ -73,11 +73,18 @@ class HelloGorilla {
 	 */
 	public function register_frontend_scripts() {
 		// Main CSS
-		wp_register_style( $this->plugin_slug . '-main-style', plugins_url( 'styles/main.css', dirname( __FILE__ ) ), $this->version );
-		wp_enqueue_style( $this->plugin_slug . '-main-style' );
+		// wp_register_style( $this->plugin_slug . '-main-style', plugins_url( 'styles/main.css', dirname( __FILE__ ) ), $this->version );
+		// wp_enqueue_style( $this->plugin_slug . '-main-style' );
 		// Enqeue HelloGorilla Scripts
-		wp_register_script( $this->plugin_slug . '-hellogorilla-script', plugins_url( 'assets/js/hellogorilla.js', dirname( __FILE__ ) ), array( 'jquery' ), $this->version );
+		// wp_register_script( $this->plugin_slug . '-hellogorilla-script', plugins_url( 'assets/js/hellogorilla.js', dirname( __FILE__ ) ), array( 'jquery' ), $this->version );
 		// wp_enqueue_script( $this->plugin_slug . '-hellogorilla-script' );
+
+
+		// Iamport SDK
+		wp_deregister_script( 'iamport-payment-sdk' );
+		wp_register_script( 'iamport-payment-sdk', 'https://cdn.iamport.kr/js/iamport.payment-1.1.5.js', array( 'jquery', 'jquery-ui-dialog' ) );
+
+		wp_enqueue_script( 'iamport-payment-sdk' );
 
 	}
 }
