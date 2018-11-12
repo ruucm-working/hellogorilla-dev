@@ -5,7 +5,7 @@
  */
 
 import React from 'react'
-import { compose, lifecycle, withHandlers } from 'recompose'
+import { compose, lifecycle, withHandlers, withState } from 'recompose'
 import { log } from 'ruucm-util'
 import { map } from 'lodash'
 import { Row, Column, EmptySpace } from 'ruucm-blocks/layouts'
@@ -78,6 +78,30 @@ const MenuWrapper = styled.div`
 const MenuItem = styled.a`
   padding-left: ${wem2(40)};
   cursor: pointer;
+  :hover {
+    color: #0fb780;
+  }
+
+  ${props =>
+    props.current &&
+    css`
+      color: #0fb780;
+      font-weight: 700;
+    `};
+`
+
+const SubMenuItemWrap = styled.a`
+  position: absolute;
+  left: 0;
+  background: yellowgreen;
+  top: 45px;
+`
+
+const SubMenuItem = styled.a`
+  padding-left: ${wem2(40)};
+  cursor: pointer;
+  background: red;
+  display: block;
   :hover {
     color: #0fb780;
   }
@@ -204,7 +228,15 @@ const MobileCartItem = styled.div`
     display: none;
   }
 `
-const Menus = ({ me, wpLogout, isActivePage, current_lang, ...props }) => {
+const Menus = ({
+  me,
+  wpLogout,
+  isActivePage,
+  current_lang,
+  showSub,
+  setShowSub,
+  ...props
+}) => {
   let contents = props[props.wpType + '_' + props.sort + '_wpData']
 
   return (
@@ -221,15 +253,34 @@ const Menus = ({ me, wpLogout, isActivePage, current_lang, ...props }) => {
             </Logo>
             <Right>
               <MenuWrapper>
-                {map(contents, (item, id) => (
-                  <MenuItem
-                    key={id}
-                    href={item.url}
-                    current={isActivePage(item.url)}
-                  >
-                    {_t(current_lang, item.title)}
-                  </MenuItem>
-                ))}
+                {map(contents, (item, id) =>
+                  item.menu_item_parent == 0 ? (
+                    <MenuItem
+                      key={id}
+                      href={item.url}
+                      current={isActivePage(item.url)}
+                      onMouseOver={() =>
+                        item.title == '헬로고릴라' && setShowSub(true)
+                      }
+                      onMouseOut={() =>
+                        item.title == '헬로고릴라' && setShowSub(false)
+                      }
+                    >
+                      {_t(current_lang, item.title)}
+                    </MenuItem>
+                  ) : (
+                    ''
+                  )
+                )}
+                {showSub ? (
+                  <SubMenuItemWrap>
+                    <SubMenuItem>{_t(current_lang, '소개')}</SubMenuItem>
+                    <SubMenuItem>{_t(current_lang, '프로그램')}</SubMenuItem>
+                  </SubMenuItemWrap>
+                ) : (
+                  ''
+                )}
+
                 {me ? (
                   // <MenuItem
                   //   onClick={() =>
@@ -322,6 +373,7 @@ const Menus = ({ me, wpLogout, isActivePage, current_lang, ...props }) => {
 
 // Component enhancer
 const enhance = compose(
+  withState('showSub', 'setShowSub', false),
   withHandlers({
     isActivePage: ({ ...props }) => url => {
       return url == location.href || url == location.pathname ? true : false
