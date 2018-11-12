@@ -877,6 +877,7 @@ current_lang :
 current_lang : 
 
 current_lang : 
+<<<<<<< HEAD
 ko
 current_lang : 
 
@@ -937,8 +938,40 @@ current_lang :
 current_lang : 
 
 current_lang : 
+=======
+>>>>>>> origin/view
 
 current_lang : 
+ko
+current_lang : 
+<<<<<<< HEAD
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+=======
+>>>>>>> origin/view
+ko
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+<<<<<<< HEAD
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+=======
+>>>>>>> origin/view
 ko
 current_lang : 
 
@@ -947,74 +980,13 @@ current_lang :
 current_lang : 
 
 current_lang : 
-
-current_lang : 
-ko
-current_lang : 
+<<<<<<< HEAD
 
 current_lang : 
 
 current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-ko
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-ko
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-ko
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-ko
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-ko
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
+=======
+>>>>>>> origin/view
 ko
 current_lang : 
 
@@ -1024,90 +996,6 @@ current_lang :
 
 current_lang : 
 ko
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-ko
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-ko
-current_lang : 
-
-current_lang : 
-current_lang : 
-
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-ko
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-ko
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-ko
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-ko
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-ko
-current_lang : 
-
-current_lang : 
-
-current_lang : 
-
 current_lang : 
 
 current_lang : 
@@ -1133,6 +1021,19 @@ current_lang :
 current_lang : 
 
 current_lang : 
+<<<<<<< HEAD
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+=======
+>>>>>>> origin/view
+ko
+current_lang : 
+
+current_lang : 
 
 current_lang : 
 
@@ -1142,6 +1043,150 @@ current_lang :
 
 current_lang : 
 
+current_lang : 
+
+current_lang : 
+<<<<<<< HEAD
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+ko
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+=======
+>>>>>>> origin/view
+ko
+current_lang : 
+
+current_lang : 
+<<<<<<< HEAD
+current_lang : 
+
+
+current_lang : 
+=======
+>>>>>>> origin/view
+
+current_lang : 
+
+current_lang : 
+ko
+current_lang : 
+<<<<<<< HEAD
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+=======
+>>>>>>> origin/view
+ko
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+<<<<<<< HEAD
+
+current_lang : 
+=======
+>>>>>>> origin/view
+ko
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+<<<<<<< HEAD
+
+current_lang : 
+ko
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+=======
+ko
+current_lang : 
+>>>>>>> origin/view
+ko
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+<<<<<<< HEAD
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+=======
+>>>>>>> origin/view
+ko
+current_lang : 
+
+current_lang : 
+<<<<<<< HEAD
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+=======
+>>>>>>> origin/view
+ko
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+
+<<<<<<< HEAD
+current_lang : 
+ko
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+
+current_lang : 
+
+=======
+>>>>>>> origin/view
 current_lang : 
 
 current_lang : 
