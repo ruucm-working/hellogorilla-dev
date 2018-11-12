@@ -17,6 +17,7 @@ const _t = (current_lang, key) => {
 
     마이페이지: 'MyPage',
     회원가입: 'Join',
+    'Language switcher': 'Ko',
   }
 
   return current_lang == 'en' ? data[key] : key

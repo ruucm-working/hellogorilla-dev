@@ -17,6 +17,7 @@ import { slide as Menu } from 'react-burger-menu'
 import burgerStyle from './burgerStyle'
 import _t from '../../../shared/translate'
 import { menuHeight, subMenuHeight } from '../../../shared/consts'
+import OutsideActioner from '../../../shared/OutsideActioner'
 // import mobileLogo from '../../assets/mobile-logo.png'
 
 const Desktop = styled.div`
@@ -45,6 +46,7 @@ const Centering = styled.div`
   transform: translateY(-50%);
   /* max-width: 960px; */
   width: 66.66%;
+  z-index: 1;
 `
 
 const Logo = styled.a`
@@ -249,93 +251,92 @@ const Menus = ({
     <div>
       <Desktop>
         <Header>
-          <Centering
-          // onMouseOut={() => setShowSub(false)}
-          >
-            <Logo href="/">
-              <span className="hellogorilla hellogorilla-logo">
-                <span className="path1" />
-                <span className="path2" />
-                <span className="path3" />
-              </span>
-            </Logo>
-            <Right>
-              <MenuWrapper>
-                {map(contents, (item, id) =>
-                  item.menu_item_parent == 0 ? (
-                    <MenuItem
-                      key={id}
-                      href={item.url}
-                      current={isActivePage(item.url)}
-                      onMouseOver={() => {
-                        if (item.title == '헬로고릴라') setShowSub(true)
-                        else setShowSub(false)
-                      }}
-                    >
-                      {_t(current_lang, item.title)}
-                    </MenuItem>
+          <Centering>
+            <OutsideActioner action={() => setShowSub(false)}>
+              <Logo href="/">
+                <span className="hellogorilla hellogorilla-logo">
+                  <span className="path1" />
+                  <span className="path2" />
+                  <span className="path3" />
+                </span>
+              </Logo>
+              <Right>
+                <MenuWrapper>
+                  {map(contents, (item, id) =>
+                    item.menu_item_parent == 0 ? (
+                      <MenuItem
+                        key={id}
+                        href={item.url}
+                        current={isActivePage(item.url)}
+                        onMouseOver={() => {
+                          if (item.title == '헬로고릴라') setShowSub(true)
+                          else setShowSub(false)
+                        }}
+                      >
+                        {_t(current_lang, item.title)}
+                      </MenuItem>
+                    ) : (
+                      ''
+                    )
+                  )}
+                  {showSub ? (
+                    <SubMenuItemWrap>
+                      <SubMenuItem onMouseOver={() => setShowSub(true)}>
+                        {_t(current_lang, '소개')}
+                      </SubMenuItem>
+                      <SubMenuItem onMouseOver={() => setShowSub(true)}>
+                        {_t(current_lang, '프로그램')}
+                      </SubMenuItem>
+                    </SubMenuItemWrap>
                   ) : (
                     ''
-                  )
-                )}
-                {showSub ? (
-                  <SubMenuItemWrap>
-                    <SubMenuItem onMouseOver={() => setShowSub(true)}>
-                      {_t(current_lang, '소개')}
-                    </SubMenuItem>
-                    <SubMenuItem onMouseOver={() => setShowSub(true)}>
-                      {_t(current_lang, '프로그램')}
-                    </SubMenuItem>
-                  </SubMenuItemWrap>
-                ) : (
-                  ''
-                )}
+                  )}
 
-                {me ? (
-                  // <MenuItem
-                  //   onClick={() =>
-                  //     wpLogout(() => {
-                  //       alert('로그아웃 되었습니다')
-                  //       window.location = '/'
-                  //     })
-                  //   }
-                  // >
-                  //   로그아웃
-                  // </MenuItem>
-                  <MenuItem
-                    href="/my-account"
-                    current={isActivePage('/my-account/')}
-                  >
-                    {_t(current_lang, '마이페이지')}
-                  </MenuItem>
-                ) : (
-                  <span>
-                    <MenuItem href="/login" current={isActivePage('/login/')}>
-                      {_t(current_lang, '로그인')}
-                    </MenuItem>
+                  {me ? (
+                    // <MenuItem
+                    //   onClick={() =>
+                    //     wpLogout(() => {
+                    //       alert('로그아웃 되었습니다')
+                    //       window.location = '/'
+                    //     })
+                    //   }
+                    // >
+                    //   로그아웃
+                    // </MenuItem>
                     <MenuItem
-                      href="/customer-signup"
-                      current={isActivePage('/customer-signup/')}
+                      href="/my-account"
+                      current={isActivePage('/my-account/')}
                     >
-                      {_t(current_lang, '회원가입')}
+                      {_t(current_lang, '마이페이지')}
                     </MenuItem>
-                  </span>
-                )}
-              </MenuWrapper>
-              {/* <MainLogo
+                  ) : (
+                    <span>
+                      <MenuItem href="/login" current={isActivePage('/login/')}>
+                        {_t(current_lang, '로그인')}
+                      </MenuItem>
+                      <MenuItem
+                        href="/customer-signup"
+                        current={isActivePage('/customer-signup/')}
+                      >
+                        {_t(current_lang, '회원가입')}
+                      </MenuItem>
+                    </span>
+                  )}
+                </MenuWrapper>
+                {/* <MainLogo
                 href="/"
                 className="beerspick beerspick-beerspick_logo_header"
               /> */}
-              <LoginMenuItem
-                dangerouslySetInnerHTML={{ __html: props.shortcodeChild }}
-              />
-              <a href="/cart">
-                <span className="hellogorilla hellogorilla-icon-cart-61" />
-              </a>
-            </Right>
-            {/* <a href="/my-account">카트</a> */}
+                <LoginMenuItem
+                  dangerouslySetInnerHTML={{ __html: props.shortcodeChild }}
+                />
+                <a href="/cart">
+                  <span className="hellogorilla hellogorilla-icon-cart-61" />
+                </a>
+              </Right>
+              {/* <a href="/my-account">카트</a> */}
 
-            {/* <IconMenuItem href="https://www.instagram.com/beers_pick/">
+              {/* <IconMenuItem href="https://www.instagram.com/beers_pick/">
                 <span className="beerspick beerspick-instagram_logo" />
               </IconMenuItem>
               <IconMenuItem href="https://www.facebook.com/Beers-Pick-비어스픽-177713022999530/">
@@ -345,6 +346,7 @@ const Menus = ({
               <IconMenuItem href="https://www.youtube.com/channel/UC-KG6FDPqMh5k55OldVTEgA">
                 <span className="beerspick-2 beerspick-2-youtube" />
               </IconMenuItem> */}
+            </OutsideActioner>
           </Centering>
         </Header>
       </Desktop>
