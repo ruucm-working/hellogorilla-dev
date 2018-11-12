@@ -215,6 +215,7 @@ const enhance = compose(
         role: 'editor',
       }
       this.props.getDatas(options)
+      this.props.getCurrentLang()
     },
   })
 )

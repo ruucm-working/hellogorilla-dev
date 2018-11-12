@@ -90,6 +90,13 @@ const enhance = compose(
       ...rest,
     }
   }),
+  mapProps(({ wp, ...rest }) => {
+    wp.currentLang = wp.registerRoute('custom', '/current-lang')
+    return {
+      wp: wp,
+      ...rest,
+    }
+  }),
   withHandlers({
     getDatas: ({ nonce, ...props }) => options => {
       log('getDatas')
@@ -260,6 +267,18 @@ const enhance = compose(
         })
         .catch(err => {
           log('err(getMe)', err)
+        })
+    },
+
+    getCurrentLang: props => () => {
+      const { dispatch, wp } = props
+
+      wp.currentLang()
+        .then(res => {
+          log('res(currentLang)', res)
+        })
+        .catch(err => {
+          log('err(currentLang)', err)
         })
     },
   }),
