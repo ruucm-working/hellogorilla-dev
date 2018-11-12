@@ -4,6 +4,7 @@ const _t = (current_lang, key) => {
     '비밀번호를 입력해주세요.': 'password',
     '아이디 찾기': 'Find ID',
     '비밀번호 찾기': 'Find Password',
+    가입하기: 'Join',
   }
 
   return current_lang == 'en' ? data[key] : key

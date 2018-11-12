@@ -202,7 +202,7 @@ const LoginForm = ({
                 <Field
                   name="password"
                   type="password"
-                  placeholder="비밀번호를 입력해주세요."
+                  placeholder={_t(current_lang, '비밀번호를 입력해주세요.')}
                   component={passwordField}
                 />
               </div>
@@ -211,19 +211,21 @@ const LoginForm = ({
                 {error && <ErrorWrapper>{error}</ErrorWrapper>}
 
                 <LoginButton type="submit" disabled={submitting}>
-                  로그인
+                  {_t(current_lang, '로그인')}
                 </LoginButton>
 
                 <Bottom>
                   <FindID onClick={() => setCurrentView('find-id')}>
-                    아이디 찾기
+                    {_t(current_lang, '아이디 찾기')}
                   </FindID>
                   <Bar>|</Bar>
                   <FindPassword onClick={() => setCurrentView('find-pw')}>
-                    비밀번호 찾기
+                    {_t(current_lang, '비밀번호 찾기')}
                   </FindPassword>
                   <Bar>|</Bar>
-                  <SignupButton href="/customer-signup">가입하기</SignupButton>
+                  <SignupButton href="/customer-signup">
+                    {_t(current_lang, '가입하기')}
+                  </SignupButton>
                 </Bottom>
               </LoginButtons>
             </form>
