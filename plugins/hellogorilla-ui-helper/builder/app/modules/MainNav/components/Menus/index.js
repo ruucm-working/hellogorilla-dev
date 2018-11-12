@@ -247,11 +247,14 @@ const Menus = ({
                     </MenuItem>
                   ) : (
                     <span>
-                      <MenuItem href="/login" current={isActivePage('/login/')}>
+                      <MenuItem
+                        href={_u(current_lang, '/login')}
+                        current={isActivePage('/login/')}
+                      >
                         {_t(current_lang, '로그인')}
                       </MenuItem>
                       <MenuItem
-                        href="/customer-signup"
+                        href={_u(current_lang, '/customer-signup')}
                         current={isActivePage('/customer-signup/')}
                       >
                         {_t(current_lang, '회원가입')}
@@ -266,7 +269,7 @@ const Menus = ({
                 <LoginMenuItem
                   dangerouslySetInnerHTML={{ __html: props.shortcodeChild }}
                 />
-                <a href="/cart">
+                <a href={_u(current_lang, '/cart')}>
                   <span className="hellogorilla hellogorilla-icon-cart-61" />
                 </a>
               </Right>
