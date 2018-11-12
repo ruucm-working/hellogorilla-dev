@@ -135,10 +135,14 @@ const UserProducts = styled.div`
   text-align: center;
 `
 
-const SearchComp = () => {
+const SearchComp = ({ current_lang, ...props }) => {
   return (
     <Search>
-      <SearchTitle>헬로고릴라 아티스트를 소개합니다</SearchTitle>
+      <SearchTitle>
+        {current_lang == 'en'
+          ? 'Hello Gorilla Artists'
+          : '헬로고릴라 아티스트를 소개합니다'}
+      </SearchTitle>
       <SearchBar>
         <SearchInput
           type="text"
@@ -158,13 +162,14 @@ const SearchComp = () => {
   )
 }
 
-const Contents = ({ getDatas, ...props }) => {
+const Contents = ({ getDatas, current_lang, ...props }) => {
+  log('props(Contents)', props)
   let contents = props[props.wpType + '_' + props.sort + '_wpData']
   log('contents', contents)
   return (
     <div>
       <Wrapper>
-        <PageBanner bannerText={<SearchComp />} />
+        <PageBanner bannerText={<SearchComp current_lang={current_lang} />} />
 
         <ArtistWrap>
           <Row>
@@ -215,7 +220,7 @@ const enhance = compose(
         role: 'editor',
       }
       this.props.getDatas(options)
-      this.props.getCurrentLang()
+      // this.props.getCurrentLang()
     },
   })
 )

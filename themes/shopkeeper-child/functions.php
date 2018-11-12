@@ -489,45 +489,39 @@ function misha_remove_my_account_links( $menu_links ){
 /**
  * ResetPassword WP API
  */
-add_action( 'rest_api_init', 'get_current_lang_api_hooks' );
+add_action( 'init', 'get_current_lang_api_hooks' );
 // API custom endpoints for WP-REST API
 function get_current_lang_api_hooks() {
 
-
 	$current_lang = pll_current_language();
 
 	logw('current_lang : ');
 	logw_a($current_lang);
-
-    register_rest_route(
-        'custom', '/current-lang/',
-        array(
-            'methods'  => 'GET',
-						'callback' => 'get_current_lang',
-        )
-		);
+	register_rest_route(
+			'custom', '/current-lang/',
+			array(
+					'methods'  => 'GET',
+					'callback' => 'get_current_lang',
+					'args'            => array(
+						'current_lang'	=> $current_lang,
+					),
+			)
+	);
 }
-function get_current_lang( $args = [] ) {
-	$user_email = wp_get_current_user();
+function get_current_lang( $param ) {
 
-	$current_lang = pll_current_language();
+	logw('param : ');
+	logw_a($param);
 
+	$current_lang = getProtectedValue($param, 'attributes')['args']['current_lang'];;
 
-	$default_lang = pll_default_language();
-
-	logw('current_lang : ');
+	logw('current_lang2 : ');
 	logw_a($current_lang);
 
+	// $user_email = wp_get_current_user();
+	// logw('user_email : ');
+	// logw_a($user_email);
 
-	logw('default_lang : ');
-	logw_a($default_lang);
-
-
-
-	logw('user_email : ');
-	logw_a($user_email);
-
-	// Return menu post objects
 	return $current_lang;
 
 }

@@ -331,6 +331,7 @@ const enhance = compose(
       this.props.getDatas ? this.props.getDatas() : ''
 
       this.props.getMe()
+      this.props.getCurrentLang()
     },
   })
 )

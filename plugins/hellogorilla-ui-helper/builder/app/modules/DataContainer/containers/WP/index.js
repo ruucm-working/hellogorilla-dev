@@ -50,6 +50,7 @@ const mapStateToProps = (state, ownProps) => {
   obj[key] = selectWPData(ownProps.wpType + '_' + ownProps.sort)
 
   obj['me'] = selectWPData('me' + '_' + ownProps.sort)
+  obj['current_lang'] = selectWPData('current_lang')
 
   return createStructuredSelector(obj)
 }
@@ -273,13 +274,19 @@ const enhance = compose(
     getCurrentLang: props => () => {
       const { dispatch, wp } = props
 
-      wp.currentLang()
-        .then(res => {
-          log('res(currentLang)', res)
-        })
-        .catch(err => {
-          log('err(currentLang)', err)
-        })
+      var pathArray = window.location.pathname.split('/')
+
+      log('pathArray', pathArray)
+      if (pathArray[1] == 'en') dispatch(getDatas('current_lang', 'en'))
+      else dispatch(getDatas('current_lang', 'ko'))
+
+      // wp.currentLang()
+      //   .then(res => {
+      //     log('res(currentLang)', res)
+      //   })
+      //   .catch(err => {
+      //     log('err(currentLang)', err)
+      //   })
     },
   }),
   withHandlers({
