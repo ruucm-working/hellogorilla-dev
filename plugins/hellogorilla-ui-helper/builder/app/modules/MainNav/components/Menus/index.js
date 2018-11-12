@@ -16,6 +16,7 @@ import { centerIconA, wem, wem2, center } from 'ruucm-blocks/tools/mixins'
 import { slide as Menu } from 'react-burger-menu'
 import burgerStyle from './burgerStyle'
 import _t from '../../../shared/translate'
+import { menuHeight, subMenuHeight } from '../../../shared/consts'
 // import mobileLogo from '../../assets/mobile-logo.png'
 
 const Desktop = styled.div`
@@ -23,7 +24,7 @@ const Desktop = styled.div`
   font-size: 15px;
   line-height: 15px;
   position: relative;
-  height: 61px;
+  height: ${menuHeight + 'px'};
   background: #533c97;
   width: 100%;
   color: white;
@@ -77,6 +78,44 @@ const MenuWrapper = styled.div`
 `
 const MenuItem = styled.a`
   padding-left: ${wem2(40)};
+  cursor: pointer;
+  :hover {
+    color: #0fb780;
+  }
+
+  ${props =>
+    props.current &&
+    css`
+      color: #0fb780;
+      font-weight: 700;
+    `};
+
+  ${props => {
+    log('props', props)
+    return (
+      props.sub &&
+      props.id &&
+      css`
+        background: yellowgreen;
+        position: absolute;
+        left: 0;
+        top: ${subMenuHeight * Number(props.id) + 'px'};
+        height: ${subMenuHeight + 'px'};
+        line-height: ${subMenuHeight + 'px'};
+        + a {
+          background: blue !important;
+        }
+      `
+    )
+  }}
+`
+
+const SubMenuItemWrap = styled.div`
+  background: green;
+`
+const SubMenuItem = styled.a`
+  padding-left: ${wem2(40)};
+  background: red;
   cursor: pointer;
   :hover {
     color: #0fb780;
@@ -221,15 +260,31 @@ const Menus = ({ me, wpLogout, isActivePage, current_lang, ...props }) => {
             </Logo>
             <Right>
               <MenuWrapper>
-                {map(contents, (item, id) => (
-                  <MenuItem
-                    key={id}
-                    href={item.url}
-                    current={isActivePage(item.url)}
-                  >
-                    {_t(current_lang, item.title)}
-                  </MenuItem>
-                ))}
+                {map(contents, (item, id) => {
+                  return (
+                    // <span>
+                    <MenuItem
+                      key={id}
+                      id={id}
+                      href={item.url}
+                      current={isActivePage(item.url)}
+                      sub={item.menu_item_parent != 0}
+                    >
+                      {_t(current_lang, item.title)}
+                      {/* {item.menu_item_parent == 0
+                        ? _t(current_lang, item.title)
+                        : ''}
+
+                      {item.menu_item_parent != 0 ? (
+                        <SubMenuItem>
+                          {_t(current_lang, item.title)}
+                        </SubMenuItem>
+                      ) : (
+                        ''
+                      )} */}
+                    </MenuItem>
+                  )
+                })}
                 {me ? (
                   // <MenuItem
                   //   onClick={() =>
