@@ -1,3 +1,4 @@
+import { log } from 'ruucm-util'
 const _t = (current_lang, key) => {
   var data = {
     // Login
@@ -24,7 +25,11 @@ const _t = (current_lang, key) => {
 }
 
 const _u = (current_lang, url) => {
-  return current_lang == 'en' ? url + '-en/' : url
+  var lastChar = url[url.length - 1]
+  var trimmedUrl = url
+  if (lastChar == '/') trimmedUrl = trimmedUrl.slice(0, -1)
+
+  return current_lang == 'en' ? trimmedUrl + '-en/' : trimmedUrl
 }
 
 export { _t, _u }

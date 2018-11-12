@@ -196,7 +196,7 @@ const Menus = ({
                     item.menu_item_parent == 0 ? (
                       <MenuItem
                         key={id}
-                        href={item.url}
+                        href={_u(current_lang, item.url)}
                         current={isActivePage(item.url)}
                         onMouseOver={() => {
                           if (item.title == '헬로고릴라') setShowSub(true)
