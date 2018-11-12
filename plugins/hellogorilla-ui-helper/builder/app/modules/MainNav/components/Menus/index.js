@@ -14,7 +14,7 @@ import styled, { css } from 'styled-components'
 import { centerIconA, wem, wem2, center } from 'ruucm-blocks/tools/mixins'
 import Mobile from './Mobile'
 
-import _t from '../../../shared/translate'
+import { _t, _u } from '../../../shared/translate'
 import { menuHeight, subMenuHeight } from '../../../shared/consts'
 import OutsideActioner from '../../../shared/OutsideActioner'
 // import mobileLogo from '../../assets/mobile-logo.png'
@@ -183,7 +183,7 @@ const Menus = ({
         <Header>
           <Centering>
             <OutsideActioner action={() => setShowSub(false)}>
-              <Logo href="/">
+              <Logo href={_u(current_lang, '/home')}>
                 <span className="hellogorilla hellogorilla-logo">
                   <span className="path1" />
                   <span className="path2" />
@@ -211,10 +211,16 @@ const Menus = ({
                   )}
                   {showSub ? (
                     <SubMenuItemWrap>
-                      <SubMenuItem onMouseOver={() => setShowSub(true)}>
+                      <SubMenuItem
+                        href={_u(current_lang, '/hellogorilla/about-us')}
+                        onMouseOver={() => setShowSub(true)}
+                      >
                         {_t(current_lang, '소개')}
                       </SubMenuItem>
-                      <SubMenuItem onMouseOver={() => setShowSub(true)}>
+                      <SubMenuItem
+                        href={_u(current_lang, '/hellogorilla/program')}
+                        onMouseOver={() => setShowSub(true)}
+                      >
                         {_t(current_lang, '프로그램')}
                       </SubMenuItem>
                     </SubMenuItemWrap>

@@ -487,9 +487,9 @@ function misha_remove_my_account_links( $menu_links ){
 
 
 /**
- * ResetPassword WP API
+ * Current Language WP API
  */
-add_action( 'init', 'get_current_lang_api_hooks' );
+// add_action( 'init', 'get_current_lang_api_hooks' );
 // API custom endpoints for WP-REST API
 function get_current_lang_api_hooks() {
 

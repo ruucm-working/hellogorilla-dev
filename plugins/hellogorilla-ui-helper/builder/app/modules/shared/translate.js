@@ -23,4 +23,8 @@ const _t = (current_lang, key) => {
   return current_lang == 'en' ? data[key] : key
 }
 
-export default _t
+const _u = (current_lang, url) => {
+  return current_lang == 'en' ? url + '-en/' : url
+}
+
+export { _t, _u }

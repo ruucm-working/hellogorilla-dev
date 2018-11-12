@@ -1,0 +1,51 @@
+2018-11-12T23:18:32+00:00 CRITICAL Uncaught Error: Call to undefined function pll_current_language() in /srv/www/hellogorilla/public_html/wp-content/themes/shopkeeper-child/functions.php:496
+Stack trace:
+#0 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(286): get_current_lang_api_hooks('')
+#1 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /srv/www/hellogorilla/public_html/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /srv/www/hellogorilla/public_html/wp-settings.php(450): do_action('init')
+#4 /srv/www/hellogorilla/public_html/wp-config.php(79): require_once('/srv/www/hellog...')
+#5 /srv/www/hellogorilla/public_html/wp-load.php(37): require_once('/srv/www/hellog...')
+#6 /srv/www/hellogorilla/public_html/wp-admin/admin.php(31): require_once('/srv/www/hellog...')
+#7 /srv/www/hellogorilla/public_html/wp-admin/plugins.php(10): require_once('/srv/www/hellog...')
+#8 {main}
+  thrown in /srv/www/hellogorilla/public_html/wp-content/themes/shopkeeper-child/functions.php on line 496
+
+2018-11-12T23:20:41+00:00 CRITICAL Uncaught Error: Call to undefined function pll_current_language() in /srv/www/hellogorilla/public_html/wp-content/themes/shopkeeper-child/functions.php:496
+Stack trace:
+#0 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(286): get_current_lang_api_hooks('')
+#1 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /srv/www/hellogorilla/public_html/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /srv/www/hellogorilla/public_html/wp-settings.php(450): do_action('init')
+#4 /srv/www/hellogorilla/public_html/wp-config.php(79): require_once('/srv/www/hellog...')
+#5 /srv/www/hellogorilla/public_html/wp-load.php(37): require_once('/srv/www/hellog...')
+#6 /srv/www/hellogorilla/public_html/wp-admin/admin-ajax.php(22): require_once('/srv/www/hellog...')
+#7 {main}
+  thrown in /srv/www/hellogorilla/public_html/wp-content/themes/shopkeeper-child/functions.php on line 496
+
+2018-11-12T23:20:42+00:00 CRITICAL Uncaught Error: Call to undefined function pll_current_language() in /srv/www/hellogorilla/public_html/wp-content/themes/shopkeeper-child/functions.php:496
+Stack trace:
+#0 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(286): get_current_lang_api_hooks('')
+#1 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /srv/www/hellogorilla/public_html/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /srv/www/hellogorilla/public_html/wp-settings.php(450): do_action('init')
+#4 /srv/www/hellogorilla/public_html/wp-config.php(79): require_once('/srv/www/hellog...')
+#5 /srv/www/hellogorilla/public_html/wp-load.php(37): require_once('/srv/www/hellog...')
+#6 /srv/www/hellogorilla/public_html/wp-admin/admin.php(31): require_once('/srv/www/hellog...')
+#7 /srv/www/hellogorilla/public_html/wp-admin/edit.php(10): require_once('/srv/www/hellog...')
+#8 {main}
+  thrown in /srv/www/hellogorilla/public_html/wp-content/themes/shopkeeper-child/functions.php on line 496
+
+2018-11-12T23:20:48+00:00 CRITICAL Uncaught Error: Call to undefined function pll_current_language() in /srv/www/hellogorilla/public_html/wp-content/themes/shopkeeper-child/functions.php:496
+Stack trace:
+#0 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(286): get_current_lang_api_hooks('')
+#1 /srv/www/hellogorilla/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /srv/www/hellogorilla/public_html/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /srv/www/hellogorilla/public_html/wp-settings.php(450): do_action('init')
+#4 /srv/www/hellogorilla/public_html/wp-config.php(79): require_once('/srv/www/hellog...')
+#5 /srv/www/hellogorilla/public_html/wp-load.php(37): require_once('/srv/www/hellog...')
+#6 /srv/www/hellogorilla/public_html/wp-admin/admin.php(31): require_once('/srv/www/hellog...')
+#7 /srv/www/hellogorilla/public_html/wp-admin/index.php(10): require_once('/srv/www/hellog...')
+#8 {main}
+  thrown in /srv/www/hellogorilla/public_html/wp-content/themes/shopkeeper-child/functions.php on line 496
+

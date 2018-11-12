@@ -5,7 +5,7 @@ import burgerStyle from './burgerStyle'
 import { centerIconA, wem, wem2, center } from 'ruucm-blocks/tools/mixins'
 import media from 'ruucm-blocks/tools/media'
 import { map } from 'lodash'
-import _t from '../../../shared/translate'
+import { _t } from '../../../shared/translate'
 
 const MenuWrapper = styled.div``
 
