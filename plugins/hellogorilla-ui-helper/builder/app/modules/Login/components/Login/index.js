@@ -14,6 +14,7 @@ import Find_ID from '../FindID'
 
 import Find_Password from '../FindPassword'
 // import ResetPassword from '../ResetPassword'
+import _t from '../../../shared/translate'
 
 const Wrap = styled.div`
   margin-top: ${wem2(96)};
@@ -168,8 +169,9 @@ const LoginForm = ({
   handleSubmit,
   submitting,
 
-  // woocommerce
+  // wordpress
   wpLogin,
+  current_lang,
   ...props
 }) => {
   return (() => {
@@ -178,7 +180,7 @@ const LoginForm = ({
         return (
           <Wrap>
             {/* <Info>{label}</Info> */}
-            <Title>로그인</Title>
+            <Title>{_t(current_lang, '로그인')}</Title>
             <form
               onSubmit={handleSubmit(values => {
                 if (validate(values))
