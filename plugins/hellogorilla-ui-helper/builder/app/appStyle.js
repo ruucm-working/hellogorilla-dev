@@ -246,4 +246,14 @@ injectGlobal`
   ${programStyle}
   ${newsStyle}
 
+  .page-id-121  {
+    #footer-content {
+      margin-top: 0;
+    }
+    #footer-line {
+      background: transparent;
+    }
+  }
+
+
 `

@@ -71,8 +71,8 @@ const Footer = props => {
   return (
     <div>
       <Wrap>
-        <Content>
-          <FooterLine />
+        <Content id="footer-content">
+          <FooterLine id="footer-line" />
           <Row>
             <Column col="5">
               <Left>문의하기</Left>
