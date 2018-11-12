@@ -50,6 +50,7 @@ const mapStateToProps = (state, ownProps) => {
   obj[key] = selectWPData(ownProps.wpType + '_' + ownProps.sort)
 
   obj['me'] = selectWPData('me' + '_' + ownProps.sort)
+  obj['current_lang'] = selectWPData('current_lang')
 
   return createStructuredSelector(obj)
 }
@@ -85,6 +86,13 @@ const enhance = compose(
   }),
   mapProps(({ wp, ...rest }) => {
     wp.logout = wp.registerRoute('custom', '/logout')
+    return {
+      wp: wp,
+      ...rest,
+    }
+  }),
+  mapProps(({ wp, ...rest }) => {
+    wp.currentLang = wp.registerRoute('custom', '/current-lang')
     return {
       wp: wp,
       ...rest,
@@ -261,6 +269,24 @@ const enhance = compose(
         .catch(err => {
           log('err(getMe)', err)
         })
+    },
+
+    getCurrentLang: props => () => {
+      const { dispatch, wp } = props
+
+      var pathArray = window.location.pathname.split('/')
+
+      log('pathArray', pathArray)
+      if (pathArray[1] == 'en') dispatch(getDatas('current_lang', 'en'))
+      else dispatch(getDatas('current_lang', 'ko'))
+
+      // wp.currentLang()
+      //   .then(res => {
+      //     log('res(currentLang)', res)
+      //   })
+      //   .catch(err => {
+      //     log('err(currentLang)', err)
+      //   })
     },
   }),
   withHandlers({

@@ -476,3 +476,52 @@ function misha_remove_my_account_links( $menu_links ){
 	return $menu_links;
  
 }
+
+
+
+/**
+ * Add Language Check to WP API
+ */
+
+
+
+
+/**
+ * ResetPassword WP API
+ */
+add_action( 'init', 'get_current_lang_api_hooks' );
+// API custom endpoints for WP-REST API
+function get_current_lang_api_hooks() {
+
+	$current_lang = pll_current_language();
+
+	logw('current_lang : ');
+	logw_a($current_lang);
+	register_rest_route(
+			'custom', '/current-lang/',
+			array(
+					'methods'  => 'GET',
+					'callback' => 'get_current_lang',
+					'args'            => array(
+						'current_lang'	=> $current_lang,
+					),
+			)
+	);
+}
+function get_current_lang( $param ) {
+
+	logw('param : ');
+	logw_a($param);
+
+	$current_lang = getProtectedValue($param, 'attributes')['args']['current_lang'];;
+
+	logw('current_lang2 : ');
+	logw_a($current_lang);
+
+	// $user_email = wp_get_current_user();
+	// logw('user_email : ');
+	// logw_a($user_email);
+
+	return $current_lang;
+
+}

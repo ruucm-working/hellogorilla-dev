@@ -14,6 +14,7 @@ import Find_ID from "../FindID";
 
 import Find_Password from "../FindPassword";
 // import ResetPassword from '../ResetPassword'
+import _t from "../../../shared/translate";
 
 const Wrap = styled.div`
   margin-top: ${wem2(96)};
@@ -164,8 +165,9 @@ const LoginForm = ({
   handleSubmit,
   submitting,
 
-  // woocommerce
+  // wordpress
   wpLogin,
+  current_lang,
   ...props
 }) => {
   return (() => {
@@ -174,7 +176,7 @@ const LoginForm = ({
         return (
           <Wrap>
             {/* <Info>{label}</Info> */}
-            <Title>로그인</Title>
+            <Title>{_t(current_lang, "로그인")}</Title>
             <form
               onSubmit={handleSubmit(values => {
                 if (validate(values))
@@ -196,7 +198,7 @@ const LoginForm = ({
                 <Field
                   name="password"
                   type="password"
-                  placeholder="비밀번호를 입력해주세요."
+                  placeholder={_t(current_lang, "비밀번호를 입력해주세요.")}
                   component={passwordField}
                 />
               </div>
@@ -205,19 +207,21 @@ const LoginForm = ({
                 {error && <ErrorWrapper>{error}</ErrorWrapper>}
 
                 <LoginButton type="submit" disabled={submitting}>
-                  로그인
+                  {_t(current_lang, "로그인")}
                 </LoginButton>
 
                 <Bottom>
                   <FindID onClick={() => setCurrentView("find-id")}>
-                    아이디 찾기
+                    {_t(current_lang, "아이디 찾기")}
                   </FindID>
                   <Bar>|</Bar>
                   <FindPassword onClick={() => setCurrentView("find-pw")}>
-                    비밀번호 찾기
+                    {_t(current_lang, "비밀번호 찾기")}
                   </FindPassword>
                   <Bar>|</Bar>
-                  <SignupButton href="/customer-signup">가입하기</SignupButton>
+                  <SignupButton href="/customer-signup">
+                    {_t(current_lang, "가입하기")}
+                  </SignupButton>
                 </Bottom>
               </LoginButtons>
             </form>

@@ -15,6 +15,7 @@ import { centerIconA, wem, wem2, center } from 'ruucm-blocks/tools/mixins'
 
 import { slide as Menu } from 'react-burger-menu'
 import burgerStyle from './burgerStyle'
+import _t from '../../../shared/translate'
 // import mobileLogo from '../../assets/mobile-logo.png'
 
 const Desktop = styled.div`
@@ -203,7 +204,7 @@ const MobileCartItem = styled.div`
     display: none;
   }
 `
-const Menus = ({ me, wpLogout, isActivePage, ...props }) => {
+const Menus = ({ me, wpLogout, isActivePage, current_lang, ...props }) => {
   let contents = props[props.wpType + '_' + props.sort + '_wpData']
 
   return (
@@ -226,7 +227,7 @@ const Menus = ({ me, wpLogout, isActivePage, ...props }) => {
                     href={item.url}
                     current={isActivePage(item.url)}
                   >
-                    {item.title}
+                    {_t(current_lang, item.title)}
                   </MenuItem>
                 ))}
                 {me ? (
@@ -244,18 +245,18 @@ const Menus = ({ me, wpLogout, isActivePage, ...props }) => {
                     href="/my-account"
                     current={isActivePage('/my-account/')}
                   >
-                    마이페이지
+                    {_t(current_lang, '마이페이지')}
                   </MenuItem>
                 ) : (
                   <span>
                     <MenuItem href="/login" current={isActivePage('/login/')}>
-                      로그인
+                      {_t(current_lang, '로그인')}
                     </MenuItem>
                     <MenuItem
                       href="/customer-signup"
                       current={isActivePage('/customer-signup/')}
                     >
-                      회원가입
+                      {_t(current_lang, '회원가입')}
                     </MenuItem>
                   </span>
                 )}
@@ -303,7 +304,7 @@ const Menus = ({ me, wpLogout, isActivePage, ...props }) => {
             <EmptySpace height="41.5" />
             {map(contents, (item, id) => (
               <MenuItem key={id} href={item.url}>
-                {item.title}
+                {_t(current_lang, item.title)}
               </MenuItem>
             ))}
             <MobileCartMenuItem>
@@ -331,6 +332,7 @@ const enhance = compose(
       this.props.getDatas ? this.props.getDatas() : ''
 
       this.props.getMe()
+      this.props.getCurrentLang()
     },
   })
 )

@@ -137,70 +137,70 @@ const newsStyle = css`
     left: 50%;
     transform: translateX(-50%);
     width: fit-content;
-  }
-  li {
-    display: inline-block;
-    position: relative;
-    width: ${wem2(48)};
-    height: ${wem2(48)};
-    border-radius: 2px;
-    border: solid 1px #533c97;
-    margin-left: ${wem2(12)};
-    color: #533c97;
-    cursor: pointer;
-    :hover {
+    li {
+      display: inline-block;
+      position: relative;
+      width: ${wem2(48)};
+      height: ${wem2(48)};
+      border-radius: 2px;
+      border: solid 1px #533c97;
+      margin-left: ${wem2(12)};
+      color: #533c97;
+      cursor: pointer;
+      :hover {
+        background: #533c97;
+        color: #ffffff;
+      }
+      a {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: ${wem2(16)};
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        white-space: nowrap;
+      }
+    }
+    .active {
       background: #533c97;
       color: #ffffff;
     }
-    a {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      font-size: ${wem2(16)};
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 1;
-      letter-spacing: normal;
-      white-space: nowrap;
+    .first-page {
+      width: ${wem2(85)};
+      height: ${wem2(48)};
+      border-radius: 2px;
+      border: solid 1px #533c97;
+      background-color: #ffffff;
+      margin-right: ${wem2(12)};
+      cursor: pointer;
+      :hover {
+        background: #533c97;
+        color: #ffffff;
+      }
     }
-  }
-  .active {
-    background: #533c97;
-    color: #ffffff;
-  }
-  .first-page {
-    width: ${wem2(85)};
-    height: ${wem2(48)};
-    border-radius: 2px;
-    border: solid 1px #533c97;
-    background-color: #ffffff;
-    margin-right: ${wem2(12)};
-    cursor: pointer;
-    :hover {
-      background: #533c97;
-      color: #ffffff;
+    .last-page {
+      width: ${wem2(85)};
+      height: ${wem2(48)};
+      border-radius: 2px;
+      border: solid 1px #533c97;
+      background-color: #ffffff;
+      margin-left: ${wem2(24)};
+      cursor: pointer;
+      :hover {
+        background: #533c97;
+        color: #ffffff;
+      }
     }
-  }
-  .last-page {
-    width: ${wem2(85)};
-    height: ${wem2(48)};
-    border-radius: 2px;
-    border: solid 1px #533c97;
-    background-color: #ffffff;
-    margin-left: ${wem2(24)};
-    cursor: pointer;
-    :hover {
-      background: #533c97;
-      color: #ffffff;
+    .prev-page {
+      display: none;
     }
-  }
-  .prev-page {
-    display: none;
-  }
-  .next-page {
-    display: none;
+    .next-page {
+      display: none;
+    }
   }
 `;
 
