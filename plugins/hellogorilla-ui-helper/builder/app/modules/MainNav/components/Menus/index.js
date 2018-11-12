@@ -16,6 +16,7 @@ import { centerIconA, wem, wem2, center } from 'ruucm-blocks/tools/mixins'
 import { slide as Menu } from 'react-burger-menu'
 import burgerStyle from './burgerStyle'
 import _t from '../../../shared/translate'
+import { menuHeight, subMenuHeight } from '../../../shared/consts'
 // import mobileLogo from '../../assets/mobile-logo.png'
 
 const Desktop = styled.div`
@@ -23,7 +24,7 @@ const Desktop = styled.div`
   font-size: 15px;
   line-height: 15px;
   position: relative;
-  height: 61px;
+  height: ${menuHeight + 'px'};
   background: #533c97;
   width: 100%;
   color: white;
@@ -47,7 +48,7 @@ const Centering = styled.div`
 `
 
 const Logo = styled.a`
-  font-size: 61px;
+  font-size: ${menuHeight + 'px'};
   display: block;
   .hellogorilla-logo {
     vertical-align: super;
@@ -92,18 +93,23 @@ const MenuItem = styled.a`
 
 const SubMenuItemWrap = styled.a`
   position: absolute;
-  left: 0;
-  background: yellowgreen;
+  left: ${wem2(40 / 2)};
   top: 45px;
 `
 
 const SubMenuItem = styled.a`
-  padding-left: ${wem2(40)};
+  width: 96px;
+  text-align: center;
+  line-height: ${subMenuHeight + 'px'};
+  height: ${subMenuHeight + 'px'};
   cursor: pointer;
-  background: red;
+  background: #0eb780;
+  color: white;
   display: block;
+  margin-bottom: 1px;
   :hover {
     color: #0fb780;
+    background: #533c97;
   }
 
   ${props =>
@@ -243,7 +249,9 @@ const Menus = ({
     <div>
       <Desktop>
         <Header>
-          <Centering>
+          <Centering
+          // onMouseOut={() => setShowSub(false)}
+          >
             <Logo href="/">
               <span className="hellogorilla hellogorilla-logo">
                 <span className="path1" />
@@ -259,12 +267,10 @@ const Menus = ({
                       key={id}
                       href={item.url}
                       current={isActivePage(item.url)}
-                      onMouseOver={() =>
-                        item.title == '헬로고릴라' && setShowSub(true)
-                      }
-                      onMouseOut={() =>
-                        item.title == '헬로고릴라' && setShowSub(false)
-                      }
+                      onMouseOver={() => {
+                        if (item.title == '헬로고릴라') setShowSub(true)
+                        else setShowSub(false)
+                      }}
                     >
                       {_t(current_lang, item.title)}
                     </MenuItem>
@@ -274,8 +280,12 @@ const Menus = ({
                 )}
                 {showSub ? (
                   <SubMenuItemWrap>
-                    <SubMenuItem>{_t(current_lang, '소개')}</SubMenuItem>
-                    <SubMenuItem>{_t(current_lang, '프로그램')}</SubMenuItem>
+                    <SubMenuItem onMouseOver={() => setShowSub(true)}>
+                      {_t(current_lang, '소개')}
+                    </SubMenuItem>
+                    <SubMenuItem onMouseOver={() => setShowSub(true)}>
+                      {_t(current_lang, '프로그램')}
+                    </SubMenuItem>
                   </SubMenuItemWrap>
                 ) : (
                   ''
