@@ -249,7 +249,7 @@ injectGlobal`
   ${programStyle}
   ${newsStyle}
 
-  .page-id-121  {
+  .page-id-121, .page-id-194  {
     #footer-content {
       margin-top: 0;
     }
