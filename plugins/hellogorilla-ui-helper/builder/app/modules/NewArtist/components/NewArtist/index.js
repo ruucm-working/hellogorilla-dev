@@ -17,7 +17,10 @@ const InfoBox = styled.div`
 `
 const CloseBtn = styled.button``
 
-const Title = styled.h1``
+const Title = styled.h1`
+  font-size: 50px;
+  margin-bottom: 150px;
+`
 
 const PromotionDesc = styled.div``
 
@@ -26,7 +29,9 @@ const fileFieldLabel = styled.div``
 const UploadedImg = styled.img`
   width: 100px;
 `
-const rederFieldLabel = styled.div``
+const RederFieldLabel = styled.div`
+  margin-bottom: 50px;
+`
 const textareaFieldLabel = styled.span``
 const radioFieldLabel = styled.span``
 const checkFieldLabel = styled.span``
@@ -49,7 +54,7 @@ const renderField = ({
 }) => (
   <div>
     <input {...input} placeholder={placeholder} type={type} />
-    <rederFieldLabel>{label}</rederFieldLabel>
+    <RederFieldLabel>{label}</RederFieldLabel>
   </div>
 )
 

@@ -61,7 +61,11 @@ const LoginButtons = styled.div`
   margin-top: ${wem2(20)};
 `
 const ErrorWrapper = styled.div`
-  color: #ee4230;
+  font-size: ${wem2(11)};
+  margin-top: ${wem2(12)};
+  margin-bottom: ${wem2(12)};
+  margin-left: ${wem2(20)};
+  color: #0eb780;
 `
 
 const CommonButtonStyle = styled.button`
@@ -179,7 +183,7 @@ const LoginForm = ({
             <Title>{_t(current_lang, '로그인')}</Title>
             <form
               onSubmit={handleSubmit(values => {
-                if (validate(values))
+                if (validate(values, current_lang))
                   return wpLogin(values, res => {
                     if (res) {
                       alert('로그인에 성공 하였습니다')

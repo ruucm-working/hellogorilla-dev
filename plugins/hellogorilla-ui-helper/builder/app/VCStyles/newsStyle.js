@@ -5,7 +5,8 @@ import media from 'ruucm-blocks/tools/media'
 
 // App Styles
 const newsStyle = css`
-  .page-id-20 {
+  .page-id-20,
+  .page-id-401 {
     .kboard-list-header {
       margin-left: ${wem2(240)};
       margin-right: ${wem2(240)};
