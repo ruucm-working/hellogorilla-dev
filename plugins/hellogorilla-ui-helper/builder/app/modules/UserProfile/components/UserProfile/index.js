@@ -158,6 +158,17 @@ const ArrowWrapper = styled.span`
   transform: translateY(-50%);
   z-index: 1;
   cursor: pointer;
+
+  &:before {
+    color: #e9e8e8;
+  }
+  &:hover {
+    &:before {
+      color: #805de9;
+    }
+  }
+
+
   ${props =>
     props.next &&
     css`
