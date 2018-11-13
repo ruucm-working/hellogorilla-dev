@@ -36,6 +36,12 @@ const _t = (current_lang, key) => {
     '비밀번호 찾기': 'Find Password',
     '가입 시 입력한 휴대폰 번호를 다시 확인해주세요.':
       'Check Your Phone Number',
+
+    // Find Password
+    '': '',
+    '': '',
+    '': '',
+    '': '',
     '': '',
     '': '',
     '': '',
