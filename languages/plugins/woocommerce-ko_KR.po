@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce translate korean\n"
 "Report-Msgid-Bugs-To: https://github.com/woocommerce/woocommerce/issues\n"
 "POT-Creation-Date: 2018-10-31 17:01:56+00:00\n"
-"PO-Revision-Date: 2018-11-09 08:13+0000\n"
+"PO-Revision-Date: 2018-11-13 00:11+0000\n"
 "Last-Translator: admin <admin@local.test>\n"
 "Language-Team: 한국어\n"
 "Language: ko_KR\n"
@@ -21340,7 +21340,7 @@ msgstr "장바구니에 1 %s만 가질 수 있습니다."
 
 #: includes/class-wc-form-handler.php:636
 msgid "Cart updated."
-msgstr "장바구니 업데이트됨."
+msgstr "카트 수량 업데이트됨."
 
 #: includes/class-wc-form-handler.php:678
 msgid "Order cancelled by customer."
@@ -26316,7 +26316,7 @@ msgstr "쿠폰:"
 
 #: templates/cart/cart.php:141
 msgid "Update cart"
-msgstr "장바구니 업데이트"
+msgstr "카트 수량 업데이트"
 
 #: templates/cart/cross-sells.php:27
 msgid "You may be interested in&hellip;"

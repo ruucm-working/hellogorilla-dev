@@ -128,6 +128,9 @@ injectGlobal`
     transform: translateX(-50%);
     cursor: pointer;
   }
+  .coupon, .woocommerce-shipping-destination, .woocommerce-shipping-calculator, .checkout_coupon_box  {
+    display: none;
+  }
 
 
 

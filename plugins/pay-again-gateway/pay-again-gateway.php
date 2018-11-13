@@ -19,10 +19,10 @@ function pay_again_init() {
 	add_filter('woocommerce_payment_gateways', 'woocommerce_add_pay_again_gateway' );
 	add_filter( 'woocommerce_order_button_text', 'pay_again_button_text' );
 	//구매자가 직접 취소할 때 환불처리(processing상태일 때만)
-	add_action( 'woocommerce_order_status_processing_to_cancelled', 'iamport_refund_payment', 10, 1 );
+	add_action( 'woocommerce_order_status_processing_to_cancelled', 'iamport_refund_payment_p', 10, 1 );
 }
 
-function iamport_refund_payment($order_id) {
+function iamport_refund_payment_p($order_id) {
 	require_once(dirname(__FILE__).'/lib/iamport.php');
 
 	$order = new WC_Order( $order_id );
@@ -44,7 +44,7 @@ function iamport_refund_payment($order_id) {
 		$order->add_order_note( __( '구매자요청에 의해 전액 환불완료', 'iamport-for-woocommerce' ) );
 		if ( $payment_data->amount == $payment_data->cancel_amount ) {
 			$old_status = $order->get_status();
-			$order->update_status('refunded'); //iamport_refund_payment가 old_status -> cancelled로 바뀌는 중이라 update_state('refunded')를 호출하는 것이 향후에 문제가 될 수 있음
+			$order->update_status('refunded'); //iamport_refund_payment_p가 old_status -> cancelled로 바뀌는 중이라 update_state('refunded')를 호출하는 것이 향후에 문제가 될 수 있음
 
 			//fire hook
 			do_action('iamport_order_status_changed', $old_status, $order->get_status());
