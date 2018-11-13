@@ -189,7 +189,13 @@ const Product = props => {
 
               <Overlay />
               <SalePercentage show={data.sale_price}>
-                <SaleText>{(data.sale_price / data.price) * 100} %</SaleText>
+                <SaleText>
+                  {100 -
+                    Math.trunc(
+                      (data.sale_price / data.regular_price) * 100
+                    )}{' '}
+                  %
+                </SaleText>
 
                 <SaleText small>OFF</SaleText>
               </SalePercentage>
