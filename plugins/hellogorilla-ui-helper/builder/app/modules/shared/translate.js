@@ -30,6 +30,13 @@ const _t = (current_lang, key) => {
     '이메일 형식이 잘못 되었습니다': 'Email Information is Not Valid',
     '비밀번호는 필수 필드 입니다': 'Password Information is Missed',
     '비밀번호가 같지 않습니다': 'Email Information is NOT match',
+
+    // Find Id
+    '이메일 찾기': 'Find Email',
+    '비밀번호 찾기': 'Find Password',
+    '가입 시 입력한 휴대폰 번호를 다시 확인해주세요.':
+      'Check Your Phone Number',
+    '': '',
     '': '',
     '': '',
     '': '',

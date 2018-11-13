@@ -228,9 +228,19 @@ const LoginForm = ({
           </Wrap>
         )
       case 'find-id':
-        return <Find_ID setCurrentView={setCurrentView} />
+        return (
+          <Find_ID
+            setCurrentView={setCurrentView}
+            current_lang={current_lang}
+          />
+        )
       case 'find-pw':
-        return <Find_Password setCurrentView={setCurrentView} />
+        return (
+          <Find_Password
+            setCurrentView={setCurrentView}
+            current_lang={current_lang}
+          />
+        )
       default:
         break
     }
