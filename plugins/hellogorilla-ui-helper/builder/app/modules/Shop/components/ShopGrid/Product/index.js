@@ -4,34 +4,34 @@
  *
  */
 
-import React from "react";
-import { compose, lifecycle } from "recompose";
-import styled, { css } from "styled-components";
-import { log, commaPipe } from "ruucm-util";
+import React from 'react'
+import { compose, lifecycle } from 'recompose'
+import styled, { css } from 'styled-components'
+import { log, commaPipe } from 'ruucm-util'
 
-import { map } from "lodash";
-import { Row, Column, EmptySpace } from "ruucm-blocks/layouts";
-import { wem2 } from "ruucm-blocks/tools/mixins";
+import { map } from 'lodash'
+import { Row, Column, EmptySpace } from 'ruucm-blocks/layouts'
+import { wem2 } from 'ruucm-blocks/tools/mixins'
 
 const Wrapper = styled.div`
   position: relative;
-`;
-const StyledColumn = styled(Column)``;
+`
+const StyledColumn = styled(Column)``
 
 const ProductWrapper = styled.div`
   position: relative;
   height: ${wem2(360)};
   margin-top: ${wem2(96)};
-`;
+`
 const Center = styled.div`
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
-`;
+`
 const ImageWrapper = styled.div`
   width: ${wem2(288)};
   height: ${wem2(360)};
-`;
+`
 
 const Overlay = styled.div`
   width: ${wem2(288)};
@@ -45,7 +45,7 @@ const Overlay = styled.div`
     opacity: 1;
     background-color: rgba(128, 92, 232, 0.5);
   }
-`;
+`
 const SalePercentage = styled.div`
   background: #533c97;
   display: none;
@@ -61,7 +61,7 @@ const SalePercentage = styled.div`
     css`
       display: block;
     `};
-`;
+`
 const SaleText = styled.div`
   font-size: ${wem2(24)};
   text-align: center;
@@ -73,7 +73,7 @@ const SaleText = styled.div`
       font-size: ${wem2(16)};
       margin-top: ${wem2(8)};
     `};
-`;
+`
 const NewLabel = styled.div`
   display: none;
   background: #533c97;
@@ -90,7 +90,7 @@ const NewLabel = styled.div`
     css`
       display: block;
     `};
-`;
+`
 const NewLabelText = styled.div`
   font-size: ${wem2(14)};
   color: white;
@@ -99,7 +99,7 @@ const NewLabelText = styled.div`
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-`;
+`
 
 const SoldOut = styled.div`
   display: none;
@@ -116,7 +116,7 @@ const SoldOut = styled.div`
     css`
       display: block;
     `};
-`;
+`
 const SoldOutLabel = styled.div`
   line-height: 1.14;
   font-size: 28px;
@@ -126,35 +126,36 @@ const SoldOutLabel = styled.div`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-`;
+  font-family: 'Lato', sans-serif;
+`
 
 const TextWrapper = styled.div`
   text-align: center;
   margin-top: ${wem2(24)};
-`;
+`
 const Title = styled.h1`
   font-size: ${wem2(18)};
   color: #231f20;
   font-weight: 500;
-`;
+`
 const Desc = styled.h1`
   margin-top: ${wem2(12)};
   font-size: ${wem2(14)};
   line-height: 1.57;
   color: #918f8f;
-`;
+`
 
-const MoreLink = styled.a``;
+const MoreLink = styled.a``
 const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-`;
+`
 
 const Price = styled.div`
   text-align: center;
   margin-top: ${wem2(12)};
-`;
+`
 const RegularPrice = styled.div`
   display: none;
   font-size: ${wem2(18)};
@@ -166,16 +167,16 @@ const RegularPrice = styled.div`
       text-decoration: line-through;
       color: #b7b5b6;
     `};
-`;
+`
 const SalePrice = styled.div`
   margin-top: ${wem2(6)};
   font-size: ${wem2(18)};
   color: #4a4a4a;
-`;
+`
 
 const Product = props => {
-  log("props", props);
-  const { data, addToCart, index } = props;
+  log('props', props)
+  const { data, addToCart, index } = props
   return (
     <div>
       <MoreLink href={data.permalink}>
@@ -195,7 +196,7 @@ const Product = props => {
 
               <NewLabel show={data.tags.length}>
                 <NewLabelText>
-                  {data.tags[0] ? data.tags[0].name : ""}
+                  {data.tags[0] ? data.tags[0].name : ''}
                 </NewLabelText>
               </NewLabel>
 
@@ -224,7 +225,7 @@ const Product = props => {
         <SalePrice>￦{commaPipe(data.price)}</SalePrice>
       </Price>
     </div>
-  );
-};
+  )
+}
 
-export default Product;
+export default Product
