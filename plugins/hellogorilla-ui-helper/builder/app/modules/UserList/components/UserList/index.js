@@ -15,6 +15,7 @@ import { wem, wem2 } from 'ruucm-blocks/tools/mixins'
 import { log } from 'ruucm-util'
 import profileDefault from '../../assets/profile-default.jpg'
 import bannerImg from '../../assets/banner.png'
+import LoadingSpinner from '../../../shared/LoadingSpinner'
 
 import { PageBanner } from '../../../PageBanner'
 
@@ -135,7 +136,7 @@ const UserProducts = styled.div`
   text-align: center;
 `
 
-const SearchComp = ({ current_lang, ...props }) => {
+const SearchComp = ({ current_lang, getDatas, ...props }) => {
   return (
     <Search>
       <SearchTitle>
@@ -167,10 +168,14 @@ const Contents = ({ getDatas, current_lang, ...props }) => {
   let contents = props[props.wpType + '_' + props.sort + '_wpData']
   log('contents', contents)
   return (
-    <div>
-      <Wrapper>
-        <PageBanner bannerText={<SearchComp current_lang={current_lang} />} />
+    <Wrapper>
+      <PageBanner
+        bannerText={
+          <SearchComp current_lang={current_lang} getDatas={getDatas} />
+        }
+      />
 
+      {contents ? (
         <ArtistWrap>
           <Row>
             {map(contents, (item, id) => (
@@ -191,7 +196,7 @@ const Contents = ({ getDatas, current_lang, ...props }) => {
 
                         {log('item', item)}
                         <UserProducts>
-                          {item.user_products
+                          {item.user_products && item.user_products.length > 1
                             ? item.user_products[0].post_title
                             : ''}
 
@@ -207,8 +212,10 @@ const Contents = ({ getDatas, current_lang, ...props }) => {
             ))}
           </Row>
         </ArtistWrap>
-      </Wrapper>
-    </div>
+      ) : (
+        <LoadingSpinner />
+      )}
+    </Wrapper>
   )
 }
 

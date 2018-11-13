@@ -75,8 +75,9 @@ const renderDropzoneInput = ({ wpUpload, label, ...field }) => {
       >
         <div>여기에 이미지 파일을 끌어다 놓으세요</div>
       </Dropzone>
-      {field.meta.touched &&
-        field.meta.error && <span className="error">{field.meta.error}</span>}
+      {field.meta.touched && field.meta.error && (
+        <span className="error">{field.meta.error}</span>
+      )}
       {log('files', files)}
       {files && <UploadedImg src={files} />}
       <fileFieldLabel>{label}</fileFieldLabel>
@@ -121,6 +122,7 @@ const NewArtist = ({
             wpSignUp(values, 'editor', res => {
               alert(res.username + ' 아티스트가 생성 되었습니다')
               log('res', res)
+              location.href = '/'
             })
           }
         })}
