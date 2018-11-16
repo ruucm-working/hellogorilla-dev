@@ -223,7 +223,8 @@ const enhance = compose(
           afterSuccess(res)
         })
         .catch(err => {
-          alert('에러 - ' + err.code)
+          // alert('에러 - ' + err.code)
+          alert('에러 - 정보를 다시 확인해주세요')
         })
     },
     wpLogout: props => afterSuccess => {

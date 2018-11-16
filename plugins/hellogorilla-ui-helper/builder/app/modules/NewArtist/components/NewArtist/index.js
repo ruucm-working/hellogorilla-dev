@@ -151,7 +151,7 @@ const NewArtist = ({
             name="email"
             type="email"
             label="이메일"
-            placeholder="이메일 (email@gmail.com) "
+            placeholder="이메일을 입력해주세요"
             component={renderField}
           />
           <Field

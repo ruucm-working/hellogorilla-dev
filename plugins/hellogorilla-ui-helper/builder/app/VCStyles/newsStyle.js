@@ -126,7 +126,7 @@ const newsStyle = css`
       display: none;
     }
     .kboard-control {
-      display: none;
+      /* display: none; */
     }
 
     .kboard-pagination {

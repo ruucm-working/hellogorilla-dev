@@ -183,7 +183,7 @@ const FindPassword = ({
           name="email"
           type="email"
           label={_t(current_lang, '이메일')}
-          placeholder="gorilla@gmail.com"
+          placeholder="이메일을 입력해주세요"
           component={emailField}
         />
         <Alarm>

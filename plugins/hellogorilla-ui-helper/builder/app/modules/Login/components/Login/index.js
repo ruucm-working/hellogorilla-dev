@@ -196,7 +196,7 @@ const LoginForm = ({
                 <Field
                   name="username"
                   type="text"
-                  placeholder="ddoooodd@gmail.com"
+                  placeholder="이메일을 입력해주세요"
                   component={emailField}
                 />
                 <Field
