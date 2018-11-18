@@ -25,9 +25,8 @@ const burgerStyle = css`
 
   /* Color/shape of close button cross */
   .bm-cross {
-    background: #000;
-    width: 4.5px !important;
-    height: 30px !important;
+    width: 21px !important;
+    height: 21px !important;
   }
 
   /* General sidebar styles */
