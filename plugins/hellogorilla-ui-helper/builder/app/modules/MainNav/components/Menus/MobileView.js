@@ -15,9 +15,13 @@ const MenuWrapper = styled.div`
 `
 
 const LoginMenuItem = styled.div``
+
+const MenuHeader = styled.div`
+  height: 60px;
+`
 const MenuItem = styled.a`
   display: block;
-  padding-top: 50px;
+  padding-bottom: 32px;
   padding-left: 20px;
   font-size: 15px;
 
@@ -89,6 +93,7 @@ const MobileView = ({
               case 0:
                 return (
                   <div>
+                    <MenuHeader />
                     <MenuItem key={id} href={item.url}>
                       {_t(current_lang, item.title)}
 
