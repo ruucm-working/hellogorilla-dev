@@ -30,8 +30,10 @@ const Absolute = styled.div`
   transform: translateX(-50%);
   max-width: 960px;
   width: 100%;
-  .input-fields {
-    /* position: relative; */
+  form {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 `
 const Title = styled.h1`
