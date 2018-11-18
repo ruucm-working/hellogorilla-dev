@@ -223,7 +223,8 @@ const enhance = compose(
           afterSuccess(res)
         })
         .catch(err => {
-          alert('에러 - ' + err.code)
+          // alert('에러 - ' + err.code)
+          alert('에러 - 정보를 다시 확인해주세요')
         })
     },
     wpLogout: props => afterSuccess => {
@@ -274,11 +275,16 @@ const enhance = compose(
     getCurrentLang: props => () => {
       const { dispatch, wp } = props
 
-      var pathArray = window.location.pathname.split('/')
+      var pathString = window.location.pathname.slice(-4)
+      log('window.location', window.location.pathname)
 
-      log('pathArray', pathArray)
-      if (pathArray[1] == 'en') dispatch(getDatas('current_lang', 'en'))
+      if (pathString == '-en/') dispatch(getDatas('current_lang', 'en'))
       else dispatch(getDatas('current_lang', 'ko'))
+
+      // var pathArray = window.location.pathname.split('/')
+
+      // if (pathArray[1] == 'en') dispatch(getDatas('current_lang', 'en'))
+      // else dispatch(getDatas('current_lang', 'ko'))
 
       // wp.currentLang()
       //   .then(res => {

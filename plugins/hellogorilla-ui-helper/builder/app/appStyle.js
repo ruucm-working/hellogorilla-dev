@@ -15,6 +15,8 @@ import aboutStyle from './VCStyles/aboutStyle'
 import programStyle from './VCStyles/programStyle'
 import newsStyle from './VCStyles/newsStyle'
 
+import myaccountStyle from './WooCommerceStyles/myaccountStyle'
+
 // App Styles
 injectGlobal`
   ${normalize}
@@ -127,6 +129,9 @@ injectGlobal`
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
+  }
+  .coupon, .woocommerce-shipping-destination, .woocommerce-shipping-calculator, .checkout_coupon_box  {
+    display: none;
   }
 
 
@@ -246,7 +251,7 @@ injectGlobal`
   ${programStyle}
   ${newsStyle}
 
-  .page-id-121  {
+  .page-id-121, .page-id-194  {
     #footer-content {
       margin-top: 0;
     }
@@ -254,6 +259,7 @@ injectGlobal`
       background: transparent;
     }
   }
+  ${myaccountStyle}
 
 
 `

@@ -17,7 +17,10 @@ const InfoBox = styled.div`
 `
 const CloseBtn = styled.button``
 
-const Title = styled.h1``
+const Title = styled.h1`
+  font-size: 50px;
+  margin-bottom: 150px;
+`
 
 const PromotionDesc = styled.div``
 
@@ -26,7 +29,9 @@ const fileFieldLabel = styled.div``
 const UploadedImg = styled.img`
   width: 100px;
 `
-const rederFieldLabel = styled.div``
+const RederFieldLabel = styled.div`
+  margin-bottom: 50px;
+`
 const textareaFieldLabel = styled.span``
 const radioFieldLabel = styled.span``
 const checkFieldLabel = styled.span``
@@ -49,7 +54,7 @@ const renderField = ({
 }) => (
   <div>
     <input {...input} placeholder={placeholder} type={type} />
-    <rederFieldLabel>{label}</rederFieldLabel>
+    <RederFieldLabel>{label}</RederFieldLabel>
   </div>
 )
 
@@ -75,8 +80,9 @@ const renderDropzoneInput = ({ wpUpload, label, ...field }) => {
       >
         <div>여기에 이미지 파일을 끌어다 놓으세요</div>
       </Dropzone>
-      {field.meta.touched &&
-        field.meta.error && <span className="error">{field.meta.error}</span>}
+      {field.meta.touched && field.meta.error && (
+        <span className="error">{field.meta.error}</span>
+      )}
       {log('files', files)}
       {files && <UploadedImg src={files} />}
       <fileFieldLabel>{label}</fileFieldLabel>
@@ -121,6 +127,7 @@ const NewArtist = ({
             wpSignUp(values, 'editor', res => {
               alert(res.username + ' 아티스트가 생성 되었습니다')
               log('res', res)
+              location.href = '/'
             })
           }
         })}
@@ -144,7 +151,7 @@ const NewArtist = ({
             name="email"
             type="email"
             label="이메일"
-            placeholder="이메일 (email@gmail.com) "
+            placeholder="이메일을 입력해주세요"
             component={renderField}
           />
           <Field

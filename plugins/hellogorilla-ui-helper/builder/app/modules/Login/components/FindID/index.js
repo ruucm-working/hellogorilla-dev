@@ -6,6 +6,7 @@ import { wem, wem2 } from 'ruucm-blocks/tools/mixins'
 import { Field, reduxForm } from 'redux-form'
 import { log } from 'ruucm-util'
 import EmptySpace from 'ruucm-blocks/layouts/EmptySpace'
+import { _t } from '../../../shared/translate'
 
 const Wrap = styled.div`
   margin-left: ${wem2(480)};
@@ -105,6 +106,7 @@ const phoneField = ({
   label,
   placeholder,
   type,
+  current_lang,
   meta: { touched, error },
 }) => (
   <div>
@@ -113,7 +115,7 @@ const phoneField = ({
     <PhoneWriteField input {...input02} placeholder={placeholder} type={type} />
     <PhoneWriteField input {...input03} placeholder={placeholder} type={type} />
     <PassButton>
-      <PassText>인증번호 전송</PassText>
+      <PassText>{_t(current_lang, '인증번호 전송')}</PassText>
     </PassButton>
   </div>
 )
@@ -122,18 +124,22 @@ const phoneMatchField = ({
   label,
   placeholder,
   type,
+  current_lang,
   meta: { touched, error },
 }) => (
   <div>
     {/* <RenderFieldLabel /> */}
     <PhoneMatchField input {...input} placeholder={placeholder} type={type} />
     <PassButton purple>
-      <PassText>인증번호 확인</PassText>
+      <PassText>{_t(current_lang, '인증번호 확인')}</PassText>
     </PassButton>
   </div>
 )
 
 const FindID = ({
+  // from parent
+  current_lang,
+
   // local
   setCurrentView,
   ...props
@@ -143,20 +149,29 @@ const FindID = ({
       <EmptySpace height="96" />
       <Wrap>
         <Title>
-          <Email>이메일 찾기</Email>
+          <Email>{_t(current_lang, '이메일 찾기')}</Email>
           <Bar>|</Bar>
           <Password onClick={() => setCurrentView('find-pw')}>
-            비밀번호 찾기
+            {_t(current_lang, '비밀번호 찾기')}
           </Password>
         </Title>
 
-        <Field name="phone" type="tel" label="휴대폰" component={phoneField} />
-        <Alarm>가입 시 입력한 휴대폰 번호를 다시 확인해주세요.</Alarm>
+        <Field
+          name="phone"
+          type="tel"
+          label={_t(current_lang, '휴대폰')}
+          component={phoneField}
+          current_lang={current_lang}
+        />
+        <Alarm>
+          {_t(current_lang, '가입 시 입력한 휴대폰 번호를 다시 확인해주세요.')}
+        </Alarm>
         <Field
           name="phone_match"
           type="tel"
           // label="인증번호를 입력해주세요."
-          placeholder="인증번호를 입력해주세요."
+          placeholder={_t(current_lang, '인증번호를 입력해주세요.')}
+          current_lang={current_lang}
           component={phoneMatchField}
         />
       </Wrap>
