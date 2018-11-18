@@ -23,7 +23,7 @@ const Wrapper = styled.div``
 
 const Search = styled.div``
 const SearchTitle = styled.div`
-  font-size: 28px;
+  font-size: ${wem2(28)};
   text-align: center;
   color: #533c97;
 `
