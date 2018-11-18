@@ -26,6 +26,9 @@ const MenuItem = styled.a`
   font-size: 15px;
 
   color: #ffffff;
+  :hover {
+    color: #0eb780;
+  }
 `
 const MenuFoldButton = styled.span`
   cursor: pointer;
