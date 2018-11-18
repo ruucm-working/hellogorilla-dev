@@ -9,6 +9,7 @@ import styled, { css } from 'styled-components'
 import { Row, Column, EmptySpace } from 'ruucm-blocks/layouts'
 
 import { wem2 } from 'ruucm-blocks/tools/mixins'
+import media, { isTablet } from 'ruucm-blocks/tools/media'
 
 const Wrap = styled.div`
   width: 100%;
@@ -28,7 +29,9 @@ const Content = styled.div`
   transform: translateX(-50%);
   width: 100%;
   max-width: 960px;
-
+  ${media.tablet`
+    text-align: center;
+  `};
 `
 
 const FooterLine = styled.div`
@@ -43,12 +46,19 @@ const Left = styled.div`
 const Right = styled.div`
   padding-left: ${wem2(44)};
   padding-bottom: 11px;
+  ${media.tablet`
+    padding-left: 0;
+  `};
 `
 const Right2 = styled.div`
   padding-left: ${wem2(44)};
   padding-bottom: 24px;
   line-height: 1.77;
   font-size: 13px;
+  ${media.tablet`
+    padding-left: 0;
+    margin-top: 30px;
+  `};
 `
 const Icon = styled.div`
   padding-left: ${wem2(44)};
@@ -90,9 +100,13 @@ const Footer = props => {
             <Column col="7">
               <Right>(주) 헬로고릴라</Right>
               <Right2>
-                대표 <L>김효정</L> | 개인정보관리책임자 <L>김소정</L> |
+                대표 <L>김효정</L> | 개인정보관리책임자 <L>김소정</L> |{' '}
+                {isTablet() && <br />}
                 사업자등록번호 <L>220-88-64886</L> <br /> 통신판매업신고{' '}
-                <L>123-45-6789 | 04718 서울시 성동구 금호로72</L>
+                <L>
+                  123-45-6789 | {isTablet() && <br />}04718 서울시 성동구
+                  금호로72
+                </L>
               </Right2>
               <Icon>
                 <span className="hellogorilla hellogorilla-icon-instagram-24" />
