@@ -9,6 +9,9 @@ const newsStyle = css`
   .page-id-401 {
     .site-content {
       min-height: ${wem2(1200)};
+      ${media.tablet`
+        min-height: 800px;
+    `};
     }
     .kboard-default-list {
       position:relative;
@@ -27,6 +30,9 @@ const newsStyle = css`
       margin-left: ${wem2(48)};
       font-size: ${wem2(15)};
       color: #231f20;
+      ${media.tablet`
+      font-size: 18px;
+    `};
     }
 
     .kboard-list {
@@ -51,6 +57,10 @@ const newsStyle = css`
         background-color: #533c97;
         color: white;
       }
+      ${media.tablet`
+      height: 44px;
+      font-size: 16px;
+    `};
     }
     td {
       color: unset !important;
@@ -59,6 +69,9 @@ const newsStyle = css`
       height: ${wem2(55)};
       background-color: #f9f9f9;
       color: #533c97;
+      ${media.tablet`
+      height: 44px;
+    `};
     }
 
     .kboard-mobile-contents {
@@ -67,6 +80,9 @@ const newsStyle = css`
     .kboard-list-title {
       position: relative;
       font-size: ${wem2(15)};
+      ${media.tablet`
+        font-size: 13px;
+    `};
     }
     .kboard-default-cut-strings {
       position: absolute;
@@ -84,6 +100,9 @@ const newsStyle = css`
       margin-top: ${wem2(20)};
       line-height: 1;
       margin-right: ${wem2(48)};
+      ${media.tablet`
+        font-size: 14px;
+    `};
     }
 
     /* New2 css */
@@ -117,6 +136,9 @@ const newsStyle = css`
       padding-top: ${wem2(20)};
       padding-bottom: ${wem2(20)};
       padding-left: ${wem2(48)};
+      ${media.tablet`
+        font-size: 12px;    
+      `};
     }
     .detail-value {
       position: absolute;
@@ -129,6 +151,9 @@ const newsStyle = css`
       line-height: 1;
       letter-spacing: normal;
       color: #231f20;
+      ${media.tablet`
+        font-size: 12px;    
+      `};
     }
     .kboard-content {
       height: ${wem2(625)};
@@ -137,6 +162,9 @@ const newsStyle = css`
       line-height: 1.86;
       color: #231f20;
       border-bottom: 1px solid #e9e8e8;
+      ${media.tablet`
+        font-size: 16px;    
+      `};
     }
     .content-view {
       margin-left: ${wem2(48)};
@@ -149,6 +177,7 @@ const newsStyle = css`
       /* display: none; */
     }
 
+    /* 차례 */
     .kboard-pagination {
       margin-top: ${wem2(72)};
       position: relative;
