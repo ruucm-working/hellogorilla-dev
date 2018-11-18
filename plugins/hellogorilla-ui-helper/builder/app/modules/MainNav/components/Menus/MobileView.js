@@ -10,13 +10,18 @@ import { _t, _u } from '../../../shared/translate'
 import { menuHeight, subMenuHeight } from '../../../shared/consts'
 
 const MenuWrapper = styled.div`
-  padding-top: 150px;
-  background: #444041;
+  /* padding-top: 150px; */
+  background: #533c97;
 `
 
 const LoginMenuItem = styled.div``
 const MenuItem = styled.a`
   display: block;
+  padding-top: 50px;
+  padding-left: 20px;
+  font-size: 15px;
+
+  color: #ffffff;
 `
 const MenuFoldButton = styled.span`
   cursor: pointer;
