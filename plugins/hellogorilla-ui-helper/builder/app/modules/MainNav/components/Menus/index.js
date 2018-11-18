@@ -12,7 +12,7 @@ import { Row, Column, EmptySpace } from 'ruucm-blocks/layouts'
 import media from 'ruucm-blocks/tools/media'
 import styled, { css } from 'styled-components'
 import { centerIconA, wem, wem2, center } from 'ruucm-blocks/tools/mixins'
-import Mobile from './Mobile'
+import MobileView from './MobileView'
 
 import { _t, _u } from '../../../shared/translate'
 import { menuHeight, subMenuHeight } from '../../../shared/consts'
@@ -289,7 +289,7 @@ const Menus = ({
           </Centering>
         </Header>
       </Desktop>
-      <Mobile contents={contents} current_lang={current_lang} />
+      <MobileView contents={contents} current_lang={current_lang} />
     </div>
   )
 }

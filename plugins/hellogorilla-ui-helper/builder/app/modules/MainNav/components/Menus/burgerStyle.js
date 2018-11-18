@@ -4,16 +4,16 @@ const burgerStyle = css`
   /* Position and sizing of burger button */
   .bm-burger-button {
     position: fixed;
-    width: 30px;
-    height: 30px;
-    left: 19px;
-    top: 22px;
+    width: 21px;
+    height: 18px;
+    left: 16px;
+    top: 16px;
   }
 
   /* Color/shape of burger icon bars */
   .bm-burger-bars {
-    background: #000000;
-    height: 4px !important;
+    background: #ffffff;
+    height: 1px !important;
   }
 
   /* Position and sizing of clickable cross button */
