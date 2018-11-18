@@ -1,5 +1,5 @@
-// const DATA_BASE_URL = 'http://hellogo.co.kr/'
-const DATA_BASE_URL = 'http://d-hellogorilla.test/'
+const DATA_BASE_URL = 'http://hellogo.co.kr/'
+// const DATA_BASE_URL = 'http://d-hellogorilla.test/'
 
 const WP_ADMIN_ID = 'admin'
 const WP_ADMIN_PW = 'museum101'
