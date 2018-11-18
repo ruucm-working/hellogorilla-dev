@@ -15,6 +15,9 @@ import aboutStyle from './VCStyles/aboutStyle'
 import programStyle from './VCStyles/programStyle'
 import newsStyle from './VCStyles/newsStyle'
 
+import myaccountStyle from './WooCommerceStyles/myaccountStyle'
+import cartStyle from './WooCommerceStyles/cartStyle'
+
 // App Styles
 injectGlobal`
   ${normalize}
@@ -257,6 +260,8 @@ injectGlobal`
       background: transparent;
     }
   }
+  ${myaccountStyle}
+  ${cartStyle}
 
 
 `
