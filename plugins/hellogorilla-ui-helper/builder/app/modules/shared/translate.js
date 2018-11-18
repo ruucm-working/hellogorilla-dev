@@ -3,6 +3,7 @@ const _t = (current_lang, key) => {
   var data = {
     // Login
     로그인: 'Login',
+    '이메일을 입력해주세요': 'email',
     '비밀번호를 입력해주세요.': 'password',
     '아이디 찾기': 'Find ID',
     '비밀번호 찾기': 'Find Password',

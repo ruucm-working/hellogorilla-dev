@@ -196,7 +196,7 @@ const LoginForm = ({
                 <Field
                   name="username"
                   type="text"
-                  placeholder="이메일을 입력해주세요"
+                  placeholder={_t(current_lang, '이메일을 입력해주세요')}
                   component={emailField}
                 />
                 <Field
