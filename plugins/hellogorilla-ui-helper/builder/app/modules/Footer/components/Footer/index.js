@@ -14,14 +14,21 @@ const Wrap = styled.div`
   width: 100%;
   font-family: 'NanumSquareRoundWeb', sans-serif;
   color: #231f20;
+  position: relative;
 `
 
 const Content = styled.div`
   margin-top: ${wem2(144)};
-  padding-left: ${wem2(240)};
-  padding-right: ${wem2(240)};
+  /* padding-left: ${wem2(240)};
+  padding-right: ${wem2(240)}; */
   font-size: 15px;
   margin-bottom: 96px;
+  position:absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+    max-width: 960px;
+
 `
 
 const FooterLine = styled.div`
