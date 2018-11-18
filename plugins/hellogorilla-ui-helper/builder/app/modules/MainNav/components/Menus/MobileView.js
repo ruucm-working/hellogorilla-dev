@@ -51,6 +51,23 @@ const CartMenuItem = styled.a`
   transform: translateY(-50%);
   right: 20px;
 `
+const CartCount = styled.div`
+  .hellogorilla-cart-count {
+    position: absolute;
+    font-size: 10px;
+    width: 14px;
+    height: 14px;
+    background-color: #ffffff;
+    text-align: center;
+    color: #533c97;
+    border-radius: 50%;
+    margin-left: ${wem2(59)};
+
+    top: -4px;
+    right: -6px;
+    line-height: 14px;
+  }
+`
 
 const CartIcon = styled.span``
 const MainLogo = styled.a`
@@ -81,6 +98,7 @@ const MobileView = ({
   current_lang,
   showSub,
   setShowSub,
+  shortcodeChild,
   ...props
 }) => {
   return (
@@ -93,6 +111,7 @@ const MobileView = ({
         </span>
       </MainLogo>
       <CartMenuItem href={_u(current_lang, '/cart')}>
+        <CartCount dangerouslySetInnerHTML={{ __html: shortcodeChild }} />
         <CartIcon className="hellogorilla hellogorilla-icon-cart-61" />
       </CartMenuItem>
       <Menu

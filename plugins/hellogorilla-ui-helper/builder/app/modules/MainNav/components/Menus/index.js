@@ -121,7 +121,7 @@ const SubMenuItem = styled.a`
     `};
 `
 
-const LoginMenuItem = styled.div`
+const CartCount = styled.div`
   display: inline-block;
   position: relative;
   .cosmosfarm-members-loginout-link {
@@ -146,23 +146,19 @@ const LoginMenuItem = styled.div`
       color: #0fb780;
     }
   } */
+
   .hellogorilla-cart-count {
     position: absolute;
     font-size: 10px;
     width: 14px;
     height: 14px;
+    line-height: 14px;
     background-color: #ffffff;
     text-align: center;
     color: #533c97;
     border-radius: 50%;
     margin-left: ${wem2(59)};
     top: -22px;
-  }
-  .cosmosfarm-members-account-links {
-    display: inline-block;
-  }
-  .cosmosfarm-members-account-link {
-    display: inline-block;
   }
 `
 
@@ -266,7 +262,7 @@ const Menus = ({
                 href="/"
                 className="beerspick beerspick-beerspick_logo_header"
               /> */}
-                <LoginMenuItem
+                <CartCount
                   dangerouslySetInnerHTML={{ __html: props.shortcodeChild }}
                 />
                 <a href={_u(current_lang, '/cart')}>
@@ -289,7 +285,11 @@ const Menus = ({
           </Centering>
         </Header>
       </Desktop>
-      <MobileView contents={contents} current_lang={current_lang} />
+      <MobileView
+        contents={contents}
+        current_lang={current_lang}
+        shortcodeChild={props.shortcodeChild}
+      />
     </div>
   )
 }
