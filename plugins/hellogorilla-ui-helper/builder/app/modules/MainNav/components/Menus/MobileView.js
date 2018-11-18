@@ -41,7 +41,13 @@ const SubMenuItemWrap = styled.a``
 
 const SubMenuItem = styled.a``
 
-const CartMenuItem = styled.a``
+const CartMenuItem = styled.a`
+  font-size: 26px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+`
 
 const CartIcon = styled.span``
 const MainLogo = styled.a`
@@ -55,7 +61,7 @@ const MainLogo = styled.a`
 
 const Wrap = styled.div`
   display: none;
-
+  position: relative;
   ${media.tablet`
     display: block;
     ${burgerStyle}
@@ -83,6 +89,9 @@ const MobileView = ({
           <span className="path3" />
         </span>
       </MainLogo>
+      <CartMenuItem href={_u(current_lang, '/cart')}>
+        <CartIcon className="hellogorilla hellogorilla-icon-cart-61" />
+      </CartMenuItem>
       <Menu
         left
         customCrossIcon={<img src={require('./assets/icon-close.svg')} />}
@@ -137,9 +146,6 @@ const MobileView = ({
                 )
             }
           })}
-          <CartMenuItem href={_u(current_lang, '/cart')}>
-            <CartIcon className="hellogorilla hellogorilla-icon-cart-61" />
-          </CartMenuItem>
         </MenuWrapper>
       </Menu>
     </Wrap>
