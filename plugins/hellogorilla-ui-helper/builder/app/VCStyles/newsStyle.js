@@ -65,6 +65,7 @@ const newsStyle = css`
       vertical-align: middle;
       line-height: 1;
       margin-left: ${wem2(48)};
+      white-space: nowrap;
     }
     .kboard-list-date {
       font-size: ${wem2(16)};
