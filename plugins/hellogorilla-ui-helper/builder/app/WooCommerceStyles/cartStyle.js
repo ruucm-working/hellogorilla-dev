@@ -18,15 +18,90 @@ const style = css`
       width: ${wem2(324)} !important;
     }
     .cart_totals {
+      padding: ${wem2(20)} !important;
       h2 {
         display: none;
       }
     }
     .shop_table {
-      margin-top: 14px !important;
+      margin-top: ${wem2(14)} !important;
+      width: 100%;
     }
+    /* 장바구니 합계 */
     .cart-subtotal {
       white-space: nowrap;
+      th {
+        padding: unset !important;
+        vertical-align: middle !important;
+        font-family: 'NanumSquareRoundWeb', sans-serif !important;
+        font-size: ${wem2(14)} !important;
+        color: #231f20 !important;
+      }
+      td {
+        padding: unset !important;
+        float: right;
+      }
+      .woocommerce-Price-amount {
+        font-family: 'NanumSquareRoundWeb', sans-serif !important;
+        font-size: ${wem2(14)} !important;
+        color: #231f20 !important;
+      }
+    }
+    /* 고정 요금 */
+    .woocommerce-shipping-totals {
+      th {
+        vertical-align: middle;
+        font-family: 'NanumSquareRoundWeb', sans-serif !important;
+        font-size: ${wem2(14)} !important;
+        color: #231f20 !important;
+      }
+      td {
+        vertical-align: middle;
+      }
+      label {
+        font-family: 'NanumSquareRoundWeb', sans-serif !important;
+        font-size: ${wem2(14)} !important;
+        color: #231f20 !important;
+        float: right;
+        ::before {
+          display: none !important;
+        }
+      }
+      .woocommerce-Price-amount {
+        font-family: 'NanumSquareRoundWeb', sans-serif !important;
+        font-size: ${wem2(14)} !important;
+        color: #231f20 !important;
+      }
+    }
+
+    /* 합계 */
+    .order-total {
+      th {
+        vertical-align: middle;
+        font-family: 'NanumSquareRoundWeb', sans-serif !important;
+        font-size: ${wem2(16)} !important;
+        color: #533c97 !important;
+      }
+      td {
+        vertical-align: middle;
+        float: right;
+      }
+      .woocommerce-Price-amount {
+        font-family: 'NanumSquareRoundWeb', sans-serif !important;
+        font-size: ${wem2(16)} !important;
+        color: #533c97 !important;
+      }
+    }
+    /* 결제진행 박스 */
+    .wc-proceed-to-checkout {
+      position: relative;
+      height: 48px;
+    }
+    .checkout-button {
+      background-color: #533c97 !important;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
     }
   }
 `
