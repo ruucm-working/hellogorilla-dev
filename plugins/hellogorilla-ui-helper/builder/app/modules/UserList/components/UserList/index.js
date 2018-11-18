@@ -53,10 +53,15 @@ const Icon = styled.div`
   transform: translate(-50%, -50%);
 `
 
+const Relative = styled.div`
+  /* position: relative; */
+`
 const ArtistWrap = styled.div`
   margin-left: ${wem2(240)};
   margin-right: ${wem2(240)};
   margin-top: ${wem2(128)};
+  /* width: 100%;
+  max-width:960px; */
 `
 const StyledColumn = styled(Column)`
   &:nth-of-type(4n) {
@@ -176,42 +181,44 @@ const Contents = ({ getDatas, current_lang, ...props }) => {
       />
 
       {contents ? (
-        <ArtistWrap>
-          <Row>
-            {map(contents, (item, id) => (
-              <StyledColumn col="3" key={id}>
-                <UserWrap>
-                  <User href={'/user-profile/?id=' + item.id}>
-                    <UserImage
-                      src={
-                        item.meta.img_profile
-                          ? item.meta.img_profile
-                          : profileDefault
-                      }
-                    />
+        <Relative>
+          <ArtistWrap>
+            <Row>
+              {map(contents, (item, id) => (
+                <StyledColumn col="3" key={id}>
+                  <UserWrap>
+                    <User href={'/user-profile/?id=' + item.id}>
+                      <UserImage
+                        src={
+                          item.meta.img_profile
+                            ? item.meta.img_profile
+                            : profileDefault
+                        }
+                      />
 
-                    <Overlay>
-                      <UserInfo>
-                        <UserName>{item.name}</UserName>
+                      <Overlay>
+                        <UserInfo>
+                          <UserName>{item.name}</UserName>
 
-                        {log('item', item)}
-                        <UserProducts>
-                          {item.user_products && item.user_products.length > 1
-                            ? item.user_products[0].post_title
-                            : ''}
+                          {log('item', item)}
+                          <UserProducts>
+                            {item.user_products && item.user_products.length > 1
+                              ? item.user_products[0].post_title
+                              : ''}
 
-                          {item.user_products && item.user_products.length > 1
-                            ? ' 외 ' + (item.user_products.length - 1) + '점'
-                            : ''}
-                        </UserProducts>
-                      </UserInfo>
-                    </Overlay>
-                  </User>
-                </UserWrap>
-              </StyledColumn>
-            ))}
-          </Row>
-        </ArtistWrap>
+                            {item.user_products && item.user_products.length > 1
+                              ? ' 외 ' + (item.user_products.length - 1) + '점'
+                              : ''}
+                          </UserProducts>
+                        </UserInfo>
+                      </Overlay>
+                    </User>
+                  </UserWrap>
+                </StyledColumn>
+              ))}
+            </Row>
+          </ArtistWrap>
+        </Relative>
       ) : (
         <LoadingSpinner />
       )}

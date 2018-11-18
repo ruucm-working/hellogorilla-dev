@@ -7,10 +7,21 @@ import media from 'ruucm-blocks/tools/media'
 const newsStyle = css`
   .page-id-20,
   .page-id-401 {
+    .site-content {
+      min-height: ${wem2(1200)};
+    }
+    .kboard-default-list {
+      position:relative;
+    }
     .kboard-list-header {
-      margin-left: ${wem2(240)};
-      margin-right: ${wem2(240)};
+      /* margin-left: ${wem2(240)};
+      margin-right: ${wem2(240)}; */
       margin-top: ${wem2(96)};
+      max-width: 960px;
+      position: absolute;
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
     }
     .kboard-total-count {
       margin-left: ${wem2(48)};
@@ -77,9 +88,17 @@ const newsStyle = css`
 
     /* New2 css */
     #kboard-document {
-      margin-left: ${wem2(240)};
-      margin-right: ${wem2(240)};
+      /* margin-left: ${wem2(240)};
+      margin-right: ${wem2(240)}; */
       margin-top: ${wem2(96)};
+      position:relative;
+    }
+    .kboard-default-document {
+      position:absolute;
+      left: 50%;
+      max-width: 960px;
+      width: 100%;
+      transform: translateX(-50%);
     }
     .kboard-document-wrap {
       position: relative;
