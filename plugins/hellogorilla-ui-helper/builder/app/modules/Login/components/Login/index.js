@@ -18,8 +18,21 @@ import { _t } from '../../../shared/translate'
 
 const Wrap = styled.div`
   margin-top: ${wem2(96)};
-  margin-left: ${wem2(480)};
-  margin-right: ${wem2(480)};
+  /* margin-left: ${wem2(480)};
+  margin-right: ${wem2(480)}; */
+  position:relative;
+  height: 400px;
+`
+
+const Absolute = styled.div`
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 960px;
+  width: 100%;
+  .input-fields {
+    /* position: relative; */
+  }
 `
 const Title = styled.h1`
   text-align: center;
@@ -180,55 +193,57 @@ const LoginForm = ({
         return (
           <Wrap>
             {/* <Info>{label}</Info> */}
-            <Title>{_t(current_lang, '로그인')}</Title>
-            <form
-              onSubmit={handleSubmit(values => {
-                if (validate(values, current_lang))
-                  return wpLogin(values, res => {
-                    if (res) {
-                      alert('로그인에 성공 하였습니다')
-                      window.location = '/'
-                    }
-                  })
-              })}
-            >
-              <div className="input-fields">
-                <Field
-                  name="username"
-                  type="text"
-                  placeholder={_t(current_lang, '이메일을 입력해주세요')}
-                  component={emailField}
-                />
-                <Field
-                  name="password"
-                  type="password"
-                  placeholder={_t(current_lang, '비밀번호를 입력해주세요.')}
-                  component={passwordField}
-                />
-              </div>
+            <Absolute>
+              <Title>{_t(current_lang, '로그인')}</Title>
+              <form
+                onSubmit={handleSubmit(values => {
+                  if (validate(values, current_lang))
+                    return wpLogin(values, res => {
+                      if (res) {
+                        alert('로그인에 성공 하였습니다')
+                        window.location = '/'
+                      }
+                    })
+                })}
+              >
+                <div className="input-fields">
+                  <Field
+                    name="username"
+                    type="text"
+                    placeholder={_t(current_lang, '이메일을 입력해주세요')}
+                    component={emailField}
+                  />
+                  <Field
+                    name="password"
+                    type="password"
+                    placeholder={_t(current_lang, '비밀번호를 입력해주세요.')}
+                    component={passwordField}
+                  />
+                </div>
 
-              <LoginButtons>
-                {error && <ErrorWrapper>{error}</ErrorWrapper>}
+                <LoginButtons>
+                  {error && <ErrorWrapper>{error}</ErrorWrapper>}
 
-                <LoginButton type="submit" disabled={submitting}>
-                  {_t(current_lang, '로그인')}
-                </LoginButton>
+                  <LoginButton type="submit" disabled={submitting}>
+                    {_t(current_lang, '로그인')}
+                  </LoginButton>
 
-                <Bottom>
-                  <FindID onClick={() => setCurrentView('find-id')}>
-                    {_t(current_lang, '아이디 찾기')}
-                  </FindID>
-                  <Bar>|</Bar>
-                  <FindPassword onClick={() => setCurrentView('find-pw')}>
-                    {_t(current_lang, '비밀번호 찾기')}
-                  </FindPassword>
-                  <Bar>|</Bar>
-                  <SignupButton href="/customer-signup">
-                    {_t(current_lang, '가입하기')}
-                  </SignupButton>
-                </Bottom>
-              </LoginButtons>
-            </form>
+                  <Bottom>
+                    <FindID onClick={() => setCurrentView('find-id')}>
+                      {_t(current_lang, '아이디 찾기')}
+                    </FindID>
+                    <Bar>|</Bar>
+                    <FindPassword onClick={() => setCurrentView('find-pw')}>
+                      {_t(current_lang, '비밀번호 찾기')}
+                    </FindPassword>
+                    <Bar>|</Bar>
+                    <SignupButton href="/customer-signup">
+                      {_t(current_lang, '가입하기')}
+                    </SignupButton>
+                  </Bottom>
+                </LoginButtons>
+              </form>
+            </Absolute>
           </Wrap>
         )
       case 'find-id':
