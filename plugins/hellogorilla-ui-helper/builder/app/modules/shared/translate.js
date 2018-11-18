@@ -68,7 +68,8 @@ const _u = (current_lang, url) => {
   var trimmedUrl = url
   if (lastChar == '/') trimmedUrl = trimmedUrl.slice(0, -1)
 
-  return current_lang == 'en' ? trimmedUrl + '-en/' : trimmedUrl
+  if (url == '/cart') return current_lang == 'en' ? '#' : url
+  else return current_lang == 'en' ? trimmedUrl + '-en/' : trimmedUrl
 }
 
 export { _t, _u }
