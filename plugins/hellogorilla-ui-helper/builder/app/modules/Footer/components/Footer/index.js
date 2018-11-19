@@ -40,8 +40,9 @@ const FooterLine = styled.div`
   margin-bottom: 47px;
 `
 
-const Left = styled.div`
+const Left = styled.a`
   padding-bottom: 20px;
+  display: block;
 `
 const Right = styled.div`
   padding-left: ${wem2(44)};
@@ -92,10 +93,12 @@ const Footer = props => {
           <FooterLine id="footer-line" />
           <Row>
             <Column col="5">
-              <Left>문의하기</Left>
+              <Left href="mailto:so@hellomuseum.com">문의하기</Left>
               <Left>이용약관</Left>
               <Left>개인정보취급방침</Left>
-              <Left>헬로우뮤지움</Left>
+              <Left href="http://www.hellomuseum.com" target="_blank">
+                헬로우뮤지움
+              </Left>
             </Column>
             <Column col="7">
               <Right>(주) 헬로고릴라</Right>
