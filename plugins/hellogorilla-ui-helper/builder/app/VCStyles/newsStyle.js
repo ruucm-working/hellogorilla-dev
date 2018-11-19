@@ -81,6 +81,7 @@ const newsStyle = css`
       position: relative;
       font-size: ${wem2(15)};
       > a {
+        display: block;
         height: ${wem2(55)};
         line-height: ${wem2(55)};
       }
