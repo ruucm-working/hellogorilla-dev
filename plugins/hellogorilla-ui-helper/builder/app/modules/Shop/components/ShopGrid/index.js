@@ -20,8 +20,8 @@ import LoadingSpinner from '../../../shared/LoadingSpinner'
 
 // ../../assets/banner.png
 const Height = styled.div`
-  /* min-height: ${wem2(1928)}; */
-  height: fill-available;
+  min-height: 1928px;
+  /* height: fill-available; */
 `
 
 const Wrap = styled.div`
