@@ -7,6 +7,7 @@ import { log } from 'ruucm-util'
 import validate from './validate'
 
 import Dropzone from 'react-dropzone'
+import { _t, _u } from '../../../shared/translate'
 
 const Wrap = styled.div``
 const InfoBox = styled.div`
@@ -151,7 +152,7 @@ const NewArtist = ({
             name="email"
             type="email"
             label="이메일"
-            placeholder={_t(current_lang, '이메일을 입력해주세요')}
+            placeholder={_t('en', '이메일을 입력해주세요')}
             component={renderField}
           />
           <Field
