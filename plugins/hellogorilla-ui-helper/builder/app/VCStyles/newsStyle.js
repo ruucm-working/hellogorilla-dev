@@ -172,6 +172,11 @@ const newsStyle = css`
       line-height: 1.86;
       color: #231f20;
       border-bottom: 1px solid #e9e8e8;
+      width: 100%;
+      max-width: 960px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       ${media.tablet`
         font-size: 16px;    
       `};
