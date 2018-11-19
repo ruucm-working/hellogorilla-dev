@@ -102,9 +102,10 @@ const newsStyle = css`
     .kboard-list-date {
       font-size: ${wem2(16)};
       float: right;
-      margin-top: ${wem2(20)};
       line-height: 1;
       margin-right: ${wem2(48)};
+      height: ${wem2(55)};
+      line-height: ${wem2(55)};
       ${media.tablet`
         font-size: 14px;
     `};
