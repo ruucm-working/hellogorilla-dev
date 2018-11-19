@@ -129,7 +129,6 @@ const newsStyle = css`
       position: relative;
     }
     .kboard-title {
-      height: ${wem2(55)};
       font-size: ${wem2(15)};
       font-weight: normal;
       font-style: normal;
@@ -142,6 +141,11 @@ const newsStyle = css`
       padding-top: ${wem2(20)};
       padding-bottom: ${wem2(20)};
       padding-left: ${wem2(48)};
+      position: absolute;
+      left: 50%;
+      width: 100%;
+      max-width: 960px;
+    transform: translateX(-50%);
       ${media.tablet`
         font-size: 12px;    
       `};
@@ -149,7 +153,7 @@ const newsStyle = css`
     .detail-value {
       position: absolute;
       top: ${wem2(20)};
-      right: ${wem2(48)};
+      right: ${wem2(288)};
       font-size: ${wem2(16)};
       font-weight: normal;
       font-style: normal;
@@ -163,11 +167,16 @@ const newsStyle = css`
     }
     .kboard-content {
       height: ${wem2(625)};
-      padding-top: ${wem2(21)};
+      padding-top: ${wem2(76)};
       font-size: ${wem2(14)};
       line-height: 1.86;
       color: #231f20;
       border-bottom: 1px solid #e9e8e8;
+      width: 100%;
+      max-width: 960px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       ${media.tablet`
         font-size: 16px;    
       `};

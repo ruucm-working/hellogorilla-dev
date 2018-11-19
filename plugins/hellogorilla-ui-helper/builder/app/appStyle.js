@@ -17,6 +17,7 @@ import newsStyle from './VCStyles/newsStyle'
 
 import myaccountStyle from './WooCommerceStyles/myaccountStyle'
 import cartStyle from './WooCommerceStyles/cartStyle'
+import checkoutStyle from './WooCommerceStyles/checkoutStyle'
 
 // App Styles
 injectGlobal`
@@ -262,6 +263,7 @@ injectGlobal`
   }
   ${myaccountStyle}
   ${cartStyle}
+  ${checkoutStyle}
 
 
 `

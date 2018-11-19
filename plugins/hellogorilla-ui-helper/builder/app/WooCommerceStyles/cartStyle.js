@@ -6,9 +6,16 @@ import media from 'ruucm-blocks/tools/media'
 const style = css`
   .page-id-7 {
     .woocommerce-cart-form {
-      /* margin-left: ${wem2(150)} !important;
-      width: ${wem2(564)} !important; */
-      min-width: 564px !important;
+      margin-left: ${wem2(150)} !important;
+      width: ${wem2(564)} !important;
+      max-width: 564px !important;
+    
+      /* position: relative;
+      left: ${wem2(-123)};
+      margin-left: ${wem2(240)}; */
+      @media all and (min-width: 1401px) {
+      margin-left: 150px !important  
+      }
       /* 상품정보 */
       .product-remove {
         vertical-align: middle;
@@ -16,20 +23,20 @@ const style = css`
       .product-name {
         display: inline-block;
         padding: unset !important;
-        position:relative ;
+        position: relative;
         height: 62px !important;
         a {
-        position: absolute;
-        font-family: 'NanumSquareRoundWeb', sans-serif !important;
-        font-size: ${wem2(14)} !important;
-        color: #231f20 !important;
-        font-weight: 300;
+          position: absolute;
+          font-family: 'NanumSquareRoundWeb', sans-serif !important;
+          font-size: ${wem2(14)} !important;
+          color: #231f20 !important;
+          font-weight: 300;
         }
       }
       .product-price {
         display: inline-block !important;
         padding: unset !important;
-        position:relative ;
+        position: relative;
         height: 62px !important;
         width: 100% !important;
         span {
@@ -46,12 +53,18 @@ const style = css`
     h2 {
       display: none;
     }
-    
 
     /* 카트 계산서 */
     .cart-collaterals {
       margin-right: ${wem2(150)};
       width: ${wem2(324)} !important;
+      max-width : 324px;
+      /* right: ${wem2(-123)};
+      position: relative;
+      margin-right: ${wem2(240)}; */
+      @media all and (min-width: 1401px) {
+      margin-right: 150px !important  
+      }
     }
     .cart_totals {
       padding: ${wem2(20)} !important;
