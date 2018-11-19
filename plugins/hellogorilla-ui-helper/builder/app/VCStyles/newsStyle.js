@@ -80,9 +80,13 @@ const newsStyle = css`
     .kboard-list-title {
       position: relative;
       font-size: ${wem2(15)};
+      > a {
+        height: ${wem2(55)};
+        line-height: ${wem2(55)};
+      }
       ${media.tablet`
         font-size: 13px;
-    `};
+      `};
     }
     .kboard-default-cut-strings {
       position: absolute;
