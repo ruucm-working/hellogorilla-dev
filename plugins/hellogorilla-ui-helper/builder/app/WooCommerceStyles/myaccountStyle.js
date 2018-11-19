@@ -83,7 +83,7 @@ const style = css`
 
       /* address page css */
       p {
-        display: none;
+        /* display: none; */
       }
       .col2-set {
         margin-top: unset;
