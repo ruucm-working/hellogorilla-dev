@@ -117,16 +117,23 @@ const PortfoliItemWrap = styled.div`
 const PortfoliItem = styled.div`
   /* width: 456px;
   height: 320px; */
+  position: relative;
 `
 const PortfolioImage = styled.img`
   width: 456px;
   height: 320px;
   object-fit: cover;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 `
-const PortfolioTitle = styled.div``
+const PortfolioTitle = styled.div`
+  width: 100%;
+  text-align: center;
+
+  font-family: NanumSquareRoundWeb;
+  font-size: 14px;
+  height: 14px;
+  color: #231f20;
+  margin-top: 20px;
+`
 
 const Products = styled.div`
   margin-top: ${wem2(96)};
@@ -209,6 +216,17 @@ const MobileSliderDot = dots => {
   return <Dot>{dots}</Dot>
 }
 
+const getFileName = source => {
+  var regex = /[^/]*$/g
+  var found = source.match(regex)
+  log('found', found)
+
+  log('found[0]', found[0].slice(0, -4))
+
+  return found[0].slice(0, -4)
+}
+
+// component
 const UserProfile = props => {
   let user = props[props.wpType + '_' + props.sort + '_wpData']
   // log('user', user)
@@ -286,6 +304,10 @@ const UserProfile = props => {
                       <PortfoliItemWrap>
                         <PortfoliItem>
                           <PortfolioImage src={user.meta.portfolio_01} />
+
+                          <PortfolioTitle>
+                            {getFileName(user.meta.portfolio_01)}
+                          </PortfolioTitle>
                         </PortfoliItem>
                       </PortfoliItemWrap>
 
@@ -293,6 +315,10 @@ const UserProfile = props => {
                         <PortfoliItemWrap>
                           <PortfoliItem>
                             <PortfolioImage src={user.meta.portfolio_02} />
+
+                            <PortfolioTitle>
+                              {getFileName(user.meta.portfolio_02)}
+                            </PortfolioTitle>
                           </PortfoliItem>
                         </PortfoliItemWrap>
                       ) : (
@@ -302,6 +328,9 @@ const UserProfile = props => {
                         <PortfoliItemWrap>
                           <PortfoliItem>
                             <PortfolioImage src={user.meta.portfolio_03} />
+                            <PortfolioTitle>
+                              {getFileName(user.meta.portfolio_03)}
+                            </PortfolioTitle>
                           </PortfoliItem>
                         </PortfoliItemWrap>
                       ) : (
