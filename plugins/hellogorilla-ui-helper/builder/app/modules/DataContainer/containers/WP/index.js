@@ -127,6 +127,7 @@ const enhance = compose(
         // .setHeaders('X-WP-Nonce', nonce)
         newWp
           .users()
+          .setHeaders('X-WP-Nonce', nonce)
           .param('roles', options.role)
           .param('search', options.search)
           .then(datas => {
@@ -323,7 +324,8 @@ const enhance = compose(
         wp.users()
           .setHeaders('X-WP-Nonce', nonce)
           .create({
-            username: values.username,
+            name: values.username,
+            username: values.email,
             email: values.email,
             password: values.password,
             roles: role,
@@ -334,7 +336,7 @@ const enhance = compose(
               // success
               props.wpLogin(
                 {
-                  username: values.username,
+                  username: values.email,
                   password: values.password,
                 },
                 afterSuccess
