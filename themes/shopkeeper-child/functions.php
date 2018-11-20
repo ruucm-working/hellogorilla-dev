@@ -532,7 +532,7 @@ function get_current_lang( $param ) {
 /* !관리자 아닌 회원 알림판 제거 & 리다이렉트 *********************************************************** */
 function custom_remove_dashboard () {
 	global $current_user, $menu, $submenu;
-	get_currentuserinfo();
+	wp_get_current_user();
 
 	if( ! in_array( 'administrator', $current_user->roles ) ) {
 			reset( $menu );
