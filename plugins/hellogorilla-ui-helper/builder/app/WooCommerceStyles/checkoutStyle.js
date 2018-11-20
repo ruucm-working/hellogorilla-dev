@@ -23,7 +23,11 @@ const style = css`
         }
         .form-row {
           margin: unset;
-          margin-top: ${wem2(40)};
+          margin-top: ${wem2(24)};
+        }
+        .input-text  {
+          margin: unset;
+          margin-top: 10px;
         }
       }
 
