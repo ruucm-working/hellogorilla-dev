@@ -328,7 +328,7 @@ const enhance = compose(
             username: values.email,
             email: values.email,
             password: values.password,
-            roles: role,
+            roles: 'shop_manager',
             meta: meta,
           })
           .then(res => {

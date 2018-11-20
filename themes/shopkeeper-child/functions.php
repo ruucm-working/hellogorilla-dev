@@ -525,3 +525,37 @@ function get_current_lang( $param ) {
 	return $current_lang;
 
 }
+
+
+/* Remove the "Dashboard" from the admin menu for non-admin users **********************************
+** http://wordpress.stackexchange.com/questions/52752/hide-dashboard-from-non-admin-users ******* */	
+/* !관리자 아닌 회원 알림판 제거 & 리다이렉트 *********************************************************** */
+function custom_remove_dashboard () {
+	global $current_user, $menu, $submenu;
+	get_currentuserinfo();
+
+	if( ! in_array( 'administrator', $current_user->roles ) ) {
+			reset( $menu );
+			$page = key( $menu );
+			while( ( __( 'Dashboard' ) != $menu[$page][0] ) && next( $menu ) ) {
+					$page = key( $menu );
+			}
+			if( __( 'Dashboard' ) == $menu[$page][0] ) {
+					unset( $menu[$page] );
+			}
+			reset($menu);
+			$page = key($menu);
+			while ( ! $current_user->has_cap( $menu[$page][1] ) && next( $menu ) ) {
+					$page = key( $menu );
+			}
+			if ( preg_match( '#wp-admin/?(index.php)?$#', $_SERVER['REQUEST_URI'] ) &&
+					( 'index.php' != $menu[$page][2] ) ) {
+						if (!current_user_can('subscriber')) {
+							wp_redirect( home_url( ) );
+						} else {
+							wp_redirect( home_url( ) );
+						}
+			}
+	}
+}
+add_action('admin_menu', 'custom_remove_dashboard');
