@@ -10,6 +10,7 @@ const style = css`
       font-family: 'NanumSquareRoundWeb', sans-serif;
       color: #231f20;
       max-width: 708px;
+      min-width: 300px;
       .col2-set {
         margin-top: unset;
       }
@@ -63,6 +64,8 @@ const style = css`
           height: 52px;
           border-radius: 2px;
           background-color: rgba(244, 243, 243, 0.5);
+          max-width: 708px;
+          min-width: 300px;
         }
         #billing_country_field {
           display: none;
@@ -71,6 +74,8 @@ const style = css`
           width: 100%;
           /* height: 52px; */
           background-color: #533c97 !important;
+          /* max-width: 708px;
+          min-width: 500px; */
         }
       }
     }
