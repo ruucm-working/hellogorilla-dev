@@ -229,7 +229,7 @@ var _media2 = _interopRequireDefault(_media);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var style = (0, _styledComponents.css)(['.page-id-9{.woocommerce-MyAccount-content{.col2-set{margin-top:unset;}.woocommerce-Address-title title h3{font-size:', ';font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;}.woocommerce-address-fields{margin-top:40px;.input-text{width:708px;height:52px;border-radius:2px;background-color:rgba(244,243,243,0.5);}}}}'], (0, _mixins.wem2)(24));
+var style = (0, _styledComponents.css)(['.page-id-9{.woocommerce-MyAccount-content{font-family:\'NanumSquareRoundWeb\',sans-serif;.col2-set{margin-top:unset;}.woocommerce-Address-title title h3{font-size:', ';font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;}.woocommerce-address-fields{margin-top:40px;.form-row{label{font-size:11px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;}}.input-text{margin-top:10px;width:708px;height:52px;border-radius:2px;background-color:rgba(244,243,243,0.5);}}}}'], (0, _mixins.wem2)(24));
 
 exports.default = style;
 

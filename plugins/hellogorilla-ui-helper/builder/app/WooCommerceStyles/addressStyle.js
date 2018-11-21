@@ -7,6 +7,7 @@ const style = css`
   .page-id-9 {
     /* address page css */
     .woocommerce-MyAccount-content {
+      font-family: 'NanumSquareRoundWeb', sans-serif;
       .col2-set {
         margin-top: unset;
       }
@@ -21,7 +22,19 @@ const style = css`
       }
       .woocommerce-address-fields {
         margin-top: 40px;
+        .form-row {
+          label {
+            font-size: 11px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1;
+            letter-spacing: normal;
+            color: #231f20;
+          }
+        }
         .input-text {
+          margin-top: 10px;
           width: 708px;
           height: 52px;
           border-radius: 2px;
