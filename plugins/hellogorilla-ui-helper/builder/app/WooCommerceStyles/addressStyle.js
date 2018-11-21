@@ -51,6 +51,7 @@ const style = css`
             .required {
               float: top;
               color: #231f20 !important;
+              border-bottom: unset;
             }
           }
         }
