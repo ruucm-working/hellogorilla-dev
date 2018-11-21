@@ -19,6 +19,7 @@ import orderStyle from './WooCommerceStyles/orderStyle'
 import cartStyle from './WooCommerceStyles/cartStyle'
 import checkoutStyle from './WooCommerceStyles/checkoutStyle'
 import addressStyle from './WooCommerceStyles/addressStyle'
+import editaccountStyle from './WooCommerceStyles/editaccountStyle'
 
 // App Styles
 injectGlobal`
@@ -265,5 +266,6 @@ injectGlobal`
   ${addressStyle}
   ${cartStyle}
   ${checkoutStyle}
+  ${editaccountStyle}
 
 `

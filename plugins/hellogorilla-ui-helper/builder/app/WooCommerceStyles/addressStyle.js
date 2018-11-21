@@ -9,38 +9,40 @@ const style = css`
     .woocommerce-MyAccount-content {
       font-family: 'NanumSquareRoundWeb', sans-serif;
       color: #231f20;
-      max-width: 708px;
-      min-width: 300px;
-      .col2-set {
-        margin-top: unset;
-      }
-      .u-columns {
-        font-family: 'NanumSquareRoundWeb', sans-serif;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1;
-        letter-spacing: normal;
-        color: #231f20;
-        .edit {
-          font-size: 11px;
-        }
-        address {
-          margin-top: 10px;
-        }
-      }
 
       /* 주소 편집 */
-      .woocommerce-Address-title title h3 {
-        font-size: ${wem2(24)};
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1;
-        letter-spacing: normal;
-        color: #231f20;
-      }
       .woocommerce-address-fields {
+        max-width: 708px;
+        min-width: 300px;
+        .col2-set {
+          margin-top: unset;
+        }
+        .u-columns {
+          font-family: 'NanumSquareRoundWeb', sans-serif;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1;
+          letter-spacing: normal;
+          color: #231f20;
+          .edit {
+            font-size: 11px;
+          }
+          address {
+            margin-top: 10px;
+          }
+        }
+
+        .woocommerce-Address-title title h3 {
+          font-size: ${wem2(24)};
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1;
+          letter-spacing: normal;
+          color: #231f20;
+        }
+
         margin-top: 40px;
         .form-row {
           label {

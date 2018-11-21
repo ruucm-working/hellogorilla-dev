@@ -4,5 +4,6 @@ import checkoutStyle from './checkoutStyle'
 import orderStyle from './orderStyle'
 import cartStyle from './cartStyle'
 import addressStyle from './addressStyle'
+import editaccountStyle from './editaccountStyle'
 
-export { checkoutStyle, orderStyle, cartStyle, addressStyle }
+export { checkoutStyle, orderStyle, cartStyle, addressStyle, editaccountStyle }
