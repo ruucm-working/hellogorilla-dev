@@ -15,9 +15,10 @@ import aboutStyle from './VCStyles/aboutStyle'
 import programStyle from './VCStyles/programStyle'
 import newsStyle from './VCStyles/newsStyle'
 
-import myaccountStyle from './WooCommerceStyles/myaccountStyle'
+import orderStyle from './WooCommerceStyles/orderStyle'
 import cartStyle from './WooCommerceStyles/cartStyle'
 import checkoutStyle from './WooCommerceStyles/checkoutStyle'
+import addressStyle from './WooCommerceStyles/addressStyle'
 
 // App Styles
 injectGlobal`
@@ -248,11 +249,6 @@ injectGlobal`
     }
   }
  
-
-
-  ${programStyle}
-  ${newsStyle}
-
   .page-id-121, .page-id-194  {
     #footer-content {
       margin-top: 0;
@@ -261,9 +257,14 @@ injectGlobal`
       background: transparent;
     }
   }
-  ${myaccountStyle}
+
+  ${programStyle}
+  ${newsStyle}
+
+
+  ${orderStyle}
+  ${addressStyle}
   ${cartStyle}
   ${checkoutStyle}
-
 
 `

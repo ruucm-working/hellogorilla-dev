@@ -5,6 +5,9 @@ import media from 'ruucm-blocks/tools/media'
 
 const style = css`
   .page-id-9 {
+    .post-9 {
+      padding-left: 10px;
+    }
     /* navigation css */
     .woocommerce-MyAccount-navigation {
       li {
@@ -17,6 +20,9 @@ const style = css`
           font-stretch: normal;
           line-height: 1;
           letter-spacing: normal;
+          :hover {
+            color: #533c97;
+          }
         }
       }
       .is-active {
@@ -79,23 +85,6 @@ const style = css`
       .cancel {
         border-bottom: 1px solid #0fb780;
         padding-bottom: unset !important;
-      }
-
-      /* address page css */
-      p {
-        /* display: none; */
-      }
-      .col2-set {
-        margin-top: unset;
-        .woocommerce-Address-title title {
-          font-size: ${wem2(24)};
-          font-weight: normal;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 1;
-          letter-spacing: normal;
-          color: #231f20;
-        }
       }
     }
   }
