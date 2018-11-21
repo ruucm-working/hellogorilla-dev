@@ -28,6 +28,7 @@ const style = css`
         }
       }
 
+      /* 주소 편집 */
       .woocommerce-Address-title title h3 {
         font-size: ${wem2(24)};
         font-weight: normal;
@@ -64,6 +65,11 @@ const style = css`
         }
         #billing_country_field {
           display: none;
+        }
+        .button {
+          width: 100%;
+          /* height: 52px; */
+          background-color: #533c97 !important;
         }
       }
     }
