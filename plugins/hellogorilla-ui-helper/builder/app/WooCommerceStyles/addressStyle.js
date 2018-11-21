@@ -9,6 +9,7 @@ const style = css`
     .woocommerce-MyAccount-content {
       font-family: 'NanumSquareRoundWeb', sans-serif;
       color: #231f20;
+      max-width: 708px;
       .col2-set {
         margin-top: unset;
       }
@@ -58,7 +59,7 @@ const style = css`
         }
         .input-text {
           margin-top: 10px;
-          width: 708px;
+          width: ${wem2(708)};
           height: 52px;
           border-radius: 2px;
           background-color: rgba(244, 243, 243, 0.5);
