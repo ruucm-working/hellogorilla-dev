@@ -20,6 +20,9 @@ const style = css`
       .product-remove {
         vertical-align: middle;
       }
+      .product-thumbnail {
+        vertical-align: middle;
+      }
       .product-name {
         display: inline-block;
         padding: unset !important;
