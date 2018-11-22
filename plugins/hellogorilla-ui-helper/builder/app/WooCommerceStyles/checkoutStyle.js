@@ -7,14 +7,20 @@ const style = css`
   .page-id-8 {
     .post-8 {
       .woocommerce {
-        margin-left: ${wem2(240)};
-        margin-right: ${wem2(240)};
+        /* margin-left: ${wem2(240)};
+        margin-right: ${wem2(240)}; */
+        margin: unset;
+        max-width: 960px;
+        white-space: nowrap;
+        left: 50%;
+        transform: translateX(-50%);
       }
       .checkout {
         font-family: 'NanumSquareRoundWeb', sans-serif;
         /* 왼쪽 고객정보 */
         .col2-set {
           width: 50% !important;
+          display: inline-block;
           .woocommerce-billing-fields {
             h3 {
               font-size: ${wem2(24)};
@@ -60,6 +66,8 @@ const style = css`
         /* 오른쪽 주문내역&결제하기 */
         .woocommerce-checkout-review-order {
           width: 50% !important;
+          margin: unset;
+          display: inline-block;
           /* 주문내역 */
           tr {
             th {
