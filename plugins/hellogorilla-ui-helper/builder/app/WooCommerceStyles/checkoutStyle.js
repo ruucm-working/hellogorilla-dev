@@ -84,11 +84,6 @@ const style = css`
               color: #533c97 !important;
             }
           }
-          .woocommerce-shipping-methods {
-            label::before {
-              display: none;
-            }
-          }
           .shop_table {
             width: 100%;
           }
@@ -97,6 +92,10 @@ const style = css`
           .woocommerce-checkout-payment {
             .form-row {
               width: 100% !important;
+            }
+            .input-text {
+              border-color: #231f20;
+              border-radius: 2px;
             }
             .button {
               background-color: #533c97 !important;
