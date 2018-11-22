@@ -60,16 +60,23 @@ const style = css`
         /* 오른쪽 주문내역&결제하기 */
         .woocommerce-checkout-review-order {
           width: 50% !important;
-          /* 결제하기 */
+          /* 주문내역 */
           .shop_table {
             width: 100%;
           }
+
+          /* 결제하기 */
           .woocommerce-checkout-payment {
             .button {
               background-color: #533c97 !important;
               position: relative;
               left: 50%;
               transform: translateX(-50%);
+            }
+            .checkout-input-row2 {
+              .col {
+                display: table-caption !important;
+              }
             }
           }
         }
