@@ -9,7 +9,8 @@ const style = css`
     .woocommerce-MyAccount-content {
       font-family: 'NanumSquareRoundWeb', sans-serif;
       color: #231f20;
-
+      max-width: 708px;
+      min-width: 300px;
       /* 주소 편집 */
       .woocommerce-address-fields {
         max-width: 708px;

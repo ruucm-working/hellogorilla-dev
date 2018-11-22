@@ -10,6 +10,8 @@ const style = css`
     }
     /* navigation css */
     .woocommerce-MyAccount-navigation {
+      width: ${wem2(55)};
+      white-space: nowrap;
       li {
         color: #231f20;
         a {
