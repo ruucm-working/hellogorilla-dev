@@ -155,9 +155,9 @@ function my_custom_my_account_menu_items( $items ) {
 
 	return $items;
 }
-// add_filter( 'woocommerce_account_menu_items', 'my_custom_my_account_menu_items' );
+add_filter( 'woocommerce_account_menu_items', 'my_custom_my_account_menu_items' );
 function my_custom_endpoint_content() {
 	do_shortcode('[pay-again-billing-method-info]');
 	do_shortcode('[pay-again-billing-inicis-method-info]');
 }
-// add_action( 'woocommerce_account_billing-method-info_endpoint', 'my_custom_endpoint_content' );
+add_action( 'woocommerce_account_billing-method-info_endpoint', 'my_custom_endpoint_content' );

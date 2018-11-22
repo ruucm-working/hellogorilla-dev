@@ -559,3 +559,15 @@ function custom_remove_dashboard () {
 	}
 }
 add_action('admin_menu', 'custom_remove_dashboard');
+
+
+/**
+ *	Redirect if current user is logged out and current page is /my-account
+ */
+add_action( 'wp', 'redirect' );
+function redirect() {
+  if ( is_page('my-account') && !is_user_logged_in() ) {
+      wp_redirect( home_url('/login') );
+      die();
+  }
+}
