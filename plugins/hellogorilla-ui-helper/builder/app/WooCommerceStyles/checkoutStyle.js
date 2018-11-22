@@ -30,6 +30,21 @@ const style = css`
           .form-row {
             margin: unset;
             margin-top: ${wem2(24)};
+            label {
+              font-family: 'NanumSquareRoundWeb', sans-serif;
+              font-size: 11px;
+              font-weight: normal;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: 1;
+              letter-spacing: normal;
+              color: #231f20;
+              .required {
+                border-bottom: unset;
+                font-size: 11px;
+                color: #231f20 !important;
+              }
+            }
           }
           .form-row-first {
             width: 100%;
@@ -37,6 +52,8 @@ const style = css`
           .input-text {
             margin: unset;
             margin-top: 10px;
+            border-radius: 2px;
+            border-color: #231f20;
           }
         }
 
