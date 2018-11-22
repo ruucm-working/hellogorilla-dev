@@ -95,8 +95,8 @@ const Footer = props => {
           <Row>
             <Column col="5">
               <Left href="mailto:so@hellomuseum.com">문의하기</Left>
-              <Left>이용약관</Left>
-              <Left>개인정보취급방침</Left>
+              <Left href="/agreement">이용약관</Left>
+              <Left href="/privacy">개인정보취급방침</Left>
               <Left href="http://www.hellomuseum.com" target="_blank">
                 헬로우뮤지움
               </Left>
