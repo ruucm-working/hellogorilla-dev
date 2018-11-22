@@ -79,8 +79,12 @@ const style = css`
           .shop_table {
             width: 100%;
           }
+
           /* 결제하기 */
           .woocommerce-checkout-payment {
+            .form-row {
+              width: 100% !important;
+            }
             .button {
               background-color: #533c97 !important;
               position: relative;
