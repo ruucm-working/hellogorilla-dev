@@ -9,9 +9,6 @@ const style = css`
       margin-left: ${wem2(150)} !important;
       width: ${wem2(564)} !important;
       max-width: 564px !important;
-      /* position: relative;
-      left: ${wem2(-123)};
-      margin-left: ${wem2(240)}; */
       @media all and (min-width: 1401px) {
       margin-left: 150px !important  
       }
