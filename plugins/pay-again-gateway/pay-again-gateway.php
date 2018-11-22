@@ -155,9 +155,46 @@ function my_custom_my_account_menu_items( $items ) {
 
 	return $items;
 }
-// add_filter( 'woocommerce_account_menu_items', 'my_custom_my_account_menu_items' );
+add_filter( 'woocommerce_account_menu_items', 'my_custom_my_account_menu_items' );
 function my_custom_endpoint_content() {
 	do_shortcode('[pay-again-billing-method-info]');
 	do_shortcode('[pay-again-billing-inicis-method-info]');
 }
-// add_action( 'woocommerce_account_billing-method-info_endpoint', 'my_custom_endpoint_content' );
+add_action( 'woocommerce_account_billing-method-info_endpoint', 'my_custom_endpoint_content' );
+
+
+
+
+/*
+ * Step 1. Add Link to My Account menu
+ */
+add_filter ( 'woocommerce_account_menu_items', 'misha_log_history_link', 40 );
+function misha_log_history_link( $menu_links ){
+ 
+	$menu_links = array_slice( $menu_links, 0, 5, true ) 
+	+ array( 'log-history' => 'Log history' )
+	+ array_slice( $menu_links, 5, NULL, true );
+ 
+	return $menu_links;
+ 
+}
+/*
+ * Step 2. Register Permalink Endpoint
+ */
+add_action( 'init', 'misha_add_endpoint' );
+function misha_add_endpoint() {
+ 
+	// WP_Rewrite is my Achilles' heel, so please do not ask me for detailed explanation
+	add_rewrite_endpoint( 'log-history', EP_PAGES );
+ 
+}
+/*
+ * Step 3. Content for the new page in My Account, woocommerce_account_{ENDPOINT NAME}_endpoint
+ */
+add_action( 'woocommerce_account_log-history_endpoint', 'misha_my_account_endpoint_content' );
+function misha_my_account_endpoint_content() {
+ 
+	// of course you can print dynamic content here, one of the most useful functions here is get_current_user_id()
+	echo 'Last time you logged in: yesterday from Safari.';
+ 
+}

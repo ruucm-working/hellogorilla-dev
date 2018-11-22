@@ -95,8 +95,8 @@ const Footer = props => {
           <Row>
             <Column col="5">
               <Left href="mailto:so@hellomuseum.com">문의하기</Left>
-              <Left>이용약관</Left>
-              <Left>개인정보취급방침</Left>
+              <Left href="/agreement">이용약관</Left>
+              <Left href="/privacy">개인정보취급방침</Left>
               <Left href="http://www.hellomuseum.com" target="_blank">
                 헬로우뮤지움
               </Left>
@@ -108,9 +108,12 @@ const Footer = props => {
                 {isTablet() && <br />}
                 사업자등록번호 <L>220-88-64886</L> <br /> 통신판매업신고{' '}
                 <L>
-                  123-45-6789 | {isTablet() && <br />}
+                  123-45-6789 |
                   <br />
-                  대표 번호 <L> 02-562-4420</L> | 04779) {isTablet() && <br />}
+                  통신사업자 <L> 제 2018-서울성동-1449 호</L> |{' '}
+                  {isTablet() && <br />}
+                  <br />
+                  대표 번호 <L> 02-562-4420</L> | {isTablet() && <br />} 04779)
                   서울특별시 성동구 왕십리로2길 20, 4층(성수동1가)
                 </L>
               </Right2>
