@@ -61,10 +61,24 @@ const style = css`
         .woocommerce-checkout-review-order {
           width: 50% !important;
           /* 주문내역 */
+          tr {
+            th {
+              font-family: 'NanumSquareRoundWeb', sans-serif !important;
+              font-size: 12px;
+              font-weight: normal !important;
+              color: #231f20;
+              /* color: pink; */
+            }
+            td {
+              font-family: 'NanumSquareRoundWeb', sans-serif !important;
+              font-size: 14px;
+              font-weight: normal !important;
+              color: #231f20;
+            }
+          }
           .shop_table {
             width: 100%;
           }
-
           /* 결제하기 */
           .woocommerce-checkout-payment {
             .button {
