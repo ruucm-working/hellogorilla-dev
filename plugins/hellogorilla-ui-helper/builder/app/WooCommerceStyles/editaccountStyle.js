@@ -8,9 +8,10 @@ const style = css`
     .woocommerce-EditAccountForm {
       font-family: 'NanumSquareRoundWeb', sans-serif;
       color: #231f20;
-      max-width: 708px;
-      min-width: 300px;
       .woocommerce-form-row {
+        width: 100%;
+        max-width: 708px;
+        min-width: 300px;
         label {
           font-size: 11px;
           font-weight: normal;
