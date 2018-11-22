@@ -76,6 +76,19 @@ const style = css`
               color: #231f20;
             }
           }
+          .order-total {
+            th {
+              color: #533c97 !important;
+            }
+            td {
+              color: #533c97 !important;
+            }
+          }
+          .woocommerce-shipping-methods {
+            label::before {
+              display: none;
+            }
+          }
           .shop_table {
             width: 100%;
           }
