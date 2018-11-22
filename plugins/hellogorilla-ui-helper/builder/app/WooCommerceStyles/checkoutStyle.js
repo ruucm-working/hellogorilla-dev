@@ -44,6 +44,9 @@ const style = css`
         .woocommerce-checkout-review-order {
           width: 50% !important;
           /* 결제하기 */
+          .shop_table {
+            width: 100%;
+          }
           .woocommerce-checkout-payment {
             .button {
               background-color: #533c97 !important;
