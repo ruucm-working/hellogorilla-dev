@@ -80,6 +80,7 @@ const Icon = styled.div`
     }
   }
 `
+const IconItem = styled.a``
 
 const L = styled.span`
   font-weight: 300;
@@ -107,14 +108,24 @@ const Footer = props => {
                 {isTablet() && <br />}
                 사업자등록번호 <L>220-88-64886</L> <br /> 통신판매업신고{' '}
                 <L>
-                  123-45-6789 | {isTablet() && <br />}04718 서울시 성동구
-                  금호로72
+                  123-45-6789 | {isTablet() && <br />}
+                  <br />
+                  대표 번호 <L> 02-562-4420</L> | 04779) {isTablet() && <br />}
+                  서울특별시 성동구 왕십리로2길 20, 4층(성수동1가)
                 </L>
               </Right2>
               <Icon>
-                <span className="hellogorilla hellogorilla-icon-instagram-24" />
+                <IconItem
+                  href="https://www.instagram.com/hello.go.rilla/"
+                  className="hellogorilla hellogorilla-icon-instagram-24"
+                  target="_blank"
+                />
 
-                <span className="hellogorilla hellogorilla-youtube" />
+                <IconItem
+                  href="https://www.youtube.com/channel/UCtAEMlQk4K7k6rcaYRQdbng/featured"
+                  className="hellogorilla hellogorilla-youtube"
+                  target="_blank"
+                />
               </Icon>
             </Column>
           </Row>
