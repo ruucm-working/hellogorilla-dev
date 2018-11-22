@@ -119,7 +119,7 @@ const SoldOut = styled.div`
 `
 const SoldOutLabel = styled.div`
   line-height: 1.14;
-  font-size: 28px;
+  font-size: ${wem2(28)};
   color: #ffffff;
   text-align: center;
   position: absolute;
