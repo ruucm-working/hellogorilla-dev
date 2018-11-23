@@ -10,10 +10,12 @@ import { _t } from '../../../shared/translate'
 import SendCode from '../../../shared/PhoneVerfication/SendCode'
 import ConfirmCode from '../../../shared/PhoneVerfication/ConfirmCode'
 
+
 const Wrap = styled.div`
   margin-top: ${wem2(96)};
   margin-left: ${wem2(480)};
   margin-right: ${wem2(480)};
+  min-height: 900px;
 `
 
 const CloseBtn = styled.button``
