@@ -273,7 +273,9 @@ const Menus = ({
                   href={
                     current_lang == 'en'
                       ? '#'
-                      : location.pathname.slice(0, -1) + '-en'
+                      : location.pathname.slice(0, -1) +
+                        '-en' +
+                        (location.search ? '/' + location.search : '')
                   }
                 >
                   EN
@@ -281,7 +283,10 @@ const Menus = ({
 
                 <MenuItem
                   href={
-                    current_lang == 'en' ? location.pathname.slice(0, -4) : '#'
+                    current_lang == 'en'
+                      ? location.pathname.slice(0, -4) +
+                        (location.search ? '/' + location.search : '')
+                      : '#'
                   }
                 >
                   한글

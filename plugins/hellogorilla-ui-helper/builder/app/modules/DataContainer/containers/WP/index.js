@@ -386,7 +386,9 @@ const enhance = compose(
 
       let meta = {
         short_desc: EmptyCheck(values.short_desc),
+        short_desc_en: EmptyCheck(values.short_desc_en),
         long_desc: EmptyCheck(values.long_desc),
+        long_desc_en: EmptyCheck(values.long_desc_en),
         homepage: EmptyCheck(values.homepage),
         facebook: EmptyCheck(values.facebook),
         instagram: EmptyCheck(values.instagram),
