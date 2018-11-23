@@ -62,7 +62,7 @@ const _t = (current_lang, key) => {
     '입력하신 휴대폰으로 등록된 사용자를 찾을 수 없습니다.':
       "Can't find a user by the phone",
     '남은 시간': 'Time Left',
-    '인증이 가능한 시간이 지났습니다': 'Try Again',
+    '새로운 인증번호를 요청해주세요': 'Try Again',
 
     // Menus
     헬로고릴라: 'HelloGorilla',

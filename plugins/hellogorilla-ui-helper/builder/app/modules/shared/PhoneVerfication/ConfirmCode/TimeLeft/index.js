@@ -22,7 +22,7 @@ const StyleWrapper = styled.div`
 const renderer = ({ hours, minutes, seconds, completed, current_lang }) => {
   if (completed) {
     // Render a completed state
-    return <span>{_t(current_lang, '인증이 가능한 시간이 지났습니다')}</span>
+    return <span>{_t(current_lang, '새로운 인증번호를 요청해주세요')}</span>
   } else {
     // Render a countdown
     return (
@@ -37,7 +37,7 @@ const TimeLeft = ({ current_lang, ...props }) => {
   return (
     <StyleWrapper>
       <Countdown
-        date={Date.now() + 1000}
+        date={Date.now() + 180000}
         renderer={renderer}
         current_lang={current_lang}
       />
