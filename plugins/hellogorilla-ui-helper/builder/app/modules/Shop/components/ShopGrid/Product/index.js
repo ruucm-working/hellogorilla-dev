@@ -21,7 +21,6 @@ const StyledColumn = styled(Column)``
 const ProductWrapper = styled.div`
   position: relative;
   height: ${wem2(360)};
-  margin-top: ${wem2(96)};
 `
 const Center = styled.div`
   position: absolute;

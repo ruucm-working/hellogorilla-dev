@@ -151,6 +151,15 @@ const style = css`
       position: absolute;
       transform: translateX(-50%);
     }
+
+
+    /* 장바구니 비었을때 */
+    .cart-empty {
+      font-size: ${wem2(25)};
+      &:before {
+        display: none;
+      }
+    }
   }
 `
 

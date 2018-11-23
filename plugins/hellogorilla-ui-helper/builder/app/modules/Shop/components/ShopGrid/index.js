@@ -28,11 +28,14 @@ const Wrap = styled.div`
   /* background: white; */
   /* margin-left: ${wem2(240)};
   margin-right: ${wem2(240)}; */
-  margin-top: 128px;
-  position: absolute;
+  /* position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
   white-space: nowrap;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 128px;
+  position: relative;
 `
 
 const Search = styled.div`
@@ -51,8 +54,9 @@ const SearchTitle = styled.div`
 `
 
 const Category = styled.ul`
-  margin-left: ${wem2(145)};
-  margin-right: ${wem2(144)};
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 `
 const CategoryWrapAll = styled.div`
   width: ${wem2(111)};
@@ -106,6 +110,14 @@ const CategoryItem = styled.li`
   width: fit-content;
 `
 
+const StyledRow = styled(Row)`
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  top: ${wem2(144)};
+`
+
 const ShopGrid = ({ active, setActive, ...props }) => {
   let contents = props[props.dataType + '_' + props.category]
   return (
@@ -132,7 +144,7 @@ const ShopGrid = ({ active, setActive, ...props }) => {
             <CategoryItem> 카테고리 1</CategoryItem>
           </CategoryWrap>
 
-          <CategoryWrap
+          {/* <CategoryWrap
             onClick={() => {
               props.getProducts({ category: 18 })
               setActive(2)
@@ -160,11 +172,11 @@ const ShopGrid = ({ active, setActive, ...props }) => {
             active={active == 4}
           >
             <CategoryItem>카테고리 4</CategoryItem>
-          </CategoryWrap>
+          </CategoryWrap> */}
         </Category>
 
         {contents ? (
-          <Row>
+          <StyledRow>
             {map(contents, (item, id) => {
               return (
                 <Column col="4">
@@ -177,7 +189,7 @@ const ShopGrid = ({ active, setActive, ...props }) => {
                 </Column>
               )
             })}
-          </Row>
+          </StyledRow>
         ) : (
           <LoadingSpinner />
         )}
