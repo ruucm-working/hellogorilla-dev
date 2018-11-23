@@ -8,6 +8,7 @@ import EmptySpace from 'ruucm-blocks/layouts/EmptySpace'
 import { _t } from '../../../shared/translate'
 import SendCode from '../../../shared/PhoneVerfication/SendCode'
 import ConfirmCode from '../../../shared/PhoneVerfication/ConfirmCode'
+import FindID_Login from './FindID_Login'
 
 const Wrap = styled.div`
   margin-left: ${wem2(480)};
@@ -38,30 +39,54 @@ const Password = styled.span`
 const FindID = ({
   // from parent
   current_lang,
+  wpGetEmailByPhone,
 
   // local
   setCurrentView,
+  phoneValue,
+  setPhoneValue,
+  phoneVerfied,
+  setPhoneVerfied,
+  emailValue,
+  setEmailValue,
 
   ...props
 }) => {
   return (
     <div>
       <EmptySpace height="96" />
-      <Wrap>
-        <Title>
-          <Email>{_t(current_lang, '이메일 찾기')}</Email>
-          <Bar>|</Bar>
-          <Password onClick={() => setCurrentView('find-pw')}>
-            {_t(current_lang, '비밀번호 찾기')}
-          </Password>
-        </Title>
-        <SendCode />
-        <ConfirmCode />
-      </Wrap>
+      {!phoneVerfied || !emailValue ? (
+        <Wrap>
+          <Title>
+            <Email>{_t(current_lang, '이메일 찾기')}</Email>
+            <Bar>|</Bar>
+            <Password onClick={() => setCurrentView('find-pw')}>
+              {_t(current_lang, '비밀번호 찾기')}
+            </Password>
+          </Title>
+          <SendCode
+            current_lang={current_lang}
+            setPhoneValue={setPhoneValue}
+            wpGetEmailByPhone={wpGetEmailByPhone}
+            setEmailValue={setEmailValue}
+          />
+          <ConfirmCode
+            current_lang={current_lang}
+            phoneValue={phoneValue}
+            setPhoneVerfied={setPhoneVerfied}
+          />
+        </Wrap>
+      ) : (
+        <FindID_Login emailValue={emailValue} />
+      )}
     </div>
   )
 }
 
 // Component enhancer
-const enhance = compose()
+const enhance = compose(
+  withState('phoneValue', 'setPhoneValue', ''),
+  withState('phoneVerfied', 'setPhoneVerfied', false),
+  withState('emailValue', 'setEmailValue', '')
+)
 export default enhance(FindID)

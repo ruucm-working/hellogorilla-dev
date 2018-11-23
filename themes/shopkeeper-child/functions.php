@@ -481,12 +481,6 @@ function misha_remove_my_account_links( $menu_links ){
 
 
 
-/**
- * Add Language Check to WP API
- */
-
-
-
 
 /**
  * Current Language WP API
@@ -621,3 +615,33 @@ register_meta( 'user', 'billing_phone',
 		'show_in_rest'    => true, 
 	)
 );
+
+
+
+
+/**
+ * Get Email By Phone WP API
+ */
+add_action( 'rest_api_init', 'get_email_by_phone_api_hooks' );
+// API custom endpoints for WP-REST API
+function get_email_by_phone_api_hooks() {
+    register_rest_route(
+        'custom', '/get-email-by-phone/',
+        array(
+            'methods'  => 'GET',
+						'callback' => 'get_email_by_phone_by_api',
+        )
+		);
+}
+function get_email_by_phone_by_api( $param ) {
+	$user;
+
+	$user_phone = getProtectedValue($param, 'params')['GET']['phone'];
+	$user = get_users(array('meta_key' => 'billing_phone', 'meta_value' => $user_phone));
+
+
+	if (sizeof($user) > 0)
+		return $user[0]->data->user_email;
+	else return false;
+
+}
