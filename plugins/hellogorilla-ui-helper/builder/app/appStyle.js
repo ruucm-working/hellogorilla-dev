@@ -14,6 +14,7 @@ import { wem2 } from 'ruucm-blocks/tools/mixins'
 import aboutStyle from './VCStyles/aboutStyle'
 import programStyle from './VCStyles/programStyle'
 import newsStyle from './VCStyles/newsStyle'
+import newseditorStyle from './VCStyles/newseditorStyle.'
 
 import orderStyle from './WooCommerceStyles/orderStyle'
 import cartStyle from './WooCommerceStyles/cartStyle'
@@ -265,6 +266,7 @@ injectGlobal`
 
   ${programStyle}
   ${newsStyle}
+  ${newseditorStyle}
 
   ${orderStyle}
   ${addressStyle}

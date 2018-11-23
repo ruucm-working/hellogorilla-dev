@@ -1,5 +1,6 @@
-import aboutStyle from "./aboutStyle";
-import programStyle from "./programStyle";
-import newsStyle from "./newsStyle";
+import aboutStyle from './aboutStyle'
+import programStyle from './programStyle'
+import newsStyle from './newsStyle'
+import newseditorStyle from './newseditorStyle.'
 
-export { aboutStyle, programStyle, newsStyle };
+export { aboutStyle, programStyle, newsStyle, newseditorStyle }
