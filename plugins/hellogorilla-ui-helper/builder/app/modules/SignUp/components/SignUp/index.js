@@ -329,8 +329,7 @@ const SignUp = ({
             ) {
               wpSignUp(
                 {
-                  phoneValue,
-                  phoneVerfied,
+                  phone: phoneValue,
                   ...values,
                 },
                 'customer',
@@ -341,7 +340,7 @@ const SignUp = ({
                       '회원가입을 축하 합니다.\n홈으로 이동합니다.'
                     )
                   )
-                  window.location = '/'
+                  // window.location = '/'
                 }
               )
             }

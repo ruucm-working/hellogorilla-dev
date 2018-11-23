@@ -573,3 +573,51 @@ function redirect() {
       die();
   }
 }
+
+
+/**
+ * register user meta for update shipping infos
+ */ 
+register_meta( 'user', 'shipping_first_name', 
+	array(
+		'type'             => 'string',
+		'single'        => true,
+		'show_in_rest'    => true, 
+	)
+);
+register_meta( 'user', 'shipping_address_1', 
+	array(
+		'type'             => 'string',
+		'single'        => true,
+		'show_in_rest'    => true, 
+	)
+);
+register_meta( 'user', 'shipping_address_2', 
+	array(
+		'type'             => 'string',
+		'single'        => true,
+		'show_in_rest'    => true, 
+	)
+);
+register_meta( 'user', 'shipping_postcode', 
+	array(
+		'type'             => 'string',
+		'single'        => true,
+		'show_in_rest'    => true, 
+	)
+);
+register_meta( 'user', 'shipping_phone', 
+	array(
+		'type'             => 'string',
+		'single'        => true,
+		'show_in_rest'    => true, 
+	)
+);
+
+register_meta( 'user', 'billing_phone', 
+	array(
+		'type'             => 'string',
+		'single'        => true,
+		'show_in_rest'    => true, 
+	)
+);

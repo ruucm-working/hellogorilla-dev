@@ -4,7 +4,7 @@ import { _t } from '../../../shared/translate'
 const validate = (values, current_lang) => {
   if (!values.phone1 || !values.phone2 || !values.phone3) {
     throw new SubmissionError({
-      _error: _t(current_lang, '휴대폰은 번호를 입력 해주세요'),
+      _error: _t(current_lang, '휴대폰 번호를 입력 해주세요'),
     })
   }
 

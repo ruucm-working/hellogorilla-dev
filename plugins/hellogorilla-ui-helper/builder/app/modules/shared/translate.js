@@ -33,10 +33,14 @@ const _t = (current_lang, key) => {
     '비밀번호가 같지 않습니다': 'Email Information is NOT match',
 
     // PhoneVerfication
-    '휴대폰은 번호를 입력 해주세요': 'Phone Number is Missed',
+    '휴대폰 번호를 입력 해주세요': 'Phone Number is Missed',
     '입력하신 휴대폰으로 인증 번호가 전송되었습니다.':
       'Please Check the Verication Code in Your Phone',
     '휴대폰 인증이 정상적으로 되지 않았습니다': 'Your Phone is Not Verified',
+    '도착한 인증번호를 입력해 주세요': 'Verication Code is Missed',
+    '휴대폰이 정상적으로 인증 되었습니다':
+      'Verication is Successfully completed',
+    '휴대폰 인증에 실패 했습니다': 'Verication Failed',
 
     // Find Id
     '이메일 찾기': 'Find Email',

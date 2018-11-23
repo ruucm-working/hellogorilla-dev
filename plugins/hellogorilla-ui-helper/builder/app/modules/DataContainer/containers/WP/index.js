@@ -299,7 +299,7 @@ const enhance = compose(
   withHandlers({
     wpSignUp: props => (values, role, afterSuccess) => {
       const { dispatch, wp, nonce } = props
-      log('nonce', nonce)
+      log('values(wpSignUp)', values)
 
       const EmptyCheck = val => {
         return val ? val : ''
@@ -317,6 +317,7 @@ const enhance = compose(
         portfolio_01: EmptyCheck(values.portfolio_01),
         portfolio_02: EmptyCheck(values.portfolio_02),
         portfolio_03: EmptyCheck(values.portfolio_03),
+        billing_phone: values.phone,
         shipping_phone: values.phone,
       }
 
