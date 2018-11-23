@@ -37,6 +37,24 @@ const style = css`
               color: #231f20;
             }
           }
+          tbody {
+            td {
+              border-bottom: 1px solid #e9e8e8;
+            }
+          }
+          tfoot {
+            th {
+              padding: unset;
+              float: left;
+              padding-top: 15px;
+            }
+            td {
+              vertical-align: middle;
+            }
+            ins {
+              background: pink;
+            }
+          }
         }
       }
     }
