@@ -317,17 +317,33 @@ const SignUp = ({
         <Form
           onSubmit={handleSubmit(values => {
             log('values', values)
-            if (validate(values, current_lang)) {
-              wpSignUp(values, 'customer', res => {
-                log('res', res)
-                alert(
-                  _t(
-                    current_lang,
-                    '회원가입을 축하 합니다.\n홈으로 이동합니다.'
+            if (
+              validate(
+                {
+                  phoneValue,
+                  phoneVerfied,
+                  ...values,
+                },
+                current_lang
+              )
+            ) {
+              wpSignUp(
+                {
+                  phoneValue,
+                  phoneVerfied,
+                  ...values,
+                },
+                'customer',
+                res => {
+                  alert(
+                    _t(
+                      current_lang,
+                      '회원가입을 축하 합니다.\n홈으로 이동합니다.'
+                    )
                   )
-                )
-                window.location = '/'
-              })
+                  window.location = '/'
+                }
+              )
             }
           })}
         >
@@ -362,6 +378,7 @@ const SignUp = ({
               )}
               component={passwordmatchField}
             />
+            phoneValue : {phoneValue}
             <SendCode
               current_lang={current_lang}
               setPhoneValue={setPhoneValue}

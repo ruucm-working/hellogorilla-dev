@@ -29,9 +29,15 @@ const validate = (values, current_lang) => {
       _error: _t(current_lang, '비밀번호가 같지 않습니다'),
     })
   }
-  if (!values.phone) {
+  if (!values.phoneValue) {
     throw new SubmissionError({
       _error: _t(current_lang, '전화번호는 필수 필드 입니다'),
+    })
+  }
+
+  if (!values.phoneVerfied) {
+    throw new SubmissionError({
+      _error: _t(current_lang, '휴대폰 인증이 정상적으로 되지 않았습니다'),
     })
   }
 

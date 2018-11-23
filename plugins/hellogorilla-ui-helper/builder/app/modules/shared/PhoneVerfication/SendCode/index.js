@@ -120,8 +120,15 @@ const SendCode = ({
 
         // handle this form submit
         handleSubmit(values => {
-          if (validate(values, current_lang))
+          if (validate(values, current_lang)) {
+            alert(
+              _t(
+                current_lang,
+                '입력하신 휴대폰으로 인증 번호가 전송되었습니다.'
+              )
+            )
             return setPhoneValue(values.phone1 + values.phone2 + values.phone3)
+          }
         })()
       }}
     >
