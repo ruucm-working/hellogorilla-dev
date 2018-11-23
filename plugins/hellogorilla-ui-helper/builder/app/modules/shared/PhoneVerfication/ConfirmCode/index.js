@@ -7,6 +7,7 @@ import { Field, reduxForm } from 'redux-form'
 import { log } from 'ruucm-util'
 import { _t } from '../../../shared/translate'
 import validate from './validate'
+import TimeLeft from './TimeLeft'
 
 const PassButton = styled.button`
   display: inline-block;
@@ -34,6 +35,13 @@ const PassText = styled.div`
 `
 
 const ErrorWrapper = styled.div`
+  margin-top: ${wem2(12)};
+  margin-left: ${wem2(20)};
+  font-size: ${wem2(11)};
+  color: #0eb780;
+`
+
+const Alarm = styled.div`
   margin-top: ${wem2(12)};
   margin-left: ${wem2(20)};
   font-size: ${wem2(11)};
@@ -112,6 +120,7 @@ const ConfirmCode = ({
       <PassButton purple type="submit">
         <PassText>{_t(current_lang, '인증번호 확인')}</PassText>
       </PassButton>
+      <TimeLeft current_lang={current_lang} />
       {error && <ErrorWrapper>{error}</ErrorWrapper>}
     </form>
   )
