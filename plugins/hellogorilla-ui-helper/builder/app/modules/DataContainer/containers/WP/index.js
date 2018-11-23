@@ -407,6 +407,7 @@ const enhance = compose(
           .create({
             name: values.username,
             username: values.email,
+            nickname: values.nickname,
             email: values.email,
             password: values.password,
             roles: 'shop_manager',

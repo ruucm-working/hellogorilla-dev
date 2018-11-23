@@ -123,6 +123,7 @@ const PortfolioImage = styled.img`
   width: 456px;
   height: 320px;
   object-fit: cover;
+  margin: 0 auto;
 `
 const PortfolioTitle = styled.div`
   width: 100%;
@@ -219,9 +220,6 @@ const MobileSliderDot = dots => {
 const getFileName = source => {
   var regex = /[^/]*$/g
   var found = source.match(regex)
-  log('found', found)
-
-  log('found[0]', found[0].slice(0, -4))
 
   return found[0].slice(0, -4)
 }
@@ -288,7 +286,7 @@ const UserProfile = props => {
                   <VideoSource src={user.meta.artist_video} />
                 </Video>
               ) : (
-                '관련 영상이 없습니다'
+                ''
               )}
 
               <Portfolios>
