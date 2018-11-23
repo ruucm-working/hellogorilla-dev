@@ -38,7 +38,7 @@ const style = css`
             }
           }
           tbody {
-            tr td {
+            tr {
               font-family: 'NanumSquareRoundWeb', sans-serif;
               font-size: 14px;
               font-weight: normal;
@@ -46,6 +46,13 @@ const style = css`
             }
             td {
               border-bottom: 1px solid #e9e8e8;
+              font-family: 'NanumSquareRoundWeb', sans-serif;
+              font-size: 14px;
+              font-weight: normal;
+              color: #231f20;
+            }
+            .product-total {
+              text-align: center;
             }
           }
           tfoot {
