@@ -7,6 +7,7 @@ import { Field, reduxForm } from 'redux-form'
 import { log } from 'ruucm-util'
 import EmptySpace from 'ruucm-blocks/layouts/EmptySpace'
 import { _t } from '../../../shared/translate'
+import validate from './validate'
 
 const RenderFieldWrap = styled.div`
   display: inline-block;
@@ -31,7 +32,7 @@ const PhoneWriteField = styled.input`
   margin-right: ${wem2(10)};
 `
 
-const PassButton = styled.div`
+const PassButton = styled.button`
   display: inline-block;
   width: ${wem2(136)};
   height: ${wem2(52)};
@@ -56,7 +57,7 @@ const PassText = styled.div`
   transform: translate(-50%, -50%);
 `
 
-const Alarm = styled.div`
+const ErrorWrapper = styled.div`
   margin-top: ${wem2(12)};
   margin-left: ${wem2(20)};
   font-size: ${wem2(11)};
@@ -92,26 +93,11 @@ const phoneField = ({
     <PhoneWriteField input {...input} placeholder={placeholder} type={type} />
   </RenderFieldWrap>
 )
-// const phoneMatchField = ({
-//   input,
-//   label,
-//   placeholder,
-//   type,
-//   current_lang,
-//   meta: { touched, error },
-// }) => (
-//   <div>
-//     {/* <RenderFieldLabel /> */}
-//     <PhoneMatchField input {...input} placeholder={placeholder} type={type} />
-//     <PassButton purple>
-//       <PassText>{_t(current_lang, '인증번호 확인')}</PassText>
-//     </PassButton>
-//   </div>
-// )
 
 const SendCode = ({
   // from parent
   current_lang,
+  setPhoneValue,
 
   // local
   setCurrentView,
@@ -126,7 +112,19 @@ const SendCode = ({
   ...props
 }) => {
   return (
-    <form>
+    <form
+      onSubmit={e => {
+        // prevent parent form submit
+        e.preventDefault()
+        e.stopPropagation()
+
+        // handle this form submit
+        handleSubmit(values => {
+          if (validate(values, current_lang))
+            return setPhoneValue(values.phone1 + values.phone2 + values.phone3)
+        })()
+      }}
+    >
       <Field
         name="phone1"
         type="tel"
@@ -149,9 +147,11 @@ const SendCode = ({
       <PassButton type="submit">
         <PassText>{_t(current_lang, '인증번호 전송')}</PassText>
       </PassButton>
-      <Alarm>
+      {/* <Alarm>
         {_t(current_lang, '가입 시 입력한 휴대폰 번호를 다시 확인해주세요.')}
-      </Alarm>
+      </Alarm> */}
+
+      {error && <ErrorWrapper>{error}</ErrorWrapper>}
     </form>
   )
 }

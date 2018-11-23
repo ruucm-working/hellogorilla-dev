@@ -32,6 +32,9 @@ const _t = (current_lang, key) => {
     '비밀번호는 필수 필드 입니다': 'Password Information is Missed',
     '비밀번호가 같지 않습니다': 'Email Information is NOT match',
 
+    // PhoneVerfication
+    '휴대폰은 번호를 입력 해주세요': 'Phone Number is Missed',
+
     // Find Id
     '이메일 찾기': 'Find Email',
     '비밀번호 찾기': 'Find Password',

@@ -281,6 +281,10 @@ const SignUp = ({
   // local
   modalOpen,
   setModalOpen,
+  phoneValue,
+  setPhoneValue,
+  phoneVerfied,
+  setPhoneVerfied,
 
   // from parent
   stage,
@@ -341,7 +345,6 @@ const SignUp = ({
               label={_t(current_lang, '이름')}
               component={renderField}
             />
-
             <Field
               name="password"
               type="password"
@@ -359,27 +362,16 @@ const SignUp = ({
               )}
               component={passwordmatchField}
             />
-
-            <SendCode />
-            <ConfirmCode />
-            {/* <Field
-              name="phone"
-              type="tel"
-              label={_t(current_lang, '휴대폰')}
+            <SendCode
               current_lang={current_lang}
-              component={phoneField}
-            /> */}
-
-            {/* <Field
-              name="phone_match"
-              type="tel"
-              placeholder={_t(current_lang, '인증번호를 입력해주세요.')}
+              setPhoneValue={setPhoneValue}
+            />
+            <ConfirmCode
               current_lang={current_lang}
-              component={phoneMatchField}
-            /> */}
+              phoneValue={phoneValue}
+              setPhoneVerfied={setPhoneVerfied}
+            />
           </div>
-
-          {/* <TimeRemain>남은 시간 02:33</TimeRemain> */}
 
           <Agree href="/agreement" target="_blank">
             {_t(
@@ -407,6 +399,8 @@ const SignUp = ({
 // Component enhancer
 const enhance = compose(
   withState('modalOpen', 'setModalOpen', false),
+  withState('phoneValue', 'setPhoneValue', ''),
+  withState('phoneVerfied', 'setPhoneVerfied', false),
 
   lifecycle({
     componentDidMount() {
