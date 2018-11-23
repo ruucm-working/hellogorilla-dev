@@ -112,6 +112,13 @@ const enhance = compose(
       ...rest,
     }
   }),
+  mapProps(({ wp, ...rest }) => {
+    wp.changePassword = wp.registerRoute('custom', '/change-password')
+    return {
+      wp: wp,
+      ...rest,
+    }
+  }),
 
   withHandlers({
     getDatas: ({ nonce, ...props }) => options => {
@@ -279,6 +286,38 @@ const enhance = compose(
         .catch(err => {
           log('err(wpEmailExists)', err)
         })
+    },
+    changePassword: ({ wp, wpLogin, ...props }) => (
+      userEmail,
+      newPassword,
+      // nonce,
+      afterSuccess
+    ) => {
+      // reset password using wp api
+      log('userEmail(changePassword)', userEmail)
+
+      wp.changePassword()
+        .create({
+          email: userEmail,
+          newPassword: newPassword,
+          // key: nonce,
+        })
+        .then(res => {
+          log('res(changePassword)')
+          log(res)
+          if (res) afterSuccess()
+          // wpLogin(
+          //   {
+          //     username: userEmail,
+          //     password: newPassword,
+          //   },
+          //   afterSuccess
+          // )
+        })
+        .catch(err => {
+          log('err', err)
+        })
+      // expire nonce
     },
     wpUpload: props => (data, afterSuccess) => {
       const { dispatch, wp, nonce } = props

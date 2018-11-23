@@ -672,3 +672,37 @@ function check_email_exists_by_api( $param ) {
 		return false;
 	}
 }
+
+
+
+/**
+ *  Change Password by WP API
+ */
+add_action( 'rest_api_init', 'change_password_api_hooks' );
+// API custom endpoints for WP-REST API
+function change_password_api_hooks() {
+	$user_id = wp_get_current_user()->data->ID;
+    register_rest_route(
+        'custom', '/change-password/',
+        array(
+            'methods'  => 'POST',
+						'callback' => 'change_password_by_api',
+        )
+		);
+}
+function change_password_by_api( $param ) {
+	$user_input = getProtectedValue($param, 'params')['JSON'];
+	$user = get_user_by( 'email', $user_input['email'] );
+
+	// if ($user_input['key'] == $_SESSION['reset-pw-validate'][0]) { // only change pw if validate key is equal
+	// 	wp_set_password( $user_input['newPassword'], $user->ID );
+	// 	unset($_SESSION['reset-pw-validate']);
+	// 	return true;
+	// }
+	// return false;
+
+	wp_set_password( $user_input['newPassword'], $user->ID );
+
+	return true;
+
+}

@@ -85,6 +85,7 @@ const FindPassword = ({
   // from parent
   current_lang,
   wpGetEmailByPhone,
+  changePassword,
 
   // local
   setCurrentView,
@@ -140,7 +141,10 @@ const FindPassword = ({
           />
         </Wrap>
       ) : (
-        <ResetPassword />
+        <ResetPassword
+          emailValue={emailValue}
+          changePassword={changePassword}
+        />
       )}
     </div>
   )
@@ -151,7 +155,7 @@ const enhance = compose(
   withState('phoneValue', 'setPhoneValue', ''),
   withState('phoneVerfied', 'setPhoneVerfied', false),
   withState('emailValue', 'setEmailValue', ''),
-  withState('emailExist', 'setEmailExist', false),
+  withState('emailExist', 'setEmailExist', true),
 
   withHandlers({
     checkDuplicatedEmail: ({
