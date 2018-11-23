@@ -317,6 +317,7 @@ const enhance = compose(
         portfolio_01: EmptyCheck(values.portfolio_01),
         portfolio_02: EmptyCheck(values.portfolio_02),
         portfolio_03: EmptyCheck(values.portfolio_03),
+        shipping_phone: values.phone,
       }
 
       log('meta', meta)

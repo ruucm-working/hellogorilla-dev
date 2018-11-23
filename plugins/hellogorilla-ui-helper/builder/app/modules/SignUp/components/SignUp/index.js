@@ -50,7 +50,7 @@ const WriteField = styled.input`
 `
 const PhoneWriteField = styled.input`
   margin-top: ${wem2(10)};
-  width: ${wem2(104)};
+  width: ${wem2(332)};
   height: ${wem2(52)};
   border-radius: 2px;
   border: solid 1px #231f20;
@@ -108,11 +108,12 @@ const TimeRemain = styled.div`
   color: #0eb780;
 `
 
-const Agree = styled.div`
+const Agree = styled.a`
   text-align: center;
   font-size: 13px;
   color: #231f20;
   margin-top: 48px;
+  display: block;
 `
 
 const ErrorWrapper = styled.div`
@@ -140,7 +141,7 @@ const Next = styled.div`
   font-size: ${wem2(14)};
 `
 
-const Already = styled.div`
+const Already = styled.a`
   font-size: ${wem2(13)};
   color: #231f20;
   margin-top: ${wem2(96)};
@@ -148,6 +149,7 @@ const Already = styled.div`
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  display: block;
 `
 
 // redux-form
@@ -188,8 +190,7 @@ const phoneField = ({
   <div>
     <RenderFieldLabel>{label}</RenderFieldLabel>
     <PhoneWriteField input {...input} placeholder={placeholder} type={type} />
-    <PhoneWriteField input {...input02} placeholder={placeholder} type={type} />
-    <PhoneWriteField input {...input03} placeholder={placeholder} type={type} />
+
     <PassButton>
       <PassText
         onClick={() => {
@@ -373,9 +374,9 @@ const SignUp = ({
               component={phoneMatchField}
             />
           </div>
-          <TimeRemain>남은 시간 02:33</TimeRemain>
+          {/* <TimeRemain>남은 시간 02:33</TimeRemain> */}
 
-          <Agree>
+          <Agree href="/agreement" target="_blank">
             {_t(
               current_lang,
               '가입 버튼을 누름과 동시에 이용약관에 동의한 것으로 간주합니다.'
@@ -389,7 +390,9 @@ const SignUp = ({
             </Button>
           </div>
 
-          <Already>{_t(current_lang, '이미 계정이 있으신가요?')}</Already>
+          <Already href="/login">
+            {_t(current_lang, '이미 계정이 있으신가요?')}
+          </Already>
         </Form>
       </Wrap>
     </div>
