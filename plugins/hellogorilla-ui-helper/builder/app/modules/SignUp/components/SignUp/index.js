@@ -7,6 +7,8 @@ import { Field, reduxForm } from 'redux-form'
 import { log } from 'ruucm-util'
 import validate from './validate'
 import { _t } from '../../../shared/translate'
+import SendCode from '../../../shared/PhoneVerfication/SendCode'
+import ConfirmCode from '../../../shared/PhoneVerfication/ConfirmCode'
 
 const Wrap = styled.div`
   margin-top: ${wem2(96)};
@@ -358,22 +360,25 @@ const SignUp = ({
               component={passwordmatchField}
             />
 
-            <Field
+            <SendCode />
+            <ConfirmCode />
+            {/* <Field
               name="phone"
               type="tel"
               label={_t(current_lang, '휴대폰')}
               current_lang={current_lang}
               component={phoneField}
-            />
+            /> */}
 
-            <Field
+            {/* <Field
               name="phone_match"
               type="tel"
               placeholder={_t(current_lang, '인증번호를 입력해주세요.')}
               current_lang={current_lang}
               component={phoneMatchField}
-            />
+            /> */}
           </div>
+
           {/* <TimeRemain>남은 시간 02:33</TimeRemain> */}
 
           <Agree href="/agreement" target="_blank">

@@ -14,6 +14,27 @@ const Wrap = styled.div`
   margin-right: ${wem2(480)};
 `
 
+const Title = styled.div`
+  text-align: center;
+  font-weight: 500;
+`
+const Email = styled.span`
+  font-size: ${wem2(24)};
+  color: #805de9;
+  cursor: pointer;
+`
+const Bar = styled.span`
+  font-size: ${wem2(24)};
+  color: #231f20;
+  margin-left: ${wem2(40)};
+  margin-right: ${wem2(40)};
+`
+const Password = styled.span`
+  font-size: ${wem2(24)};
+  color: #231f20;
+  cursor: pointer;
+`
+
 const FindID = ({
   // from parent
   current_lang,
@@ -27,6 +48,13 @@ const FindID = ({
     <div>
       <EmptySpace height="96" />
       <Wrap>
+        <Title>
+          <Email>{_t(current_lang, '이메일 찾기')}</Email>
+          <Bar>|</Bar>
+          <Password onClick={() => setCurrentView('find-pw')}>
+            {_t(current_lang, '비밀번호 찾기')}
+          </Password>
+        </Title>
         <SendCode />
         <ConfirmCode />
       </Wrap>

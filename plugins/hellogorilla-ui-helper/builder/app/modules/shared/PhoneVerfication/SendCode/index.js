@@ -8,31 +8,6 @@ import { log } from 'ruucm-util'
 import EmptySpace from 'ruucm-blocks/layouts/EmptySpace'
 import { _t } from '../../../shared/translate'
 
-const Wrap = styled.div`
-  margin-left: ${wem2(480)};
-  margin-right: ${wem2(480)};
-`
-
-const Title = styled.div`
-  text-align: center;
-  font-weight: 500;
-`
-const Email = styled.span`
-  font-size: ${wem2(24)};
-  color: #805de9;
-  cursor: pointer;
-`
-const Bar = styled.span`
-  font-size: ${wem2(24)};
-  color: #231f20;
-  margin-left: ${wem2(40)};
-  margin-right: ${wem2(40)};
-`
-const Password = styled.span`
-  font-size: ${wem2(24)};
-  color: #231f20;
-  cursor: pointer;
-`
 const RenderFieldWrap = styled.div`
   display: inline-block;
 `
@@ -152,14 +127,6 @@ const SendCode = ({
 }) => {
   return (
     <form>
-      <Title>
-        <Email>{_t(current_lang, '이메일 찾기')}</Email>
-        <Bar>|</Bar>
-        <Password onClick={() => setCurrentView('find-pw')}>
-          {_t(current_lang, '비밀번호 찾기')}
-        </Password>
-      </Title>
-
       <Field
         name="phone1"
         type="tel"
