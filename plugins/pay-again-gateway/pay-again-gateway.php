@@ -19,10 +19,10 @@ function pay_again_init() {
 	add_filter('woocommerce_payment_gateways', 'woocommerce_add_pay_again_gateway' );
 	add_filter( 'woocommerce_order_button_text', 'pay_again_button_text' );
 	//구매자가 직접 취소할 때 환불처리(processing상태일 때만)
-	add_action( 'woocommerce_order_status_processing_to_cancelled', 'iamport_refund_payment_p', 10, 1 );
+	add_action( 'woocommerce_order_status_processing_to_cancelled', 'pag_iamport_refund_payment', 10, 1 );
 }
 
-function iamport_refund_payment_p($order_id) {
+function pag_iamport_refund_payment($order_id) {
 	require_once(dirname(__FILE__).'/lib/iamport.php');
 
 	$order = new WC_Order( $order_id );
@@ -44,7 +44,7 @@ function iamport_refund_payment_p($order_id) {
 		$order->add_order_note( __( '구매자요청에 의해 전액 환불완료', 'iamport-for-woocommerce' ) );
 		if ( $payment_data->amount == $payment_data->cancel_amount ) {
 			$old_status = $order->get_status();
-			$order->update_status('refunded'); //iamport_refund_payment_p가 old_status -> cancelled로 바뀌는 중이라 update_state('refunded')를 호출하는 것이 향후에 문제가 될 수 있음
+			$order->update_status('refunded'); //pag_iamport_refund_payment가 old_status -> cancelled로 바뀌는 중이라 update_state('refunded')를 호출하는 것이 향후에 문제가 될 수 있음
 
 			//fire hook
 			do_action('iamport_order_status_changed', $old_status, $order->get_status());
@@ -122,27 +122,28 @@ function delete_pay_again_inicis_method() {
 function show_pay_again_payment_method_button( $atts ) {
 	include('template/template-billing-method-info.php');
 }
-// add_shortcode('pay-again-billing-method-info', 'show_pay_again_payment_method_button');
+add_shortcode('pay-again-billing-method-info', 'show_pay_again_payment_method_button');
 
 function show_pay_again_inicis_payment_method_button( $atts ) {
 	include('template/template-inicis-billing-method-info.php');
 }
-// add_shortcode('pay-again-billing-inicis-method-info', 'show_pay_again_inicis_payment_method_button');
+add_shortcode('pay-again-billing-inicis-method-info', 'show_pay_again_inicis_payment_method_button');
 
 /**
  *	Add Custom Tab To Woocommerce
  **/
-function my_custom_endpoints() {
+function pag_custom_endpoints() { // add endpoint 'billing-method-info'
 	add_rewrite_endpoint( 'billing-method-info', EP_ROOT | EP_PAGES );
 }
-add_action( 'my_custom_endpoints', 'my_custom_endpoints' );
-function my_custom_query_vars( $vars ) {
+add_action( 'init', 'pag_custom_endpoints' );
+function pag_custom_query_vars( $vars ) {
 	$vars[] = 'billing-method-info';
-
 	return $vars;
 }
-add_filter( 'query_vars', 'my_custom_query_vars', 0 );
-function my_custom_my_account_menu_items( $items ) {
+add_filter( 'query_vars', 'pag_custom_query_vars', 0 );
+
+
+function pag_my_account_menu_items( $items ) { // add custom wc account tab (my-account page)
 	// Remove the logout menu item.
 	$logout = $items['customer-logout'];
 	unset( $items['customer-logout'] );
@@ -155,46 +156,9 @@ function my_custom_my_account_menu_items( $items ) {
 
 	return $items;
 }
-add_filter( 'woocommerce_account_menu_items', 'my_custom_my_account_menu_items' );
+add_filter( 'woocommerce_account_menu_items', 'pag_my_account_menu_items' );
 function my_custom_endpoint_content() {
 	do_shortcode('[pay-again-billing-method-info]');
 	do_shortcode('[pay-again-billing-inicis-method-info]');
 }
 add_action( 'woocommerce_account_billing-method-info_endpoint', 'my_custom_endpoint_content' );
-
-
-
-
-/*
- * Step 1. Add Link to My Account menu
- */
-add_filter ( 'woocommerce_account_menu_items', 'misha_log_history_link', 40 );
-function misha_log_history_link( $menu_links ){
- 
-	$menu_links = array_slice( $menu_links, 0, 5, true ) 
-	+ array( 'log-history' => 'Log history' )
-	+ array_slice( $menu_links, 5, NULL, true );
- 
-	return $menu_links;
- 
-}
-/*
- * Step 2. Register Permalink Endpoint
- */
-add_action( 'init', 'misha_add_endpoint' );
-function misha_add_endpoint() {
- 
-	// WP_Rewrite is my Achilles' heel, so please do not ask me for detailed explanation
-	add_rewrite_endpoint( 'log-history', EP_PAGES );
- 
-}
-/*
- * Step 3. Content for the new page in My Account, woocommerce_account_{ENDPOINT NAME}_endpoint
- */
-add_action( 'woocommerce_account_log-history_endpoint', 'misha_my_account_endpoint_content' );
-function misha_my_account_endpoint_content() {
- 
-	// of course you can print dynamic content here, one of the most useful functions here is get_current_user_id()
-	echo 'Last time you logged in: yesterday from Safari.';
- 
-}
