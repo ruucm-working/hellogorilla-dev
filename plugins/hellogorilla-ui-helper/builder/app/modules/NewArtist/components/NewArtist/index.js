@@ -125,22 +125,23 @@ const NewArtist = ({
       <Form
         onSubmit={handleSubmit(values => {
           if (validate(values)) {
-            wpSignUp(values, 'editor', res => {
-              alert(res.username + ' 아티스트가 생성 되었습니다')
-              log('res', res)
-              location.href = '/'
-            })
+            wpSignUp(
+              {
+                email: values.username.replace(/\s/g, '') + '@hellogo.co.kr',
+                password: 'museum101', // default password
+                ...values,
+              },
+              'editor',
+              res => {
+                alert(res.username + ' 아티스트가 생성 되었습니다')
+                log('res', res)
+                location.href = '/'
+              }
+            )
           }
         })}
       >
         <div>
-          <Field
-            name="username"
-            type="text"
-            label="아이디"
-            component={renderField}
-          />
-
           <Field
             name="nickname"
             type="text"
@@ -149,23 +150,9 @@ const NewArtist = ({
           />
 
           <Field
-            name="email"
-            type="email"
-            label="이메일"
-            placeholder={_t('en', '이메일을 입력해주세요')}
-            component={renderField}
-          />
-          <Field
-            name="password"
-            type="password"
-            label="비밀번호"
-            placeholder="비밀번호(6자리 이상)"
-            component={renderField}
-          />
-          <Field
-            name="password_match"
-            type="password"
-            label="비밀번호(확인)"
+            name="username"
+            type="text"
+            label="닉네임 (en)"
             component={renderField}
           />
 
@@ -177,8 +164,21 @@ const NewArtist = ({
           />
 
           <Field
+            name="short_desc_en"
+            type="text"
+            label="한줄 소개 (en)"
+            component={renderField}
+          />
+
+          <Field
             name="long_desc"
             label="자세한 소개"
+            component={textareaField}
+          />
+
+          <Field
+            name="long_desc_en"
+            label="자세한 소개 (en)"
             component={textareaField}
           />
 
@@ -240,6 +240,19 @@ const NewArtist = ({
           <Field
             name="portfolio_03"
             label="작품 이미지 3"
+            component={renderDropzoneInput}
+            wpUpload={wpUpload}
+          />
+
+          <Field
+            name="portfolio_04"
+            label="작품 이미지 4"
+            component={renderDropzoneInput}
+            wpUpload={wpUpload}
+          />
+          <Field
+            name="portfolio_05"
+            label="작품 이미지 5"
             component={renderDropzoneInput}
             wpUpload={wpUpload}
           />
