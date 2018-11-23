@@ -23,6 +23,9 @@ const style = css`
         }
         .woocommerce-table--order-details {
           thead {
+            tr {
+              border-bottom: 1px solid #e9e8e8;
+            }
             th {
               font-family: 'NanumSquareRoundWeb', sans-serif;
               font-size: 14px;
