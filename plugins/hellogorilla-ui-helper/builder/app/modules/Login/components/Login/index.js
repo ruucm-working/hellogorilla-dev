@@ -269,7 +269,7 @@ const LoginForm = ({
 }
 
 // Component enhancer
-const enhance = compose(withState('currentView', 'setCurrentView', 'login'))
+const enhance = compose(withState('currentView', 'setCurrentView', 'find-id'))
 // withState('submitSuccessed', 'setsubmitSuccess', '')
 export default enhance(
   reduxForm({
