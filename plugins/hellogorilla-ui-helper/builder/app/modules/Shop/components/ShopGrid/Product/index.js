@@ -13,6 +13,10 @@ import { map } from 'lodash'
 import { Row, Column, EmptySpace } from 'ruucm-blocks/layouts'
 import { wem2 } from 'ruucm-blocks/tools/mixins'
 
+const ProductWrap = styled.div`
+  padding-bottom: ${wem2(72)};
+`
+
 const Wrapper = styled.div`
   position: relative;
 `
@@ -177,7 +181,7 @@ const Product = props => {
   log('props', props)
   const { data, addToCart, index } = props
   return (
-    <div>
+    <ProductWrap>
       <MoreLink href={data.permalink}>
         <Wrapper featured={data.featured}>
           <ProductWrapper>
@@ -229,7 +233,7 @@ const Product = props => {
         </RegularPrice>
         <SalePrice>￦{commaPipe(data.price)}</SalePrice>
       </Price>
-    </div>
+    </ProductWrap>
   )
 }
 
