@@ -68,6 +68,7 @@ const style = css`
             td {
               font-family: 'NanumSquareRoundWeb', sans-serif;
               vertical-align: middle;
+              text-align: center;
             }
             ins {
               background: unset;
