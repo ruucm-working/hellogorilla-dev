@@ -127,6 +127,7 @@ const newsStyle = css`
     }
     .kboard-document-wrap {
       position: relative;
+      min-height: ${wem2(625)};
     }
     .kboard-title {
       font-size: ${wem2(15)};
@@ -166,7 +167,7 @@ const newsStyle = css`
       `};
     }
     .kboard-content {
-      height: ${wem2(625)};
+      min-height: ${wem2(625)};
       padding-top: ${wem2(76)};
       font-size: ${wem2(14)};
       line-height: 1.86;
@@ -267,6 +268,15 @@ const newsStyle = css`
       .next-page {
         display: none;
       }
+    }
+  }
+
+  /* kboard controls */
+  .page-id-20 {
+    .kboard-control {
+      text-align: center;
+      font-weight: 900;
+      margin-top: ${wem2(60)};
     }
   }
 `
