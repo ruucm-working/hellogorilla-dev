@@ -98,6 +98,14 @@ const enhance = compose(
       ...rest,
     }
   }),
+  mapProps(({ wp, ...rest }) => {
+    wp.getEmailByPhone = wp.registerRoute('custom', '/get-email-by-phone')
+    return {
+      wp: wp,
+      ...rest,
+    }
+  }),
+
   withHandlers({
     getDatas: ({ nonce, ...props }) => options => {
       log('getDatas')
@@ -213,6 +221,7 @@ const enhance = compose(
             log('err', err)
           })
     },
+
     wpLogin: props => (values, afterSuccess) => {
       const { dispatch, wp } = props
       wp.login()
@@ -235,6 +244,17 @@ const enhance = compose(
         .then(res => {
           log('res', res)
           afterSuccess()
+        })
+        .catch(err => {
+          log('err', err)
+        })
+    },
+    wpGetEmailByPhone: ({ wp, ...props }) => (phone, afterSuccess) => {
+      wp.getEmailByPhone()
+        .param('phone', phone)
+        .then(res => {
+          log('res(wpGetEmailByPhone)', res)
+          afterSuccess(res)
         })
         .catch(err => {
           log('err', err)

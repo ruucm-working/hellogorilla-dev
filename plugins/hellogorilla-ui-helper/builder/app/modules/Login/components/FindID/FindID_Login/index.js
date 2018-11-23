@@ -17,7 +17,7 @@ const Email = styled.div`
   text-align: center;
   color: #231f20;
 `
-const LoginBox = styled.div`
+const LoginBox = styled.a`
   border-radius: 2px;
   background-color: #533c97;
   width: ${wem2(480)};
@@ -27,22 +27,24 @@ const LoginBox = styled.div`
   color: #ffffff;
   position: relative;
   cursor: pointer;
+  display: block;
 `
 const Login = styled.div`
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  display: block;
 `
 
-const FindID_Login = props => {
+const FindID_Login = ({ emailValue, ...props }) => {
   return (
     <div>
       <EmptySpace height="144" />
       <Wrap>
-        <Email>이메일을 입력해주세요</Email>
+        <Email>{emailValue}</Email>
 
-        <LoginBox>
+        <LoginBox href="/login">
           <Login>로그인</Login>
         </LoginBox>
       </Wrap>
@@ -50,4 +52,12 @@ const FindID_Login = props => {
   )
 }
 
-export default FindID_Login
+// Component enhancer
+const enhance = compose(
+  lifecycle({
+    componentDidMount() {
+      // this.props.getEmailByPhone(this.props.phoneValue, )
+    },
+  })
+)
+export default enhance(FindID_Login)

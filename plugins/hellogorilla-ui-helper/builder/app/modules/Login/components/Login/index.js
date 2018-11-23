@@ -187,6 +187,7 @@ const LoginForm = ({
   // wordpress
   wpLogin,
   current_lang,
+  wpGetEmailByPhone,
   ...props
 }) => {
   return (() => {
@@ -253,6 +254,7 @@ const LoginForm = ({
           <Find_ID
             setCurrentView={setCurrentView}
             current_lang={current_lang}
+            wpGetEmailByPhone={wpGetEmailByPhone}
           />
         )
       case 'find-pw':
@@ -269,7 +271,7 @@ const LoginForm = ({
 }
 
 // Component enhancer
-const enhance = compose(withState('currentView', 'setCurrentView', 'find-id'))
+const enhance = compose(withState('currentView', 'setCurrentView', 'login'))
 // withState('submitSuccessed', 'setsubmitSuccess', '')
 export default enhance(
   reduxForm({

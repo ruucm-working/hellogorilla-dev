@@ -101,6 +101,7 @@ const SendCode = ({
 
   // local
   setCurrentView,
+  handlePhoneSubmit,
 
   // redux-form
   history,
@@ -121,13 +122,9 @@ const SendCode = ({
         // handle this form submit
         handleSubmit(values => {
           if (validate(values, current_lang)) {
-            alert(
-              _t(
-                current_lang,
-                '입력하신 휴대폰으로 인증 번호가 전송되었습니다.'
-              )
+            return handlePhoneSubmit(
+              values.phone1 + values.phone2 + values.phone3
             )
-            return setPhoneValue(values.phone1 + values.phone2 + values.phone3)
           }
         })()
       }}
@@ -164,7 +161,46 @@ const SendCode = ({
 }
 
 // Component enhancer
-const enhance = compose()
+const enhance = compose(
+  withHandlers({
+    handlePhoneSubmit: ({
+      current_lang,
+      setPhoneValue,
+      setEmailValue,
+      wpGetEmailByPhone,
+      ...props
+    }) => phone => {
+      if (wpGetEmailByPhone) {
+        wpGetEmailByPhone(phone, res => {
+          if (res) {
+            setPhoneValue(phone)
+            setEmailValue(res)
+            alert(
+              _t(
+                current_lang,
+                '입력하신 휴대폰으로 인증 번호가 전송되었습니다.'
+              )
+            )
+          } else {
+            // err
+            alert(
+              _t(
+                current_lang,
+                '입력하신 휴대폰으로 등록된 사용자를 찾을 수 없습니다.'
+              )
+            )
+          }
+        }) // get email by verificated phone number
+      } else {
+        setPhoneValue(phone) // at SignUp (only phone verification)
+
+        alert(
+          _t(current_lang, '입력하신 휴대폰으로 인증 번호가 전송되었습니다.')
+        )
+      }
+    },
+  })
+)
 export default enhance(
   reduxForm({
     form: 'HG_SENDCODE_FORM',
