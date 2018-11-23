@@ -85,8 +85,10 @@ injectGlobal`
   }
 
   .item {
-    padding-left: ${wem2(240)};
-    padding-right: ${wem2(240)};
+    /* padding-left: ${wem2(240)}; */
+    /* padding-right: ${wem2(240)}; */
+    max-width: ${wem2(960)};
+    margin: 0 auto;
     margin-top: ${wem2(96)};
   }
   .item-header {
