@@ -645,3 +645,29 @@ function get_email_by_phone_by_api( $param ) {
 	else return false;
 
 }
+
+/**
+ *  Check Email Exists by WP API
+ */
+add_action( 'rest_api_init', 'check_email_exists_api_hooks' );
+// API custom endpoints for WP-REST API
+function check_email_exists_api_hooks() {
+	register_rest_route(
+			'custom', '/email-exists/',
+			array(
+					'methods'  => 'POST',
+					'callback' => 'check_email_exists_by_api',
+			)
+	);
+}
+function check_email_exists_by_api( $param ) {
+	$user_input = getProtectedValue($param, 'params')['JSON'];
+
+	$exists = email_exists( $user_input['email'] );
+	
+	if ( $exists ) {
+		return $exists;
+	} else {
+		return false;
+	}
+}

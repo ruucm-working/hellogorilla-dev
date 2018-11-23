@@ -9,6 +9,7 @@ import EmptySpace from 'ruucm-blocks/layouts/EmptySpace'
 import { _t } from '../../../shared/translate'
 import SendCode from '../../../shared/PhoneVerfication/SendCode'
 import ConfirmCode from '../../../shared/PhoneVerfication/ConfirmCode'
+import ResetPassword from './ResetPassword'
 
 const Wrap = styled.div`
   margin-left: ${wem2(480)};
@@ -58,7 +59,7 @@ const WriteField = styled.input`
   color: #b7b5b6;
 `
 
-const Alarm = styled.div`
+const ErrorWrapper = styled.div`
   margin-top: ${wem2(12)};
   margin-left: ${wem2(20)};
   font-size: ${wem2(11)};
@@ -75,46 +76,93 @@ const emailField = ({
   <div>
     <RenderFieldLabel email>{label}</RenderFieldLabel>
     <WriteField input {...input} placeholder={placeholder} type={type} />
+    {touched && (error && <ErrorWrapper>{error}</ErrorWrapper>)}
   </div>
 )
+const showEmailErr = value => '가입 시 입력한 이메일을 다시 확인해주세요.'
 
 const FindPassword = ({
   // from parent
   current_lang,
+  wpGetEmailByPhone,
 
   // local
   setCurrentView,
+  phoneValue,
+  setPhoneValue,
+  phoneVerfied,
+  setPhoneVerfied,
+  emailValue,
+  setEmailValue,
+  checkDuplicatedEmail,
+  emailExist,
+
   ...props
 }) => {
   return (
     <div>
       <EmptySpace height="96" />
-      <Wrap>
-        <Title>
-          <Email onClick={() => setCurrentView('find-id')}>
-            {_t(current_lang, '이메일 찾기')}
-          </Email>
+      {!phoneVerfied ? (
+        <Wrap>
+          <Title>
+            <Email onClick={() => setCurrentView('find-id')}>
+              {_t(current_lang, '이메일 찾기')}
+            </Email>
 
-          <Bar>|</Bar>
-          <Password>{_t(current_lang, '비밀번호 찾기')}</Password>
-        </Title>
+            <Bar>|</Bar>
+            <Password>{_t(current_lang, '비밀번호 찾기')}</Password>
+          </Title>
 
-        <Field
-          name="email"
-          type="email"
-          label={_t(current_lang, '이메일')}
-          placeholder={_t(current_lang, '이메일을 입력해주세요')}
-          component={emailField}
-        />
-        <Alarm>
-          {_t(current_lang, '가입 시 입력한 이메일을 다시 확인해주세요.')}
-        </Alarm>
+          <Field
+            name="email"
+            type="email"
+            label={_t(current_lang, '이메일')}
+            placeholder={_t(current_lang, '이메일을 입력해주세요')}
+            component={emailField}
+            onChange={e => checkDuplicatedEmail(e.target.value)}
+            validate={!emailExist && showEmailErr}
+          />
 
-        <SendCode />
-        <ConfirmCode />
-      </Wrap>
+          <SendCode
+            current_lang={current_lang}
+            setPhoneValue={setPhoneValue}
+            wpGetEmailByPhone={wpGetEmailByPhone}
+          />
+          <ConfirmCode
+            current_lang={current_lang}
+            phoneValue={phoneValue}
+            setPhoneVerfied={setPhoneVerfied}
+          />
+        </Wrap>
+      ) : (
+        <ResetPassword />
+      )}
     </div>
   )
 }
 
-export default FindPassword
+// Component enhancer
+const enhance = compose(
+  withState('phoneValue', 'setPhoneValue', ''),
+  withState('phoneVerfied', 'setPhoneVerfied', false),
+  withState('emailValue', 'setEmailValue', ''),
+  withState('emailExist', 'setEmailExist', false),
+
+  withHandlers({
+    checkDuplicatedEmail: ({
+      wpEmailExists,
+      setEmailExist,
+      ...props
+    }) => email => {
+      if (
+        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email) &&
+        wpEmailExists
+      ) {
+        log("it's a email! & check function available")
+
+        wpEmailExists(email, res => setEmailExist(res))
+      }
+    },
+  })
+)
+export default enhance(FindPassword)

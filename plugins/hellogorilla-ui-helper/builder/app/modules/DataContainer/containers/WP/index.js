@@ -105,6 +105,13 @@ const enhance = compose(
       ...rest,
     }
   }),
+  mapProps(({ wp, ...rest }) => {
+    wp.emailExists = wp.registerRoute('custom', '/email-exists')
+    return {
+      wp: wp,
+      ...rest,
+    }
+  }),
 
   withHandlers({
     getDatas: ({ nonce, ...props }) => options => {
@@ -258,6 +265,19 @@ const enhance = compose(
         })
         .catch(err => {
           log('err', err)
+        })
+    },
+    wpEmailExists: ({ wp, ...props }) => (email, afterSuccess) => {
+      wp.emailExists()
+        .create({
+          email: email,
+        })
+        .then(res => {
+          log('res(wpEmailExists)', res)
+          afterSuccess(res)
+        })
+        .catch(err => {
+          log('err(wpEmailExists)', err)
         })
     },
     wpUpload: props => (data, afterSuccess) => {

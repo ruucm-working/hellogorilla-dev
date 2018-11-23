@@ -188,6 +188,7 @@ const LoginForm = ({
   wpLogin,
   current_lang,
   wpGetEmailByPhone,
+  wpEmailExists,
   ...props
 }) => {
   return (() => {
@@ -262,6 +263,8 @@ const LoginForm = ({
           <Find_Password
             setCurrentView={setCurrentView}
             current_lang={current_lang}
+            wpGetEmailByPhone={wpGetEmailByPhone}
+            wpEmailExists={wpEmailExists}
           />
         )
       default:
@@ -271,7 +274,7 @@ const LoginForm = ({
 }
 
 // Component enhancer
-const enhance = compose(withState('currentView', 'setCurrentView', 'login'))
+const enhance = compose(withState('currentView', 'setCurrentView', 'find-pw'))
 // withState('submitSuccessed', 'setsubmitSuccess', '')
 export default enhance(
   reduxForm({
