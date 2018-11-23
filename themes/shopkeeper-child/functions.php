@@ -100,6 +100,18 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_r
 add_action( 'rest_api_init', 'create_api_user_posts_field' );
  
 function create_api_user_posts_field() {
+
+
+	register_rest_field( 'user', 'user_name',
+		array(
+			'get_callback'    => function ( $user ) {
+					return $user['username'];
+			},
+			'update_callback' => null,
+			'schema'          => null,
+		)
+	);
+
 	register_rest_field( 'user', 'user_email',
 		array(
 			'get_callback'    => function ( $user ) {
@@ -275,8 +287,22 @@ register_meta( 'user', 'short_desc',
 		'show_in_rest'    => true, 
 	)
 );
+register_meta( 'user', 'short_desc_en', 
+	array(
+		'type'             => 'string',
+		'single'        => true,
+		'show_in_rest'    => true, 
+	)
+);
 
 register_meta( 'user', 'long_desc', 
+	array(
+		'type'             => 'string',
+		'single'        => true,
+		'show_in_rest'    => true, 
+	)
+);
+register_meta( 'user', 'long_desc_en', 
 	array(
 		'type'             => 'string',
 		'single'        => true,
@@ -345,6 +371,20 @@ register_meta( 'user', 'portfolio_02',
 	)
 );
 register_meta( 'user', 'portfolio_03', 
+	array(
+		'type'             => 'string',
+		'single'        => true,
+		'show_in_rest'    => true, 
+	)
+);
+register_meta( 'user', 'portfolio_04', 
+	array(
+		'type'             => 'string',
+		'single'        => true,
+		'show_in_rest'    => true, 
+	)
+);
+register_meta( 'user', 'portfolio_05', 
 	array(
 		'type'             => 'string',
 		'single'        => true,

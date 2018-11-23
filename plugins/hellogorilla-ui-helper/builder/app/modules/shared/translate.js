@@ -74,6 +74,10 @@ const _t = (current_lang, key) => {
 
     마이페이지: 'MyPage',
     회원가입: 'Join',
+
+    // User Profile
+    '작품 소개': 'Portfolios',
+    '관련 상품': 'Products',
   }
 
   return current_lang == 'en' ? data[key] : key

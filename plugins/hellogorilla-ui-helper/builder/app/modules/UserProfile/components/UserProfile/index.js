@@ -22,6 +22,7 @@ import LoadingSpinner from '../../../shared/LoadingSpinner'
 
 // import Page from './Page'
 import { Frame, Hover, Animate } from 'ruucm-blocks/animation'
+import { _t } from '../../../shared/translate'
 
 const CoverImg = styled.div`
   ${props =>
@@ -123,6 +124,7 @@ const PortfolioImage = styled.img`
   width: 456px;
   height: 320px;
   object-fit: cover;
+  margin: 0 auto;
 `
 const PortfolioTitle = styled.div`
   width: 100%;
@@ -219,17 +221,16 @@ const MobileSliderDot = dots => {
 const getFileName = source => {
   var regex = /[^/]*$/g
   var found = source.match(regex)
-  log('found', found)
-
-  log('found[0]', found[0].slice(0, -4))
 
   return found[0].slice(0, -4)
 }
 
 // component
-const UserProfile = props => {
+const UserProfile = ({ current_lang, ...props }) => {
   let user = props[props.wpType + '_' + props.sort + '_wpData']
   // log('user', user)
+
+  log('current_lang(UserProfile)', current_lang)
 
   return user ? (
     <div>
@@ -248,10 +249,16 @@ const UserProfile = props => {
 
           <Column col="8">
             <ProfileWrap>
-              <ShortDesc>{user.meta.short_desc}</ShortDesc>
+              <ShortDesc>
+                {current_lang == 'en'
+                  ? user.meta.short_desc_en
+                  : user.meta.short_desc}
+              </ShortDesc>
 
               <NameLink>
-                <UserName>{user.name}</UserName>
+                <UserName>
+                  {current_lang == 'en' ? user.user_name : user.name}
+                </UserName>
                 <Links>
                   <HomePage
                     href={user.meta.homepage ? user.meta.homepage : '#'}
@@ -281,18 +288,22 @@ const UserProfile = props => {
                 </Links>
               </NameLink>
 
-              <LongDesc>{user.meta.long_desc}</LongDesc>
+              <LongDesc>
+                {current_lang == 'en'
+                  ? user.meta.long_desc_en
+                  : user.meta.long_desc}
+              </LongDesc>
 
               {user.meta.artist_video ? (
                 <Video controls>
                   <VideoSource src={user.meta.artist_video} />
                 </Video>
               ) : (
-                '관련 영상이 없습니다'
+                ''
               )}
 
               <Portfolios>
-                <Label>작품 소개</Label>
+                <Label>{_t(current_lang, '작품 소개')}</Label>
 
                 {user.meta.portfolio_01 ? (
                   <SliderWrap>
@@ -336,6 +347,32 @@ const UserProfile = props => {
                       ) : (
                         ''
                       )}
+
+                      {user.meta.portfolio_04 ? (
+                        <PortfoliItemWrap>
+                          <PortfoliItem>
+                            <PortfolioImage src={user.meta.portfolio_04} />
+                            <PortfolioTitle>
+                              {getFileName(user.meta.portfolio_04)}
+                            </PortfolioTitle>
+                          </PortfoliItem>
+                        </PortfoliItemWrap>
+                      ) : (
+                        ''
+                      )}
+
+                      {user.meta.portfolio_05 ? (
+                        <PortfoliItemWrap>
+                          <PortfoliItem>
+                            <PortfolioImage src={user.meta.portfolio_05} />
+                            <PortfolioTitle>
+                              {getFileName(user.meta.portfolio_05)}
+                            </PortfolioTitle>
+                          </PortfoliItem>
+                        </PortfoliItemWrap>
+                      ) : (
+                        ''
+                      )}
                     </Slider>
                   </SliderWrap>
                 ) : (
@@ -344,7 +381,7 @@ const UserProfile = props => {
               </Portfolios>
 
               <Products>
-                <Label>관련 상품</Label>
+                <Label>{_t(current_lang, '관련 상품')}</Label>
                 <Row>
                   {map(user.user_products, (item, id) => (
                     <Column col="6">
