@@ -666,7 +666,8 @@ function check_email_exists_by_api( $param ) {
 	$exists = email_exists( $user_input['email'] );
 	
 	if ( $exists ) {
-		return $exists;
+		// return $exists; // user Id
+		return $user_input['email'];
 	} else {
 		return false;
 	}

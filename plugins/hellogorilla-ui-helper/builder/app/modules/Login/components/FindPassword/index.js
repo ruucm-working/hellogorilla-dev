@@ -102,7 +102,7 @@ const FindPassword = ({
   return (
     <div>
       <EmptySpace height="96" />
-      {!phoneVerfied ? (
+      {!phoneVerfied || !emailExist || !(emailExist == emailValue) ? (
         <Wrap>
           <Title>
             <Email onClick={() => setCurrentView('find-id')}>
@@ -120,13 +120,18 @@ const FindPassword = ({
             placeholder={_t(current_lang, '이메일을 입력해주세요')}
             component={emailField}
             onChange={e => checkDuplicatedEmail(e.target.value)}
-            validate={!emailExist && showEmailErr}
+            validate={
+              (!emailExist || // 이메일로 가입된 유저가 없을경우
+                (phoneVerfied && emailExist != emailValue)) && // 본인 인증 후, 핸드폰 번호의 유저와, 입력한 이메일의 유저가 다를 경우
+              showEmailErr
+            }
           />
 
           <SendCode
             current_lang={current_lang}
             setPhoneValue={setPhoneValue}
             wpGetEmailByPhone={wpGetEmailByPhone}
+            setEmailValue={setEmailValue}
           />
           <ConfirmCode
             current_lang={current_lang}
