@@ -118,16 +118,16 @@ const StyledRow = styled(Row)`
   top: ${wem2(144)};
 `
 
-const ShopGrid = ({ active, setActive, ...props }) => {
-  let contents = props[props.dataType + '_' + props.category]
+const ShopGrid = ({ active, setActive, contents, setContents, ...props }) => {
   return (
     <Height>
       <Wrap>
         <Category>
           <CategoryWrapAll
             onClick={() => {
-              props.getProducts()
+              setContents(null)
               setActive(0)
+              props.getProducts()
             }}
             active={active == 0}
           >
@@ -136,8 +136,9 @@ const ShopGrid = ({ active, setActive, ...props }) => {
 
           <CategoryWrap
             onClick={() => {
-              props.getProducts({ category: 17 })
+              setContents(null)
               setActive(1)
+              props.getProducts({ category: 17 })
             }}
             active={active == 1}
           >
@@ -200,7 +201,19 @@ const ShopGrid = ({ active, setActive, ...props }) => {
 // Component enhancer
 const enhance = compose(
   withState('active', 'setActive', 0),
+  withState('contents', 'setContents', null),
+
   lifecycle({
+    componentWillReceiveProps(nextProps) {
+      let contents = this.props[this.props.dataType + '_' + this.props.category]
+
+      let contentsNext =
+        nextProps[nextProps.dataType + '_' + nextProps.category]
+
+      if (contents != contentsNext) {
+        this.props.setContents(contentsNext)
+      }
+    },
     componentDidMount() {
       this.props.getProducts ? this.props.getProducts() : void 0 // don't run in builder
     },
