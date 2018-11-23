@@ -38,21 +38,34 @@ const style = css`
             }
           }
           tbody {
+            tr td {
+              font-family: 'NanumSquareRoundWeb', sans-serif;
+              font-size: 14px;
+              font-weight: normal;
+              color: #231f20;
+            }
             td {
               border-bottom: 1px solid #e9e8e8;
             }
           }
           tfoot {
             th {
+              font-family: 'NanumSquareRoundWeb', sans-serif;
+              font-size: 14px;
+              font-weight: normal;
+              color: #231f20;
               padding: unset;
               float: left;
               padding-top: 15px;
             }
             td {
+              font-family: 'NanumSquareRoundWeb', sans-serif;
               vertical-align: middle;
             }
             ins {
-              background: pink;
+              background: unset;
+              text-decoration: none;
+              color: #533c97;
             }
           }
         }
