@@ -32,20 +32,6 @@ const _t = (current_lang, key) => {
     '비밀번호는 필수 필드 입니다': 'Password Information is Missed',
     '비밀번호가 같지 않습니다': 'Email Information is NOT match',
 
-    // PhoneVerfication
-    '휴대폰 번호를 입력 해주세요': 'Phone Number is Missed',
-    '입력하신 휴대폰으로 인증 번호가 전송되었습니다.':
-      'Please Check the Verification Code in Your Phone',
-    '휴대폰 인증이 정상적으로 되지 않았습니다': 'Your Phone is Not Verified',
-    '도착한 인증번호를 입력해 주세요': 'Verification Code is Missed',
-    '휴대폰이 정상적으로 인증 되었습니다':
-      'Verification is Successfully completed',
-    '휴대폰 인증에 실패 했습니다': 'Verification Failed',
-    '휴대폰으로 인증번호를 보내주세요':
-      'Please Send Verification Code to Your Phone',
-    '입력하신 휴대폰으로 등록된 사용자를 찾을 수 없습니다.':
-      "Can't find a user by the phone",
-
     // Find Id
     '이메일 찾기': 'Find Email',
     '비밀번호 찾기': 'Find Password',
@@ -61,6 +47,22 @@ const _t = (current_lang, key) => {
     '': '',
     '': '',
     '': '',
+
+    // PhoneVerfication
+    '휴대폰 번호를 입력 해주세요': 'Phone Number is Missed',
+    '입력하신 휴대폰으로 인증 번호가 전송되었습니다.':
+      'Please Check the Verification Code in Your Phone',
+    '휴대폰 인증이 정상적으로 되지 않았습니다': 'Your Phone is Not Verified',
+    '도착한 인증번호를 입력해 주세요': 'Verification Code is Missed',
+    '휴대폰이 정상적으로 인증 되었습니다':
+      'Verification is Successfully completed',
+    '휴대폰 인증에 실패 했습니다': 'Verification Failed',
+    '휴대폰으로 인증번호를 보내주세요':
+      'Please Send Verification Code to Your Phone',
+    '입력하신 휴대폰으로 등록된 사용자를 찾을 수 없습니다.':
+      "Can't find a user by the phone",
+    '남은 시간': 'Time Left',
+    '새로운 인증번호를 요청해주세요': 'Try Again',
 
     // Menus
     헬로고릴라: 'HelloGorilla',
