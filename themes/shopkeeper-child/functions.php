@@ -223,7 +223,7 @@ function enable_gutenberg_by_post_type($is_enabled, $post_type) {
 add_filter('gutenberg_can_edit_post_type', 'enable_gutenberg_by_post_type', 10, 2);
 
 /**
- * change editor role name to 아티스트
+ * change editor role name to 아티스트 / shop_manager to 고객
  */
 
 function wps_change_role_name() {
@@ -231,6 +231,8 @@ function wps_change_role_name() {
 	if ( ! isset( $wp_roles ) )
 			$wp_roles = new WP_Roles();
 	$wp_roles->roles['editor']['name'] = '아티스트';
+	$wp_roles->roles['shop_manager']['name'] = '고객';
+	$wp_roles->role_names['shop_manager'] = '고객';
 }
 add_action('init', 'wps_change_role_name');
 
