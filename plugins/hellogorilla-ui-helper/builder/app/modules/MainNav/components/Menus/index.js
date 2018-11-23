@@ -268,6 +268,24 @@ const Menus = ({
                 <a href={_u(current_lang, '/cart')}>
                   <span className="hellogorilla hellogorilla-icon-cart-61" />
                 </a>
+
+                <MenuItem
+                  href={
+                    current_lang == 'en'
+                      ? '#'
+                      : location.pathname.slice(0, -1) + '-en'
+                  }
+                >
+                  EN
+                </MenuItem>
+
+                <MenuItem
+                  href={
+                    current_lang == 'en' ? location.pathname.slice(0, -4) : '#'
+                  }
+                >
+                  한글
+                </MenuItem>
               </Right>
               {/* <a href="/my-account">카트</a> */}
 
