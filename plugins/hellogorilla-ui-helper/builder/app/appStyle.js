@@ -21,6 +21,7 @@ import checkoutStyle from './WooCommerceStyles/checkoutStyle'
 import addressStyle from './WooCommerceStyles/addressStyle'
 import editaccountStyle from './WooCommerceStyles/editaccountStyle'
 import payagainStyle from './WooCommerceStyles/payagainStyle'
+import orderreceivedStyle from './WooCommerceStyles/orderreceivedStyle'
 
 // App Styles
 injectGlobal`
@@ -269,5 +270,6 @@ injectGlobal`
   ${checkoutStyle}
   ${editaccountStyle}
   ${payagainStyle}
+  ${orderreceivedStyle}
 
 `
