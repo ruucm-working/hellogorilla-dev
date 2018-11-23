@@ -377,7 +377,6 @@ const SignUp = ({
               )}
               component={passwordmatchField}
             />
-            phoneValue : {phoneValue}
             <SendCode
               current_lang={current_lang}
               setPhoneValue={setPhoneValue}
