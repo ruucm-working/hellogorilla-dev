@@ -12,6 +12,10 @@ const newseditorStyle = css`
       min-height: 1400px;
     }
     .kboard-attr-row {
+      .attr-name {
+        color: #231f20;
+        font-size: 24px;
+      }
       label {
         font-family: 'NanumSquareRoundWeb', sans-serif;
         margin-top: 10px;
@@ -23,13 +27,9 @@ const newseditorStyle = css`
       }
     }
     .kboard-default-button-small {
-      /* width: 144px;
-      height: 52px;
-      background: #533c97;
-      color: white; */
     }
     .wp-editor-wrap {
-      margin-top: 150px;
+      top: 100px;
       .button {
         background: #533c97 !important;
         color: white !important;
@@ -37,7 +37,17 @@ const newseditorStyle = css`
       }
     }
     .kboard-control {
-      margin-top: unset;
+      margin-top: 850px;
+      @media all and (max-width: 700px) {
+        margin-top: 1500px;
+      }
+      .kboard-default-button-small {
+        cursor: pointer;
+        font-size: 24px !important;
+        :hover {
+          color: unset;
+        }
+      }
     }
   }
 `
