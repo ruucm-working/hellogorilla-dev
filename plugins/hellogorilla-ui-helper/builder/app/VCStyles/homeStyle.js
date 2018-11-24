@@ -76,8 +76,10 @@ const style = css`
 
 
   .artist {
-    padding-left: ${wem2(240)};
-    padding-right: ${wem2(240)};
+    max-width: 960px;
+    margin: 0 auto;
+    /* padding-left: ${wem2(240)};
+    padding-right: ${wem2(240)}; */
     margin-top: ${wem2(144)};
   }
   .artist-header {

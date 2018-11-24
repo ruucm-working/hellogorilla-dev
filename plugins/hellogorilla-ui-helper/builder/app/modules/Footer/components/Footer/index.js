@@ -9,7 +9,7 @@ import styled, { css } from 'styled-components'
 import { Row, Column, EmptySpace } from 'ruucm-blocks/layouts'
 
 import { wem2 } from 'ruucm-blocks/tools/mixins'
-import media, { isTablet } from 'ruucm-blocks/tools/media'
+import media, { isTablet, isMobile } from 'ruucm-blocks/tools/media'
 
 const Wrap = styled.div`
   width: 100%;
@@ -31,6 +31,7 @@ const Content = styled.div`
   max-width: 960px;
   ${media.tablet`
     text-align: center;
+    font-size: 13px;
   `};
 `
 
