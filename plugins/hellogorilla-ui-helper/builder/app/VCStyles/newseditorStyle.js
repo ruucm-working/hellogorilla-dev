@@ -64,7 +64,6 @@ const newseditorStyle = css`
       }
       .kboard-default-button-small {
         cursor: pointer;
-
         font-size: 16px !important;
         :hover {
           color: unset;

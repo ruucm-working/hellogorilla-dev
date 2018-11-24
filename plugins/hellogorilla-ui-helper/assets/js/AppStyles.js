@@ -130,6 +130,37 @@ exports.default = style;
 
 /***/ }),
 
+/***/ "./builder/app/VCStyles/homeStyle.js":
+/*!*******************************************!*\
+  !*** ./builder/app/VCStyles/homeStyle.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
+
+var _mixins = __webpack_require__(/*! ruucm-blocks/tools/mixins */ "./node_modules/ruucm-blocks/tools/mixins.js");
+
+var _media = __webpack_require__(/*! ruucm-blocks/tools/media */ "./node_modules/ruucm-blocks/tools/media.js");
+
+var _media2 = _interopRequireDefault(_media);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// App Styles
+var style = (0, _styledComponents.css)(['.item{max-width:', ';margin:0 auto;margin-top:', ';}.item-header{text-align:center;font-size:', ';color:#231f20;margin-bottom:', ';}.item-img{cursor:pointer;margin-bottom:', ';}.item-title{font-size:', ';text-align:center;color:#231f20;margin-bottom:', ';}.item-text{font-size:', ';line-height:1.57;text-align:center;color:#918f8f;margin-bottom:', ';}.item-price{font-size:', ';text-align:center;color:#231f20;margin-bottom:0;}.item-more{margin-top:', ';width:', ';height:', ';border-radius:2px;border:solid 1px #533c97;background-color:#ffffff;position:relative;left:50%;transform:translateX(-50%);cursor:pointer;:hover{background-color:#533c97;color:white !important;}}.coupon,.woocommerce-shipping-destination,.woocommerce-shipping-calculator,.checkout_coupon_box{display:none;}.artist{padding-left:', ';padding-right:', ';margin-top:', ';}.artist-header{font-size:', ';color:#231f20;margin-bottom:', ';}.artist-img{cursor:pointer;margin-bottom:0;}.artist-more{width:', ';height:', ';border-radius:2px;border:solid 1px #533c97;background-color:#ffffff;margin-top:', ';position:relative;left:50%;transform:translateX(-50%);margin-bottom:', ';color:#533c97;cursor:pointer;:hover{background-color:#533c97;color:white !important;}}.more-text{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:', ';}.banner01{padding-left:240px;padding-right:240px;height:', ';background-color:#533c97;}.banner02{padding-left:240px;padding-right:240px;height:', ';background-color:#0eb780;}.banner-title{color:white;font-size:', ';line-height:1.5;}.banner-more{font-size:', ';color:#ffffff;cursor:pointer;}.banner-label{color:#ffffff;font-size:', ';white-space:nowrap;}.banner-text{font-size:', ';line-height:1.71;color:#ffffff;}.banner-img{font-size:', ';float:right;}.hellogorilla-about-image{}'], (0, _mixins.wem2)(960), (0, _mixins.wem2)(96), (0, _mixins.wem2)(32), (0, _mixins.wem2)(72), (0, _mixins.wem2)(24), (0, _mixins.wem2)(18), (0, _mixins.wem2)(12), (0, _mixins.wem2)(14), (0, _mixins.wem2)(12), (0, _mixins.wem2)(18), (0, _mixins.wem2)(72), (0, _mixins.wem2)(144), (0, _mixins.wem2)(48), (0, _mixins.wem2)(240), (0, _mixins.wem2)(240), (0, _mixins.wem2)(144), (0, _mixins.wem2)(32), (0, _mixins.wem2)(72), (0, _mixins.wem2)(144), (0, _mixins.wem2)(48), (0, _mixins.wem2)(72), (0, _mixins.wem2)(144), (0, _mixins.wem2)(16), (0, _mixins.wem2)(336), (0, _mixins.wem2)(336), (0, _mixins.wem2)(32), (0, _mixins.wem2)(14), (0, _mixins.wem2)(16), (0, _mixins.wem2)(14), (0, _mixins.wem2)(240));
+
+exports.default = style;
+
+/***/ }),
+
 /***/ "./builder/app/VCStyles/newartistStyle.js":
 /*!************************************************!*\
   !*** ./builder/app/VCStyles/newartistStyle.js ***!
@@ -233,6 +264,37 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var newseditorStyle = (0, _styledComponents.css)(['.page-id-20{.kboard-form{max-width:960px !important;margin:0 auto !important;min-height:1400px;}.kboard-attr-row{.attr-name{color:#231f20;font-size:24px;}label{font-family:\'NanumSquareRoundWeb\',sans-serif;margin-top:10px;}#kboard-input-title{margin-top:10px;border:1px solid #231f20;border-radius:2px;}}.kboard-default-button-small{}.wp-editor-wrap{top:100px;.button{background:#533c97 !important;color:white !important;height:100% !important;}}.kboard-control{margin-top:850px;@media all and (max-width:700px){margin-top:1500px;}.right{.kboard-default-button-small{border:1px solid #533c97;color:black;border-radius:2px;cursor:pointer;width:144px !important;height:48px;display:inline-block;font-size:16px !important;:hover{color:white;background:#533c97;}}}.kboard-default-button-small{cursor:pointer;font-size:16px !important;:hover{color:unset;}}}}']);
 
 exports.default = newseditorStyle;
+
+/***/ }),
+
+/***/ "./builder/app/VCStyles/notFoundStyle.js":
+/*!***********************************************!*\
+  !*** ./builder/app/VCStyles/notFoundStyle.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
+
+var _mixins = __webpack_require__(/*! ruucm-blocks/tools/mixins */ "./node_modules/ruucm-blocks/tools/mixins.js");
+
+var _media = __webpack_require__(/*! ruucm-blocks/tools/media */ "./node_modules/ruucm-blocks/tools/media.js");
+
+var _media2 = _interopRequireDefault(_media);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// App Styles
+var notFoundStyle = (0, _styledComponents.css)(['.error404{.error-404{padding-top:', ';padding-bottom:', ';.error-banner{img{width:', ';}}.page-title{font-size:', ' !important;}.page-content{display:none;}}}'], (0, _mixins.wem2)(200), (0, _mixins.wem2)(200), (0, _mixins.wem2)(100), (0, _mixins.wem2)(30));
+
+exports.default = notFoundStyle;
 
 /***/ }),
 
@@ -441,7 +503,7 @@ var _media2 = _interopRequireDefault(_media);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var style = (0, _styledComponents.css)(['.page-id-8{.post-8{font-family:\'NanumSquareRoundWeb\',sans-serif;.woocommerce-notice{background:#533c97;}.woocommerce-order-details{max-width:500px;margin:0 auto;.woocommerce-order-details__title{font-size:24px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;}.woocommerce-table--order-details{width:100%;thead{tr{border-bottom:1px solid #e9e8e8;}th{font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:14px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;}}tbody{tr{font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:14px;font-weight:normal;color:#231f20;}td{border-bottom:1px solid #e9e8e8;font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:14px;font-weight:normal;color:#231f20;}.product-total{text-align:center;}}tfoot{th{font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:14px;font-weight:normal;color:#231f20;padding:unset;float:left;padding-top:15px;}td{font-family:\'NanumSquareRoundWeb\',sans-serif;vertical-align:middle;text-align:center;}ins{background:unset;text-decoration:none;color:#533c97;}}}}.woocommerce-customer-details{max-width:500px;}}}']);
+var style = (0, _styledComponents.css)(['.page-id-8{.post-8{font-family:\'NanumSquareRoundWeb\',sans-serif;.woocommerce-notice{background:#533c97;}.woocommerce-order-overview{li{}}.woocommerce-order-details{max-width:500px;margin:0 auto;.woocommerce-order-details__title{font-size:24px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;}.woocommerce-table--order-details{width:100%;thead{tr{border-bottom:1px solid #e9e8e8;}th{font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:14px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;}}tbody{tr{font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:14px;font-weight:normal;color:#231f20;}td{border-bottom:1px solid #e9e8e8;font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:14px;font-weight:normal;color:#231f20;}.product-total{text-align:center;}}tfoot{th{font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:14px;font-weight:normal;color:#231f20;padding:unset;float:left;padding-top:15px;}td{font-family:\'NanumSquareRoundWeb\',sans-serif;vertical-align:middle;text-align:center;}ins{background:unset;text-decoration:none;color:#533c97;}}}}.woocommerce-customer-details{max-width:500px;}}}']);
 
 exports.default = style;
 
@@ -491,7 +553,7 @@ var _taggedTemplateLiteral2 = __webpack_require__(/*! babel-runtime/helpers/tagg
 
 var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  ', '\n  /* Fonts */\n  ', '\n  @import url(\'https://fonts.googleapis.com/css?family=Lato:400,700\');\n  /* Icons */\n  ', '\n  \n  /* Body Styles */\n\n  body {\n    font-family: "NanumSquareRoundWeb", sans-serif;\n    font-weight: 300;\n  }\n  /* Content Styles */\n  #content {\n    overflow-x: hidden;\n  }\n  \n\n\n  /* Basic Typo */\n  *, h1, h2, h3, p, a {\n    /* font-family: NanumSquareWeb */\n  }\n  a {\n    text-decoration: none;\n    color: inherit;\n  }\n  /* WooCommerce */\n\n  .has-very-dark-gray-color {\n    color: #231f20;\n    font-size: 14px;\n    line-height: 1.71;\n    padding-bottom:32px;\n  }\n\n  .has-cyan-bluish-gray-color {\n  color: #918f8f;\n  padding-bottom: 32px;\n  }\n\n  .has-small-font-size{\n  font-size: 11px;\n  line-height: 1.73;\n  }\n\n  .wp-block-image {\n    padding-bottom: 32px;\n    width: 100%;\n  }\n  .wp-block-video {\n    padding-bottom: 32px;\n  }\n  img {\n    width: 100%;\n    height: auto;\n  }\n\n  .item {\n    /* padding-left: ', '; */\n    /* padding-right: ', '; */\n    max-width: ', ';\n    margin: 0 auto;\n    margin-top: ', ';\n  }\n  .item-header {\n    text-align: center;\n    font-size: ', ';\n    color: #231f20;\n    margin-bottom: ', ';\n  }\n  .item-img {\n    cursor: pointer;\n    margin-bottom:', ';\n  }\n  .item-title {\n    /* width: 288px;\n    height: 18px; */\n    font-size: ', ';\n    text-align: center;\n    color: #231f20;\n    margin-bottom: ', ';\n  }\n  .item-text {\n    /* width: 288px;\n    height: 44px; */\n    font-size: ', ';\n    line-height: 1.57;\n    text-align: center;\n    color: #918f8f;\n    margin-bottom: ', ';\n  }\n  .item-price {\n    /* width: 288px;\n    height: 18px; */\n    font-size: ', ';\n    text-align: center;\n    color: #231f20;\n    margin-bottom:0;\n  }\n  .item-more {\n    margin-top: ', ';\n    width: ', ';\n    height: ', ';\n    border-radius: 2px;\n    border: solid 1px #533c97;\n    background-color: #ffffff;\n    position: relative;\n    left: 50%;\n    transform: translateX(-50%);\n    cursor: pointer;\n  }\n  .coupon, .woocommerce-shipping-destination, .woocommerce-shipping-calculator, .checkout_coupon_box  {\n    display: none;\n  }\n\n\n\n  .artist {\n    padding-left: ', ';\n    padding-right: ', ';\n    margin-top: ', ';\n  }\n  .artist-header {\n    /* width: 199px;\n    height: 32px; */\n    font-size: ', ';\n    color: #231f20;\n    margin-bottom: ', ';\n  }\n  .artist-img {\n    cursor:pointer;\n    margin-bottom:0;\n  }\n  .artist-more {\n    width: ', ';\n    height: ', ';\n    border-radius: 2px;\n    border: solid 1px #533c97;\n    background-color: #ffffff;\n    margin-top: ', ';\n    position: relative;\n    left: 50%;\n    transform: translateX(-50%);\n    margin-bottom:', ';\n    cursor: pointer;\n  }\n  .more-text {\n   position: absolute;\n   left: 50%;\n   top: 50%;\n   transform: translate(-50%, -50%);\n   font-size: ', ';\n   color: #533c97;\n  }\n\n\n\n  .banner01 {\n    padding-left: 240px;\n    padding-right: 240px;\n    height: ', ';\n    background-color: #533c97;\n  }\n  .banner02 {\n    padding-left: 240px;\n    padding-right: 240px;\n    height: ', ';\n    background-color: #0eb780;\n  }\n  .banner-title {\n    color:white;\n    font-size: ', ';\n    line-height: 1.5;\n  }\n  .banner-more {\n    font-size: ', ';\n    color: #ffffff;\n    cursor: pointer;\n  }\n  .banner-label {\n    color: #ffffff;\n    font-size: ', ';\n    white-space: nowrap;\n  }\n  .banner-text {\n    font-size: ', ';\n    line-height: 1.71;\n    color: #ffffff;\n  }\n  .banner-img {\n    font-size: ', ';\n    float: right;\n  }\n  .hellogorilla-about-image {\n    /* font-size: ', ';\n    float: right; */\n  }\n\n  /* Visual Composer Styles */\n  ', '\n  .single {\n    p {\n      line-height: 1.7em;\n    }\n  }\n  .woocommerce-account {\n    #content {\n      padding: 200px 0;\n      max-width: 960px;\n      margin: 0 auto;\n    }\n  }\n  .woocommerce-cart  {\n    .hellogorilla-page-banner {\n      margin-bottom: 80px;\n    }\n    .return-to-shop {\n      display: none;\n    }\n  }\n \n  .woocommerce-checkout  {\n    .hellogorilla-page-banner {\n      margin-bottom: 80px;\n    }\n  }\n \n  .page-id-121, .page-id-194  {\n    #footer-content {\n      margin-top: 0;\n    }\n    #footer-line {\n      background: transparent;\n    }\n  }\n\n  ', '\n  ', '\n  ', '\n  ', '\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n\n'], ['\n  ', '\n  /* Fonts */\n  ', '\n  @import url(\'https://fonts.googleapis.com/css?family=Lato:400,700\');\n  /* Icons */\n  ', '\n  \n  /* Body Styles */\n\n  body {\n    font-family: "NanumSquareRoundWeb", sans-serif;\n    font-weight: 300;\n  }\n  /* Content Styles */\n  #content {\n    overflow-x: hidden;\n  }\n  \n\n\n  /* Basic Typo */\n  *, h1, h2, h3, p, a {\n    /* font-family: NanumSquareWeb */\n  }\n  a {\n    text-decoration: none;\n    color: inherit;\n  }\n  /* WooCommerce */\n\n  .has-very-dark-gray-color {\n    color: #231f20;\n    font-size: 14px;\n    line-height: 1.71;\n    padding-bottom:32px;\n  }\n\n  .has-cyan-bluish-gray-color {\n  color: #918f8f;\n  padding-bottom: 32px;\n  }\n\n  .has-small-font-size{\n  font-size: 11px;\n  line-height: 1.73;\n  }\n\n  .wp-block-image {\n    padding-bottom: 32px;\n    width: 100%;\n  }\n  .wp-block-video {\n    padding-bottom: 32px;\n  }\n  img {\n    width: 100%;\n    height: auto;\n  }\n\n  .item {\n    /* padding-left: ', '; */\n    /* padding-right: ', '; */\n    max-width: ', ';\n    margin: 0 auto;\n    margin-top: ', ';\n  }\n  .item-header {\n    text-align: center;\n    font-size: ', ';\n    color: #231f20;\n    margin-bottom: ', ';\n  }\n  .item-img {\n    cursor: pointer;\n    margin-bottom:', ';\n  }\n  .item-title {\n    /* width: 288px;\n    height: 18px; */\n    font-size: ', ';\n    text-align: center;\n    color: #231f20;\n    margin-bottom: ', ';\n  }\n  .item-text {\n    /* width: 288px;\n    height: 44px; */\n    font-size: ', ';\n    line-height: 1.57;\n    text-align: center;\n    color: #918f8f;\n    margin-bottom: ', ';\n  }\n  .item-price {\n    /* width: 288px;\n    height: 18px; */\n    font-size: ', ';\n    text-align: center;\n    color: #231f20;\n    margin-bottom:0;\n  }\n  .item-more {\n    margin-top: ', ';\n    width: ', ';\n    height: ', ';\n    border-radius: 2px;\n    border: solid 1px #533c97;\n    background-color: #ffffff;\n    position: relative;\n    left: 50%;\n    transform: translateX(-50%);\n    cursor: pointer;\n  }\n  .coupon, .woocommerce-shipping-destination, .woocommerce-shipping-calculator, .checkout_coupon_box  {\n    display: none;\n  }\n\n\n\n  .artist {\n    padding-left: ', ';\n    padding-right: ', ';\n    margin-top: ', ';\n  }\n  .artist-header {\n    /* width: 199px;\n    height: 32px; */\n    font-size: ', ';\n    color: #231f20;\n    margin-bottom: ', ';\n  }\n  .artist-img {\n    cursor:pointer;\n    margin-bottom:0;\n  }\n  .artist-more {\n    width: ', ';\n    height: ', ';\n    border-radius: 2px;\n    border: solid 1px #533c97;\n    background-color: #ffffff;\n    margin-top: ', ';\n    position: relative;\n    left: 50%;\n    transform: translateX(-50%);\n    margin-bottom:', ';\n    cursor: pointer;\n  }\n  .more-text {\n   position: absolute;\n   left: 50%;\n   top: 50%;\n   transform: translate(-50%, -50%);\n   font-size: ', ';\n   color: #533c97;\n  }\n\n\n\n  .banner01 {\n    padding-left: 240px;\n    padding-right: 240px;\n    height: ', ';\n    background-color: #533c97;\n  }\n  .banner02 {\n    padding-left: 240px;\n    padding-right: 240px;\n    height: ', ';\n    background-color: #0eb780;\n  }\n  .banner-title {\n    color:white;\n    font-size: ', ';\n    line-height: 1.5;\n  }\n  .banner-more {\n    font-size: ', ';\n    color: #ffffff;\n    cursor: pointer;\n  }\n  .banner-label {\n    color: #ffffff;\n    font-size: ', ';\n    white-space: nowrap;\n  }\n  .banner-text {\n    font-size: ', ';\n    line-height: 1.71;\n    color: #ffffff;\n  }\n  .banner-img {\n    font-size: ', ';\n    float: right;\n  }\n  .hellogorilla-about-image {\n    /* font-size: ', ';\n    float: right; */\n  }\n\n  /* Visual Composer Styles */\n  ', '\n  .single {\n    p {\n      line-height: 1.7em;\n    }\n  }\n  .woocommerce-account {\n    #content {\n      padding: 200px 0;\n      max-width: 960px;\n      margin: 0 auto;\n    }\n  }\n  .woocommerce-cart  {\n    .hellogorilla-page-banner {\n      margin-bottom: 80px;\n    }\n    .return-to-shop {\n      display: none;\n    }\n  }\n \n  .woocommerce-checkout  {\n    .hellogorilla-page-banner {\n      margin-bottom: 80px;\n    }\n  }\n \n  .page-id-121, .page-id-194  {\n    #footer-content {\n      margin-top: 0;\n    }\n    #footer-line {\n      background: transparent;\n    }\n  }\n\n  ', '\n  ', '\n  ', '\n  ', '\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n\n']);
+var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  ', '\n  /* Fonts */\n  ', '\n  @import url(\'https://fonts.googleapis.com/css?family=Lato:400,700\');\n  /* Icons */\n  ', '\n  \n  /* Body Styles */\n\n  body {\n    font-family: "NanumSquareRoundWeb", sans-serif;\n    font-weight: 300;\n  }\n  /* Content Styles */\n  #content {\n    overflow-x: hidden;\n  }\n  \n\n\n  /* Basic Typo */\n  *, h1, h2, h3, p, a {\n    /* font-family: NanumSquareWeb */\n  }\n  a {\n    text-decoration: none;\n    color: inherit;\n  }\n  /* WooCommerce */\n\n  .has-very-dark-gray-color {\n    color: #231f20;\n    font-size: 14px;\n    line-height: 1.71;\n    padding-bottom:32px;\n  }\n\n  .has-cyan-bluish-gray-color {\n  color: #918f8f;\n  padding-bottom: 32px;\n  }\n\n  .has-small-font-size{\n  font-size: 11px;\n  line-height: 1.73;\n  }\n\n  .wp-block-image {\n    padding-bottom: 32px;\n    width: 100%;\n  }\n  .wp-block-video {\n    padding-bottom: 32px;\n  }\n  img {\n    width: 100%;\n    height: auto;\n  }\n\n\n  /* Visual Composer Styles */\n  ', '\n  .single {\n    p {\n      line-height: 1.7em;\n    }\n  }\n  .woocommerce-account {\n    #content {\n      padding: 200px 0;\n      max-width: 960px;\n      margin: 0 auto;\n    }\n  }\n  .woocommerce-cart  {\n    .hellogorilla-page-banner {\n      margin-bottom: 80px;\n    }\n    .return-to-shop {\n      display: none;\n    }\n  }\n \n  .woocommerce-checkout  {\n    .hellogorilla-page-banner {\n      margin-bottom: 80px;\n    }\n  }\n \n  .page-id-121, .page-id-194  {\n    #footer-content {\n      margin-top: 0;\n    }\n    #footer-line {\n      background: transparent;\n    }\n  }\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n\n'], ['\n  ', '\n  /* Fonts */\n  ', '\n  @import url(\'https://fonts.googleapis.com/css?family=Lato:400,700\');\n  /* Icons */\n  ', '\n  \n  /* Body Styles */\n\n  body {\n    font-family: "NanumSquareRoundWeb", sans-serif;\n    font-weight: 300;\n  }\n  /* Content Styles */\n  #content {\n    overflow-x: hidden;\n  }\n  \n\n\n  /* Basic Typo */\n  *, h1, h2, h3, p, a {\n    /* font-family: NanumSquareWeb */\n  }\n  a {\n    text-decoration: none;\n    color: inherit;\n  }\n  /* WooCommerce */\n\n  .has-very-dark-gray-color {\n    color: #231f20;\n    font-size: 14px;\n    line-height: 1.71;\n    padding-bottom:32px;\n  }\n\n  .has-cyan-bluish-gray-color {\n  color: #918f8f;\n  padding-bottom: 32px;\n  }\n\n  .has-small-font-size{\n  font-size: 11px;\n  line-height: 1.73;\n  }\n\n  .wp-block-image {\n    padding-bottom: 32px;\n    width: 100%;\n  }\n  .wp-block-video {\n    padding-bottom: 32px;\n  }\n  img {\n    width: 100%;\n    height: auto;\n  }\n\n\n  /* Visual Composer Styles */\n  ', '\n  .single {\n    p {\n      line-height: 1.7em;\n    }\n  }\n  .woocommerce-account {\n    #content {\n      padding: 200px 0;\n      max-width: 960px;\n      margin: 0 auto;\n    }\n  }\n  .woocommerce-cart  {\n    .hellogorilla-page-banner {\n      margin-bottom: 80px;\n    }\n    .return-to-shop {\n      display: none;\n    }\n  }\n \n  .woocommerce-checkout  {\n    .hellogorilla-page-banner {\n      margin-bottom: 80px;\n    }\n  }\n \n  .page-id-121, .page-id-194  {\n    #footer-content {\n      margin-top: 0;\n    }\n    #footer-line {\n      background: transparent;\n    }\n  }\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n\n']);
 
 // import NanumSquare from 'ruucm-blocks/css-patterns/fonts/NanumSquare'
 // import Montserrat from 'ruucm-blocks/css-patterns/fonts/Montserrat'
@@ -514,6 +576,10 @@ var _HelloGorillaIcon2 = _interopRequireDefault(_HelloGorillaIcon);
 
 var _mixins = __webpack_require__(/*! ruucm-blocks/tools/mixins */ "./node_modules/ruucm-blocks/tools/mixins.js");
 
+var _homeStyle = __webpack_require__(/*! ./VCStyles/homeStyle */ "./builder/app/VCStyles/homeStyle.js");
+
+var _homeStyle2 = _interopRequireDefault(_homeStyle);
+
 var _aboutStyle = __webpack_require__(/*! ./VCStyles/aboutStyle */ "./builder/app/VCStyles/aboutStyle.js");
 
 var _aboutStyle2 = _interopRequireDefault(_aboutStyle);
@@ -533,6 +599,10 @@ var _newseditorStyle2 = _interopRequireDefault(_newseditorStyle);
 var _newartistStyle = __webpack_require__(/*! ./VCStyles/newartistStyle */ "./builder/app/VCStyles/newartistStyle.js");
 
 var _newartistStyle2 = _interopRequireDefault(_newartistStyle);
+
+var _notFoundStyle = __webpack_require__(/*! ./VCStyles/notFoundStyle */ "./builder/app/VCStyles/notFoundStyle.js");
+
+var _notFoundStyle2 = _interopRequireDefault(_notFoundStyle);
 
 var _orderStyle = __webpack_require__(/*! ./WooCommerceStyles/orderStyle */ "./builder/app/WooCommerceStyles/orderStyle.js");
 
@@ -565,7 +635,7 @@ var _orderreceivedStyle2 = _interopRequireDefault(_orderreceivedStyle);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // App Styles
-(0, _styledComponents.injectGlobal)(_templateObject, _normalize2.default, _NanumSquareRound2.default, _HelloGorillaIcon2.default, (0, _mixins.wem2)(240), (0, _mixins.wem2)(240), (0, _mixins.wem2)(960), (0, _mixins.wem2)(96), (0, _mixins.wem2)(32), (0, _mixins.wem2)(72), (0, _mixins.wem2)(24), (0, _mixins.wem2)(18), (0, _mixins.wem2)(12), (0, _mixins.wem2)(14), (0, _mixins.wem2)(12), (0, _mixins.wem2)(18), (0, _mixins.wem2)(72), (0, _mixins.wem2)(144), (0, _mixins.wem2)(48), (0, _mixins.wem2)(240), (0, _mixins.wem2)(240), (0, _mixins.wem2)(144), (0, _mixins.wem2)(32), (0, _mixins.wem2)(72), (0, _mixins.wem2)(116), (0, _mixins.wem2)(48), (0, _mixins.wem2)(72), (0, _mixins.wem2)(144), (0, _mixins.wem2)(16), (0, _mixins.wem2)(336), (0, _mixins.wem2)(336), (0, _mixins.wem2)(32), (0, _mixins.wem2)(14), (0, _mixins.wem2)(16), (0, _mixins.wem2)(14), (0, _mixins.wem2)(240), (0, _mixins.wem2)(240), _aboutStyle2.default, _programStyle2.default, _newsStyle2.default, _newseditorStyle2.default, _newartistStyle2.default, _orderStyle2.default, _addressStyle2.default, _cartStyle2.default, _checkoutStyle2.default, _editaccountStyle2.default, _payagainStyle2.default, _orderreceivedStyle2.default);
+(0, _styledComponents.injectGlobal)(_templateObject, _normalize2.default, _NanumSquareRound2.default, _HelloGorillaIcon2.default, _aboutStyle2.default, _homeStyle2.default, _programStyle2.default, _newsStyle2.default, _newseditorStyle2.default, _newartistStyle2.default, _notFoundStyle2.default, _orderStyle2.default, _addressStyle2.default, _cartStyle2.default, _checkoutStyle2.default, _editaccountStyle2.default, _payagainStyle2.default, _orderreceivedStyle2.default);
 
 /***/ }),
 

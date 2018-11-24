@@ -10,6 +10,11 @@ const style = css`
       .woocommerce-notice {
         background: #533c97;
       }
+      .woocommerce-order-overview {
+        li {
+          /* width: fit-content !important; */
+        }
+      }
       /* 주문 상세 */
       .woocommerce-order-details {
         max-width: 500px;
