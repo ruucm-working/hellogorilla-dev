@@ -4,18 +4,18 @@ import { wem, wem2, center } from 'ruucm-blocks/tools/mixins'
 import media from 'ruucm-blocks/tools/media'
 
 // App Styles
-const newsStyle = css`
+const notFoundStyle = css`
   .error404 {
     .error-404 {
-      padding-top: 200px;
-      padding-bottom: 200px;
+      padding-top: ${wem2(200)};
+      padding-bottom: ${wem2(200)};
       .error-banner {
         img {
-          width: 100px;
+          width: ${wem2(100)};
         }
       }
       .page-title {
-        font-size: 30px !important;
+        font-size: ${wem2(30)} !important;
       }
       .page-content {
         display: none;
@@ -24,4 +24,4 @@ const newsStyle = css`
   }
 `
 
-export default newsStyle
+export default notFoundStyle

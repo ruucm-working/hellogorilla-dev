@@ -261,9 +261,9 @@ var _media2 = _interopRequireDefault(_media);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // App Styles
-var newsStyle = (0, _styledComponents.css)(['.error404{.error-404{padding-top:200px;padding-bottom:200px;.error-banner{img{width:100px;}}.page-title{font-size:30px !important;}.page-content{display:none;}}}']);
+var notFoundStyle = (0, _styledComponents.css)(['.error404{.error-404{padding-top:', ';padding-bottom:', ';.error-banner{img{width:', ';}}.page-title{font-size:', ' !important;}.page-content{display:none;}}}'], (0, _mixins.wem2)(200), (0, _mixins.wem2)(200), (0, _mixins.wem2)(100), (0, _mixins.wem2)(30));
 
-exports.default = newsStyle;
+exports.default = notFoundStyle;
 
 /***/ }),
 
