@@ -9,6 +9,7 @@ const newseditorStyle = css`
     .kboard-form {
       max-width: 960px !important;
       margin: 0 auto !important;
+      min-height: 1400px;
     }
     .kboard-attr-row {
       label {
@@ -21,9 +22,22 @@ const newseditorStyle = css`
         border-radius: 2px;
       }
     }
-    .button {
-      background: #533c97 !important;
-      color: white !important;
+    .kboard-default-button-small {
+      /* width: 144px;
+      height: 52px;
+      background: #533c97;
+      color: white; */
+    }
+    .wp-editor-wrap {
+      margin-top: 150px;
+      .button {
+        background: #533c97 !important;
+        color: white !important;
+        height: 100% !important;
+      }
+    }
+    .kboard-control {
+      margin-top: unset;
     }
   }
 `
