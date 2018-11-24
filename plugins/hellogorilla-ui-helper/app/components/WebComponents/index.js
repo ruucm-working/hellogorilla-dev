@@ -13,7 +13,7 @@ import configureStore from './store'
 import MainNav from './MainNav'
 import Footer from './Footer'
 
-import PostGrid from './PostGrid'
+// import PostGrid from './PostGrid'
 import SinglePost from './SinglePost'
 
 import HelloGorillaShop from './HelloGorillaShop'
@@ -107,17 +107,17 @@ document.addEventListener('DOMContentLoaded', function() {
     )
   }
 
-  for (let i = 0; i < shortcode_postGrid_containers.length; ++i) {
-    const objectId = shortcode_postGrid_containers[i].getAttribute(
-      'data-object-id'
-    )
-    ReactDOM.render(
-      <Provider store={store}>
-        <PostGrid wpObject={window[objectId]} />
-      </Provider>,
-      shortcode_postGrid_containers[i]
-    )
-  }
+  // for (let i = 0; i < shortcode_postGrid_containers.length; ++i) {
+  //   const objectId = shortcode_postGrid_containers[i].getAttribute(
+  //     'data-object-id'
+  //   )
+  //   ReactDOM.render(
+  //     <Provider store={store}>
+  //       <PostGrid wpObject={window[objectId]} />
+  //     </Provider>,
+  //     shortcode_postGrid_containers[i]
+  //   )
+  // }
 
   for (let i = 0; i < shortcode_singlePost_containers.length; ++i) {
     const objectId = shortcode_singlePost_containers[i].getAttribute(

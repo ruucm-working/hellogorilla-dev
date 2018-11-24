@@ -5,7 +5,7 @@
  */
 
 import React from 'react'
-import { compose, lifecycle, withState } from 'recompose'
+import { compose, lifecycle, withState, withHandlers } from 'recompose'
 import styled, { css } from 'styled-components'
 import { log } from 'ruucm-util'
 
@@ -17,6 +17,7 @@ import { Row, Column } from 'ruucm-blocks/layouts'
 
 import bannerImg from '../../assets/banner.png'
 import LoadingSpinner from '../../../shared/LoadingSpinner'
+import { _t } from '../../../shared/translate'
 
 // ../../assets/banner.png
 const Height = styled.div`
@@ -36,21 +37,6 @@ const Wrap = styled.div`
   margin: 0 auto;
   margin-top: 128px;
   position: relative;
-`
-
-const Search = styled.div`
-  background: center / cover no-repeat url(${bannerImg});
-  height: 288px;
-  position: relative;
-`
-const SearchTitle = styled.div`
-  font-size: 28px;
-  text-align: center;
-  color: #533c97;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
 `
 
 const Category = styled.ul`
@@ -118,7 +104,21 @@ const StyledRow = styled(Row)`
   top: ${wem2(144)};
 `
 
-const ShopGrid = ({ active, setActive, contents, setContents, ...props }) => {
+const ShopGrid = ({
+  // from parent
+  contents,
+
+  // local
+  active,
+  setActive,
+  setContents,
+  filterByLang,
+
+  // wordpress
+  current_lang,
+
+  ...props
+}) => {
   return (
     <Height>
       <Wrap>
@@ -131,7 +131,7 @@ const ShopGrid = ({ active, setActive, contents, setContents, ...props }) => {
             }}
             active={active == 0}
           >
-            <CategoryItem> 모두 보기</CategoryItem>
+            <CategoryItem>{_t(current_lang, '모두 보기')}</CategoryItem>
           </CategoryWrapAll>
 
           <CategoryWrap
@@ -142,7 +142,7 @@ const ShopGrid = ({ active, setActive, contents, setContents, ...props }) => {
             }}
             active={active == 1}
           >
-            <CategoryItem> 카테고리 1</CategoryItem>
+            <CategoryItem>{_t(current_lang, '카테고리 1')}</CategoryItem>
           </CategoryWrap>
 
           {/* <CategoryWrap
@@ -178,7 +178,7 @@ const ShopGrid = ({ active, setActive, contents, setContents, ...props }) => {
 
         {contents ? (
           <StyledRow>
-            {map(contents, (item, id) => {
+            {map(filterByLang(current_lang, contents), (item, id) => {
               return (
                 <Column col="4">
                   <Product
@@ -202,6 +202,19 @@ const ShopGrid = ({ active, setActive, contents, setContents, ...props }) => {
 const enhance = compose(
   withState('active', 'setActive', 0),
   withState('contents', 'setContents', null),
+  withHandlers({
+    filterByLang: props => (lang, contents) => {
+      var res = []
+      var res_en = []
+      for (let index = 0; index < contents.length; index++) {
+        contents[index].meta_data.filter(obj => {
+          if (obj.key === 'amazon_link') res_en.push(contents[index])
+        })
+      }
+      res = contents.filter(val => !res_en.includes(val))
+      return lang == 'en' ? res_en : res
+    },
+  }),
 
   lifecycle({
     componentWillReceiveProps(nextProps) {

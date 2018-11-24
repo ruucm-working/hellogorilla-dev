@@ -78,6 +78,10 @@ const _t = (current_lang, key) => {
     // User Profile
     '작품 소개': 'Portfolios',
     '관련 상품': 'Products',
+
+    // Shop
+    '모두 보기': 'All',
+    '카테고리 1': 'Category 1',
   }
 
   return current_lang == 'en' ? data[key] : key
