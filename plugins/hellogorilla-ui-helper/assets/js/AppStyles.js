@@ -230,7 +230,7 @@ var _media2 = _interopRequireDefault(_media);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // App Styles
-var newseditorStyle = (0, _styledComponents.css)(['.page-id-20{.kboard-form{max-width:960px !important;margin:0 auto !important;}}']);
+var newseditorStyle = (0, _styledComponents.css)(['.page-id-20{.kboard-form{max-width:960px !important;margin:0 auto !important;}.kboard-attr-row{label{font-family:\'NanumSquareRoundWeb\',sans-serif;margin-top:10px;}#kboard-input-title{margin-top:10px;border:1px solid #231f20;border-radius:2px;}}.button{background:#533c97 !important;color:white !important;}}']);
 
 exports.default = newseditorStyle;
 
