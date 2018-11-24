@@ -7,7 +7,16 @@ const style = css`
   .page-id-9 {
     .post-9 {
       padding-left: 10px;
+      /* error */
+      .woocommerce-error {
+        color: #231f20 !important;
+        ::before {
+          color: #231f20 !important;
+          vertical-align: middle;
+        }
+      }
     }
+
     /* navigation css */
     .woocommerce-MyAccount-navigation {
       width: ${wem2(55)};
