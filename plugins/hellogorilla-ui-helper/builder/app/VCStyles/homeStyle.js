@@ -5,7 +5,12 @@ import media from 'ruucm-blocks/tools/media'
 
 // App Styles
 const style = css`
-
+.page-id-121{
+  .wpb_column {
+    @media all and (max-width: 763px) {
+    margin-top: 20px;
+    }
+  }
   .item {
     /* padding-left: ${wem2(240)}; */
     /* padding-right: ${wem2(240)}; */
@@ -59,7 +64,7 @@ const style = css`
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
-        :hover {
+      :hover {
       background-color:  #533c97;
       color: white !important;
     }
@@ -154,6 +159,7 @@ const style = css`
     /* font-size: ${wem2(240)};
     float: right; */
   }
+}
 `
 
 export default style
