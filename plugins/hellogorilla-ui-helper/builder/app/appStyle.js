@@ -16,6 +16,7 @@ import programStyle from './VCStyles/programStyle'
 import newsStyle from './VCStyles/newsStyle'
 import newseditorStyle from './VCStyles/newseditorStyle'
 import newartistStyle from './VCStyles/newartistStyle'
+import notFoundStyle from './VCStyles/notFoundStyle'
 
 import orderStyle from './WooCommerceStyles/orderStyle'
 import cartStyle from './WooCommerceStyles/cartStyle'
@@ -269,6 +270,7 @@ injectGlobal`
   ${newsStyle}
   ${newseditorStyle}
   ${newartistStyle}
+  ${notFoundStyle}
 
   ${orderStyle}
   ${addressStyle}
