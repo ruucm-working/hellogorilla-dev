@@ -186,6 +186,7 @@ const ShopGrid = ({
                     data={item}
                     addToCart={props.addToCart}
                     index={id}
+                    current_lang={current_lang}
                   />
                 </Column>
               )

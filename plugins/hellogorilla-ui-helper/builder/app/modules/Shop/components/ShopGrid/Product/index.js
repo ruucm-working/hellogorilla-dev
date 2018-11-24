@@ -12,6 +12,7 @@ import { log, commaPipe } from 'ruucm-util'
 import { map } from 'lodash'
 import { Row, Column, EmptySpace } from 'ruucm-blocks/layouts'
 import { wem2 } from 'ruucm-blocks/tools/mixins'
+import { _t } from '../../../../shared/translate'
 
 const ProductWrap = styled.div`
   padding-bottom: ${wem2(72)};
@@ -146,6 +147,7 @@ const Desc = styled.h1`
   font-size: ${wem2(14)};
   line-height: 1.57;
   color: #918f8f;
+  white-space: normal;
 `
 
 const MoreLink = styled.a``
@@ -177,12 +179,24 @@ const SalePrice = styled.div`
   color: #4a4a4a;
 `
 
-const Product = props => {
-  log('props', props)
+const Product = ({ current_lang, ...props }) => {
   const { data, addToCart, index } = props
+  const amazon_link = data.meta_data.filter(obj => {
+    return obj.key === 'amazon_link'
+  })
+  log('amazon_link', amazon_link)
   return (
     <ProductWrap>
-      <MoreLink href={data.permalink}>
+      <MoreLink
+        href={
+          current_lang == 'en'
+            ? data.meta_data.filter(obj => {
+                return obj.key === 'amazon_link'
+              })[0].value
+            : data.permalink
+        }
+        target={current_lang == 'en' ? '_blank' : ''}
+      >
         <Wrapper featured={data.featured}>
           <ProductWrapper>
             <Center>
@@ -229,9 +243,13 @@ const Product = props => {
 
       <Price>
         <RegularPrice show={data.sale_price}>
-          ￦{commaPipe(data.regular_price)}
+          {_t(current_lang, '￦')}
+          {commaPipe(data.regular_price)}
         </RegularPrice>
-        <SalePrice>￦{commaPipe(data.price)}</SalePrice>
+        <SalePrice>
+          {_t(current_lang, '￦')}
+          {commaPipe(data.price)}
+        </SalePrice>
       </Price>
     </ProductWrap>
   )

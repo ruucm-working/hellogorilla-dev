@@ -82,6 +82,7 @@ const _t = (current_lang, key) => {
     // Shop
     '모두 보기': 'All',
     '카테고리 1': 'Category 1',
+    '￦': '$',
   }
 
   return current_lang == 'en' ? data[key] : key
