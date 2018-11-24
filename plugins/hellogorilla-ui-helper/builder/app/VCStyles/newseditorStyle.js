@@ -4,13 +4,13 @@ import { wem, wem2, center } from 'ruucm-blocks/tools/mixins'
 import media from 'ruucm-blocks/tools/media'
 
 // App Styles
-const style = css`
+const newseditorStyle = css`
   .page-id-20 {
-    .kboard-default-editor {
+    .kboard-form {
       max-width: 960px !important;
       margin: 0 auto !important;
     }
   }
 `
 
-export default style
+export default newseditorStyle
