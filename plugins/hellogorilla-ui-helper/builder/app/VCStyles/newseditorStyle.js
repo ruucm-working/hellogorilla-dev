@@ -27,8 +27,13 @@ const newseditorStyle = css`
       }
     }
     .kboard-default-button-small {
+      /* width: 144px;
+      height: 52px;
+      background: #533c97;
+      color: white; */
     }
     .wp-editor-wrap {
+      /* padding-top: 150px; */
       top: 100px;
       .button {
         background: #533c97 !important;
@@ -41,9 +46,26 @@ const newseditorStyle = css`
       @media all and (max-width: 700px) {
         margin-top: 1500px;
       }
+      .right {
+        .kboard-default-button-small {
+          border: 1px solid #533c97;
+          color: black;
+          border-radius: 2px;
+          cursor: pointer;
+          width: 144px !important;
+          height: 48px;
+          display: inline-block;
+          font-size: 16px !important;
+          :hover {
+            color: white;
+            background: #533c97;
+          }
+        }
+      }
       .kboard-default-button-small {
         cursor: pointer;
-        font-size: 24px !important;
+
+        font-size: 16px !important;
         :hover {
           color: unset;
         }
