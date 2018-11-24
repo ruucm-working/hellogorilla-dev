@@ -22,8 +22,14 @@ const newseditorStyle = css`
         border-radius: 2px;
       }
     }
+    .kboard-default-button-small {
+      /* width: 144px;
+      height: 52px;
+      background: #533c97;
+      color: white; */
+    }
     .wp-editor-wrap {
-      margin-top: 130px;
+      margin-top: 150px;
       .button {
         background: #533c97 !important;
         color: white !important;
@@ -31,7 +37,7 @@ const newseditorStyle = css`
       }
     }
     .kboard-control {
-      /* margin-top: 620px; */
+      margin-top: unset;
     }
   }
 `
