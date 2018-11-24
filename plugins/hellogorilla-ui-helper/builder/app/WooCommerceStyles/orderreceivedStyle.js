@@ -12,6 +12,8 @@ const style = css`
       }
       /* 주문 상세 */
       .woocommerce-order-details {
+        max-width: 500px;
+        margin: 0 auto;
         .woocommerce-order-details__title {
           font-size: 24px;
           font-weight: normal;
@@ -22,6 +24,7 @@ const style = css`
           color: #231f20;
         }
         .woocommerce-table--order-details {
+          width: 100%;
           thead {
             tr {
               border-bottom: 1px solid #e9e8e8;
@@ -77,6 +80,9 @@ const style = css`
             }
           }
         }
+      }
+      .woocommerce-customer-details {
+        max-width: 500px;
       }
     }
   }
