@@ -26,6 +26,7 @@ const style = css`
         input {
           border: 1px solid #231f20;
           border-radius: 2px;
+          margin-top: 10px;
         }
         .NewArtist__RederFieldLabel-sc-1mlgdnv-8 {
           font-family: 'NanumSquareRoundWeb', sans-serif;
@@ -36,6 +37,9 @@ const style = css`
           line-height: 1;
           letter-spacing: normal;
           color: #231f20;
+        }
+        div {
+          margin-top: 10px;
         }
       }
     }

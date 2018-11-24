@@ -155,7 +155,7 @@ var _media2 = _interopRequireDefault(_media);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // App Styles
-var style = (0, _styledComponents.css)(['.page-id-168{.site-content{max-width:960px;margin:0 auto;margin-top:', ';font-family:\'NanumSquareRoundWeb\',sans-serif;.NewArtist__Title-sc-1mlgdnv-3{font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:24px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;}.NewArtist__Form-sc-1mlgdnv-5{input{border:1px solid #231f20;border-radius:2px;}.NewArtist__RederFieldLabel-sc-1mlgdnv-8{font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:11px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;}}}}'], (0, _mixins.wem2)(128));
+var style = (0, _styledComponents.css)(['.page-id-168{.site-content{max-width:960px;margin:0 auto;margin-top:', ';font-family:\'NanumSquareRoundWeb\',sans-serif;.NewArtist__Title-sc-1mlgdnv-3{font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:24px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;}.NewArtist__Form-sc-1mlgdnv-5{input{border:1px solid #231f20;border-radius:2px;margin-top:10px;}.NewArtist__RederFieldLabel-sc-1mlgdnv-8{font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:11px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;}div{margin-top:10px;}}}}'], (0, _mixins.wem2)(128));
 
 exports.default = style;
 
