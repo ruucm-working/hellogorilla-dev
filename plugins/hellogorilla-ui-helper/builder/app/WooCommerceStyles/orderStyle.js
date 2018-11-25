@@ -97,6 +97,33 @@ const style = css`
         border-bottom: 1px solid #0fb780;
         padding-bottom: unset !important;
       }
+
+      /* 주문 상세보기 view-order */
+      mark {
+        background-color: #533c97 !important;
+        color: white !important;
+      }
+      .woocommerce-order-details {
+        /* background: pink; */
+        margin-top: 20px;
+        .woocommerce-table--order-details {
+          display: unset;
+          tbody {
+            .woocommerce-table__product-total {
+              text-align: center;
+            }
+          }
+          tfoot {
+            th {
+              float: left;
+              padding-left: unset;
+            }
+            td {
+              text-align: center;
+            }
+          }
+        }
+      }
     }
   }
 `
