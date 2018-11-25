@@ -23,12 +23,19 @@ const Wrapper = styled.div`
   /* position: absolute; */
   left: 0;
   display: inline-block;
+  ${media.tablet`
+    display: block;
+    max-width: 335px;
+    margin: 0 auto;
+  `};
 `
 
 const Left = styled.div`
   margin-left: ${wem2(240)};
   max-width: ${wem2(528)};
-  /* padding-top: 72px; */
+  ${media.tablet`
+    margin: 0;
+  `};
 `
 const MainImgWrap = styled.div`
   position: relative;

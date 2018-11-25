@@ -18,9 +18,9 @@ const burgerStyle = css`
 
   /* Position and sizing of clickable cross button */
   .bm-cross-button {
-    height: 34px !important;
-    top: 24px !important;
-    left: 19px !important;
+    height: 21px !important;
+    top: 13px !important;
+    left: 16px !important;
   }
 
   /* Color/shape of close button cross */
@@ -49,7 +49,7 @@ const burgerStyle = css`
 
   /* Wrapper for item list */
   .bm-item-list {
-    color: #b8b7ad;
+    background: rgba(35, 31, 32, 0.85);
   }
 
   /* Individual item */

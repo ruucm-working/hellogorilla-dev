@@ -277,6 +277,9 @@ const newsStyle = css`
       text-align: center;
       font-weight: 900;
       margin-top: ${wem2(60)};
+      ${media.tablet`
+        margin-top: 0;
+      `};
     }
   }
 `
