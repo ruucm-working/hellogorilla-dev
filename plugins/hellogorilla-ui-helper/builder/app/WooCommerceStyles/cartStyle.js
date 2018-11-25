@@ -48,6 +48,7 @@ const style = css`
         }
         .product-name {
           display: inline-block ;
+          padding-top: 60px;
           a {
             /* position: absolute; */
             font-family: 'NanumSquareRoundWeb', sans-serif !important;
