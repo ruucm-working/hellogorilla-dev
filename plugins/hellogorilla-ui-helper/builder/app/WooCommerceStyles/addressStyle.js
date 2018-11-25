@@ -16,9 +16,13 @@ const style = css`
       max-width: 708px;
       min-width: 300px;
       /* 주소 편집 */
-      /* .woocommerce-address-fields {
-        max-width: 708px;
-        min-width: 300px; */
+      .woocommerce-address-fields {
+        /* max-width: 708px;
+        min-width: 300px;  */
+        p {
+          padding-left: unset !important;
+        }
+      }
       /* .col2-set {
         margin-top: unset;
       } */
@@ -66,7 +70,6 @@ const style = css`
         }
       }
 
-      /* margin-top: 40px; */
       .form-row {
         label {
           font-size: 11px;
@@ -82,6 +85,10 @@ const style = css`
             border-bottom: unset;
           }
         }
+        ${media.tablet`
+          width: 100%;
+          padding-left: unset !important;
+        `}
       }
       .input-text {
         margin-top: 10px;
@@ -91,6 +98,9 @@ const style = css`
         background-color: rgba(244, 243, 243, 0.5);
         max-width: 708px;
         min-width: 300px;
+        ${media.tablet`
+          width: 100%;
+        `}
       }
       #billing_country_field {
         display: none;
