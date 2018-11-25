@@ -54,6 +54,7 @@ const newseditorStyle = css`
           cursor: pointer;
           width: 144px !important;
           height: 48px;
+          line-height: 48px;
           display: inline-block;
           font-size: 16px !important;
           :hover {

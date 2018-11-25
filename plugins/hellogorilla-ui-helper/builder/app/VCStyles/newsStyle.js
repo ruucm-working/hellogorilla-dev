@@ -163,7 +163,9 @@ const newsStyle = css`
       letter-spacing: normal;
       color: #231f20;
       ${media.tablet`
-        font-size: 12px;    
+        font-size: 12px;   
+        position: absolute;
+        right: 30px; 
       `};
     }
     .kboard-content {

@@ -45,7 +45,7 @@ const style = css`
     .woocommerce-MyAccount-content {
       width: ${wem2(708)};
       table {
-        width: 100%;
+        width: 100vw;
       }
       thead {
         border-bottom: 1px solid #e9e8e8;
