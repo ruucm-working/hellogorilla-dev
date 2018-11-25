@@ -4,7 +4,8 @@ import { wem, wem2, center } from 'ruucm-blocks/tools/mixins'
 import media from 'ruucm-blocks/tools/media'
 
 const style = css`
-  .page-id-362 {
+  .page-id-362,
+  .page-id-377 {
     .vc_column-inner {
       padding: unset;
     }

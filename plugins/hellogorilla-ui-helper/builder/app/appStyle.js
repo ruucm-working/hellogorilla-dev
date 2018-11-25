@@ -10,6 +10,7 @@ import NanumSquareRound from 'ruucm-blocks/css-patterns/fonts/NanumSquareRound'
 import HelloGorillaIcon from 'ruucm-blocks/css-patterns/icons/HelloGorillaIcon'
 
 import { wem2 } from 'ruucm-blocks/tools/mixins'
+import media from 'ruucm-blocks/tools/media'
 
 import homeStyle from './VCStyles/homeStyle'
 import aboutStyle from './VCStyles/aboutStyle'
@@ -125,6 +126,11 @@ injectGlobal`
     #footer-line {
       background: transparent;
     }
+  }
+  .hide-on-mobile {
+    ${media.tablet`
+      display: none;
+    `};
   }
 
   ${homeStyle}
