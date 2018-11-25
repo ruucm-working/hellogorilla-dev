@@ -273,6 +273,8 @@ const Menus = ({
                   href={
                     current_lang == 'en'
                       ? '#'
+                      : location.pathname == '/'
+                      ? 'home-en'
                       : location.pathname.slice(0, -1) +
                         '-en' +
                         (location.search ? '/' + location.search : '')

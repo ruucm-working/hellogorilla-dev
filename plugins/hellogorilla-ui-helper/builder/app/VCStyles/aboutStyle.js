@@ -76,6 +76,95 @@ const style = css`
     .hello-gorilla-fifth-row {
       margin-top: 192px;
     }
+
+    /* History */
+    .history-item {
+      border-left: 1px solid #e9e8e8;
+      padding-bottom: 65px;
+      &:last-child {
+        border: none;
+      }
+      .year {
+        font-family: Lato;
+        font-size: 20px;
+        color: #ffffff;
+        line-height: 80px;
+        height: 80px;
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+        &:before {
+          width: 75px;
+          height: 70px;
+          transform: rotate(-15deg);
+          display: block;
+          content: '';
+          background: #533c97;
+          position: absolute;
+          top: 5px;
+          left: -15px;
+          z-index: -1;
+        }
+      }
+      .title {
+        font-family: NanumSquareRoundWeb;
+        font-size: 16px;
+        color: #231f20;
+        display: inline-block;
+        margin-left: 40px;
+        &.number2 {
+          margin-left: 90px !important;
+          margin-top: 40px;
+          margin-bottom: 12px;
+        }
+        ${media.tablet`
+          margin-top: 10px;
+          margin-bottom: 20px;
+          &.number2 {
+            margin-left: 40px !important;
+          }
+        `};
+      }
+      .desc {
+        font-family: NanumSquareRoundWeb;
+        font-size: 14px;
+        color: #918f8f;
+        margin-left: 90px;
+        margin-bottom: 20px;
+        vertical-align: top;
+        margin-right: 10px;
+        ${media.tablet`
+          margin-left: 40px;
+        `};
+      }
+      .certi-icon {
+        ${media.tablet`
+          margin-top: 30px;
+          margin-left: 40px;
+        `};
+      }
+      img {
+        margin-left: 90px;
+        width: 288px;
+        ${media.tablet`
+          margin-left: 40px;
+          width: 230px;
+        `};
+      }
+
+      &.two-line {
+        .year {
+          line-height: 30px;
+          padding-top: 10px;
+        }
+        .title {
+          margin-left: 33px;
+          ${media.tablet`
+            margin-left: 40px;
+          `};
+        }
+      }
+    }
   }
 `
 
