@@ -195,6 +195,7 @@ const style = css`
         /* vertical-align: middle */
         left: 35px !important;
         top: -3px !important;
+      font-size: 28px !important;
       }
     }
   }
