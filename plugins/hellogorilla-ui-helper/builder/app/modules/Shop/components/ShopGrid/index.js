@@ -23,6 +23,10 @@ import { _t } from '../../../shared/translate'
 const Height = styled.div`
   min-height: 1928px;
   /* height: fill-available; */
+  @media all and (max-width: 575px) {
+    /* width: 100%; */
+    min-height: 3000px;
+  }
 `
 
 const Wrap = styled.div`
@@ -37,11 +41,11 @@ const Wrap = styled.div`
   margin: 0 auto;
   margin-top: 128px;
   position: relative;
-    .col-sm-4 {
+    /* .col-sm-4 {
     @media all and (min-width: 575px) {
       height: 350px !important;
     }
-  }
+  } */
 `
 
 const Category = styled.ul`

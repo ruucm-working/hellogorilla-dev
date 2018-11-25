@@ -14,6 +14,15 @@ import { Row, Column, EmptySpace } from 'ruucm-blocks/layouts'
 import { wem2 } from 'ruucm-blocks/tools/mixins'
 import { _t } from '../../../../shared/translate'
 
+const Size = styled.div`
+  /* width: ${wem2(288)};
+  height: ${wem2(360)}; */
+  @media all and (max-width: 575px) {
+    /* width: 100%; */
+    height: 350px;
+  }
+`
+
 const ProductWrap = styled.div`
   padding-bottom: ${wem2(72)};
 `
@@ -31,15 +40,8 @@ const Center = styled.div`
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
-`
-
-const Size = styled.div`
-  /* width: ${wem2(288)};
-  height: ${wem2(360)}; */
-  @media all and (max-width: 575px) {
-    /* width: 100%; */
-    height: 350px;
-  }
+  /* width: 100%;
+  height: 100%; */
 `
 
 const ImageWrapper = styled.div`
@@ -47,6 +49,8 @@ const ImageWrapper = styled.div`
   height: ${wem2(360)};
   /* width: 100%;
   height: 100%; */
+  max-width: 288px;
+  height: 360px;
   @media all and (max-width: 575px) {
     width: 253px;
     height: 316px;
