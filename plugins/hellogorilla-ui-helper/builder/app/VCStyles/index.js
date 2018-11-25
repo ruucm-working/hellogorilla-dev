@@ -4,6 +4,7 @@ import newsStyle from './newsStyle'
 import newseditorStyle from './newseditorStyle'
 import newartistStyle from './newartistStyle'
 import homeStyle from './homeStyle'
+import agreeprivacyStyle from './agreeprivacyStyle'
 
 export {
   aboutStyle,
@@ -12,4 +13,5 @@ export {
   newseditorStyle,
   newartistStyle,
   homeStyle,
+  agreeprivacyStyle,
 }

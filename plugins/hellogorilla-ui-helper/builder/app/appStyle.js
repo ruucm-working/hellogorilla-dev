@@ -19,6 +19,7 @@ import newsStyle from './VCStyles/newsStyle'
 import newseditorStyle from './VCStyles/newseditorStyle'
 import newartistStyle from './VCStyles/newartistStyle'
 import notFoundStyle from './VCStyles/notFoundStyle'
+import agreeprivacyStyle from './VCStyles/agreeprivacyStyle'
 
 import orderStyle from './WooCommerceStyles/orderStyle'
 import cartStyle from './WooCommerceStyles/cartStyle'
@@ -139,6 +140,7 @@ injectGlobal`
   ${newseditorStyle}
   ${newartistStyle}
   ${notFoundStyle}
+  ${agreeprivacyStyle}
 
   ${orderStyle}
   ${addressStyle}

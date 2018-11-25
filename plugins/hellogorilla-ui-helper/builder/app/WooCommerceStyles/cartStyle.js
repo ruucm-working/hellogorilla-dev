@@ -160,6 +160,9 @@ const style = css`
         font-family: 'NanumSquareRoundWeb', sans-serif !important;
         font-size: 14px!important;
         color: #231f20 !important;
+        ${media.tablet`
+        padding: unset !important;
+        `}
       }
       td {
         /* vertical-align: middle; */
