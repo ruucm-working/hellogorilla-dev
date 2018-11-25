@@ -139,33 +139,35 @@ const style = css`
         padding: unset !important;
         vertical-align: middle !important;
         font-family: 'NanumSquareRoundWeb', sans-serif !important;
-        font-size: ${wem2(14)} !important;
+        font-size: 14px !important;
         color: #231f20 !important;
       }
       td {
+        /* float: right; */
         padding: unset !important;
         float: right;
       }
       .woocommerce-Price-amount {
         font-family: 'NanumSquareRoundWeb', sans-serif !important;
-        font-size: ${wem2(14)} !important;
+        font-size: 14px !important;
         color: #231f20 !important;
       }
     }
     /* 고정 요금 */
     .woocommerce-shipping-totals {
       th {
-        vertical-align: middle;
+        /* vertical-align: middle; */
         font-family: 'NanumSquareRoundWeb', sans-serif !important;
-        font-size: ${wem2(14)} !important;
+        font-size: 14px!important;
         color: #231f20 !important;
       }
       td {
-        vertical-align: middle;
+        /* vertical-align: middle; */
+        white-space: nowrap;
       }
       label {
         font-family: 'NanumSquareRoundWeb', sans-serif !important;
-        font-size: ${wem2(14)} !important;
+        font-size: 14px !important;
         color: #231f20 !important;
         float: right;
         ::before {
@@ -180,7 +182,7 @@ const style = css`
       }
       .woocommerce-Price-amount {
         font-family: 'NanumSquareRoundWeb', sans-serif !important;
-        font-size: ${wem2(14)} !important;
+        font-size: 14px !important;
         color: #231f20 !important;
       }
     }
@@ -190,7 +192,7 @@ const style = css`
       th {
         vertical-align: middle;
         font-family: 'NanumSquareRoundWeb', sans-serif !important;
-        font-size: ${wem2(16)} !important;
+        font-size: 16px !important;
         color: #533c97 !important;
       }
       td {
@@ -199,7 +201,7 @@ const style = css`
       }
       .woocommerce-Price-amount {
         font-family: 'NanumSquareRoundWeb', sans-serif !important;
-        font-size: ${wem2(16)} !important;
+        font-size: 16px !important;
         color: #533c97 !important;
       }
     }
@@ -218,7 +220,7 @@ const style = css`
 
     /* 장바구니 비었을때 */
     .cart-empty {
-      font-size: ${wem2(25)};
+      font-size: 25px;
       &:before {
         display: none;
       }
