@@ -18,14 +18,17 @@ const style = css`
       margin-left: 150px !important  
       } */
       thead {
-        display: unset !important;
+        /* display: unset !important; */
         tr {
           white-space: nowrap;
           .product-remove {
-            display: none;
+            display: none !important;
           }
           .product-thumbnail {
-            display: none;
+            display: none !important;
+          }
+          .product-subtotal {
+            display: none !important;
           }
         }
       }
@@ -132,6 +135,12 @@ const style = css`
         ::before {
           display: none !important;
         }
+      }
+      .woocommerce-shipping-destination {
+        display: none !important;
+      }  
+      .woocommerce-shipping-calculator {
+        display: none !important;
       }
       .woocommerce-Price-amount {
         font-family: 'NanumSquareRoundWeb', sans-serif !important;
