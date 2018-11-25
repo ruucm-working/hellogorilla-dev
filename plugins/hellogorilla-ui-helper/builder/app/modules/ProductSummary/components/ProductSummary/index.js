@@ -17,7 +17,7 @@ import { wem, center, wem2 } from 'ruucm-blocks/tools/mixins'
 import media, { isMobile } from 'ruucm-blocks/tools/media'
 import LoadingSpinner from '../../../shared/LoadingSpinner'
 
-const View = styled.div`
+const Wrap = styled.div`
   position: relative;
   min-height: 72px;
 `
@@ -43,6 +43,11 @@ const Label = styled.div`
   padding-bottom: 24px;
   font-size: 14px;
   line-height: 14px;
+
+  ${media.tablet`
+    margin-top: 30px;
+    padding-bottom: 0;
+  `};
 `
 const Title = styled.h1`
   font-size: 28px;
@@ -142,6 +147,16 @@ const OrderButton = styled.a`
   background-color: #805de9;
   display: inline-block;
   position: relative;
+  ${media.tablet`
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+  `};
 `
 const OrderCenter = styled.div`
   top: 50%;
@@ -219,8 +234,18 @@ const LoadingText = styled.h1`
 `
 
 // Mobile
+const FixedModal = styled.div`
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px -2px 2px 0px;
+  padding: 15px;
+`
 const OrderButtonCloser = styled.div`
-  /* background: white;
+  background: white;
   width: 100px;
   text-align: center;
   top: -20px;
@@ -229,16 +254,17 @@ const OrderButtonCloser = styled.div`
   box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.3);
   border-radius: 4px 4px 0 0;
   span {
-    font-size: 20px;
-    transform: rotate(90deg);
+    font-size: 10px;
     display: inline-block;
-    color: #ec943f;
+    &:before {
+      color: #533c97;
+    }
     ${props =>
       props.optionOpened &&
       css`
-        transform: rotate(270deg);
+        transform: rotate(180deg);
       `};
-  } */
+  }
 `
 const OptionBox = styled.div``
 
@@ -332,7 +358,7 @@ const ProductSummary = ({
   }
 
   return contents ? (
-    <View>
+    <Wrap>
       <Wrapper>
         {/* <MainImg src={contents.images[0].src} /> */}
 
@@ -415,63 +441,74 @@ const ProductSummary = ({
         </Right>
 
         {/* Mobile */}
-        {/* <MobileOnly>
-        <OrderButtonCloser onClick={openOption} optionOpened={optionOpened}>
-          <span className="beerspick beerspick-keyboard_arrow_left" />
-        </OrderButtonCloser>
-        {optionOpened ? (
-          <OptionBox>
-            <Title
-              dangerouslySetInnerHTML={{
-                __html: contents.name,
-              }}
-            />
-            <Label>판매 가격</Label>
-            <Price
-              dangerouslySetInnerHTML={{
-                __html: contents.price_html,
-              }}
-            />
-            <EmptySpace height={wem(30)} />
-            {productOptions.length > 1 ? (
-              <div>
-                <Label>옵션</Label>
-                <Select
-                  value={selectedOption}
-                  onChange={optionSelected}
-                  options={productOptions}
-                  styles={colourStyles}
-                />
-              </div>
-            ) : (
-              ''
-            )}
-            <EmptySpace height={wem(30)} />
-            <Label>수량</Label>
-            <Quantity
-              value={quantity}
-              onChange={e => setQuantity(e.target.value)}
-            />
+        <MobileOnly>
+          <FixedModal>
+            <OrderButtonCloser onClick={openOption} optionOpened={optionOpened}>
+              <span className="hellogorilla hellogorilla-arrow-dropdown-selected" />
+            </OrderButtonCloser>
+            <OptionBox>
+              {optionOpened ? (
+                <div>
+                  <Title
+                    dangerouslySetInnerHTML={{
+                      __html: contents.name,
+                    }}
+                  />
+                  <Label>판매 가격</Label>
+                  <Price
+                    dangerouslySetInnerHTML={{
+                      __html: contents.price_html,
+                    }}
+                  />
+                  <EmptySpace height={wem(30)} />
+                  {productOptions.length > 1 ? (
+                    <div>
+                      <Label>옵션</Label>
+                      <Select
+                        value={selectedOption}
+                        onChange={optionSelected}
+                        options={productOptions}
+                        styles={colourStyles}
+                      />
+                    </div>
+                  ) : (
+                    ''
+                  )}
+                  <EmptySpace height={wem(30)} />
 
-            <EmptySpace height="200" />
-            <OrderButton
-              href={getCheckoutHref()}
-              onClick={() => orderButtonClicked(selectedOption)}
-            >
-              바로주문
-            </OrderButton>
-          </OptionBox>
-        ) : (
-          ''
-        )}
-        {optionOpened ? (
-          ''
-        ) : (
-          <OrderButton onClick={openOption}>주문하기</OrderButton>
-        )}
-      </MobileOnly> */}
+                  <MinusBox
+                    onClick={() => {
+                      if (quantity > 1) setQuantity(quantity - 1)
+                      else alert('상품의 최소 수량은 한개 입니다.')
+                    }}
+                  >
+                    <Minus>-</Minus>
+                  </MinusBox>
+                  <Number>
+                    <Quantity
+                      value={quantity}
+                      // onChange={e => setQuantity(e.target.value)}
+                    />
+                  </Number>
+                  <PlusBox onClick={() => setQuantity(quantity + 1)}>
+                    <Plus>+</Plus>
+                  </PlusBox>
+                  <EmptySpace height="100" />
+                  <OrderButton
+                    href={getCheckoutHref()}
+                    onClick={() => orderButtonClicked(selectedOption)}
+                  >
+                    카트에 담기
+                  </OrderButton>
+                </div>
+              ) : (
+                <OrderButton onClick={openOption}>카트에 담기</OrderButton>
+              )}
+            </OptionBox>
+          </FixedModal>
+        </MobileOnly>
       </Wrapper>
-    </View>
+    </Wrap>
   ) : (
     <LoadingSpinner />
   )
