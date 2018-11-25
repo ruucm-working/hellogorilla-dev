@@ -5,6 +5,7 @@ import media from 'ruucm-blocks/tools/media'
 
 // App Styles
 const prgramStyle = css`
+.page-id-270{
   .program-header {
     margin-top: 96px;
   }
@@ -20,6 +21,14 @@ const prgramStyle = css`
     text-align: center;
   }
 
+
+
+  .vc_row-fluid{
+  ${media.tablet`
+    /* min-height: 650px !important; */
+    margin-bottom: 20px;
+  `};
+  }
   .program-left {
     /* margin-top: 72px; */
     text-align: center;
@@ -46,7 +55,7 @@ const prgramStyle = css`
     line-height: 1.5;
     text-align: center;
     color: #231f20;
-    height: 144px;
+    height: 200px;
   }
   .program-info {
     font-size: 14px;
@@ -60,29 +69,41 @@ const prgramStyle = css`
 
   .program-artist-right {
     height: ${wem2(352)};
-    max-height: 352px;
+    /* min-height: 290px; */
+    /* max-height: 352px; */
     position: relative;
+    ${media.tablet`
+    height: 300px;
+  `};
   }
   .program-artist {
-    font-size: 16px;
+    font-size: ${wem2(16)};
     color: #533c97;
-    margin-top: 24px;
+    margin-top: ${wem2(24)};
     margin-bottom: unset;
+    ${media.tablet`
+    font-size: 14px;
+  `};
   }
   .program-artist-name {
-    font-size: 20px;
+    font-size: ${wem2(20)};
     color: #231f20;
-    margin-top: 10px;
+    margin-top: ${wem2(10)};
     margin-bottom: unset;
+    ${media.tablet`
+    font-size: 16px;
+  `};
   }
   .program-artist-info {
-    font-size: 14px;
+    font-size: ${wem2(14)};
     line-height: 2;
     color: #231f20;
     margin-bottom: unset;
     position: absolute; 
     bottom: 0;
-    /* margin-top: ${wem2(100)} !important; */
+    ${media.tablet`
+    font-size: 12px;
+  `};    
   }
 
 
@@ -126,7 +147,7 @@ const prgramStyle = css`
     /* font-size: ${wem2(240)};
     float: right; */
   }
-
+}
 `
 
 export default prgramStyle
