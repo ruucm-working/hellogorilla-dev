@@ -187,6 +187,16 @@ const style = css`
         display: none;
       }
     }
+    /* 쿠폰 */
+    .coupon {
+      position: relative;
+      ::before {
+        /* color: pink !important; */
+        /* vertical-align: middle */
+        left: 35px !important;
+        top: -3px !important;
+      }
+    }
   }
 `
 
