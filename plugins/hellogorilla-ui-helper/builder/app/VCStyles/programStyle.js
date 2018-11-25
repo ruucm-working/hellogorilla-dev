@@ -1,7 +1,7 @@
-import { css } from "styled-components";
+import { css } from 'styled-components'
 
-import { wem, wem2, center } from "ruucm-blocks/tools/mixins";
-import media from "ruucm-blocks/tools/media";
+import { wem, wem2, center } from 'ruucm-blocks/tools/mixins'
+import media from 'ruucm-blocks/tools/media'
 
 // App Styles
 const prgramStyle = css`
@@ -82,6 +82,49 @@ const prgramStyle = css`
     position: absolute;
     bottom: 0;
   }
-`;
 
-export default prgramStyle;
+
+  .banner01 {
+    padding-left: 240px;
+    padding-right: 240px;
+    height: ${wem2(336)};
+    background-color: #533c97;
+  }
+  .banner02 {
+    padding-left: 240px;
+    padding-right: 240px;
+    height: ${wem2(336)};
+    background-color: #0eb780;
+  }
+  .banner-title {
+    color:white;
+    font-size: ${wem2(32)};
+    line-height: 1.5;
+  }
+  .banner-more {
+    font-size: ${wem2(14)};
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .banner-label {
+    color: #ffffff;
+    font-size: ${wem2(16)};
+    white-space: nowrap;
+  }
+  .banner-text {
+    font-size: ${wem2(14)};
+    line-height: 1.71;
+    color: #ffffff;
+  }
+  .banner-img {
+    font-size: ${wem2(240)};
+    float: right;
+  }
+  .hellogorilla-about-image {
+    /* font-size: ${wem2(240)};
+    float: right; */
+  }
+
+`
+
+export default prgramStyle
