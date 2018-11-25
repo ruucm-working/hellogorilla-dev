@@ -127,12 +127,19 @@ const style = css`
       padding-right: 240px;
       height: ${wem2(336)};
       background-color: #533c97;
+      ${media.tablet`
+        padding: 0 20px;
+      `};
     }
     .banner02 {
       padding-left: 240px;
       padding-right: 240px;
       height: ${wem2(336)};
       background-color: #0eb780;
+      ${media.tablet`
+        padding: 0 20px;
+        height: 310px;
+      `};
     }
     .banner-title {
       color:white;
