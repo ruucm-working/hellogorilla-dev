@@ -45,16 +45,18 @@ const style = css`
     /* content css */
     .woocommerce-MyAccount-content {
       width: ${wem2(708)};
+      margin-top: unset;
       ${media.tablet`
       margin-top: 30px !important;
       width: 100%;
       `}
       @media all and (min-width: 738px) and (max-width: 768px) 
-      {
-      margin-top: 200px !important;      
-        }       
+      {  margin-top: 200px !important;      }       
       p {
-        padding-left: 30px;
+        font-weight: 400;
+          ${media.tablet`
+          padding-left: 30px !important;
+          `}
       } 
 
       table {

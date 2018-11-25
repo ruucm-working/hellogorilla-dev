@@ -16,74 +16,73 @@ const style = css`
       max-width: 708px;
       min-width: 300px;
       /* 주소 편집 */
-      .woocommerce-address-fields {
+      /* .woocommerce-address-fields {
         max-width: 708px;
-        min-width: 300px;
-        .col2-set {
-          margin-top: unset;
-        }
-        .u-columns {
-          font-family: 'NanumSquareRoundWeb', sans-serif;
-          font-weight: normal;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 1;
-          letter-spacing: normal;
-          color: #231f20;
-          .edit {
-            font-size: 11px;
-          }
-          address {
-          }
-        }
-
-        .woocommerce-Address-title title h3 {
-          font-size: ${wem2(24)};
-          font-weight: normal;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 1;
-          letter-spacing: normal;
-          color: #231f20;
-        }
-
-        margin-top: 40px;
-        .form-row {
-          label {
-            font-size: 11px;
-            font-weight: normal;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 1;
-            letter-spacing: normal;
-            color: #231f20;
-            .required {
-              float: top;
-              color: #231f20 !important;
-              border-bottom: unset;
-            }
-          }
-        }
-        .input-text {
-          margin-top: 10px;
-          width: ${wem2(708)};
-          height: 52px;
-          border-radius: 2px;
-          background-color: rgba(244, 243, 243, 0.5);
-          max-width: 708px;
-          min-width: 300px;
-        }
-        #billing_country_field {
-          display: none;
-        }
-        .button {
-          width: 100%;
-          /* height: 52px; */
-          background-color: #533c97 !important;
-          /* max-width: 708px;
-          min-width: 500px; */
+        min-width: 300px; */
+      /* .col2-set {
+        margin-top: unset;
+      } */
+      .u-columns {
+        font-family: 'NanumSquareRoundWeb', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        color: #231f20;
+        margin-top: 90px;
+        .edit {
+          font-size: 11px;
         }
       }
+
+      .woocommerce-Address-title title h3 {
+        font-size: ${wem2(24)};
+        font-weight: 400 !important;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        color: #231f20;
+      }
+
+      /* margin-top: 40px; */
+      .form-row {
+        label {
+          font-size: 11px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1;
+          letter-spacing: normal;
+          color: #231f20;
+          .required {
+            float: top;
+            color: #231f20 !important;
+            border-bottom: unset;
+          }
+        }
+      }
+      .input-text {
+        margin-top: 10px;
+        width: ${wem2(708)};
+        height: 52px;
+        border-radius: 2px;
+        background-color: rgba(244, 243, 243, 0.5);
+        max-width: 708px;
+        min-width: 300px;
+      }
+      #billing_country_field {
+        display: none;
+      }
+      .button {
+        width: 100%;
+        /* height: 52px; */
+        background-color: #533c97 !important;
+        /* max-width: 708px;
+          min-width: 500px; */
+      }
+      /* } */
     }
   }
 `
