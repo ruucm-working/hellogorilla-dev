@@ -19,9 +19,11 @@ const style = css`
       } */
       thead {
         display: unset !important;
+        /* width: 551px; */
+        position: relative;
         tr {
           white-space: nowrap;
-          border-bottom: 1px solid #e9e8e8;
+          /* border-bottom: 1px solid #e9e8e8; */
             .product-remove {
               display: none !important;
             }
@@ -31,13 +33,20 @@ const style = css`
             .product-subtotal {
               display: none !important;
             }
-          
+            .product-quantity {
+              padding-left: 205px;
+            }
+          .product-price {
+            position:absolute;
+            right: -95px;
+          }
         }
       }
 
       /* 상품정보 */
       tbody{
         float: left;
+        border-top: 1px solid #e9e8e8;
         .woocommerce-cart-form__cart-item {
           position: relative;
           border-bottom: 1px solid #e9e8e8 !important;
