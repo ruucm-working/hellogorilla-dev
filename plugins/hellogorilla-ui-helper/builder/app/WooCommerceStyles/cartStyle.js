@@ -34,33 +34,51 @@ const style = css`
       }
 
       /* 상품정보 */
-      .product-remove {
-        vertical-align: middle;
-      }
-      .product-thumbnail {
-        vertical-align: middle;
-        img {
-          height: 110px !important;
+      .woocommerce-cart-form__cart-item {
+        position: relative;
+        .product-remove {
           vertical-align: middle;
         }
-      }
-      .product-name {
-        display: inline-block ;
-        a {
-          /* position: absolute; */
-          font-family: 'NanumSquareRoundWeb', sans-serif !important;
-          font-size: ${wem2(14)} !important;
-          color: #231f20 !important;
-          font-weight: 300;
+        .product-thumbnail {
+          vertical-align: middle;
+          img {
+            height: 110px !important;
+            vertical-align: middle;
+          }
         }
-      }
-      .product-price {
-        position: absolute;
-        left: 314px;
-        top:100px;
-        padding: unset !important;
-        span {
-          /* position: absolute; */
+        .product-name {
+          display: inline-block ;
+          a {
+            /* position: absolute; */
+            font-family: 'NanumSquareRoundWeb', sans-serif !important;
+            font-size: 14px !important;
+            color: #231f20 !important;
+            font-weight: 300;
+          }
+        }
+        .product-price {
+          /* position: absolute;
+          left: ${wem2(310)};
+          top: ${wem2(100)};
+          padding: unset !important; */
+          display: block;
+          padding: unset !important;
+          margin-top: -20px;
+          span {
+            /* position: absolute; */
+          }
+        }
+        .product-quantity {
+          vertical-align: middle;
+          /* margin-top: 10px; */
+          padding: unset;
+          padding-top: 14px;
+          .screen-reader-text {
+            display: none;
+          }
+        }
+        .product-subtotal {
+          vertical-align: middle;
         }
       }
       /* 수량 */
