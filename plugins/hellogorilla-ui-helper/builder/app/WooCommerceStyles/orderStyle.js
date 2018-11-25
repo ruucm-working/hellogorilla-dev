@@ -56,8 +56,18 @@ const style = css`
         font-weight: 400;
           ${media.tablet`
           padding-left: 30px !important;
-          `}
+        `}
       } 
+      .woocommerce-customer-details--email {
+           ${media.tablet`
+          padding-left: unset !important;
+        `}
+      }
+      .woocommerce-customer-details--phone {
+          ${media.tablet`
+          padding-left: unset !important;
+        `}
+      }
 
       table {
         width: 100vw;

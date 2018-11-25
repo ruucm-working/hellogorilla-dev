@@ -21,6 +21,10 @@ const style = css`
         .col2-set {
           width: 50% !important;
           display: inline-block;
+          ${media.tablet`
+            display:block;
+            width: 100% !important;
+          `}
           .woocommerce-billing-fields {
             h3 {
               font-size: ${wem2(24)};
@@ -68,6 +72,9 @@ const style = css`
           width: 50% !important;
           margin: unset;
           display: inline-block;
+          ${media.tablet`
+            width: 100% !important;
+          `}
           /* 주문내역 */
           tr {
             th {
