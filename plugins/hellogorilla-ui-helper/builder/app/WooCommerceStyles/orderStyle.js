@@ -49,12 +49,13 @@ const style = css`
       margin-top: 30px !important;
       width: 100%;
       `}
-
       @media all and (min-width: 738px) and (max-width: 768px) 
       {
       margin-top: 200px !important;      
         }       
-       
+      p {
+        padding-left: 30px;
+      } 
 
       table {
         width: 100vw;
@@ -116,12 +117,11 @@ const style = css`
         color: white !important;
       }
       .woocommerce-order-details {
-        /* background: pink; */
         ${media.tablet`
         padding: unset;  
-        /* padding-left: 10px; */
         width: fit-content;
         margin: 0 auto;
+        margin-top: 30px;
          `}
         margin-top: 20px;
         .woocommerce-table--order-details {
@@ -144,7 +144,8 @@ const style = css`
       }
       .woocommerce-customer-details {
         ${media.tablet`
-        padding: unset;  
+        padding: unset; 
+        padding-left: 30px; 
         `}
       }
     }
