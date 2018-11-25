@@ -312,6 +312,7 @@ const Menus = ({
         contents={contents}
         current_lang={current_lang}
         shortcodeChild={props.shortcodeChild}
+        me={me}
       />
     </div>
   )

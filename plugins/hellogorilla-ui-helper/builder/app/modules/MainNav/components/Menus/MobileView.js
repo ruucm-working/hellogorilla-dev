@@ -10,39 +10,55 @@ import { _t, _u } from '../../../shared/translate'
 import { menuHeight, subMenuHeight } from '../../../shared/consts'
 
 const MenuWrapper = styled.div`
-  /* padding-top: 150px; */
   background: #533c97;
-`
-
-const LoginMenuItem = styled.div``
-
-const MenuHeader = styled.div`
-  height: 60px;
+  padding-top: 70px;
+  padding-bottom: 32px;
+  padding-left: 20px;
 `
 const MenuItem = styled.a`
   display: block;
-  padding-bottom: 32px;
-  padding-left: 20px;
+  font-family: NanumSquareRoundWeb;
   font-size: 15px;
-
   color: #ffffff;
+  margin-top: 32px;
   :hover {
     color: #0eb780;
+    font-weight: 700;
   }
 `
 const MenuFoldButton = styled.span`
   cursor: pointer;
   display: inline-block;
   transform: rotate(180deg);
+  height: 15px;
+  right: 16px;
+  font-size: 8px;
+  position: absolute;
+  line-height: 15px;
   ${props =>
     props.showing &&
     css`
       transform: initial;
     `}
 `
-const SubMenuItemWrap = styled.a``
+const SubMenuItemWrap = styled.div`
+  background-color: #0eb780;
+  margin-left: -20px;
+  margin-top: 16px;
+  padding-left: 32px;
+`
 
-const SubMenuItem = styled.a``
+const SubMenuItem = styled.a`
+  height: 45px;
+  line-height: 45px;
+  font-family: NanumSquareRoundWeb;
+  font-size: 13px;
+  color: #ffffff;
+  display: block;
+  :hover {
+    color: #533c97;
+  }
+`
 
 const CartMenuItem = styled.a`
   font-size: 26px;
@@ -94,6 +110,8 @@ const Wrap = styled.div`
 `
 
 const MobileView = ({
+  // from parent
+  me,
   contents,
   current_lang,
   showSub,
@@ -121,18 +139,20 @@ const MobileView = ({
         <MenuWrapper>
           {map(contents, (item, id) => {
             switch (id) {
-              case 0:
+              case 0: // 헬로고릴라 서브메뉴
                 return (
                   <div>
-                    <MenuHeader />
-                    <MenuItem key={id} href={item.url}>
+                    <MenuItem
+                      key={id}
+                      href={item.url}
+                      onClick={() => {
+                        setShowSub(!showSub)
+                      }}
+                    >
                       {_t(current_lang, item.title)}
 
                       <MenuFoldButton
                         className="hellogorilla hellogorilla-arrow-dropdown-selected"
-                        onClick={() => {
-                          setShowSub(!showSub)
-                        }}
                         showing={showSub}
                       />
                     </MenuItem>
@@ -168,6 +188,21 @@ const MobileView = ({
                 )
             }
           })}
+
+          {me ? (
+            <MenuItem href="/my-account">
+              {_t(current_lang, '마이페이지')}
+            </MenuItem>
+          ) : (
+            <span>
+              <MenuItem href={_u(current_lang, '/login')}>
+                {_t(current_lang, '로그인')}
+              </MenuItem>
+              <MenuItem href={_u(current_lang, '/customer-signup')}>
+                {_t(current_lang, '회원가입')}
+              </MenuItem>
+            </span>
+          )}
         </MenuWrapper>
       </Menu>
     </Wrap>
