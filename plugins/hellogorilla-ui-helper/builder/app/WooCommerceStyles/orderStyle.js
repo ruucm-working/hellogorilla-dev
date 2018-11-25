@@ -6,7 +6,6 @@ import media from 'ruucm-blocks/tools/media'
 const style = css`
   .page-id-9 {
     .post-9 {
-      padding-left: 10px;
       /* error */
       .woocommerce-error {
         color: #231f20 !important;
@@ -20,12 +19,14 @@ const style = css`
     /* navigation css */
     .woocommerce-MyAccount-navigation {
       width: ${wem2(55)};
+      padding-left: 30px;
       white-space: nowrap;
       li {
         color: #231f20;
         a {
           font-family: 'NanumSquareRoundWeb', sans-serif;
-          font-size: ${wem2(15)};
+          /* font-size: ${wem2(15)}; */
+          font-size: 15px;
           font-weight: normal;
           font-style: normal;
           font-stretch: normal;
@@ -44,6 +45,17 @@ const style = css`
     /* content css */
     .woocommerce-MyAccount-content {
       width: ${wem2(708)};
+      ${media.tablet`
+      margin-top: 30px !important;
+      width: 100%;
+      `}
+
+      @media all and (min-width: 738px) and (max-width: 768px) 
+      {
+      margin-top: 200px !important;      
+        }       
+       
+
       table {
         width: 100vw;
       }
@@ -105,6 +117,12 @@ const style = css`
       }
       .woocommerce-order-details {
         /* background: pink; */
+        ${media.tablet`
+        padding: unset;  
+        /* padding-left: 10px; */
+        width: fit-content;
+        margin: 0 auto;
+         `}
         margin-top: 20px;
         .woocommerce-table--order-details {
           display: unset;
@@ -123,6 +141,11 @@ const style = css`
             }
           }
         }
+      }
+      .woocommerce-customer-details {
+        ${media.tablet`
+        padding: unset;  
+        `}
       }
     }
   }
