@@ -6,6 +6,10 @@ import media from 'ruucm-blocks/tools/media'
 const style = css`
   .page-id-9 {
     /* address page css */
+    address {
+      margin-top: 15px;
+      line-height: 1.4 !important;
+    }
     .woocommerce-MyAccount-content {
       font-family: 'NanumSquareRoundWeb', sans-serif;
       color: #231f20;
@@ -30,7 +34,6 @@ const style = css`
             font-size: 11px;
           }
           address {
-            margin-top: 10px;
           }
         }
 
