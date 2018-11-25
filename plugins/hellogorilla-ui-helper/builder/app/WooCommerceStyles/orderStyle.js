@@ -97,6 +97,14 @@ const style = css`
         border-bottom: 1px solid #0fb780;
         padding-bottom: unset !important;
       }
+
+      /* 주문 상세보기 view-order */
+      .woocommerce-order-details {
+        background: pink;
+        .woocommerce-table--order-details {
+          display: unset;
+        }
+      }
     }
   }
 `
