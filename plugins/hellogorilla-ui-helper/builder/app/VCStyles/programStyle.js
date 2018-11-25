@@ -114,6 +114,7 @@ const prgramStyle = css`
     background-color: #533c97;
     ${media.tablet`
       padding: 0 20px;
+      margin-bottom: unset;
     `};
   }
   .banner02 {
@@ -123,7 +124,7 @@ const prgramStyle = css`
     background-color: #0eb780;
     ${media.tablet`
       padding: 0 20px;
-      height: 310px;
+      /* height: 310px; */
     `};
   }
   .banner-title {
@@ -149,6 +150,10 @@ const prgramStyle = css`
   .banner-img {
     font-size: ${wem2(240)};
     float: right;
+    ${media.tablet`
+      display: none;
+    `};
+    
   }
   .hellogorilla-about-image {
     /* font-size: ${wem2(240)};
