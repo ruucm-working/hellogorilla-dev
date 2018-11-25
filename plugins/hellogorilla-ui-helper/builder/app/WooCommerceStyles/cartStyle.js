@@ -18,70 +18,78 @@ const style = css`
       margin-left: 150px !important  
       } */
       thead {
-        /* display: unset !important; */
+        display: unset !important;
         tr {
           white-space: nowrap;
-          .product-remove {
-            display: none !important;
-          }
-          .product-thumbnail {
-            display: none !important;
-          }
-          .product-subtotal {
-            display: none !important;
-          }
+          border-bottom: 1px solid #e9e8e8;
+            .product-remove {
+              display: none !important;
+            }
+            .product-thumbnail {
+              display: none !important;
+            }
+            .product-subtotal {
+              display: none !important;
+            }
+          
         }
       }
 
       /* 상품정보 */
-      .woocommerce-cart-form__cart-item {
-        position: relative;
-        .product-remove {
-          vertical-align: middle;
-        }
-        .product-thumbnail {
-          vertical-align: middle;
-          img {
-            height: 110px !important;
+      tbody{
+        float: left;
+        .woocommerce-cart-form__cart-item {
+          position: relative;
+          border-bottom: 1px solid #e9e8e8 !important;
+          /* float: left; */
+          .product-remove {
+            vertical-align: middle;
+          }
+          .product-thumbnail {
+            vertical-align: middle;
+            img {
+              height: 110px !important;
+              vertical-align: middle;
+            }
+          }
+          .product-name {
+            display: inline-block ;
+            padding-top: 60px;
+            a {
+              /* position: absolute; */
+              font-family: 'NanumSquareRoundWeb', sans-serif !important;
+              font-size: 14px !important;
+              color: #231f20 !important;
+              font-weight: 300;
+            }
+          }
+          .product-price {
+            /* position: absolute;
+            left: ${wem2(310)};
+            top: ${wem2(100)};
+            padding: unset !important; */
+            display: block;
+            padding: unset !important;
+            margin-top: -20px;
+            span {
+              /* position: absolute; */
+            }
+          }
+          .product-quantity {
+            vertical-align: middle;
+            /* margin-top: 10px; */
+            padding: unset;
+            padding-top: 14px;
+            .screen-reader-text {
+              display: none;
+            }
+          }
+          .product-subtotal {
             vertical-align: middle;
           }
         }
-        .product-name {
-          display: inline-block ;
-          padding-top: 60px;
-          a {
-            /* position: absolute; */
-            font-family: 'NanumSquareRoundWeb', sans-serif !important;
-            font-size: 14px !important;
-            color: #231f20 !important;
-            font-weight: 300;
-          }
-        }
-        .product-price {
-          /* position: absolute;
-          left: ${wem2(310)};
-          top: ${wem2(100)};
-          padding: unset !important; */
-          display: block;
-          padding: unset !important;
-          margin-top: -20px;
-          span {
-            /* position: absolute; */
-          }
-        }
-        .product-quantity {
-          vertical-align: middle;
-          /* margin-top: 10px; */
-          padding: unset;
-          padding-top: 14px;
-          .screen-reader-text {
-            display: none;
-          }
-        }
-        .product-subtotal {
-          vertical-align: middle;
-        }
       }
+
       /* 수량 */
       .quantity {
         a {
@@ -209,6 +217,7 @@ const style = css`
     /* 쿠폰 */
     .coupon {
       position: relative;
+      display: inline-block;
       ::before {
         /* color: pink !important; */
         /* vertical-align: middle */
