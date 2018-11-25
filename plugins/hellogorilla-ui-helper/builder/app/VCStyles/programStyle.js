@@ -60,6 +60,7 @@ const prgramStyle = css`
 
   .program-artist-right {
     height: ${wem2(352)};
+    max-height: 352px;
     position: relative;
   }
   .program-artist {
@@ -79,8 +80,9 @@ const prgramStyle = css`
     line-height: 2;
     color: #231f20;
     margin-bottom: unset;
-    position: absolute;
+    position: absolute; 
     bottom: 0;
+    /* margin-top: ${wem2(100)} !important; */
   }
 
 
