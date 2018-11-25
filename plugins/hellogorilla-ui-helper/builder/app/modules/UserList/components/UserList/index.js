@@ -60,8 +60,10 @@ const ArtistWrap = styled.div`
   margin-left: ${wem2(240)};
   margin-right: ${wem2(240)};
   margin-top: ${wem2(128)};
-  /* width: 100%;
-  max-width:960px; */
+  ${media.tablet`
+    margin-left: 0;
+    margin-right: 0;
+  `}
 `
 const StyledColumn = styled(Column)`
   &:nth-of-type(4n) {
@@ -109,6 +111,11 @@ const UserImage = styled.img`
   height: ${wem2(232)};
   object-fit: cover;
   position: relative;
+  ${media.tablet`
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  `}
 `
 const Overlay = styled.div`
   width: ${wem2(204)};
@@ -120,6 +127,10 @@ const Overlay = styled.div`
   :hover {
     background-color: rgba(128, 92, 232, 0.5);
   }
+  ${media.tablet`
+    left: 50%;
+    transform: translateX(-50%);
+  `}
 `
 
 const UserInfo = styled.div`
