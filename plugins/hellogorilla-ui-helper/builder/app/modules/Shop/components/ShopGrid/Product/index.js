@@ -32,14 +32,32 @@ const Center = styled.div`
   transform: translateX(-50%);
   left: 50%;
 `
+
+const Size = styled.div`
+  /* width: ${wem2(288)};
+  height: ${wem2(360)}; */
+  @media all and (max-width: 575px) {
+    /* width: 100%; */
+    height: 350px;
+  }
+`
+
 const ImageWrapper = styled.div`
   width: ${wem2(288)};
   height: ${wem2(360)};
+  /* width: 100%;
+  height: 100%; */
+  @media all and (max-width: 575px) {
+    width: 253px;
+    height: 316px;
+  }
 `
 
 const Overlay = styled.div`
-  width: ${wem2(288)};
-  height: ${wem2(360)};
+  /* width: ${wem2(288)};
+  height: ${wem2(360)}; */
+  width: 100%;
+  height: 100%;
   opacity: 0;
   position: absolute;
   top: 0;
@@ -198,40 +216,42 @@ const Product = ({ current_lang, ...props }) => {
         target={current_lang == 'en' ? '_blank' : ''}
       >
         <Wrapper featured={data.featured}>
-          <ProductWrapper>
-            <Center>
-              <ImageWrapper>
-                <Image src={data.images[0].src} />
-              </ImageWrapper>
+          <Size>
+            <ProductWrapper>
+              <Center>
+                <ImageWrapper>
+                  <Image src={data.images[0].src} />
+                </ImageWrapper>
 
-              <Overlay />
-              <SalePercentage show={data.sale_price}>
-                <SaleText>
-                  {100 -
-                    Math.trunc(
-                      (data.sale_price / data.regular_price) * 100
-                    )}{' '}
-                  %
-                </SaleText>
+                <Overlay />
+                <SalePercentage show={data.sale_price}>
+                  <SaleText>
+                    {100 -
+                      Math.trunc(
+                        (data.sale_price / data.regular_price) * 100
+                      )}{' '}
+                    %
+                  </SaleText>
 
-                <SaleText small>OFF</SaleText>
-              </SalePercentage>
+                  <SaleText small>OFF</SaleText>
+                </SalePercentage>
 
-              <NewLabel show={data.tags.length}>
-                <NewLabelText>
-                  {data.tags[0] ? data.tags[0].name : ''}
-                </NewLabelText>
-              </NewLabel>
+                <NewLabel show={data.tags.length}>
+                  <NewLabelText>
+                    {data.tags[0] ? data.tags[0].name : ''}
+                  </NewLabelText>
+                </NewLabel>
 
-              <SoldOut show={!data.in_stock}>
-                <SoldOutLabel>
-                  SOLD
-                  <br />
-                  OUT
-                </SoldOutLabel>
-              </SoldOut>
-            </Center>
-          </ProductWrapper>
+                <SoldOut show={!data.in_stock}>
+                  <SoldOutLabel>
+                    SOLD
+                    <br />
+                    OUT
+                  </SoldOutLabel>
+                </SoldOut>
+              </Center>
+            </ProductWrapper>
+          </Size>
         </Wrapper>
       </MoreLink>
 

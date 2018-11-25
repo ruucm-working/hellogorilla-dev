@@ -37,6 +37,11 @@ const Wrap = styled.div`
   margin: 0 auto;
   margin-top: 128px;
   position: relative;
+    .col-sm-4 {
+    @media all and (min-width: 575px) {
+      height: 350px !important;
+    }
+  }
 `
 
 const Category = styled.ul`
