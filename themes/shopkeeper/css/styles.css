@@ -18926,8 +18926,8 @@ li.display_buttons .product_after_shop_loop .product_after_shop_loop_switcher {
     background: none !important; }
   .woocommerce-order-received h2 {
     margin-bottom: 13px; }
-  .content-area {
-    padding: 40px 0 0 0; }
+  /* .content-area {
+    padding: 40px 0 0 0; } */
   .transparent_header.sticky_header .page-title-shown .entry-header.with_featured_img,
   .sticky_header .page-title-shown .entry-header.with_featured_img {
     margin-top: -40px; }

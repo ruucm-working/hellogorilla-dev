@@ -7,6 +7,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { Row, Column, EmptySpace } from 'ruucm-blocks/layouts'
+import media from 'ruucm-blocks/tools/media'
 
 import { wem2 } from 'ruucm-blocks/tools/mixins'
 import img1 from '../../assets/store-banner-background-1.png'
@@ -14,15 +15,27 @@ import img2 from '../../assets/store-banner-background-2.png'
 import img3 from '../../assets/store-banner-background-3.png'
 import img4 from '../../assets/store-banner-background-4.png'
 
-const Wrap = styled.div``
+const Wrap = styled.div`
+  ${media.tablet`
+    margin-top: 80px;
+  `};
+`
 const Img1 = styled.img`
   width: 100%;
 `
 const Img2 = styled.img`
   width: 100%;
+  ${media.tablet`
+    visibility: hidden;
+    height: 50px;
+  `};
 `
 const Img3 = styled.img`
   width: 100%;
+  ${media.tablet`
+    visibility: hidden;
+    height: 50px;
+  `};
 `
 const Img4 = styled.img`
   width: 100%;
@@ -41,9 +54,10 @@ const BannerText = styled.div`
   letter-spacing: normal;
   color: rgb(83, 60, 151);
   white-space: nowrap;
-  @media all and (max-width: 575px) {
+
+  ${media.tablet`
     font-size: 16px !important;
-  }
+  `};
 `
 
 const PageBanner = ({ bannerText, ...props }) => {
