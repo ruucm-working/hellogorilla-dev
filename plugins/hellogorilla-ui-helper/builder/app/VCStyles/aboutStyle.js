@@ -81,6 +81,9 @@ const style = css`
     .history-item {
       border-left: 1px solid #e9e8e8;
       padding-bottom: 65px;
+      &:last-child {
+        border: none;
+      }
       .year {
         font-family: Lato;
         font-size: 20px;
@@ -114,6 +117,13 @@ const style = css`
           margin-top: 40px;
           margin-bottom: 12px;
         }
+        ${media.tablet`
+          margin-top: 10px;
+          margin-bottom: 20px;
+          &.number2 {
+            margin-left: 40px !important;
+          }
+        `};
       }
       .desc {
         font-family: NanumSquareRoundWeb;
@@ -123,10 +133,23 @@ const style = css`
         margin-bottom: 20px;
         vertical-align: top;
         margin-right: 10px;
+        ${media.tablet`
+          margin-left: 40px;
+        `};
+      }
+      .certi-icon {
+        ${media.tablet`
+          margin-top: 30px;
+          margin-left: 40px;
+        `};
       }
       img {
         margin-left: 90px;
         width: 288px;
+        ${media.tablet`
+          margin-left: 40px;
+          width: 230px;
+        `};
       }
 
       &.two-line {
@@ -136,6 +159,9 @@ const style = css`
         }
         .title {
           margin-left: 33px;
+          ${media.tablet`
+            margin-left: 40px;
+          `};
         }
       }
     }
