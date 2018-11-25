@@ -5,7 +5,9 @@ import media from 'ruucm-blocks/tools/media'
 
 // App Styles
 const style = css`
-.page-id-121{
+.page-id-121,
+.page-id-194
+{
   .wpb_column {
     @media all and (max-width: 763px) {
     margin-top: 20px;
