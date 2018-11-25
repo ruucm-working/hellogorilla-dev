@@ -39,14 +39,15 @@ const style = css`
       }
       .product-thumbnail {
         vertical-align: middle;
+        img {
+          height: 110px !important;
+          vertical-align: middle;
+        }
       }
       .product-name {
-        display: inline-block;
-        padding: unset !important;
-        position: relative;
-        height: 62px !important;
+        display: inline-block ;
         a {
-          position: absolute;
+          /* position: absolute; */
           font-family: 'NanumSquareRoundWeb', sans-serif !important;
           font-size: ${wem2(14)} !important;
           color: #231f20 !important;
@@ -54,13 +55,12 @@ const style = css`
         }
       }
       .product-price {
-        display: inline-block !important;
+        position: absolute;
+        left: 314px;
+        top:100px;
         padding: unset !important;
-        position: relative;
-        height: 62px !important;
-        width: 100% !important;
         span {
-          position: absolute;
+          /* position: absolute; */
         }
       }
       /* 수량 */
