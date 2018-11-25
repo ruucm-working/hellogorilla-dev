@@ -9,9 +9,27 @@ const style = css`
       margin-left: ${wem2(150)} !important;
       width: ${wem2(564)} !important;
       max-width: 564px !important;
-      @media all and (min-width: 1401px) {
+
+      /* ${media.tablet`
       margin-left: 150px !important  
+      `} */
+
+      /* @media all and (min-width: 1401px) {
+      margin-left: 150px !important  
+      } */
+      thead {
+        display: unset !important;
+        tr {
+          white-space: nowrap;
+          .product-remove {
+            display: none;
+          }
+          .product-thumbnail {
+            display: none;
+          }
+        }
       }
+
       /* 상품정보 */
       .product-remove {
         vertical-align: middle;
