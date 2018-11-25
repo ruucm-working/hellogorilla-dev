@@ -355,6 +355,14 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _taggedTemplateLiteral2 = __webpack_require__(/*! babel-runtime/helpers/taggedTemplateLiteral */ "./node_modules/babel-runtime/helpers/taggedTemplateLiteral.js");
+
+var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
+
+var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n          margin-left: 30px !important;\n          /* width: 100%; */\n        '], ['\n          margin-left: 30px !important;\n          /* width: 100%; */\n        ']),
+    _templateObject2 = (0, _taggedTemplateLiteral3.default)(['\n          margin-top: 40px !important;\n          /* width: 100%; */\n        '], ['\n          margin-top: 40px !important;\n          /* width: 100%; */\n        ']),
+    _templateObject3 = (0, _taggedTemplateLiteral3.default)(['\n          font-size: 18px;\n        '], ['\n          font-size: 18px;\n        ']);
+
 var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
 
 var _mixins = __webpack_require__(/*! ruucm-blocks/tools/mixins */ "./node_modules/ruucm-blocks/tools/mixins.js");
@@ -365,7 +373,7 @@ var _media2 = _interopRequireDefault(_media);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var style = (0, _styledComponents.css)(['.page-id-9{address{margin-top:15px;line-height:1.4 !important;}.woocommerce-MyAccount-content{font-family:\'NanumSquareRoundWeb\',sans-serif;color:#231f20;max-width:708px;min-width:300px;.u-columns{font-family:\'NanumSquareRoundWeb\',sans-serif;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;margin-top:90px;.edit{font-size:11px;}}.woocommerce-Address-title title h3{font-size:', ';font-weight:400 !important;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;}.form-row{label{font-size:11px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;.required{float:top;color:#231f20 !important;border-bottom:unset;}}}.input-text{margin-top:10px;width:', ';height:52px;border-radius:2px;background-color:rgba(244,243,243,0.5);max-width:708px;min-width:300px;}#billing_country_field{display:none;}.button{width:100%;background-color:#533c97 !important;}}}'], (0, _mixins.wem2)(24), (0, _mixins.wem2)(708));
+var style = (0, _styledComponents.css)(['.page-id-9{address{margin-top:15px;line-height:1.4 !important;}.woocommerce-MyAccount-content{font-family:\'NanumSquareRoundWeb\',sans-serif;color:#231f20;max-width:708px;min-width:300px;.u-columns{font-family:\'NanumSquareRoundWeb\',sans-serif;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;margin-top:90px !important;', ' .edit{font-size:12px;background:#533c97;color:white;padding:2px;border-radius:2px;}.u-column2{margin-top:40px !important;', '}}.title{h3{font-size:', ';font-weight:400 !important;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;', '}}.form-row{label{font-size:11px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;.required{float:top;color:#231f20 !important;border-bottom:unset;}}}.input-text{margin-top:10px;width:', ';height:52px;border-radius:2px;background-color:rgba(244,243,243,0.5);max-width:708px;min-width:300px;}#billing_country_field{display:none;}.button{width:100%;background-color:#533c97 !important;}}}'], _media2.default.tablet(_templateObject), _media2.default.tablet(_templateObject2), (0, _mixins.wem2)(24), _media2.default.tablet(_templateObject3), (0, _mixins.wem2)(708));
 
 exports.default = style;
 

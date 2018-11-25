@@ -30,20 +30,40 @@ const style = css`
         line-height: 1;
         letter-spacing: normal;
         color: #231f20;
-        margin-top: 90px;
+        margin-top: 90px !important;
+        ${media.tablet`
+          margin-left: 30px !important;
+          /* width: 100%; */
+        `}
         .edit {
-          font-size: 11px;
+          font-size: 12px;
+          background: #533c97;
+          color: white;
+          padding: 2px;
+          border-radius: 2px;
+        }
+        .u-column2 {
+          margin-top: 40px !important;
+          ${media.tablet`
+          margin-top: 40px !important;
+          /* width: 100%; */
+        `}
         }
       }
 
-      .woocommerce-Address-title title h3 {
-        font-size: ${wem2(24)};
-        font-weight: 400 !important;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1;
-        letter-spacing: normal;
-        color: #231f20;
+      .title {
+        h3 {
+          font-size: ${wem2(24)};
+          font-weight: 400 !important;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1;
+          letter-spacing: normal;
+          color: #231f20;
+          ${media.tablet`
+          font-size: 18px;
+        `}
+        }
       }
 
       /* margin-top: 40px; */
