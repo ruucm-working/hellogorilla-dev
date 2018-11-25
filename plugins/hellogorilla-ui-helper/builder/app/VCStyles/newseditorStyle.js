@@ -42,9 +42,9 @@ const newseditorStyle = css`
       }
     }
     .kboard-control {
-      margin-top: 850px;
+      /* margin-top: 850px; */
       @media all and (max-width: 700px) {
-        margin-top: 1500px;
+        /* margin-top: 1500px; */
       }
       .right {
         .kboard-default-button-small {
