@@ -25,7 +25,7 @@ const Height = styled.div`
   /* height: fill-available; */
   @media all and (max-width: 575px) {
     /* width: 100%; */
-    min-height: 3000px;
+    min-height: 4200px;
   }
 `
 

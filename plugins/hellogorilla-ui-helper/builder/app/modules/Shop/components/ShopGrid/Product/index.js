@@ -50,7 +50,7 @@ const ImageWrapper = styled.div`
   /* width: 100%;
   height: 100%; */
   max-width: 288px;
-  height: 360px;
+  max-height: 360px;
   @media all and (max-width: 575px) {
     width: 253px;
     height: 316px;
