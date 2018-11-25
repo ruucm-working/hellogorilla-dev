@@ -9,18 +9,16 @@ const style = css`
       margin-left: ${wem2(150)} !important;
       width: ${wem2(564)} !important;
       max-width: 564px !important;
-
-      /* ${media.tablet`
-      margin-left: 150px !important  
-      `} */
-
-      /* @media all and (min-width: 1401px) {
-      margin-left: 150px !important  
-      } */
+         ${media.tablet`
+        margin-left: unset !important;
+        `}
       thead {
         display: unset !important;
         /* width: 551px; */
         position: relative;
+          ${media.tablet`
+          display: none !important;
+          `}
         tr {
           white-space: nowrap;
           /* border-bottom: 1px solid #e9e8e8; */
@@ -47,6 +45,9 @@ const style = css`
       tbody{
         float: left;
         border-top: 1px solid #e9e8e8;
+        ${media.tablet`
+          border-top: none;
+          `}
         .woocommerce-cart-form__cart-item {
           position: relative;
           border-bottom: 1px solid #e9e8e8 !important;
@@ -114,12 +115,11 @@ const style = css`
     .cart-collaterals {
       margin-right: ${wem2(150)};
       width: ${wem2(324)} !important;
-      max-width : 324px;
-      /* right: ${wem2(-123)};
-      position: relative;
-      margin-right: ${wem2(240)}; */
-      @media all and (min-width: 1401px) {
-      margin-right: 150px !important  
+        @media all and (min-width: 1401px) {
+        margin-right: 150px !important  
+      }
+        @media all and (max-width: 1024px) {
+        margin: unset !important  
       }
     }
     .cart_totals {
