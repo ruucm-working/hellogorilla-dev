@@ -214,7 +214,7 @@ const MobileView = ({
                   (location.search ? '/' + location.search : '')
             }
           >
-            EN
+            ENG
           </MenuItem>
 
           <MenuItem
@@ -225,7 +225,7 @@ const MobileView = ({
                 : '#'
             }
           >
-            한글
+            한국어
           </MenuItem>
         </MenuWrapper>
       </Menu>

@@ -280,7 +280,7 @@ const Menus = ({
                         (location.search ? '/' + location.search : '')
                   }
                 >
-                  EN
+                  ENG
                 </MenuItem>
 
                 <MenuItem
@@ -291,7 +291,7 @@ const Menus = ({
                       : '#'
                   }
                 >
-                  한글
+                  한국어
                 </MenuItem>
               </Right>
               {/* <a href="/my-account">카트</a> */}
