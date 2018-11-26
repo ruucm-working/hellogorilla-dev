@@ -10,6 +10,7 @@ const newseditorStyle = css`
       max-width: 960px !important;
       margin: 0 auto !important;
       min-height: 1400px;
+      position: relative;
     }
     .kboard-attr-row {
       .attr-name {
@@ -42,6 +43,8 @@ const newseditorStyle = css`
       }
     }
     .kboard-control {
+      position: absolute;
+      bottom: 5%;
       /* margin-top: 850px; */
       @media all and (max-width: 700px) {
         /* margin-top: 1500px; */
