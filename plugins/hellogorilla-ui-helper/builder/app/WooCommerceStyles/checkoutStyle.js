@@ -126,8 +126,29 @@ const style = css`
             }
           }
         }
+        ${media.tablet`
+          .woocommerce-error {
+            ${media.tablet`
+              display: block;
+              left: 0;
+              padding: 30px 20px!important;
+              white-space: normal;
+              height: auto;
+              position: relative;
+              margin-bottom: 30px;
+              margin-top: 10px;
+    
+            `};
+          }
+        `};
       }
     }
+  }
+  /* 에러메세지 아이콘과 텍스트 간격 */
+  body.gbt_custom_notif:not(.woocommerce-account) .woocommerce-error li:first-child {
+    ${media.tablet`
+      padding-top: 40px !important;
+    `};
   }
 `
 
