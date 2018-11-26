@@ -154,6 +154,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _taggedTemplateLiteral2 = __webpack_require__(/*! babel-runtime/helpers/taggedTemplateLiteral */ "./node_modules/babel-runtime/helpers/taggedTemplateLiteral.js");
+
+var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
+
+var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n        padding-left: 20px;\n        padding-right: 20px;\n      '], ['\n        padding-left: 20px;\n        padding-right: 20px;\n      ']);
+
 var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
 
 var _mixins = __webpack_require__(/*! ruucm-blocks/tools/mixins */ "./node_modules/ruucm-blocks/tools/mixins.js");
@@ -165,7 +171,7 @@ var _media2 = _interopRequireDefault(_media);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // App Styles
-var style = (0, _styledComponents.css)(['.page-id-421{font-family:\'NanumSquareRoundWeb\',sans-serif;.entry-content{max-width:960px;margin:0 auto;margin-top:20px;h1{font-size:24px;font-weight:400;color:#231f20;}p{margin-top:14px;line-height:1.2;color:#231f20;}}}.page-id-422{font-family:\'NanumSquareRoundWeb\',sans-serif;.entry-content{max-width:960px;margin:0 auto;margin-top:20px;h1{font-size:24px;font-weight:400;color:#231f20;}p{margin-top:14px;line-height:1.2;color:#231f20;}}}']);
+var style = (0, _styledComponents.css)(['.page-id-421{font-family:\'NanumSquareRoundWeb\',sans-serif;.entry-content{max-width:960px;margin:0 auto;margin-top:20px;padding-top:100px;h1{font-size:24px;font-weight:400;color:#231f20;}p{margin-top:14px;line-height:1.2;color:#231f20;}', ';}}.page-id-422{font-family:\'NanumSquareRoundWeb\',sans-serif;.entry-content{max-width:960px;margin:0 auto;margin-top:20px;padding-top:100px;h1{font-size:24px;font-weight:400;color:#231f20;}p{margin-top:14px;line-height:1.2;color:#231f20;}', ';}}'], _media2.default.tablet(_templateObject), _media2.default.tablet(_templateObject));
 
 exports.default = style;
 
