@@ -5,6 +5,13 @@ import media from 'ruucm-blocks/tools/media'
 
 const style = css`
   .page-id-7 {
+    .post-7{
+    ${media.tablet`
+      min-height: 1300px;
+    `}
+    @media all and (min-width: 769px) and (max-width: 1024px) 
+      {  min-height: 950px;      }  
+    }
     .woocommerce-cart-form {
       margin-left: ${wem2(150)} !important;
       width: ${wem2(564)} !important;
@@ -47,6 +54,7 @@ const style = css`
         border-top: 1px solid #e9e8e8;
         ${media.tablet`
           border-top: none;
+          width: 100%;
           `}
         .woocommerce-cart-form__cart-item {
           position: relative;
@@ -249,7 +257,10 @@ const style = css`
     /* 쿠폰 */
     .coupon {
       position: relative;
-      display: inline-block;
+      display: none !important; 
+      /* ${media.tablet`
+        display: none !important;
+      `} */
       ::before {
         /* color: pink !important; */
         /* vertical-align: middle */
