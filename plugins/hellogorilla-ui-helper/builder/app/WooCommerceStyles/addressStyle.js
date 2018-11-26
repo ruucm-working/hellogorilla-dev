@@ -20,7 +20,8 @@ const style = css`
         /* max-width: 708px;
         min-width: 300px;  */
         p {
-          padding-left: unset !important;
+          padding-left: 20px !important;
+          padding-right: 20px !important;
         }
       }
       /* .col2-set {
@@ -87,7 +88,8 @@ const style = css`
         }
         ${media.tablet`
           width: 100%;
-          padding-left: unset !important;
+          padding-left: 20px !important;
+          padding-right: 20px !important;
         `}
       }
       .input-text {
@@ -112,7 +114,15 @@ const style = css`
         /* max-width: 708px;
           min-width: 500px; */
       }
-      /* } */
+      ${media.tablet`
+        p {
+          padding-right: 30px !important;
+        }
+        h3 {
+          padding-left: 20px;
+          margin-bottom: 20px;
+        }
+      `};
     }
   }
 `

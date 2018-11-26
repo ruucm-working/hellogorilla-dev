@@ -413,8 +413,9 @@ var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
 var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n          margin-left: 30px !important;\n          /* width: 100%; */\n        '], ['\n          margin-left: 30px !important;\n          /* width: 100%; */\n        ']),
     _templateObject2 = (0, _taggedTemplateLiteral3.default)(['\n          margin-top: 40px !important;\n          /* width: 100%; */\n        '], ['\n          margin-top: 40px !important;\n          /* width: 100%; */\n        ']),
     _templateObject3 = (0, _taggedTemplateLiteral3.default)(['\n          font-size: 18px;\n        '], ['\n          font-size: 18px;\n        ']),
-    _templateObject4 = (0, _taggedTemplateLiteral3.default)(['\n          width: 100%;\n          padding-left: unset !important;\n        '], ['\n          width: 100%;\n          padding-left: unset !important;\n        ']),
-    _templateObject5 = (0, _taggedTemplateLiteral3.default)(['\n          width: 100%;\n        '], ['\n          width: 100%;\n        ']);
+    _templateObject4 = (0, _taggedTemplateLiteral3.default)(['\n          width: 100%;\n          padding-left: 20px !important;\n          padding-right: 20px !important;\n        '], ['\n          width: 100%;\n          padding-left: 20px !important;\n          padding-right: 20px !important;\n        ']),
+    _templateObject5 = (0, _taggedTemplateLiteral3.default)(['\n          width: 100%;\n        '], ['\n          width: 100%;\n        ']),
+    _templateObject6 = (0, _taggedTemplateLiteral3.default)(['\n        p {\n          padding-right: 30px !important;\n        }\n        h3 {\n          padding-left: 20px;\n          margin-bottom: 20px;\n        }\n      '], ['\n        p {\n          padding-right: 30px !important;\n        }\n        h3 {\n          padding-left: 20px;\n          margin-bottom: 20px;\n        }\n      ']);
 
 var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
 
@@ -426,7 +427,7 @@ var _media2 = _interopRequireDefault(_media);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var style = (0, _styledComponents.css)(['.page-id-9{address{margin-top:15px;line-height:1.4 !important;}.woocommerce-MyAccount-content{font-family:\'NanumSquareRoundWeb\',sans-serif;color:#231f20;max-width:708px;min-width:300px;.woocommerce-address-fields{p{padding-left:unset !important;}}.u-columns{font-family:\'NanumSquareRoundWeb\',sans-serif;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;margin-top:90px !important;', ' .edit{font-size:12px;background:#533c97;color:white;padding:2px;border-radius:2px;}.u-column2{margin-top:40px !important;', '}}.title{h3{font-size:', ';font-weight:400 !important;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;', '}}.form-row{label{font-size:11px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;.required{float:top;color:#231f20 !important;border-bottom:unset;}}', '}.input-text{margin-top:10px;width:', ';height:52px;border-radius:2px;background-color:rgba(244,243,243,0.5);max-width:708px;min-width:300px;', '}#billing_country_field{display:none;}.button{width:100%;background-color:#533c97 !important;}}}'], _media2.default.tablet(_templateObject), _media2.default.tablet(_templateObject2), (0, _mixins.wem2)(24), _media2.default.tablet(_templateObject3), _media2.default.tablet(_templateObject4), (0, _mixins.wem2)(708), _media2.default.tablet(_templateObject5));
+var style = (0, _styledComponents.css)(['.page-id-9{address{margin-top:15px;line-height:1.4 !important;}.woocommerce-MyAccount-content{font-family:\'NanumSquareRoundWeb\',sans-serif;color:#231f20;max-width:708px;min-width:300px;.woocommerce-address-fields{p{padding-left:20px !important;padding-right:20px !important;}}.u-columns{font-family:\'NanumSquareRoundWeb\',sans-serif;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;margin-top:90px !important;', ' .edit{font-size:12px;background:#533c97;color:white;padding:2px;border-radius:2px;}.u-column2{margin-top:40px !important;', '}}.title{h3{font-size:', ';font-weight:400 !important;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;', '}}.form-row{label{font-size:11px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;.required{float:top;color:#231f20 !important;border-bottom:unset;}}', '}.input-text{margin-top:10px;width:', ';height:52px;border-radius:2px;background-color:rgba(244,243,243,0.5);max-width:708px;min-width:300px;', '}#billing_country_field{display:none;}.button{width:100%;background-color:#533c97 !important;}', ';}}'], _media2.default.tablet(_templateObject), _media2.default.tablet(_templateObject2), (0, _mixins.wem2)(24), _media2.default.tablet(_templateObject3), _media2.default.tablet(_templateObject4), (0, _mixins.wem2)(708), _media2.default.tablet(_templateObject5), _media2.default.tablet(_templateObject6));
 
 exports.default = style;
 
@@ -599,6 +600,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _taggedTemplateLiteral2 = __webpack_require__(/*! babel-runtime/helpers/taggedTemplateLiteral */ "./node_modules/babel-runtime/helpers/taggedTemplateLiteral.js");
+
+var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
+
+var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n          padding: 100px !important;\n          background: none;\n          margin-bottom: 100px !important;\n        '], ['\n          padding: 100px !important;\n          background: none;\n          margin-bottom: 100px !important;\n        ']);
+
 var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
 
 var _mixins = __webpack_require__(/*! ruucm-blocks/tools/mixins */ "./node_modules/ruucm-blocks/tools/mixins.js");
@@ -609,7 +616,7 @@ var _media2 = _interopRequireDefault(_media);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var style = (0, _styledComponents.css)(['.page-id-8{.post-8{font-family:\'NanumSquareRoundWeb\',sans-serif;.woocommerce-notice{background:#533c97;}.woocommerce-order-overview{li{}}.woocommerce-order-details{max-width:500px;margin:0 auto;.woocommerce-order-details__title{font-size:24px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;}.woocommerce-table--order-details{width:100%;thead{tr{border-bottom:1px solid #e9e8e8;}th{font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:14px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;}}tbody{tr{font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:14px;font-weight:normal;color:#231f20;}td{border-bottom:1px solid #e9e8e8;font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:14px;font-weight:normal;color:#231f20;}.product-total{text-align:center;}}tfoot{th{font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:14px;font-weight:normal;color:#231f20;padding:unset;float:left;padding-top:15px;}td{font-family:\'NanumSquareRoundWeb\',sans-serif;vertical-align:middle;text-align:center;}ins{background:unset;text-decoration:none;color:#533c97;}}}}.woocommerce-customer-details{max-width:500px;}}}']);
+var style = (0, _styledComponents.css)(['.page-id-8{.post-8{font-family:\'NanumSquareRoundWeb\',sans-serif;.woocommerce-notice{background:#533c97;}.woocommerce-order-overview{li{}}.woocommerce-order-details{max-width:500px;margin:0 auto;.woocommerce-order-details__title{font-size:24px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;}.woocommerce-table--order-details{width:100%;thead{tr{border-bottom:1px solid #e9e8e8;}th{font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:14px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;}}tbody{tr{font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:14px;font-weight:normal;color:#231f20;}td{border-bottom:1px solid #e9e8e8;font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:14px;font-weight:normal;color:#231f20;}.product-total{text-align:center;}}tfoot{th{font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:14px;font-weight:normal;color:#231f20;padding:unset;float:left;padding-top:15px;}td{font-family:\'NanumSquareRoundWeb\',sans-serif;vertical-align:middle;text-align:center;}ins{background:unset;text-decoration:none;color:#533c97;}}}}.woocommerce-customer-details{max-width:500px;}.woocommerce-thankyou-order-details.order_details{', ';}}}'], _media2.default.tablet(_templateObject));
 
 exports.default = style;
 
@@ -629,6 +636,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _taggedTemplateLiteral2 = __webpack_require__(/*! babel-runtime/helpers/taggedTemplateLiteral */ "./node_modules/babel-runtime/helpers/taggedTemplateLiteral.js");
+
+var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
+
+var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n      padding: 0 20px;\n    '], ['\n      padding: 0 20px;\n    ']);
+
 var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
 
 var _mixins = __webpack_require__(/*! ruucm-blocks/tools/mixins */ "./node_modules/ruucm-blocks/tools/mixins.js");
@@ -639,7 +652,7 @@ var _media2 = _interopRequireDefault(_media);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var style = (0, _styledComponents.css)(['.payagain-cardpan{&:nth-of-type(2){display:none;}}']);
+var style = (0, _styledComponents.css)(['.payagain-cardpan{&:nth-of-type(2){display:none;}', '}'], _media2.default.tablet(_templateObject));
 
 exports.default = style;
 

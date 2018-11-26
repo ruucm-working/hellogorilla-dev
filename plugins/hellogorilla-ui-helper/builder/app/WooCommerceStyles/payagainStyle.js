@@ -8,6 +8,9 @@ const style = css`
     &:nth-of-type(2) {
       display: none;
     }
+    ${media.tablet`
+      padding: 0 20px;
+    `}
   }
 `
 

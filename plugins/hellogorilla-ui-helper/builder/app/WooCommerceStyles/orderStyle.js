@@ -54,7 +54,7 @@ const style = css`
       {  margin-top: 200px !important;      }       
       p {
         font-weight: 400;
-          ${media.tablet`
+        ${media.tablet`
           padding-left: 30px !important;
         `}
       } 

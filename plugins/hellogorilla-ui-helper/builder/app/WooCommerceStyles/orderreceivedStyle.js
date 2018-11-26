@@ -89,6 +89,13 @@ const style = css`
       .woocommerce-customer-details {
         max-width: 500px;
       }
+      .woocommerce-thankyou-order-details.order_details {
+        ${media.tablet`
+          padding: 100px !important;
+          background: none;
+          margin-bottom: 100px !important;
+        `};
+      }
     }
   }
 `
