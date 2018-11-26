@@ -5,7 +5,7 @@ import media from 'ruucm-blocks/tools/media'
 
 // App Styles
 const prgramStyle = css`
-.page-id-270{
+.page-id-270, .page-id-378 {
   .program-header {
     margin-top: 96px;
   }
@@ -114,6 +114,7 @@ const prgramStyle = css`
     background-color: #533c97;
     ${media.tablet`
       padding: 0 20px;
+      padding-top: 30px;
       margin-bottom: unset;
     `};
   }
