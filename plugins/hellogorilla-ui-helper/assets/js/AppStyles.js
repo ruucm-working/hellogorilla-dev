@@ -306,6 +306,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _taggedTemplateLiteral2 = __webpack_require__(/*! babel-runtime/helpers/taggedTemplateLiteral */ "./node_modules/babel-runtime/helpers/taggedTemplateLiteral.js");
+
+var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
+
+var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n        min-height: 1800px !important;\n      '], ['\n        min-height: 1800px !important;\n      ']);
+
 var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
 
 var _mixins = __webpack_require__(/*! ruucm-blocks/tools/mixins */ "./node_modules/ruucm-blocks/tools/mixins.js");
@@ -317,7 +323,7 @@ var _media2 = _interopRequireDefault(_media);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // App Styles
-var newseditorStyle = (0, _styledComponents.css)(['.page-id-20{.kboard-form{max-width:960px !important;margin:0 auto !important;min-height:1400px;position:relative;}.kboard-attr-row{.attr-name{color:#231f20;font-size:24px;}label{font-family:\'NanumSquareRoundWeb\',sans-serif;margin-top:10px;}#kboard-input-title{margin-top:10px;border:1px solid #231f20;border-radius:2px;}}.kboard-default-button-small{}.wp-editor-wrap{top:100px;.button{background:#533c97 !important;color:white !important;height:100% !important;}}.kboard-control{position:absolute;bottom:5%;@media all and (max-width:700px){}.right{.kboard-default-button-small{border:1px solid #533c97;color:black;border-radius:2px;cursor:pointer;width:144px !important;height:48px;line-height:48px;display:inline-block;font-size:16px !important;:hover{color:white;background:#533c97;}}}.kboard-default-button-small{cursor:pointer;font-size:16px !important;:hover{color:unset;}}}}']);
+var newseditorStyle = (0, _styledComponents.css)(['.page-id-20{.kboard-form{max-width:960px !important;margin:0 auto !important;min-height:1400px;position:relative;', ' .kboard-attr-row{margin-top:50px;.attr-name{color:#231f20;font-size:24px;}label{font-family:\'NanumSquareRoundWeb\',sans-serif;margin-top:10px;}#kboard-input-title{margin-top:10px;border:1px solid #231f20;border-radius:2px;}}.kboard-content{margin-top:250px;padding:unset;}.wp-editor-wrap{.button{background:#533c97 !important;color:white !important;height:100% !important;}}.kboard-control{position:absolute;bottom:20px;width:100%;.right{.kboard-default-button-small{border:1px solid #533c97;color:black;border-radius:2px;cursor:pointer;width:144px !important;height:48px;line-height:48px;display:inline-block;font-size:16px !important;:hover{color:white;background:#533c97;}}}.kboard-default-button-small{cursor:pointer;font-size:16px !important;:hover{color:unset;}}}}}'], _media2.default.tablet(_templateObject));
 
 exports.default = newseditorStyle;
 
