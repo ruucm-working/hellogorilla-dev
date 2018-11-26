@@ -21,10 +21,6 @@ const style = css`
         .col2-set {
           width: 50% !important;
           display: inline-block;
-          ${media.tablet`
-            display:block;
-            width: 100% !important;
-          `}
           .woocommerce-billing-fields {
             h3 {
               font-size: ${wem2(24)};
@@ -65,6 +61,11 @@ const style = css`
             border-radius: 2px;
             border-color: #231f20;
           }
+          ${media.tablet`
+            display:block;
+            width: 100% !important;
+            padding: 0 20px !important;
+          `}
         }
 
         /* 오른쪽 주문내역&결제하기 */
