@@ -155,6 +155,9 @@ const style = css`
       color: #ffffff;
       font-size: ${wem2(16)};
       white-space: nowrap;
+      ${media.tablet`
+        white-space: unset;
+    `}
     }
     .banner-text {
       font-size: ${wem2(14)};
