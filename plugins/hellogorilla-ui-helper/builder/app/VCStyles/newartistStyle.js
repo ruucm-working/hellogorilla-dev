@@ -9,7 +9,7 @@ const style = css`
     .site-content {
       max-width: 960px;
       margin: 0 auto;
-      margin-top: ${wem2(128)};
+      /* margin-top: ${wem2(128)}; */
       font-family: 'NanumSquareRoundWeb', sans-serif;
 
       .NewArtist__Title-sc-1mlgdnv-3 {
@@ -39,8 +39,17 @@ const style = css`
           color: #231f20;
         }
         div {
-          margin-top: 10px;
+          margin-top: 20px;
+          margin-bottom: 10px;
         }
+      }
+      filefieldlabel {
+        font-family: 'NanumSquareRoundWeb', sans-serif;
+        font-weight: 700;
+      }
+      button {
+        margin-top: 15px;
+        font-size: 22px !important;
       }
     }
   }

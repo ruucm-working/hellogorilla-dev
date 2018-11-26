@@ -34,8 +34,10 @@ const CoverImg = styled.div`
 `
 
 const Wrap = styled.div`
-  margin-left: ${wem2(240)};
-  margin-right: ${wem2(240)};
+  /* margin-left: ${wem2(240)};
+  margin-right: ${wem2(240)}; */
+  max-width: 960px;
+  margin: 0 auto;
 `
 
 const User = styled.a``
