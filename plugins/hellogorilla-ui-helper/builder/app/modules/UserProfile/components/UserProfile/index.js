@@ -38,17 +38,29 @@ const Wrap = styled.div`
   margin-right: ${wem2(240)}; */
   max-width: 960px;
   margin: 0 auto;
+  ${media.tablet`
+    padding: 0 20px;
+  `}
 `
 
 const User = styled.a``
 const UserImage = styled.img`
   position: absolute;
   top: -128px;
+  @media all and (max-width: 575px) {
+    width: 100%;
+    position: relative
+
+  }
 `
 
 const ProfileWrap = styled.div`
   margin-left: 48px;
   margin-top: 48px;
+  ${media.tablet`
+      margin-left: unset;
+      margin-top: -90px;
+  `};
 `
 const ShortDesc = styled.div`
   font-size: 16px;
