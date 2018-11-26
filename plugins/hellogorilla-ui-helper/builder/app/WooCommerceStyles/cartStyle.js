@@ -106,6 +106,9 @@ const style = css`
           display: inline-block;
         }
       }
+      ${media.tablet`
+        padding: 0 20px;
+      `}
     }
     h2 {
       display: none;
@@ -152,6 +155,12 @@ const style = css`
         font-size: 14px !important;
         color: #231f20 !important;
       }
+      ${media.tablet`
+        .woocommerce-Price-amount {
+          width: 100% !important;
+        }
+      `}
+      
     }
     /* 고정 요금 */
     .woocommerce-shipping-totals {
@@ -188,6 +197,12 @@ const style = css`
         font-size: 14px !important;
         color: #231f20 !important;
       }
+      ${media.tablet`
+        >td {
+          display: table;
+          float: right;
+        }
+      `}
     }
 
     /* 합계 */
@@ -227,6 +242,9 @@ const style = css`
       &:before {
         display: none;
       }
+      ${media.tablet`
+        font-size: 14px;
+      `}
     }
     /* 쿠폰 */
     .coupon {
