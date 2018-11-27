@@ -17,14 +17,20 @@ const newsStyle = css`
       position:relative;
     }
     .kboard-list-header {
-      /* margin-left: ${wem2(240)};
-      margin-right: ${wem2(240)}; */
-      margin-top: ${wem2(96)};
       max-width: 960px;
-      position: absolute;
-      width: 100%;
-      left: 50%;
-      transform: translateX(-50%);
+      margin: 0 auto;
+      margin-top: ${wem2(96)};
+      position: relative;
+      .kboard-control {
+        position: absolute;
+        right: 6.94vw;
+        padding: 5px;
+        border: 1px solid #533c97;
+        border-radius: 2px;
+        margin-top: unset;
+        top: 77%;
+        font-size: ${wem2(16)};
+      }
     }
     .kboard-total-count {
       margin-left: ${wem2(48)};
