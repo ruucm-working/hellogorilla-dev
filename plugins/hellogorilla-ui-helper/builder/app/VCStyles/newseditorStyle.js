@@ -55,7 +55,23 @@ const newseditorStyle = css`
         position: absolute;
         bottom: 20px;
         width: 100%;
+        border-radius: 2px;
+        color: black;
+        .left {
+          display: inline-block;
+          a {
+            padding: 15px 42px;
+            border: 1px solid #533c97;
+            font-size: 16px !important;
+            :hover {
+              color: white;
+              background: #533c97;
+            }
+          }
+        }
         .right {
+          margin-left: 20px;
+          display: inline-block;
           .kboard-default-button-small {
             border: 1px solid #533c97;
             color: black;
