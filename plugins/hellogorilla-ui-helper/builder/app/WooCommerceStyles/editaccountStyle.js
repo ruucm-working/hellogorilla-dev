@@ -25,9 +25,26 @@ const style = css`
             font-size: 11px !important;
           }
         }
+
         .woocommerce-Input {
           margin-top: 10px;
           width: 100% !important;
+        }
+      }
+      .form-row-last {
+        display: none;
+      }
+      .woocommerce-form-row--wide {
+        label[for='account_display_name'] {
+          display: none;
+        }
+        #account_display_name {
+          display: none;
+        }
+        span {
+          em {
+            display: none;
+          }
         }
       }
 

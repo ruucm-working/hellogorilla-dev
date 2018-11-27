@@ -19,6 +19,7 @@ const newseditorStyle = css`
         .attr-name {
           color: #231f20;
           font-size: 24px;
+          /* display: none; */
         }
         label {
           font-family: 'NanumSquareRoundWeb', sans-serif;
