@@ -14,6 +14,9 @@ const style = css`
         white-space: nowrap;
         left: 50%;
         transform: translateX(-50%);
+        .checkout_coupon_box {
+          display: none;
+        }
       }
       .checkout {
         font-family: 'NanumSquareRoundWeb', sans-serif;
