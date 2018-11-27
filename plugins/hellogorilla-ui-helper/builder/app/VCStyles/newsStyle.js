@@ -30,6 +30,10 @@ const newsStyle = css`
         margin-top: unset;
         top: 77%;
         font-size: ${wem2(16)};
+        :hover {
+          background:#533c97;
+          color: white; 
+        }
       }
     }
     .kboard-total-count {

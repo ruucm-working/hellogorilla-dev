@@ -21,6 +21,15 @@ const newseditorStyle = css`
           font-size: 24px;
           /* display: none; */
         }
+        .attr-name[for='kboard-input-thumbnail'] {
+          display: none;
+        }
+        #kboard-input-thumbnail {
+          display: none;
+        }
+        .attr-name[for='kboard-select-wordpress-search'] {
+          display: none;
+        }
         label {
           font-family: 'NanumSquareRoundWeb', sans-serif;
           margin-top: 10px;
