@@ -128,12 +128,27 @@ const newsStyle = css`
       margin-top: ${wem2(96)};
       position:relative;
     }
-    .kboard-default-document {
-      position:absolute;
+    #kboard-default-document {
+      /* position:absolute;
       left: 50%;
       max-width: 960px;
       width: 100%;
-      transform: translateX(-50%);
+      transform: translateX(-50%); */
+      .kboard-control {
+        /* background: pink; */
+        a {
+          margin: 0 25px;
+          border: 1px solid #533c97;
+          padding: 15px 42px;
+          color: #231f20;
+          cursor: pointer;
+          border-radius: 2px;
+          :hover {
+            color: white;
+            background: #533c97;
+          }
+        }
+      }
     }
     .kboard-document-wrap {
       position: relative;
@@ -200,9 +215,6 @@ const newsStyle = css`
     }
     .kboard-document-navi {
       display: none;
-    }
-    .kboard-control {
-      /* display: none; */
     }
 
     /* 차례 */
