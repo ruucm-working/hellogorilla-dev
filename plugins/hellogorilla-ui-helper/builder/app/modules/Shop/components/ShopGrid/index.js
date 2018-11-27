@@ -23,7 +23,7 @@ import { _t } from '../../../shared/translate'
 const Height = styled.div`
   min-height: ${wem2(1928)};
   @media all and (max-width: 575px) {
-    min-height: 4300px;
+    /* min-height: 4000px; */
   }
 `
 
@@ -39,11 +39,9 @@ const Wrap = styled.div`
   margin: 0 auto;
   margin-top: 128px;
   position: relative;
-    /* .col-sm-4 {
-    @media all and (min-width: 575px) {
-      height: 350px !important;
-    }
-  } */
+    @media all and (max-width: 575px) {
+      padding-bottom: 50px;
+  }
 `
 
 const Category = styled.ul`
@@ -104,7 +102,7 @@ const CategoryItem = styled.li`
 `
 
 const StyledRow = styled(Row)`
-  position: absolute;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
