@@ -21,11 +21,9 @@ import { _t } from '../../../shared/translate'
 
 // ../../assets/banner.png
 const Height = styled.div`
-  min-height: 1928px;
-  /* height: fill-available; */
+  min-height: ${wem2(1928)};
   @media all and (max-width: 575px) {
-    /* width: 100%; */
-    min-height: 4200px;
+    min-height: 4300px;
   }
 `
 
