@@ -64,6 +64,7 @@ const style = css`
           font-stretch: normal;
           line-height: 1;
           letter-spacing: normal;
+          padding-left: unset;
           color: #231f20;
           ${media.tablet`
           font-size: 18px;
