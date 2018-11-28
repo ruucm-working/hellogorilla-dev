@@ -171,7 +171,7 @@ const enhance = compose(
       startVerification,
       ...props
     }) => phone => {
-      if (wpGetEmailByPhone) {
+      if (setEmailValue) {
         wpGetEmailByPhone(phone, res => {
           if (res) {
             setPhoneValue(phone)
@@ -194,14 +194,26 @@ const enhance = compose(
           }
         }) // get email by verificated phone number
       } else {
-        setPhoneValue(phone) // at SignUp (only phone verification)
-
-        alert(
-          _t(
-            current_lang,
-            '휴대폰 번호가 조회 되었습니다.\n아래 버튼을 클릭하여 인증을 진행해주세요.'
-          )
-        )
+        // at SignUp
+        wpGetEmailByPhone(phone, res => {
+          if (res) {
+            alert(
+              _t(
+                current_lang,
+                '입력하신 휴대폰으로 이미 가입된 사용자가 있습니다.'
+              )
+            )
+          } else {
+            // err
+            setPhoneValue(phone)
+            alert(
+              _t(
+                current_lang,
+                '입력하신 휴대폰 번호로 가입하실 수 있습니다.\n아래 버튼을 클릭하여 인증을 진행해주세요.'
+              )
+            )
+          }
+        }) // get email by verificated phone number
       }
     },
   })

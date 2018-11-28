@@ -32,6 +32,10 @@ const _t = (current_lang, key) => {
     '이메일 형식이 잘못 되었습니다': 'Email Information is Not Valid',
     '비밀번호는 필수 필드 입니다': 'Password Information is Missed',
     '비밀번호가 같지 않습니다': 'Email Information is NOT match',
+    '입력하신 휴대폰 번호로 가입하실 수 있습니다.\n아래 버튼을 클릭하여 인증을 진행해주세요.':
+      'This is an available phone number.\nPress below button to Verification',
+    '입력하신 휴대폰으로 이미 가입된 사용자가 있습니다.':
+      'User already signed up with the phone number',
 
     // Find Id
     '이메일 찾기': 'Find Email',

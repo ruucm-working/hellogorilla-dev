@@ -150,6 +150,7 @@ const SignUp = ({
   // wordpress
   current_lang,
   wpSignUp,
+  wpGetEmailByPhone,
 
   ...props
 }) => {
@@ -224,12 +225,18 @@ const SignUp = ({
             <SendCode
               current_lang={current_lang}
               setPhoneValue={setPhoneValue}
+              wpGetEmailByPhone={wpGetEmailByPhone}
             />
-            <ConfirmCode
-              current_lang={current_lang}
-              phoneValue={phoneValue}
-              setPhoneVerfied={setPhoneVerfied}
-            />
+            {/* render ConfirmCode if phone is not already signed up */}
+            {phoneValue ? (
+              <ConfirmCode
+                current_lang={current_lang}
+                phoneValue={phoneValue}
+                setPhoneVerfied={setPhoneVerfied}
+              />
+            ) : (
+              ''
+            )}
           </div>
 
           <Agree href="/agreement" target="_blank">
