@@ -49,8 +49,7 @@ const UserImage = styled.img`
   top: -128px;
   @media all and (max-width: 575px) {
     width: 100%;
-    position: relative
-
+    position: relative;
   }
 `
 
@@ -113,6 +112,10 @@ const Label = styled.div`
   color: #533c97;
   font-weight: 600;
 `
+const NoProductLabel = styled.div`
+  margin-top: 20px;
+`
+
 const SliderWrap = styled.div`
   margin-top: 24px;
   .lcotMS {
@@ -396,16 +399,20 @@ const UserProfile = ({ current_lang, ...props }) => {
 
               <Products>
                 <Label>{_t(current_lang, '관련 상품')}</Label>
-                <Row>
-                  {map(user.user_products, (item, id) => (
-                    <Column col="6">
-                      <Item key={id} href={'/?p=' + item.ID}>
-                        <ItemImage src={item.image} />
-                        <ItemTitle>{item.post_title}</ItemTitle>
-                      </Item>
-                    </Column>
-                  ))}
-                </Row>
+                {user.user_products.length > 0 ? (
+                  <Row>
+                    {map(user.user_products, (item, id) => (
+                      <Column col="6">
+                        <Item key={id} href={'/?p=' + item.ID}>
+                          <ItemImage src={item.image} />
+                          <ItemTitle>{item.post_title}</ItemTitle>
+                        </Item>
+                      </Column>
+                    ))}
+                  </Row>
+                ) : (
+                  <NoProductLabel>관련상품이 없습니다.</NoProductLabel>
+                )}
               </Products>
             </ProfileWrap>
           </Column>

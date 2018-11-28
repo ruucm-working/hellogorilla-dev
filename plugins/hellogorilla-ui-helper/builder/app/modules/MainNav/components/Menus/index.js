@@ -236,8 +236,8 @@ const Menus = ({
                     //   로그아웃
                     // </MenuItem>
                     <MenuItem
-                      href="/my-account"
-                      current={isActivePage('/my-account/')}
+                      href="/my-account/orders"
+                      current={isActivePage('/my-account/orders')}
                     >
                       {_t(current_lang, '마이페이지')}
                     </MenuItem>
@@ -294,7 +294,7 @@ const Menus = ({
                   한국어
                 </MenuItem>
               </Right>
-              {/* <a href="/my-account">카트</a> */}
+              {/* <a href="/my-account/orders/">카트</a> */}
 
               {/* <IconMenuItem href="https://www.instagram.com/beers_pick/">
                 <span className="beerspick beerspick-instagram_logo" />

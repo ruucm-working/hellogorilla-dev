@@ -13241,12 +13241,12 @@ input[type="submit"],
   min-width: 15px !important;
   width: auto !important; }
 
-button:hover,
+/* button:hover,
 .button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  color: #fff; }
+  color: #fff; } */
 
 label {
   text-transform: uppercase;

@@ -9,7 +9,11 @@ import validate from './validate'
 import Dropzone from 'react-dropzone'
 import { _t, _u } from '../../../shared/translate'
 
-const Wrap = styled.div``
+const Wrap = styled.div`
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: 'NanumSquareRoundWeb', sans-serif;
+`
 const InfoBox = styled.div`
   background: rebeccapurple;
   position: fixed;
@@ -20,29 +24,56 @@ const CloseBtn = styled.button``
 
 const Title = styled.h1`
   font-size: 50px;
+  margin-top: 50px;
   margin-bottom: 150px;
+  font-family: 'NanumSquareRoundWeb', sans-serif;
+  font-size: 24px;
+  color: #231f20;
+  font-weight: 900;
 `
 
 const PromotionDesc = styled.div``
 
-const Form = styled.form``
-const fileFieldLabel = styled.div``
+const Form = styled.form`
+  input {
+    border: 1px solid #231f20;
+    border-radius: 2px;
+  }
+`
+
 const UploadedImg = styled.img`
   width: 100px;
 `
-const RederFieldLabel = styled.div`
+const FieldWrap = styled.div`
   margin-bottom: 50px;
 `
-const textareaFieldLabel = styled.span``
-const radioFieldLabel = styled.span``
-const checkFieldLabel = styled.span``
-const CheckFields = styled.div``
-const HR = styled.hr``
-const SelectAll = styled.input``
-const SelectAllLabel = styled.span``
+const RederFieldLabel = styled.div`
+  margin-bottom: 10px;
+  font-weight: 900;
+  font-family: 'NanumSquareRoundWeb', sans-serif;
+  font-size: 11px;
+  color: #231f20;
+`
+const TextareaFieldLabel = styled.div`
+  margin-bottom: 10px;
+  font-weight: 900;
+  font-family: 'NanumSquareRoundWeb', sans-serif;
+  font-size: 11px;
+  color: #231f20;
+`
+const FileFieldLabel = styled.div`
+  font-family: 'NanumSquareRoundWeb', sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+`
 
 const ErrorWrapper = styled.div`
   color: #ee4230;
+`
+const Button = styled.button`
+  margin-top: 15px;
+  font-size: 22px !important;
+  cursor: pointer;
 `
 
 // redux-form
@@ -53,23 +84,24 @@ const renderField = ({
   type,
   meta: { touched, error },
 }) => (
-  <div>
-    <input {...input} placeholder={placeholder} type={type} />
+  <FieldWrap>
     <RederFieldLabel>{label}</RederFieldLabel>
-  </div>
+    <input {...input} placeholder={placeholder} type={type} />
+  </FieldWrap>
 )
 
 const textareaField = ({ input, label, type, meta: { touched, error } }) => (
-  <div>
+  <FieldWrap>
+    <TextareaFieldLabel>{label}</TextareaFieldLabel>
     <input {...input} type={type} />
-    <textareaFieldLabel>{label}</textareaFieldLabel>
-  </div>
+  </FieldWrap>
 )
 
 const renderDropzoneInput = ({ wpUpload, label, ...field }) => {
   const files = field.input.value
   return (
-    <div>
+    <FieldWrap>
+      <FileFieldLabel>{label}</FileFieldLabel>
       <Dropzone
         name={field.name}
         onDrop={(filesToUpload, e) => {
@@ -86,8 +118,7 @@ const renderDropzoneInput = ({ wpUpload, label, ...field }) => {
       )}
       {log('files', files)}
       {files && <UploadedImg src={files} />}
-      <fileFieldLabel>{label}</fileFieldLabel>
-    </div>
+    </FieldWrap>
   )
 }
 
@@ -261,9 +292,9 @@ const NewArtist = ({
         <div>
           {error && <ErrorWrapper>{error}</ErrorWrapper>}
 
-          <button type="submit" disabled={submitting}>
+          <Button type="submit" disabled={submitting}>
             만들기
-          </button>
+          </Button>
         </div>
       </Form>
     </Wrap>

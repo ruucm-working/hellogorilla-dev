@@ -17,7 +17,6 @@ import aboutStyle from './VCStyles/aboutStyle'
 import programStyle from './VCStyles/programStyle'
 import newsStyle from './VCStyles/newsStyle'
 import newseditorStyle from './VCStyles/newseditorStyle'
-import newartistStyle from './VCStyles/newartistStyle'
 import notFoundStyle from './VCStyles/notFoundStyle'
 import agreeprivacyStyle from './VCStyles/agreeprivacyStyle'
 
@@ -138,7 +137,6 @@ injectGlobal`
   ${programStyle}
   ${newsStyle}
   ${newseditorStyle}
-  ${newartistStyle}
   ${notFoundStyle}
   ${agreeprivacyStyle}
 

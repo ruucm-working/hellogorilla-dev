@@ -216,37 +216,6 @@ exports.default = style;
 
 /***/ }),
 
-/***/ "./builder/app/VCStyles/newartistStyle.js":
-/*!************************************************!*\
-  !*** ./builder/app/VCStyles/newartistStyle.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.es.js");
-
-var _mixins = __webpack_require__(/*! ruucm-blocks/tools/mixins */ "./node_modules/ruucm-blocks/tools/mixins.js");
-
-var _media = __webpack_require__(/*! ruucm-blocks/tools/media */ "./node_modules/ruucm-blocks/tools/media.js");
-
-var _media2 = _interopRequireDefault(_media);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// App Styles
-var style = (0, _styledComponents.css)(['.page-id-168{.site-content{max-width:960px;margin:0 auto;font-family:\'NanumSquareRoundWeb\',sans-serif;.NewArtist__Title-sc-1mlgdnv-3{font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:24px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;}.NewArtist__Form-sc-1mlgdnv-5{input{border:1px solid #231f20;border-radius:2px;margin-top:10px;}.NewArtist__RederFieldLabel-sc-1mlgdnv-8{font-family:\'NanumSquareRoundWeb\',sans-serif;font-size:11px;font-weight:normal;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;color:#231f20;}div{margin-top:20px;margin-bottom:10px;}}filefieldlabel{font-family:\'NanumSquareRoundWeb\',sans-serif;font-weight:700;}button{margin-top:15px;font-size:22px !important;}}}']);
-
-exports.default = style;
-
-/***/ }),
-
 /***/ "./builder/app/VCStyles/newsStyle.js":
 /*!*******************************************!*\
   !*** ./builder/app/VCStyles/newsStyle.js ***!
@@ -687,7 +656,7 @@ var _taggedTemplateLiteral2 = __webpack_require__(/*! babel-runtime/helpers/tagg
 
 var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  ', '\n  /* Fonts */\n  ', '\n  @import url(\'https://fonts.googleapis.com/css?family=Lato:400,700\');\n  /* Icons */\n  ', '\n  \n  /* Body Styles */\n\n  body {\n    font-family: "NanumSquareRoundWeb", sans-serif;\n    font-weight: 300;\n  }\n  /* Content Styles */\n  #content {\n    overflow-x: hidden;\n  }\n  \n\n\n  /* Basic Typo */\n  *, h1, h2, h3, p, a {\n    /* font-family: NanumSquareWeb */\n  }\n  a {\n    text-decoration: none;\n    color: inherit;\n  }\n  /* WooCommerce */\n\n  .has-very-dark-gray-color {\n    color: #231f20;\n    font-size: 14px;\n    line-height: 1.71;\n    padding-bottom:32px;\n  }\n\n  .has-cyan-bluish-gray-color {\n  color: #918f8f;\n  padding-bottom: 32px;\n  }\n\n  .has-small-font-size{\n  font-size: 11px;\n  line-height: 1.73;\n  }\n\n  .wp-block-image {\n    padding-bottom: 32px;\n    width: 100%;\n  }\n  .wp-block-video {\n    padding-bottom: 32px;\n  }\n  img {\n    width: 100%;\n    height: auto;\n  }\n\n\n  /* Visual Composer Styles */\n  ', '\n  .single {\n    p {\n      line-height: 1.7em;\n    }\n  }\n  .woocommerce-account {\n    #content {\n      padding: 200px 0;\n      max-width: 960px;\n      margin: 0 auto;\n    }\n  }\n  .woocommerce-cart  {\n    .hellogorilla-page-banner {\n      margin-bottom: 80px;\n    }\n    .return-to-shop {\n      display: none;\n    }\n  }\n \n  .woocommerce-checkout  {\n    .hellogorilla-page-banner {\n      margin-bottom: 80px;\n    }\n  }\n \n  .page-id-121, .page-id-194  {\n    #footer-content {\n      margin-top: 0;\n    }\n    #footer-line {\n      background: transparent;\n    }\n  }\n  .hide-on-mobile {\n    ', ';\n  }\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n\n'], ['\n  ', '\n  /* Fonts */\n  ', '\n  @import url(\'https://fonts.googleapis.com/css?family=Lato:400,700\');\n  /* Icons */\n  ', '\n  \n  /* Body Styles */\n\n  body {\n    font-family: "NanumSquareRoundWeb", sans-serif;\n    font-weight: 300;\n  }\n  /* Content Styles */\n  #content {\n    overflow-x: hidden;\n  }\n  \n\n\n  /* Basic Typo */\n  *, h1, h2, h3, p, a {\n    /* font-family: NanumSquareWeb */\n  }\n  a {\n    text-decoration: none;\n    color: inherit;\n  }\n  /* WooCommerce */\n\n  .has-very-dark-gray-color {\n    color: #231f20;\n    font-size: 14px;\n    line-height: 1.71;\n    padding-bottom:32px;\n  }\n\n  .has-cyan-bluish-gray-color {\n  color: #918f8f;\n  padding-bottom: 32px;\n  }\n\n  .has-small-font-size{\n  font-size: 11px;\n  line-height: 1.73;\n  }\n\n  .wp-block-image {\n    padding-bottom: 32px;\n    width: 100%;\n  }\n  .wp-block-video {\n    padding-bottom: 32px;\n  }\n  img {\n    width: 100%;\n    height: auto;\n  }\n\n\n  /* Visual Composer Styles */\n  ', '\n  .single {\n    p {\n      line-height: 1.7em;\n    }\n  }\n  .woocommerce-account {\n    #content {\n      padding: 200px 0;\n      max-width: 960px;\n      margin: 0 auto;\n    }\n  }\n  .woocommerce-cart  {\n    .hellogorilla-page-banner {\n      margin-bottom: 80px;\n    }\n    .return-to-shop {\n      display: none;\n    }\n  }\n \n  .woocommerce-checkout  {\n    .hellogorilla-page-banner {\n      margin-bottom: 80px;\n    }\n  }\n \n  .page-id-121, .page-id-194  {\n    #footer-content {\n      margin-top: 0;\n    }\n    #footer-line {\n      background: transparent;\n    }\n  }\n  .hide-on-mobile {\n    ', ';\n  }\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n\n']),
+var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  ', '\n  /* Fonts */\n  ', '\n  @import url(\'https://fonts.googleapis.com/css?family=Lato:400,700\');\n  /* Icons */\n  ', '\n  \n  /* Body Styles */\n\n  body {\n    font-family: "NanumSquareRoundWeb", sans-serif;\n    font-weight: 300;\n  }\n  /* Content Styles */\n  #content {\n    overflow-x: hidden;\n  }\n  \n\n\n  /* Basic Typo */\n  *, h1, h2, h3, p, a {\n    /* font-family: NanumSquareWeb */\n  }\n  a {\n    text-decoration: none;\n    color: inherit;\n  }\n  /* WooCommerce */\n\n  .has-very-dark-gray-color {\n    color: #231f20;\n    font-size: 14px;\n    line-height: 1.71;\n    padding-bottom:32px;\n  }\n\n  .has-cyan-bluish-gray-color {\n  color: #918f8f;\n  padding-bottom: 32px;\n  }\n\n  .has-small-font-size{\n  font-size: 11px;\n  line-height: 1.73;\n  }\n\n  .wp-block-image {\n    padding-bottom: 32px;\n    width: 100%;\n  }\n  .wp-block-video {\n    padding-bottom: 32px;\n  }\n  img {\n    width: 100%;\n    height: auto;\n  }\n\n\n  /* Visual Composer Styles */\n  ', '\n  .single {\n    p {\n      line-height: 1.7em;\n    }\n  }\n  .woocommerce-account {\n    #content {\n      padding: 200px 0;\n      max-width: 960px;\n      margin: 0 auto;\n    }\n  }\n  .woocommerce-cart  {\n    .hellogorilla-page-banner {\n      margin-bottom: 80px;\n    }\n    .return-to-shop {\n      display: none;\n    }\n  }\n \n  .woocommerce-checkout  {\n    .hellogorilla-page-banner {\n      margin-bottom: 80px;\n    }\n  }\n \n  .page-id-121, .page-id-194  {\n    #footer-content {\n      margin-top: 0;\n    }\n    #footer-line {\n      background: transparent;\n    }\n  }\n  .hide-on-mobile {\n    ', ';\n  }\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n\n'], ['\n  ', '\n  /* Fonts */\n  ', '\n  @import url(\'https://fonts.googleapis.com/css?family=Lato:400,700\');\n  /* Icons */\n  ', '\n  \n  /* Body Styles */\n\n  body {\n    font-family: "NanumSquareRoundWeb", sans-serif;\n    font-weight: 300;\n  }\n  /* Content Styles */\n  #content {\n    overflow-x: hidden;\n  }\n  \n\n\n  /* Basic Typo */\n  *, h1, h2, h3, p, a {\n    /* font-family: NanumSquareWeb */\n  }\n  a {\n    text-decoration: none;\n    color: inherit;\n  }\n  /* WooCommerce */\n\n  .has-very-dark-gray-color {\n    color: #231f20;\n    font-size: 14px;\n    line-height: 1.71;\n    padding-bottom:32px;\n  }\n\n  .has-cyan-bluish-gray-color {\n  color: #918f8f;\n  padding-bottom: 32px;\n  }\n\n  .has-small-font-size{\n  font-size: 11px;\n  line-height: 1.73;\n  }\n\n  .wp-block-image {\n    padding-bottom: 32px;\n    width: 100%;\n  }\n  .wp-block-video {\n    padding-bottom: 32px;\n  }\n  img {\n    width: 100%;\n    height: auto;\n  }\n\n\n  /* Visual Composer Styles */\n  ', '\n  .single {\n    p {\n      line-height: 1.7em;\n    }\n  }\n  .woocommerce-account {\n    #content {\n      padding: 200px 0;\n      max-width: 960px;\n      margin: 0 auto;\n    }\n  }\n  .woocommerce-cart  {\n    .hellogorilla-page-banner {\n      margin-bottom: 80px;\n    }\n    .return-to-shop {\n      display: none;\n    }\n  }\n \n  .woocommerce-checkout  {\n    .hellogorilla-page-banner {\n      margin-bottom: 80px;\n    }\n  }\n \n  .page-id-121, .page-id-194  {\n    #footer-content {\n      margin-top: 0;\n    }\n    #footer-line {\n      background: transparent;\n    }\n  }\n  .hide-on-mobile {\n    ', ';\n  }\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n\n']),
     _templateObject2 = (0, _taggedTemplateLiteral3.default)(['\n      display: none;\n    '], ['\n      display: none;\n    ']);
 
 // import NanumSquare from 'ruucm-blocks/css-patterns/fonts/NanumSquare'
@@ -735,10 +704,6 @@ var _newseditorStyle = __webpack_require__(/*! ./VCStyles/newseditorStyle */ "./
 
 var _newseditorStyle2 = _interopRequireDefault(_newseditorStyle);
 
-var _newartistStyle = __webpack_require__(/*! ./VCStyles/newartistStyle */ "./builder/app/VCStyles/newartistStyle.js");
-
-var _newartistStyle2 = _interopRequireDefault(_newartistStyle);
-
 var _notFoundStyle = __webpack_require__(/*! ./VCStyles/notFoundStyle */ "./builder/app/VCStyles/notFoundStyle.js");
 
 var _notFoundStyle2 = _interopRequireDefault(_notFoundStyle);
@@ -778,7 +743,7 @@ var _orderreceivedStyle2 = _interopRequireDefault(_orderreceivedStyle);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // App Styles
-(0, _styledComponents.injectGlobal)(_templateObject, _normalize2.default, _NanumSquareRound2.default, _HelloGorillaIcon2.default, _aboutStyle2.default, _media2.default.tablet(_templateObject2), _homeStyle2.default, _programStyle2.default, _newsStyle2.default, _newseditorStyle2.default, _newartistStyle2.default, _notFoundStyle2.default, _agreeprivacyStyle2.default, _orderStyle2.default, _addressStyle2.default, _cartStyle2.default, _checkoutStyle2.default, _editaccountStyle2.default, _payagainStyle2.default, _orderreceivedStyle2.default);
+(0, _styledComponents.injectGlobal)(_templateObject, _normalize2.default, _NanumSquareRound2.default, _HelloGorillaIcon2.default, _aboutStyle2.default, _media2.default.tablet(_templateObject2), _homeStyle2.default, _programStyle2.default, _newsStyle2.default, _newseditorStyle2.default, _notFoundStyle2.default, _agreeprivacyStyle2.default, _orderStyle2.default, _addressStyle2.default, _cartStyle2.default, _checkoutStyle2.default, _editaccountStyle2.default, _payagainStyle2.default, _orderreceivedStyle2.default);
 
 /***/ }),
 
