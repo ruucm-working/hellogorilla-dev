@@ -10,15 +10,12 @@ import { _t } from '../../../shared/translate'
 import SendCode from '../../../shared/PhoneVerfication/SendCode'
 import ConfirmCode from '../../../shared/PhoneVerfication/ConfirmCode'
 
-
 const Wrap = styled.div`
   margin-top: ${wem2(96)};
   margin-left: ${wem2(480)};
   margin-right: ${wem2(480)};
   min-height: 900px;
 `
-
-const CloseBtn = styled.button``
 
 const Title = styled.h1`
   position: absolute;
@@ -51,65 +48,6 @@ const WriteField = styled.input`
   font-size: ${wem2(14)};
   padding-left: ${wem2(20)};
   color: #b7b5b6;
-`
-const PhoneWriteField = styled.input`
-  margin-top: ${wem2(10)};
-  width: ${wem2(332)};
-  height: ${wem2(52)};
-  border-radius: 2px;
-  border: solid 1px #231f20;
-  font-size: ${wem2(14)};
-  padding-left: ${wem2(20)};
-  color: #b7b5b6;
-  display: inline-block;
-  margin-right: ${wem2(10)};
-`
-const PhoneMatchField = styled.input`
-  margin-top: ${wem2(12)};
-  width: ${wem2(332)};
-  height: ${wem2(52)};
-  border-radius: 2px;
-  border: solid 1px #231f20;
-  font-size: ${wem2(14)};
-  padding-left: ${wem2(20)};
-  color: #b7b5b6;
-  display: inline-block;
-  margin-right: ${wem2(10)};
-`
-
-const PassButton = styled.div`
-  display: inline-block;
-  width: ${wem2(136)};
-  height: ${wem2(52)};
-  border-radius: 2px;
-  background-color: #533c97;
-  cursor: pointer;
-  position: relative;
-  vertical-align: middle;
-`
-const PassText = styled.div`
-  white-space: nowrap;
-  font-size: ${wem2(14)};
-  color: #ffffff;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-`
-
-const RoleFieldLabel = styled.span``
-const RadioFieldLabel = styled.span``
-const CheckFieldLabel = styled.span``
-const CheckFields = styled.div``
-const HR = styled.hr``
-const SelectAll = styled.input``
-const SelectAllLabel = styled.span``
-
-const TimeRemain = styled.div`
-  font-size: ${wem2(11)};
-  margin-top: ${wem2(12)};
-  margin-left: ${wem2(20)};
-  color: #0eb780;
 `
 
 const Agree = styled.a`
@@ -179,102 +117,6 @@ const passwordmatchField = ({
   <div>
     <PasswordmatchField>{label}</PasswordmatchField>
     <WriteField input {...input} placeholder={placeholder} type={type} />
-  </div>
-)
-const phoneField = ({
-  input,
-  input02,
-  input03,
-  label,
-  placeholder,
-  type,
-  current_lang,
-  meta: { touched, error },
-}) => (
-  <div>
-    <RenderFieldLabel>{label}</RenderFieldLabel>
-    <PhoneWriteField input {...input} placeholder={placeholder} type={type} />
-
-    <PassButton>
-      <PassText
-        onClick={() => {
-          // alert('hey')
-          log('IMP', IMP)
-
-          // IMP.certification(param, callback) 호출
-          IMP.certification(
-            {
-              // param
-              merchant_uid: 'merchant_' + new Date().getTime(), // 옵션 값
-            },
-            rsp => {
-              // callback
-              log('rsp', rsp)
-              if (rsp.success) {
-                // ...,
-                // 인증 성공 시 로직,
-                // ...
-              } else {
-                // ...,
-                // 인증 실패 시 로직,
-                // ...
-              }
-            }
-          )
-        }}
-      >
-        {_t(current_lang, '인증번호 전송')}
-      </PassText>
-    </PassButton>
-  </div>
-)
-
-const phoneMatchField = ({
-  input,
-  label,
-  placeholder,
-  type,
-  current_lang,
-  meta: { touched, error },
-}) => (
-  <div>
-    {/* <RenderFieldLabel /> */}
-    <PhoneMatchField input {...input} placeholder={placeholder} type={type} />
-    <PassButton>
-      <PassText>{_t(current_lang, '인증번호 확인')}</PassText>
-    </PassButton>
-  </div>
-)
-
-const loginField = ({
-  input,
-  label,
-  placeholder,
-  type,
-  meta: { touched, error },
-}) => (
-  <div>
-    <LoginField {...input} placeholder={placeholder} type={type} />
-  </div>
-)
-
-const roleField = ({ input, label, type, meta: { touched, error } }) => (
-  <div>
-    <RoleFieldLabel>{label}</RoleFieldLabel>
-    <input {...input} type={type} />
-  </div>
-)
-const radioField = ({ input, label, type, meta: { touched, error } }) => (
-  <div>
-    <RadioFieldLabel>{label}</RadioFieldLabel>
-    <input {...input} type={type} />
-  </div>
-)
-
-const checkField = ({ input, label, type, meta: { touched, error } }) => (
-  <div>
-    <CheckFieldLabel>{label}</CheckFieldLabel>
-    <input {...input} type={type} />
   </div>
 )
 
