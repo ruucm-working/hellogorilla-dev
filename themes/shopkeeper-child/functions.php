@@ -500,6 +500,18 @@ function custom_remove_woo_checkout_fields( $fields ) {
 }
 
 /**
+ * Removing Form Fields from the WooCommerce My Account Page
+ */
+function storefront_child_remove_unwanted_form_fields($fields) {
+	unset( $fields ['country'] );
+	unset( $fields ['last_name'] );
+	unset( $fields ['company'] );
+	unset( $fields ['city'] );
+	return $fields;
+}
+add_filter( 'woocommerce_default_address_fields', 'storefront_child_remove_unwanted_form_fields' );
+
+/**
  * Remove or Add WooCommerce My Account Menu Items
  */
 add_filter ( 'woocommerce_account_menu_items', 'misha_remove_my_account_links' );

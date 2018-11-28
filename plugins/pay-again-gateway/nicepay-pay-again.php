@@ -99,7 +99,7 @@ class WC_Gateway_Pay_Again extends WC_Payment_Gateway {
 			}
 		} else {
 			$iamoprt_fields = array(
-				'info-field' => '<p>결제는 등록된 카드로 결제되고, 결제카드 수정은 마이페이지>결제정보에서 가능합니다.</p>',
+				'info-field' => '<p>결제는 등록된 카드로 결제되고,<br/>결제카드 수정은 마이페이지>결제정보에서 가능합니다.</p>',
 			);
 			add_filter( 'woocommerce_order_button_html', 'pay_again_order_button_html');
 			function pay_again_order_button_html( $button ) {

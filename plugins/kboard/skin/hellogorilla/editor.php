@@ -97,21 +97,21 @@
 				<textarea name="kboard_content" id="kboard_content"><?php echo $content->content?></textarea>
 			<?php endif?>
 		</div>
-		
+<!-- 		
 		<div class="kboard-attr-row">
 			<label class="attr-name"><?php echo __('Photos', 'kboard')?></label>
 			<div class="attr-value">
 				<a href="#" onclick="kboard_editor_open_media();return false;"><?php echo __('KBoard Add Media', 'kboard')?></a>
 			</div>
-		</div>
+		</div> -->
 		
-		<div class="kboard-attr-row">
+		<!-- <div class="kboard-attr-row">
 			<label class="attr-name" for="kboard-input-thumbnail"><?php echo __('Thumbnail', 'kboard')?></label>
 			<div class="attr-value">
 				<?php if($content->thumbnail_file):?><?php echo $content->thumbnail_name?> - <a href="<?php echo $url->getDeleteURLWithAttach($content->uid);?>" onclick="return confirm('<?php echo __('Are you sure you want to delete?', 'kboard')?>');"><?php echo __('Delete file', 'kboard')?></a><?php endif?>
 				<input type="file" id="kboard-input-thumbnail" name="thumbnail" accept="image/*">
 			</div>
-		</div>
+		</div> -->
 		
 		<?php if($board->meta->max_attached_count > 0):?>
 			<!-- 첨부파일 시작 -->

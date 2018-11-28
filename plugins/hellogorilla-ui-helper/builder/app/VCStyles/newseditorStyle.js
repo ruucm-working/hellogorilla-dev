@@ -13,6 +13,7 @@ const newseditorStyle = css`
       position: relative;
       ${media.tablet`
         min-height: 1800px !important;
+        max-width: 335px !important;        
       `}
       .kboard-attr-row {
         margin-top: 50px;
@@ -41,7 +42,7 @@ const newseditorStyle = css`
         }
       }
       .kboard-content {
-        margin-top: 250px;
+        margin-top: 50px;
         padding: unset;
       }
       .wp-editor-wrap {
@@ -95,6 +96,9 @@ const newseditorStyle = css`
             color: unset;
           }
         }
+      }
+      #wp-kboard_content-media-buttons {
+        display: none;
       }
     }
   }

@@ -67,8 +67,8 @@ const style = css`
           padding-left: unset;
           color: #231f20;
           ${media.tablet`
-          font-size: 18px;
-        `}
+            font-size: 18px;
+          `}
         }
       }
 
@@ -124,6 +124,11 @@ const style = css`
           margin-bottom: 20px;
         }
       `};
+    }
+    form {
+      > h3 {
+        margin-bottom: 30px;
+      }
     }
   }
 `

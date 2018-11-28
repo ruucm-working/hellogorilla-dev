@@ -70,7 +70,7 @@ const style = css`
       }
 
       table {
-        width: 100vw;
+        width: 100%;
       }
       thead {
         border-bottom: 1px solid #e9e8e8;
