@@ -82,9 +82,13 @@ class HelloGorilla {
 
 		// Iamport SDK
 		wp_deregister_script( 'iamport-payment-sdk' );
-		wp_register_script( 'iamport-payment-sdk', 'https://cdn.iamport.kr/js/iamport.payment-1.1.5.js', array( 'jquery', 'jquery-ui-dialog' ) );
+		wp_register_script( 'iamport-payment-sdk', 'https://cdn.iamport.kr/js/iamport.payment-1.1.7.js', array( 'jquery', 'jquery-ui-dialog' ) );
 
-		wp_enqueue_script( 'iamport-payment-sdk' );
+
+		// hide it, cause the other plugins alreay imports it
+
+		// wp_enqueue_script( 'iamport-payment-sdk' );
+
 
 	}
 }

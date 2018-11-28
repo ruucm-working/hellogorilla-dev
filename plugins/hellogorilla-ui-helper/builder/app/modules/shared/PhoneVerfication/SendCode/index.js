@@ -149,7 +149,7 @@ const SendCode = ({
         current_lang={current_lang}
       />
       <PassButton type="submit">
-        <PassText>{_t(current_lang, '인증번호 전송')}</PassText>
+        <PassText>{_t(current_lang, '휴대폰 가입확인')}</PassText>
       </PassButton>
       {/* <Alarm>
         {_t(current_lang, '가입 시 입력한 휴대폰 번호를 다시 확인해주세요.')}
@@ -168,6 +168,7 @@ const enhance = compose(
       setPhoneValue,
       setEmailValue,
       wpGetEmailByPhone,
+      startVerification,
       ...props
     }) => phone => {
       if (wpGetEmailByPhone) {
@@ -175,10 +176,11 @@ const enhance = compose(
           if (res) {
             setPhoneValue(phone)
             setEmailValue(res)
+
             alert(
               _t(
                 current_lang,
-                '입력하신 휴대폰으로 인증 번호가 전송되었습니다.'
+                '휴대폰 번호가 조회 되었습니다.\n아래 버튼을 클릭하여 인증을 진행해주세요.'
               )
             )
           } else {
@@ -195,7 +197,10 @@ const enhance = compose(
         setPhoneValue(phone) // at SignUp (only phone verification)
 
         alert(
-          _t(current_lang, '입력하신 휴대폰으로 인증 번호가 전송되었습니다.')
+          _t(
+            current_lang,
+            '휴대폰 번호가 조회 되었습니다.\n아래 버튼을 클릭하여 인증을 진행해주세요.'
+          )
         )
       }
     },

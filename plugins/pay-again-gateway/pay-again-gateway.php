@@ -82,7 +82,7 @@ function pay_again_enque_scripts() {
 	wp_enqueue_style( 'payagain-ionicons', plugin_dir_url( __FILE__ ) . 'assets/ion-icon/ionicons.min.css', array() );
 
 	// Iamport Library
-	wp_register_script( 'iamport_script', 'https://service.iamport.kr/js/iamport.payment-1.1.2.js', array('jquery') );
+	wp_register_script( 'iamport_script', 'https://service.iamport.kr/js/iamport.payment-1.1.7.js', array('jquery') );
 	wp_register_script( 'iamport_jquery_url', plugins_url( '/assets/js/url.min.js',plugin_basename(__FILE__) ));
 	wp_register_script( 'iamport_script_for_woocommerce', plugins_url( '/assets/js/iamport.woocommerce.js',plugin_basename(__FILE__) ), array('jquery'), '20170507');
 	wp_enqueue_script('iamport_script');

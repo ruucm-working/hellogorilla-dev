@@ -70,11 +70,15 @@ const FindID = ({
             wpGetEmailByPhone={wpGetEmailByPhone}
             setEmailValue={setEmailValue}
           />
-          <ConfirmCode
-            current_lang={current_lang}
-            phoneValue={phoneValue}
-            setPhoneVerfied={setPhoneVerfied}
-          />
+          {phoneValue ? (
+            <ConfirmCode
+              current_lang={current_lang}
+              phoneValue={phoneValue}
+              setPhoneVerfied={setPhoneVerfied}
+            />
+          ) : (
+            ''
+          )}
         </Wrap>
       ) : (
         <FindID_Login emailValue={emailValue} />

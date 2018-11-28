@@ -11,6 +11,7 @@ const _t = (current_lang, key) => {
 
     // SignUp
     '인증번호 전송': 'Send',
+    '휴대폰 가입확인': 'Check Phone',
     '인증번호 확인': 'Confirm',
     '회원가입을 축하 합니다.\n홈으로 이동합니다.': 'Thanks for Joining Us!',
     이메일: 'Email',
@@ -52,6 +53,8 @@ const _t = (current_lang, key) => {
     '휴대폰 번호를 입력 해주세요': 'Phone Number is Missed',
     '입력하신 휴대폰으로 인증 번호가 전송되었습니다.':
       'Please Check the Verification Code in Your Phone',
+    '휴대폰 번호가 조회 되었습니다.\n아래 버튼을 클릭하여 인증을 진행해주세요.':
+      'Press below button to start Verification',
     '휴대폰 인증이 정상적으로 되지 않았습니다': 'Your Phone is Not Verified',
     '도착한 인증번호를 입력해 주세요': 'Verification Code is Missed',
     '휴대폰이 정상적으로 인증 되었습니다':
