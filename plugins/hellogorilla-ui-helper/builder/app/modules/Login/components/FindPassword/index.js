@@ -134,11 +134,16 @@ const FindPassword = ({
             wpGetEmailByPhone={wpGetEmailByPhone}
             setEmailValue={setEmailValue}
           />
-          <ConfirmCode
-            current_lang={current_lang}
-            phoneValue={phoneValue}
-            setPhoneVerfied={setPhoneVerfied}
-          />
+
+          {phoneValue ? (
+            <ConfirmCode
+              current_lang={current_lang}
+              phoneValue={phoneValue}
+              setPhoneVerfied={setPhoneVerfied}
+            />
+          ) : (
+            ''
+          )}
         </Wrap>
       ) : (
         <ResetPassword
