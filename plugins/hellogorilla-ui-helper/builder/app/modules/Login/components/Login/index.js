@@ -21,7 +21,7 @@ const Wrap = styled.div`
   /* margin-left: ${wem2(480)};
   margin-right: ${wem2(480)}; */
   position:relative;
-  height: 400px;
+  height: ${wem2(400)};
 `
 
 const Absolute = styled.div`
