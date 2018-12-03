@@ -72,7 +72,7 @@ const prgramStyle = css`
       /* max-height: 352px; */
       position: relative;
       ${media.tablet`
-    height: 300px;
+    height: 100%;
   `};
     }
     .program-artist {
@@ -90,8 +90,13 @@ const prgramStyle = css`
       margin-top: ${wem2(10)};
       margin-bottom: unset;
       ${media.tablet`
-    font-size: 16px;
-  `};
+        font-size: 16px;
+      `};
+    }
+    .vc_empty_space {
+      ${media.tablet`
+        height: 20px !important;
+      `};
     }
     .program-artist-info {
       font-size: ${wem2(14)};
@@ -101,8 +106,9 @@ const prgramStyle = css`
       position: absolute;
       bottom: 4%;
       ${media.tablet`
-    font-size: 12px;
-  `};
+        font-size: 12px;
+        position: unset;
+      `};
     }
 
     .banner01 {

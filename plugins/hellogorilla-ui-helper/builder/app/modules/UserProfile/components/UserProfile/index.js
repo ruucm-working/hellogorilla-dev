@@ -216,23 +216,11 @@ const ArrowWrapper = styled.span`
 `
 
 const ArrowNext = props => {
-  return (
-    <ArrowWrapper
-      next
-      className="hellogorilla hellogorilla-arrow-right-selected"
-      onClick={props.onClick}
-    />
-  )
+  return <ArrowWrapper next className="hellogorilla hellogorilla-arrow-right-selected" onClick={props.onClick} />
 }
 
 const ArrowPrev = props => {
-  return (
-    <ArrowWrapper
-      prev
-      className="hellogorilla hellogorilla-arrow-right-selected"
-      onClick={props.onClick}
-    />
-  )
+  return <ArrowWrapper prev className="hellogorilla hellogorilla-arrow-right-selected" onClick={props.onClick} />
 }
 
 const MobileSliderDot = dots => {
@@ -255,42 +243,24 @@ const UserProfile = ({ current_lang, ...props }) => {
 
   return user ? (
     <div>
-      <CoverImg
-        src={user.meta.img_cover ? user.meta.img_cover : coverDefault}
-      />
+      <CoverImg src={user.meta.img_cover ? user.meta.img_cover : coverDefault} />
       <Wrap>
         <Row>
           <Column col="4">
-            <UserImage
-              src={
-                user.meta.img_profile ? user.meta.img_profile : profileDefault
-              }
-            />
+            <UserImage src={user.meta.img_profile ? user.meta.img_profile : profileDefault} />
           </Column>
 
           <Column col="8">
             <ProfileWrap>
-              <ShortDesc>
-                {current_lang == 'en'
-                  ? user.meta.short_desc_en
-                  : user.meta.short_desc}
-              </ShortDesc>
+              <ShortDesc>{current_lang == 'en' ? user.meta.short_desc_en : user.meta.short_desc}</ShortDesc>
 
               <NameLink>
-                <UserName>
-                  {current_lang == 'en' ? user.user_name : user.name}
-                </UserName>
+                <UserName>{current_lang == 'en' ? user.user_name : user.name}</UserName>
                 <Links>
-                  <HomePage
-                    href={user.meta.homepage ? user.meta.homepage : '#'}
-                    target={user.meta.homepage ? '_blank' : ''}
-                  >
+                  <HomePage href={user.meta.homepage ? user.meta.homepage : '#'} target={user.meta.homepage ? '_blank' : ''}>
                     <span className="hellogorilla hellogorilla-icon-website-hover-32" />
                   </HomePage>
-                  <Facebook
-                    href={user.meta.facebook ? user.meta.facebook : '#'}
-                    target={user.meta.facebook ? '_blank' : ''}
-                  >
+                  <Facebook href={user.meta.facebook ? user.meta.facebook : '#'} target={user.meta.facebook ? '_blank' : ''}>
                     {/* <span className="hellogorilla hellogorilla-icon-facebook-24">
                           <span className="path1" />
                           <span className="path2" />
@@ -300,20 +270,13 @@ const UserProfile = ({ current_lang, ...props }) => {
                       <span className="path2" />
                     </span>
                   </Facebook>
-                  <Instagram
-                    href={user.meta.instagram ? user.meta.instagram : '#'}
-                    target={user.meta.instagram ? '_blank' : ''}
-                  >
+                  <Instagram href={user.meta.instagram ? user.meta.instagram : '#'} target={user.meta.instagram ? '_blank' : ''}>
                     <span className="hellogorilla hellogorilla-icon-instagram-hover-24" />
                   </Instagram>
                 </Links>
               </NameLink>
 
-              <LongDesc>
-                {current_lang == 'en'
-                  ? user.meta.long_desc_en
-                  : user.meta.long_desc}
-              </LongDesc>
+              <LongDesc>{current_lang == 'en' ? user.meta.long_desc_en : user.meta.long_desc}</LongDesc>
 
               {user.meta.artist_video ? (
                 <Video controls>
@@ -328,18 +291,12 @@ const UserProfile = ({ current_lang, ...props }) => {
 
                 {user.meta.portfolio_01 ? (
                   <SliderWrap>
-                    <Slider
-                      nextArrow={<ArrowNext />}
-                      prevArrow={<ArrowPrev />}
-                      appendDots={MobileSliderDot}
-                    >
+                    <Slider nextArrow={<ArrowNext />} prevArrow={<ArrowPrev />} appendDots={MobileSliderDot}>
                       <PortfoliItemWrap>
                         <PortfoliItem>
                           <PortfolioImage src={user.meta.portfolio_01} />
 
-                          <PortfolioTitle>
-                            {getFileName(user.meta.portfolio_01)}
-                          </PortfolioTitle>
+                          <PortfolioTitle>{getFileName(user.meta.portfolio_01)}</PortfolioTitle>
                         </PortfoliItem>
                       </PortfoliItemWrap>
 
@@ -348,9 +305,7 @@ const UserProfile = ({ current_lang, ...props }) => {
                           <PortfoliItem>
                             <PortfolioImage src={user.meta.portfolio_02} />
 
-                            <PortfolioTitle>
-                              {getFileName(user.meta.portfolio_02)}
-                            </PortfolioTitle>
+                            <PortfolioTitle>{getFileName(user.meta.portfolio_02)}</PortfolioTitle>
                           </PortfoliItem>
                         </PortfoliItemWrap>
                       ) : (
@@ -360,9 +315,7 @@ const UserProfile = ({ current_lang, ...props }) => {
                         <PortfoliItemWrap>
                           <PortfoliItem>
                             <PortfolioImage src={user.meta.portfolio_03} />
-                            <PortfolioTitle>
-                              {getFileName(user.meta.portfolio_03)}
-                            </PortfolioTitle>
+                            <PortfolioTitle>{getFileName(user.meta.portfolio_03)}</PortfolioTitle>
                           </PortfoliItem>
                         </PortfoliItemWrap>
                       ) : (
@@ -373,9 +326,7 @@ const UserProfile = ({ current_lang, ...props }) => {
                         <PortfoliItemWrap>
                           <PortfoliItem>
                             <PortfolioImage src={user.meta.portfolio_04} />
-                            <PortfolioTitle>
-                              {getFileName(user.meta.portfolio_04)}
-                            </PortfolioTitle>
+                            <PortfolioTitle>{getFileName(user.meta.portfolio_04)}</PortfolioTitle>
                           </PortfoliItem>
                         </PortfoliItemWrap>
                       ) : (
@@ -386,9 +337,7 @@ const UserProfile = ({ current_lang, ...props }) => {
                         <PortfoliItemWrap>
                           <PortfoliItem>
                             <PortfolioImage src={user.meta.portfolio_05} />
-                            <PortfolioTitle>
-                              {getFileName(user.meta.portfolio_05)}
-                            </PortfolioTitle>
+                            <PortfolioTitle>{getFileName(user.meta.portfolio_05)}</PortfolioTitle>
                           </PortfoliItem>
                         </PortfoliItemWrap>
                       ) : (
@@ -432,9 +381,7 @@ const UserProfile = ({ current_lang, ...props }) => {
 const enhance = compose(
   lifecycle({
     componentDidMount() {
-      this.props.getPosts
-        ? this.props.getDatas({ userId: getParameterByName('id') })
-        : void 0 // don't run in builder
+      this.props.getPosts ? this.props.getDatas({ userId: getParameterByName('id') }) : void 0 // don't run in builder
     },
   })
 )
