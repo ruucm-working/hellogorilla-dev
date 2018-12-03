@@ -64,10 +64,14 @@ const ProfileWrap = styled.div`
 const ShortDesc = styled.div`
   font-size: 16px;
   color: #918f8f;
+  line-height: 1.86;
 `
 
 const NameLink = styled.div`
   margin-top: 20px;
+  ${media.tablet`
+      margin-top: 40px;
+  `};
 `
 const UserName = styled.div`
   font-size: 32px;
