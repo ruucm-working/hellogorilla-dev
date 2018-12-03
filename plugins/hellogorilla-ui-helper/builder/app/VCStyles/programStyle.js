@@ -99,7 +99,7 @@ const prgramStyle = css`
       color: #231f20;
       margin-bottom: unset;
       position: absolute;
-      bottom: 0;
+      bottom: 4%;
       ${media.tablet`
     font-size: 12px;
   `};

@@ -11,22 +11,26 @@ import SendCode from '../../../shared/PhoneVerfication/SendCode'
 import ConfirmCode from '../../../shared/PhoneVerfication/ConfirmCode'
 
 const Wrap = styled.div`
+  /* max-width: 960px;
+  margin: 0 auto; */
   margin-top: ${wem2(96)};
-  margin-left: ${wem2(480)};
-  margin-right: ${wem2(480)};
-  min-height: 900px;
+  min-height: ${wem2(900)};
 `
 
 const Title = styled.h1`
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  /* position: absolute; */
+  /* left: 50%;
+  transform: translateX(-50%); */
+  text-align: center;
   font-size: ${wem2(24)};
   color: #231f20;
 `
 
 const Form = styled.form`
   padding-top: ${wem2(48)};
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 `
 
 const RenderFieldLabel = styled.div`
@@ -52,7 +56,7 @@ const WriteField = styled.input`
 
 const Agree = styled.a`
   text-align: center;
-  font-size: 13px;
+  font-size: ${wem2(13)};
   color: #231f20;
   margin-top: 48px;
   display: block;
@@ -95,25 +99,13 @@ const Already = styled.a`
 `
 
 // redux-form
-const renderField = ({
-  input,
-  label,
-  placeholder,
-  type,
-  meta: { touched, error },
-}) => (
+const renderField = ({ input, label, placeholder, type, meta: { touched, error } }) => (
   <div>
     <RenderFieldLabel>{label}</RenderFieldLabel>
     <WriteField input {...input} placeholder={placeholder} type={type} />
   </div>
 )
-const passwordmatchField = ({
-  input,
-  label,
-  placeholder,
-  type,
-  meta: { touched, error },
-}) => (
+const passwordmatchField = ({ input, label, placeholder, type, meta: { touched, error } }) => (
   <div>
     <PasswordmatchField>{label}</PasswordmatchField>
     <WriteField input {...input} placeholder={placeholder} type={type} />
@@ -179,12 +171,7 @@ const SignUp = ({
                 },
                 'customer',
                 res => {
-                  alert(
-                    _t(
-                      current_lang,
-                      '회원가입을 축하 합니다.\n홈으로 이동합니다.'
-                    )
-                  )
+                  alert(_t(current_lang, '회원가입을 축하 합니다.\n홈으로 이동합니다.'))
                   window.location = '/'
                 }
               )
@@ -192,58 +179,17 @@ const SignUp = ({
           })}
         >
           <div>
-            <Field
-              name="email"
-              type="email"
-              label={_t(current_lang, '이메일')}
-              placeholder={_t(current_lang, '이메일을 입력해주세요')}
-              component={renderField}
-            />
-            <Field
-              name="username"
-              type="text"
-              label={_t(current_lang, '이름')}
-              component={renderField}
-            />
-            <Field
-              name="password"
-              type="password"
-              label="비밀번호"
-              label={_t(current_lang, '비밀번호')}
-              placeholder={_t(current_lang, '8-20자 이내로 입력해주세요.')}
-              component={renderField}
-            />
-            <Field
-              name="password_match"
-              type="password"
-              placeholder={_t(
-                current_lang,
-                '비밀번호 확인을 위해 재입력해주세요.'
-              )}
-              component={passwordmatchField}
-            />
-            <SendCode
-              current_lang={current_lang}
-              setPhoneValue={setPhoneValue}
-              wpGetEmailByPhone={wpGetEmailByPhone}
-            />
+            <Field name="email" type="email" label={_t(current_lang, '이메일')} placeholder={_t(current_lang, '이메일을 입력해주세요')} component={renderField} />
+            <Field name="username" type="text" label={_t(current_lang, '이름')} component={renderField} />
+            <Field name="password" type="password" label="비밀번호" label={_t(current_lang, '비밀번호')} placeholder={_t(current_lang, '8-20자 이내로 입력해주세요.')} component={renderField} />
+            <Field name="password_match" type="password" placeholder={_t(current_lang, '비밀번호 확인을 위해 재입력해주세요.')} component={passwordmatchField} />
+            <SendCode current_lang={current_lang} setPhoneValue={setPhoneValue} wpGetEmailByPhone={wpGetEmailByPhone} />
             {/* render ConfirmCode if phone is not already signed up */}
-            {phoneValue ? (
-              <ConfirmCode
-                current_lang={current_lang}
-                phoneValue={phoneValue}
-                setPhoneVerfied={setPhoneVerfied}
-              />
-            ) : (
-              ''
-            )}
+            {phoneValue ? <ConfirmCode current_lang={current_lang} phoneValue={phoneValue} setPhoneVerfied={setPhoneVerfied} /> : ''}
           </div>
 
           <Agree href="/agreement" target="_blank">
-            {_t(
-              current_lang,
-              '가입 버튼을 누름과 동시에 이용약관에 동의한 것으로 간주합니다.'
-            )}
+            {_t(current_lang, '가입 버튼을 누름과 동시에 이용약관에 동의한 것으로 간주합니다.')}
           </Agree>
           <div>
             {error && <ErrorWrapper>{error}</ErrorWrapper>}
@@ -253,9 +199,7 @@ const SignUp = ({
             </Button>
           </div>
 
-          <Already href="/login">
-            {_t(current_lang, '이미 계정이 있으신가요?')}
-          </Already>
+          <Already href="/login">{_t(current_lang, '이미 계정이 있으신가요?')}</Already>
         </Form>
       </Wrap>
     </div>
