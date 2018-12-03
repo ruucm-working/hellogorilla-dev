@@ -7,10 +7,7 @@ import { Field, reduxForm } from 'redux-form'
 import { log } from 'ruucm-util'
 import EmptySpace from 'ruucm-blocks/layouts/EmptySpace'
 
-const Wrap = styled.div`
-  margin-left: ${wem2(480)};
-  margin-right: ${wem2(480)};
-`
+const Wrap = styled.div``
 
 const Email = styled.div`
   font-size: ${wem2(28)};
