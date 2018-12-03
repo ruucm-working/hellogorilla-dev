@@ -9,8 +9,8 @@ import EmptySpace from 'ruucm-blocks/layouts/EmptySpace'
 import validate from './validate'
 
 const Wrap = styled.div`
-  margin-left: ${wem2(480)};
-  margin-right: ${wem2(480)};
+  /* margin-left: ${wem2(480)};
+  margin-right: ${wem2(480)}; */
 `
 
 const Title = styled.div`
@@ -69,25 +69,13 @@ const Complete = styled.div`
   transform: translate(-50%, -50%);
 `
 
-const renderField = ({
-  input,
-  label,
-  placeholder,
-  type,
-  meta: { touched, error },
-}) => (
+const renderField = ({ input, label, placeholder, type, meta: { touched, error } }) => (
   <div>
     <RenderFieldLabel first>{label}</RenderFieldLabel>
     <WriteField input {...input} placeholder={placeholder} type={type} />
   </div>
 )
-const passwordmatchField = ({
-  input,
-  label,
-  placeholder,
-  type,
-  meta: { touched, error },
-}) => (
+const passwordmatchField = ({ input, label, placeholder, type, meta: { touched, error } }) => (
   <div>
     <RenderFieldLabel>{label}</RenderFieldLabel>
     <WriteField input {...input} placeholder={placeholder} type={type} />
@@ -132,21 +120,9 @@ const ResetPassword = ({
             }
           })}
         >
-          <Field
-            name="password"
-            type="password"
-            label="새로운 비밀번호"
-            placeholder="8-20자 이내로 입력해주세요."
-            component={renderField}
-          />
+          <Field name="password" type="password" label="새로운 비밀번호" placeholder="8-20자 이내로 입력해주세요." component={renderField} />
 
-          <Field
-            name="password_match"
-            type="password"
-            label="비밀번호 재확인"
-            placeholder="***********"
-            component={passwordmatchField}
-          />
+          <Field name="password_match" type="password" label="비밀번호 재확인" placeholder="***********" component={passwordmatchField} />
 
           {error && <ErrorWrapper>{error}</ErrorWrapper>}
 

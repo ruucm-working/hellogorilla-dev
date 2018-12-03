@@ -12,14 +12,22 @@ import ConfirmCode from '../../../shared/PhoneVerfication/ConfirmCode'
 import ResetPassword from './ResetPassword'
 
 const Wrap = styled.div`
-  margin-left: ${wem2(480)};
-  margin-right: ${wem2(480)};
+  /* margin-left: ${wem2(480)};
+  margin-right: ${wem2(480)}; */
+  min-height: 350px;
 `
 
 const Title = styled.div`
   text-align: center;
   font-weight: 500;
 `
+
+const InputWrap = styled.div`
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+`
+
 const Email = styled.span`
   font-size: ${wem2(24)};
   color: #231f20;
@@ -66,13 +74,7 @@ const ErrorWrapper = styled.div`
   color: #0eb780;
 `
 
-const emailField = ({
-  input,
-  label,
-  placeholder,
-  type,
-  meta: { touched, error },
-}) => (
+const emailField = ({ input, label, placeholder, type, meta: { touched, error } }) => (
   <div>
     <RenderFieldLabel email>{label}</RenderFieldLabel>
     <WriteField input {...input} placeholder={placeholder} type={type} />
@@ -106,50 +108,32 @@ const FindPassword = ({
       {!phoneVerfied || !emailExist || !(emailExist == emailValue) ? (
         <Wrap>
           <Title>
-            <Email onClick={() => setCurrentView('find-id')}>
-              {_t(current_lang, '이메일 찾기')}
-            </Email>
+            <Email onClick={() => setCurrentView('find-id')}>{_t(current_lang, '이메일 찾기')}</Email>
 
             <Bar>|</Bar>
             <Password>{_t(current_lang, '비밀번호 찾기')}</Password>
           </Title>
 
-          <Field
-            name="email"
-            type="email"
-            label={_t(current_lang, '이메일')}
-            placeholder={_t(current_lang, '이메일을 입력해주세요')}
-            component={emailField}
-            onChange={e => checkDuplicatedEmail(e.target.value)}
-            validate={
-              (!emailExist || // 이메일로 가입된 유저가 없을경우
-                (phoneVerfied && emailExist != emailValue)) && // 본인 인증 후, 핸드폰 번호의 유저와, 입력한 이메일의 유저가 다를 경우
-              showEmailErr
-            }
-          />
-
-          <SendCode
-            current_lang={current_lang}
-            setPhoneValue={setPhoneValue}
-            wpGetEmailByPhone={wpGetEmailByPhone}
-            setEmailValue={setEmailValue}
-          />
-
-          {phoneValue ? (
-            <ConfirmCode
-              current_lang={current_lang}
-              phoneValue={phoneValue}
-              setPhoneVerfied={setPhoneVerfied}
+          <InputWrap>
+            <Field
+              name="email"
+              type="email"
+              label={_t(current_lang, '이메일')}
+              placeholder={_t(current_lang, '이메일을 입력해주세요')}
+              component={emailField}
+              onChange={e => checkDuplicatedEmail(e.target.value)}
+              validate={
+                (!emailExist || (phoneVerfied && emailExist != emailValue)) && showEmailErr // 이메일로 가입된 유저가 없을경우 // 본인 인증 후, 핸드폰 번호의 유저와, 입력한 이메일의 유저가 다를 경우
+              }
             />
-          ) : (
-            ''
-          )}
+
+            <SendCode current_lang={current_lang} setPhoneValue={setPhoneValue} wpGetEmailByPhone={wpGetEmailByPhone} setEmailValue={setEmailValue} />
+
+            {phoneValue ? <ConfirmCode current_lang={current_lang} phoneValue={phoneValue} setPhoneVerfied={setPhoneVerfied} /> : ''}
+          </InputWrap>
         </Wrap>
       ) : (
-        <ResetPassword
-          emailValue={emailValue}
-          changePassword={changePassword}
-        />
+        <ResetPassword emailValue={emailValue} changePassword={changePassword} />
       )}
     </div>
   )
@@ -163,15 +147,8 @@ const enhance = compose(
   withState('emailExist', 'setEmailExist', true),
 
   withHandlers({
-    checkDuplicatedEmail: ({
-      wpEmailExists,
-      setEmailExist,
-      ...props
-    }) => email => {
-      if (
-        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email) &&
-        wpEmailExists
-      ) {
+    checkDuplicatedEmail: ({ wpEmailExists, setEmailExist, ...props }) => email => {
+      if (/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email) && wpEmailExists) {
         log("it's a email! & check function available")
 
         wpEmailExists(email, res => setEmailExist(res))
