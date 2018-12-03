@@ -11,8 +11,12 @@ import ConfirmCode from '../../../shared/PhoneVerfication/ConfirmCode'
 import FindID_Login from './FindID_Login'
 
 const Wrap = styled.div`
-  margin-left: ${wem2(480)};
-  margin-right: ${wem2(480)};
+  form {
+    /* position: relative;
+    left: 50%;
+    transform: translateX(-50%); */
+    text-align: center;
+  }
 `
 
 const Title = styled.div`
@@ -60,25 +64,10 @@ const FindID = ({
           <Title>
             <Email>{_t(current_lang, '이메일 찾기')}</Email>
             <Bar>|</Bar>
-            <Password onClick={() => setCurrentView('find-pw')}>
-              {_t(current_lang, '비밀번호 찾기')}
-            </Password>
+            <Password onClick={() => setCurrentView('find-pw')}>{_t(current_lang, '비밀번호 찾기')}</Password>
           </Title>
-          <SendCode
-            current_lang={current_lang}
-            setPhoneValue={setPhoneValue}
-            wpGetEmailByPhone={wpGetEmailByPhone}
-            setEmailValue={setEmailValue}
-          />
-          {phoneValue ? (
-            <ConfirmCode
-              current_lang={current_lang}
-              phoneValue={phoneValue}
-              setPhoneVerfied={setPhoneVerfied}
-            />
-          ) : (
-            ''
-          )}
+          <SendCode current_lang={current_lang} setPhoneValue={setPhoneValue} wpGetEmailByPhone={wpGetEmailByPhone} setEmailValue={setEmailValue} />
+          {phoneValue ? <ConfirmCode current_lang={current_lang} phoneValue={phoneValue} setPhoneVerfied={setPhoneVerfied} /> : ''}
         </Wrap>
       ) : (
         <FindID_Login emailValue={emailValue} />
