@@ -50,6 +50,9 @@ const style = css`
         line-height: 1.2;
         color: #231f20;
       }
+      strong {
+        font-weight: 700;
+      }
       ${media.tablet`
         padding-left: 20px;
         padding-right: 20px;
