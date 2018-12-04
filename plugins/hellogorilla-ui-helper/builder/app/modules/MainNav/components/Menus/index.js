@@ -236,7 +236,7 @@ const Menus = ({
                     //   로그아웃
                     // </MenuItem>
                     <MenuItem
-                      href="/my-account/orders"
+                      href={_u(current_lang, '/my-account/orders')}
                       current={isActivePage('/my-account/orders')}
                     >
                       {_t(current_lang, '마이페이지')}
@@ -269,12 +269,15 @@ const Menus = ({
                   <span className="hellogorilla hellogorilla-icon-cart-61" />
                 </a>
 
+                {log('location.pathname', location.pathname)}
                 <MenuItem
                   href={
                     current_lang == 'en'
                       ? '#'
                       : location.pathname == '/'
                       ? 'home-en'
+                      : location.pathname == '/my-account/orders/'
+                      ? '/my-account-en/orders/'
                       : location.pathname.slice(0, -1) +
                         '-en' +
                         (location.search ? '/' + location.search : '')
@@ -286,8 +289,10 @@ const Menus = ({
                 <MenuItem
                   href={
                     current_lang == 'en'
-                      ? location.pathname.slice(0, -4) +
-                        (location.search ? '/' + location.search : '')
+                      ? location.pathname == '/my-account-en/orders/'
+                        ? '/my-account/orders/'
+                        : location.pathname.slice(0, -4) +
+                          (location.search ? '/' + location.search : '')
                       : '#'
                   }
                 >

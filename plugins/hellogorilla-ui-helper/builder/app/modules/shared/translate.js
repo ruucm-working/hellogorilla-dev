@@ -102,6 +102,8 @@ const _u = (current_lang, url) => {
   if (lastChar == '/') trimmedUrl = trimmedUrl.slice(0, -1)
 
   if (url == '/cart') return current_lang == 'en' ? '#' : url
+  else if (url == '/my-account/orders')
+    return current_lang == 'en' ? '/my-account-en/orders' : url
   else return current_lang == 'en' ? trimmedUrl + '-en/' : trimmedUrl
 }
 

@@ -355,11 +355,15 @@ const enhance = compose(
     getCurrentLang: props => () => {
       const { dispatch, wp } = props
 
-      var pathString = window.location.pathname.slice(-4)
-      log('window.location', window.location.pathname)
+      if (window.location.pathname == '/my-account-en/orders/')
+        dispatch(getDatas('current_lang', 'en'))
+      else {
+        var pathString = window.location.pathname.slice(-4)
+        log('window.location', window.location.pathname)
 
-      if (pathString == '-en/') dispatch(getDatas('current_lang', 'en'))
-      else dispatch(getDatas('current_lang', 'ko'))
+        if (pathString == '-en/') dispatch(getDatas('current_lang', 'en'))
+        else dispatch(getDatas('current_lang', 'ko'))
+      }
 
       // var pathArray = window.location.pathname.split('/')
 
