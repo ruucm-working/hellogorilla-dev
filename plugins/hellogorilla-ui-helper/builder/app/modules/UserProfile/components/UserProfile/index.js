@@ -17,7 +17,7 @@ import { wem2 } from 'ruucm-blocks/tools/mixins'
 import media from 'ruucm-blocks/tools/media'
 
 import profileDefault from '../../assets/profile-default.jpg'
-import coverDefault from '../../assets/cover-default.jpg'
+import coverDefault from '../../assets/cover-default-2.jpg'
 import LoadingSpinner from '../../../shared/LoadingSpinner'
 
 // import Page from './Page'
