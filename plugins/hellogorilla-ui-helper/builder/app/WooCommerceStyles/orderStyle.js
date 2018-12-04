@@ -4,8 +4,8 @@ import { wem, wem2, center } from 'ruucm-blocks/tools/mixins'
 import media from 'ruucm-blocks/tools/media'
 
 const style = css`
-  .page-id-9 {
-    .post-9 {
+  .page-id-9, .page-id-397 {
+    .post-9, .post-397 {
       /* error */
       .woocommerce-error {
         color: #231f20 !important;
