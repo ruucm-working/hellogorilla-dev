@@ -8,6 +8,7 @@ const _t = (current_lang, key) => {
     '아이디 찾기': 'Find ID',
     '비밀번호 찾기': 'Find Password',
     가입하기: 'Join',
+    '로그인에 성공 하였습니다': 'Success',
 
     // SignUp
     '인증번호 전송': 'Send',

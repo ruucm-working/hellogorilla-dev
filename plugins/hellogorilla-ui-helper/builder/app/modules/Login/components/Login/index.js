@@ -205,8 +205,11 @@ const LoginForm = ({
                   if (validate(values, current_lang))
                     return wpLogin(values, res => {
                       if (res) {
-                        alert('로그인에 성공 하였습니다')
-                        window.location = '/'
+                        log('current_lang', current_lang)
+                        alert(_t(current_lang, '로그인에 성공 하였습니다'))
+                        current_lang == 'en'
+                          ? (window.location = '/home-en')
+                          : (window.location = '/')
                       }
                     })
                 })}
