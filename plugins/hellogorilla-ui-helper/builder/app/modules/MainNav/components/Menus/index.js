@@ -277,7 +277,7 @@ const Menus = ({
                       : location.pathname == '/'
                       ? 'home-en'
                       : location.pathname == '/my-account/orders/'
-                      ? '/my-account-en/orders/'
+                      ? '/my-account-en/edit-account/'
                       : location.pathname.slice(0, -1) +
                         '-en' +
                         (location.search ? '/' + location.search : '')
@@ -289,7 +289,7 @@ const Menus = ({
                 <MenuItem
                   href={
                     current_lang == 'en'
-                      ? location.pathname == '/my-account-en/orders/'
+                      ? location.pathname == '/my-account-en/edit-account/'
                         ? '/my-account/orders/'
                         : location.pathname.slice(0, -4) +
                           (location.search ? '/' + location.search : '')
@@ -332,13 +332,94 @@ const enhance = compose(
     isActivePage: ({ ...props }) => url => {
       return url == location.href || url == location.pathname ? true : false
     },
+    removeElByClassName: props => className => {
+      var elements = document.getElementsByClassName(className)
+      for (var i = 0, length = elements.length; i < length; i++) {
+        elements[i].style.display = 'none'
+      }
+    },
+    changeTextByQuery: props => (className, text) => {
+      document.querySelectorAll(className)[0].innerHTML = text
+    },
   }),
   lifecycle({
     componentDidMount() {
       this.props.getDatas ? this.props.getDatas() : ''
 
       this.props.getMe()
-      this.props.getCurrentLang()
+      this.props.getCurrentLang(() => {
+        // fixMypageEn
+
+        // remove unusing MyPage tabs
+        this.props.removeElByClassName(
+          'woocommerce-MyAccount-navigation-link--orders'
+        )
+        this.props.removeElByClassName(
+          'woocommerce-MyAccount-navigation-link--edit-address'
+        )
+        this.props.removeElByClassName(
+          'woocommerce-MyAccount-navigation-link--billing-method-info'
+        )
+
+        // change texts to eng
+
+        this.props.changeTextByQuery(
+          '.woocommerce-MyAccount-navigation-link--edit-account',
+          _t('en', '계정 상세')
+        )
+
+        this.props.changeTextByQuery(
+          '.woocommerce-MyAccount-navigation-link--customer-logout a',
+          _t('en', '로그아웃')
+        )
+
+        this.props.changeTextByQuery(
+          'label[for="account_first_name"]',
+          _t('en', '이름')
+        )
+
+        this.props.changeTextByQuery(
+          'label[for="account_last_name"]',
+          _t('en', '성')
+        )
+
+        this.props.changeTextByQuery(
+          'label[for="account_display_name"]',
+          _t('en', '보여질 이름')
+        )
+
+        this.props.changeTextByQuery(
+          'span > em',
+          _t('en', '이 이름이 보여집니다.')
+        )
+
+        this.props.changeTextByQuery(
+          'label[for="account_email"]',
+          _t('en', '이메일 주소')
+        )
+
+        this.props.changeTextByQuery(
+          'fieldset legend',
+          _t('en', '비밀번호 변경')
+        )
+
+        this.props.changeTextByQuery(
+          'label[for="password_current"]',
+          _t('en', '현재 비밀번호 (변경하지 않으려면 비워두세요)')
+        )
+        this.props.changeTextByQuery(
+          'label[for="password_1"]',
+          _t('en', '새 비밀번호 (변경하지 않으려면 비워두세요)')
+        )
+        this.props.changeTextByQuery(
+          'label[for="password_2"]',
+          _t('en', '새 비밀번호 확인')
+        )
+        this.props.changeTextByQuery(
+          'button[name="save_account_details"]',
+          _t('en', '변경 사항 저장')
+        )
+      })
     },
   })
 )

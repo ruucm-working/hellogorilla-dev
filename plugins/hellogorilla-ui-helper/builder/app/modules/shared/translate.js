@@ -16,7 +16,7 @@ const _t = (current_lang, key) => {
     '인증번호 확인': 'Confirm',
     '회원가입을 축하 합니다.\n홈으로 이동합니다.': 'Thanks for Joining Us!',
     이메일: 'Email',
-    이름: 'Name',
+    름: 'Name',
     비밀번호: 'Password',
     '8-20자 이내로 입력해주세요.': '8 to 20 letters',
     '비밀번호 확인을 위해 재입력해주세요.': 'Type same passwords',
@@ -30,7 +30,7 @@ const _t = (current_lang, key) => {
     '닉네임은 필수 필드 입니다': 'Email Information is Missed',
     '이메일은 필수 필드입니다': 'Email Information is Missed',
     '이메일을 입력하세요': 'Email Information is Missed',
-    '이메일 형식이 잘못 되었습니다': 'Email Information is Not Valid',
+    '소형식이 잘못 되었습니다': 'Email Information is Not Valid',
     '비밀번호는 필수 필드 입니다': 'Password Information is Missed',
     '비밀번호가 같지 않습니다': 'Email Information is NOT match',
     '입력하신 휴대폰 번호로 가입하실 수 있습니다.\n아래 버튼을 클릭하여 인증을 진행해주세요.':
@@ -91,6 +91,19 @@ const _t = (current_lang, key) => {
     '모두 보기': 'All',
     '카테고리 1': 'Category 1',
     '￦': '$',
+
+    // My Page
+    '계정 상세': 'Account',
+    로그아웃: 'Logout',
+    성: 'Last Name',
+    '보여질 이름': 'Display Name',
+    '이 이름이 보여집니다.': 'This name will be displayed',
+    '이메일 주소': 'Email',
+    '비밀번호 변경': 'Change Password',
+    '현재 비밀번호 (변경하지 않으려면 비워두세요)': 'Current Password',
+    '새 비밀번호 (변경하지 않으려면 비워두세요)': 'New Password',
+    '새 비밀번호 확인': 'Confirm Password',
+    '변경 사항 저장': 'Save',
   }
 
   return current_lang == 'en' ? data[key] : key

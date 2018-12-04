@@ -352,12 +352,13 @@ const enhance = compose(
         })
     },
 
-    getCurrentLang: props => () => {
+    getCurrentLang: props => fixMypageEn => {
       const { dispatch, wp } = props
 
-      if (window.location.pathname == '/my-account-en/orders/')
+      if (window.location.pathname == '/my-account-en/edit-account/') {
         dispatch(getDatas('current_lang', 'en'))
-      else {
+        fixMypageEn && fixMypageEn()
+      } else {
         var pathString = window.location.pathname.slice(-4)
         log('window.location', window.location.pathname)
 
