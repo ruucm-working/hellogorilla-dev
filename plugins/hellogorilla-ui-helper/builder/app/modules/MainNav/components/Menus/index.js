@@ -169,9 +169,12 @@ const Menus = ({
   current_lang,
   showSub,
   setShowSub,
+  getCartCounts,
   ...props
 }) => {
   let contents = props[props.wpType + '_' + props.sort + '_wpData']
+
+  let cartContenst = props.cart_items
 
   return (
     <div>
@@ -262,9 +265,11 @@ const Menus = ({
                 href="/"
                 className="beerspick beerspick-beerspick_logo_header"
               /> */}
-                <CartCount
-                  dangerouslySetInnerHTML={{ __html: props.shortcodeChild }}
-                />
+                <CartCount>
+                  <span className="hellogorilla-cart-count">
+                    {getCartCounts(cartContenst)}
+                  </span>
+                </CartCount>
                 <a href={_u(current_lang, '/cart')}>
                   <span className="hellogorilla hellogorilla-icon-cart-61" />
                 </a>
@@ -320,6 +325,7 @@ const Menus = ({
         current_lang={current_lang}
         shortcodeChild={props.shortcodeChild}
         me={me}
+        cartCounts={getCartCounts(cartContenst)}
       />
     </div>
   )
@@ -341,9 +347,24 @@ const enhance = compose(
     changeTextByQuery: props => (className, text) => {
       document.querySelectorAll(className)[0].innerHTML = text
     },
+    getCartCounts: props => cart_items => {
+      var counts = 0
+      if (cart_items) {
+        log('cart_items', cart_items)
+        for (let index = 0; index < cart_items.length; index++) {
+          counts += cart_items[index].quantity
+          log('counts', counts)
+        }
+      }
+
+      return counts
+    },
   }),
   lifecycle({
     componentDidMount() {
+      this.props.getCartItems(() => {
+        log('this.props(Menus)', this.props)
+      })
       this.props.getDatas ? this.props.getDatas() : ''
 
       this.props.getMe()

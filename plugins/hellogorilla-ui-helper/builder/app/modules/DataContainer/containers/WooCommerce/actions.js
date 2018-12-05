@@ -21,6 +21,7 @@ import {
   GET_POSTS,
   ADD_TO_CART,
   CREATE_ORDER,
+  GET_DATAS,
 } from './constants'
 import { log } from 'ruucm-util'
 
@@ -59,5 +60,15 @@ export function createOrder(namespace, postData) {
     type: `${CREATE_ORDER}/${namespace}`,
     namespace: namespace,
     postData: postData,
+  }
+}
+
+export function getDatas(namespace, wcData, sort, category) {
+  return {
+    type: `${GET_DATAS}/${namespace}`,
+    namespace: namespace,
+    wcData: wcData,
+    sort: sort,
+    category: category,
   }
 }

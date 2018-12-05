@@ -1,5 +1,6 @@
 import { log } from 'ruucm-util'
 
+window.log = log
 if (!window._babelPolyfill) {
   require('babel-polyfill')
 }

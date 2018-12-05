@@ -147,6 +147,7 @@ const OrderButton = styled.a`
   background-color: #805de9;
   display: inline-block;
   position: relative;
+  cursor: pointer;
   ${media.tablet`
     height: 50px;
     line-height: 50px;
@@ -414,7 +415,7 @@ const ProductSummary = ({
             </PlusBox>
 
             <OrderButton
-              href={getCheckoutHref()}
+              // href={getCheckoutHref()}
               onClick={() => orderButtonClicked(selectedOption)}
             >
               <OrderCenter>
@@ -495,7 +496,7 @@ const ProductSummary = ({
                   </PlusBox>
                   <EmptySpace height="100" />
                   <OrderButton
-                    href={getCheckoutHref()}
+                    // href={getCheckoutHref()}
                     onClick={() => orderButtonClicked(selectedOption)}
                   >
                     카트에 담기
@@ -535,9 +536,15 @@ const enhance = compose(
     },
   }),
   withHandlers({
-    orderButtonClicked: props => selectedOption => {
+    orderButtonClicked: ({
+      addToCart,
+      quantity,
+      ...props
+    }) => selectedOption => {
+      let contents = props[props.dataType + '_' + props.category]
       if (props.isVariableProduct() && !props.optionHasValue())
         alert('옵션 선택은 필수 입니다')
+      else addToCart(contents.id, quantity)
     },
     getCheckoutHref: props => () => {
       let contents = props[props.dataType + '_' + props.category]

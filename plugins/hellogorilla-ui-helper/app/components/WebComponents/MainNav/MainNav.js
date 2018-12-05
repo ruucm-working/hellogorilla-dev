@@ -7,7 +7,7 @@ import { log } from 'ruucm-util'
 import { wem } from 'ruucm-blocks/tools/mixins'
 
 import { MainNav, Menus } from '../../../../builder/app/modules/MainNav'
-import { WP } from '../../../../builder/app/modules/DataContainer'
+import { WP, WooCommerce } from '../../../../builder/app/modules/DataContainer'
 
 const MainNavComp = props => {
   return (
@@ -15,9 +15,11 @@ const MainNavComp = props => {
       shortcodeChild={props.wpObject.shortcodeChild}
       nonce={props.wpObject.nonce}
     >
-      <WP wpType="menu">
-        <Menus />
-      </WP>
+      <WooCommerce wcType="cart">
+        <WP wpType="menu">
+          <Menus />
+        </WP>
+      </WooCommerce>
     </MainNav>
   )
 }

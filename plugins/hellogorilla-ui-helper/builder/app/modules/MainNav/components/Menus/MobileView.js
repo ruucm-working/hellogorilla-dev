@@ -117,6 +117,7 @@ const MobileView = ({
   showSub,
   setShowSub,
   shortcodeChild,
+  cartCounts,
   ...props
 }) => {
   return (
@@ -129,7 +130,9 @@ const MobileView = ({
         </span>
       </MainLogo>
       <CartMenuItem href={_u(current_lang, '/cart')}>
-        <CartCount dangerouslySetInnerHTML={{ __html: shortcodeChild }} />
+        <CartCount>
+          <span className="hellogorilla-cart-count">{cartCounts}</span>
+        </CartCount>
         <CartIcon className="hellogorilla hellogorilla-icon-cart-61" />
       </CartMenuItem>
       <Menu

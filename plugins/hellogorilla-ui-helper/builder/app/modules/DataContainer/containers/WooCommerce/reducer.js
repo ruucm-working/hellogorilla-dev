@@ -16,6 +16,7 @@ import {
   GET_POSTS,
   ADD_TO_CART,
   CREATE_ORDER,
+  GET_DATAS,
 } from './constants'
 import { log } from 'ruucm-util'
 
@@ -43,6 +44,12 @@ const dataContainerReducer = (state = initialState, action) => {
       var key = action.namespace
       var obj = {}
       obj[key] = action.postData
+      return Object.assign({}, state, obj)
+    case `${GET_DATAS}/${action.namespace}`:
+      var key = action.namespace
+      var obj = {}
+      log('action', action)
+      obj[key] = action.wcData
       return Object.assign({}, state, obj)
     default:
       return state

@@ -4,26 +4,27 @@
  *
  */
 
-import React from "react";
+import React from 'react'
 
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
-import { selectName, selectPostData } from "./selectors";
-import { getProducts, addToCart, createOrder } from "./actions";
+import { connect } from 'react-redux'
+import { createStructuredSelector } from 'reselect'
+import { selectName, selectPostData, selectWCData } from './selectors'
+import { getProducts, addToCart, createOrder, getDatas } from './actions'
 import {
   compose,
   withHandlers,
   withProps,
   defaultProps,
-  mapProps
-} from "recompose";
-import { log } from "ruucm-util";
-import { isString } from "lodash";
+  mapProps,
+  lifecycle,
+} from 'recompose'
+import { log } from 'ruucm-util'
+import { isString } from 'lodash'
 
 // import WPAPI from 'wpapi'
-import WooCommerceAPI from "woocommerce-api";
+import WooCommerceAPI from 'woocommerce-api'
 
-import { DATA_BASE_URL } from "../../consts";
+import { DATA_BASE_URL } from '../../consts'
 
 const WooCommerce = props => {
   return (
@@ -32,28 +33,29 @@ const WooCommerce = props => {
         let newChildProps = {
           ...props,
           ...child.props,
-          style: child.props.style
-        };
+          style: child.props.style,
+        }
         return isString(child.type)
           ? child
-          : React.cloneElement(child, newChildProps);
+          : React.cloneElement(child, newChildProps)
       })}
     </div>
-  );
-};
+  )
+}
 
 // Component redux
 const mapStateToProps = (state, ownProps) => {
-  var key = ownProps.dataType + "_" + ownProps.category;
-  var obj = { name: selectName() };
-  obj[key] = selectPostData(key);
+  var key = ownProps.dataType + '_' + ownProps.category
 
-  return createStructuredSelector(obj);
-};
+  var obj = { name: selectName(), cart_items: selectWCData() }
+  obj[key] = selectPostData(key)
+
+  return createStructuredSelector(obj)
+}
 function mapDispatchToProps(dispatch, ownProps) {
   return {
-    dispatch
-  };
+    dispatch,
+  }
 }
 
 // Component enhancer
@@ -61,11 +63,11 @@ const enhance = compose(
   withProps({
     wc: new WooCommerceAPI({
       url: DATA_BASE_URL,
-      consumerKey: "ck_547e360fd8308a0af390669ff3da1e9db567a02f",
-      consumerSecret: "cs_8da9d8111f290100aa131f11edfe05f225d2e114",
+      consumerKey: 'ck_547e360fd8308a0af390669ff3da1e9db567a02f',
+      consumerSecret: 'cs_8da9d8111f290100aa131f11edfe05f225d2e114',
       wpAPI: true,
-      version: "wc/v2"
-    })
+      version: 'wc/v2',
+    }),
   }),
   // mapProps(({ wp, ...rest }) => {
   //   wp.harbor_curation = wp.registerRoute('wp/v2', '/harbor_curation/(?P<id>)')
@@ -81,142 +83,186 @@ const enhance = compose(
   //   },
   // }),
   withHandlers({
+    getProductById: props => (productId, afterSuccess) => {
+      const { dispatch, wc, dataType, wcType, sort, category } = props
+      wc.getAsync('products/' + productId)
+        .then(res => {
+          let result = JSON.parse(res.toJSON().body)
+          afterSuccess && afterSuccess(result)
+
+          // dispatch(getDatas(wcType, result, sort, category))
+          return result
+        })
+        .catch(err => {
+          log('err', err)
+        })
+    },
+    getCartItems: props => afterSuccess => {
+      const { dispatch, wc } = props
+
+      let result = JSON.parse(localStorage.getItem('lsCart')) || []
+      log('getCartItems!', result)
+      setTimeout(() => {
+        dispatch(getDatas('cart', result)) // dispatch value with key 'cart'
+      }, 0)
+
+      afterSuccess && afterSuccess(result)
+    },
+  }),
+  withHandlers({
     getProducts: props => options => {
-      const { dispatch, wc, dataType, category } = props;
-      log("props", props);
-      log("options", options);
-      if (dataType == "product") {
+      const { dispatch, wc, dataType, category } = props
+      log('props', props)
+      log('options', options)
+      if (dataType == 'product') {
         let optionUrl = options
-          ? "products" + "?category=" + options.category
-          : "products";
+          ? 'products' + '?category=' + options.category
+          : 'products'
         wc.getAsync(optionUrl)
           .then(result => {
-            log("result", result);
-            log("category", category);
-            let datas = JSON.parse(result.toJSON().body);
-            dispatch(getProducts(dataType + "_" + category, datas));
+            log('result', result)
+            log('category', category)
+            let datas = JSON.parse(result.toJSON().body)
+            dispatch(getProducts(dataType + '_' + category, datas))
           })
           .catch(err => {
-            log("err", err);
-          });
-      } else if (dataType == "singleProduct") {
-        log("fetch!");
-        wc.getAsync("products/" + options.productId)
+            log('err', err)
+          })
+      } else if (dataType == 'singleProduct') {
+        log('fetch!')
+        wc.getAsync('products/' + options.productId)
           .then(result => {
-            log("result", result);
-            let datas = JSON.parse(result.toJSON().body);
-            log("datas", datas);
-            dispatch(getProducts(dataType + "_" + category, datas));
+            log('result', result)
+            let datas = JSON.parse(result.toJSON().body)
+            log('datas', datas)
+            dispatch(getProducts(dataType + '_' + category, datas))
           })
           .catch(err => {
-            log("err", err);
-          });
+            log('err', err)
+          })
       }
     },
-    addToCart: props => (productId, variationId, optionSlug) => {
-      const { dispatch, wc, clean, dataType } = props;
-      log("addToCart!");
-      log("productId", productId);
-      log("variationId", variationId);
 
-      var orderData = {
-        product_id: productId,
-        quantity: 1,
-        variation_id: variationId
-      };
-      // clear cart first
-      wc.post("cart/clear", (err, data, res) => {
-        log("data", data);
-        if (!err) {
-          log("res", res);
-        } else log("err", err);
-      });
+    addToCart: ({ getProductById, getCartItems, ...props }) => (
+      productId,
+      quantity
+    ) => {
+      getProductById(productId, res => {
+        var oldItems = JSON.parse(localStorage.getItem('lsCart')) || []
+        var found = -1
+        // check if productId is already in oldItems
+        for (var i = 0; i < oldItems.length; i++) {
+          if (oldItems[i].id == productId) {
+            found = i
+            break
+          }
+        }
+        log('oldItems', oldItems)
 
-      wc.post("cart/add", orderData, (err, data, res) => {
-        log("data", data);
-        if (!err) {
-          let result = JSON.parse(res);
-          dispatch(addToCart(dataType, result));
-          log("result", result);
-          // alert('상품이 선택 되었습니다')
-          // window.location = DATA_BASE_URL + '/cart'
-        } else log("err", err);
-      });
+        if (found >= 0) {
+          log('found!', found)
+          // just add quantity of that
+          var newQuantity = oldItems[found].quantity + quantity
+          oldItems[found] = {
+            ...oldItems[found],
+            quantity: newQuantity,
+            line_total: Number(res.price) * newQuantity,
+          }
+        } else {
+          // new item push
+          oldItems.push({
+            quantity: quantity,
+            ...res,
+            // common cart props
+            original_price: res.price,
+            line_total: Number(res.price) * quantity,
+            product_name: res.name,
+            product_id: res.id,
+            // meta_data: {
+            //   item_color: res.meta_data.filter(obj => {
+            //     return obj.key === 'item_color'
+            //   })[0].value,
+            //   size_fit: res.meta_data.filter(obj => {
+            //     return obj.key === 'size_fit'
+            //   })[0].value,
+            // },
+          })
+        }
 
-      // //d-harborschool.test//?add-to-cart=48&variation_id=105&attribute_pa_dayorend=weekday-a
-      // http: alert('날짜가 선택 되었습니다 \n\n결제 페이지로 이동합니다.')
+        localStorage.setItem('lsCart', JSON.stringify(oldItems))
 
-      // window.location =
-      //   DATA_BASE_URL +
-      //   '//?add-to-cart=' +
-      //   productId +
-      //   '&variation_id=' +
-      //   variationId +
-      //   '&quantity=1' +
-      //   '&attribute_pa_dayorend=' +
-      //   optionSlug
+        log('oldItems', oldItems)
+
+        props.dispatch(getDatas('cart', oldItems, props.sort, props.category)) // dispatch value with key 'cart'
+        alert('장바구니에 상품이 담겼습니다')
+      })
     },
     createOrder: props => (orderData, successMessage) => {
-      log("createOrder");
-      const { dispatch, wc, clean, dataType } = props;
+      log('createOrder')
+      const { dispatch, wc, clean, dataType } = props
 
       var defaultData = {
-        payment_method: "bacs",
-        payment_method_title: "Direct Bank Transfer",
+        payment_method: 'bacs',
+        payment_method_title: 'Direct Bank Transfer',
         set_paid: true,
         billing: {
-          first_name: "John(default data)",
-          last_name: "Doe",
-          address_1: "969 Market",
-          address_2: "",
-          city: "San Francisco",
-          state: "CA",
-          postcode: "94103",
-          country: "US",
-          email: "john.doe@example.com",
-          phone: "(555) 555-5555"
+          first_name: 'John(default data)',
+          last_name: 'Doe',
+          address_1: '969 Market',
+          address_2: '',
+          city: 'San Francisco',
+          state: 'CA',
+          postcode: '94103',
+          country: 'US',
+          email: 'john.doe@example.com',
+          phone: '(555) 555-5555',
         },
         shipping: {
-          first_name: "John",
-          last_name: "Doe",
-          address_1: "969 Market",
-          address_2: "",
-          city: "San Francisco",
-          state: "CA",
-          postcode: "94103",
-          country: "US"
+          first_name: 'John',
+          last_name: 'Doe',
+          address_1: '969 Market',
+          address_2: '',
+          city: 'San Francisco',
+          state: 'CA',
+          postcode: '94103',
+          country: 'US',
         },
         line_items: [
           {
             product_id: 93,
-            quantity: 2
+            quantity: 2,
           },
           {
             product_id: 22,
             variation_id: 23,
-            quantity: 1
-          }
-        ]
-      };
+            quantity: 1,
+          },
+        ],
+      }
 
       wc.post(
-        "orders",
+        'orders',
         orderData ? orderData : defaultData,
         (err, data, res) => {
           if (!err) {
-            alert(successMessage);
-            let result = JSON.parse(res);
-            dispatch(createOrder(dataType, result));
-          } else log("err", err);
+            alert(successMessage)
+            let result = JSON.parse(res)
+            dispatch(createOrder(dataType, result))
+          } else log('err', err)
         }
-      );
-    }
+      )
+    },
+  }),
+  lifecycle({
+    componentDidMount() {
+      log('this.props(WooCommerce)', this.props)
+    },
   })
-);
+)
 
-export default defaultProps({ sort: "recent", category: "all" })(
+export default defaultProps({ sort: 'recent', category: 'all' })(
   connect(
     mapStateToProps,
     mapDispatchToProps
   )(enhance(WooCommerce))
-);
+)
