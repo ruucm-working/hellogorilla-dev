@@ -70,7 +70,7 @@ const StyledColumn = styled(Column)`
     ${Box} {
       margin-right: 0;
       ${media.tablet`
-        margin-right: 37.5px;
+        /* margin-right: 37.5px; */
       `};
     }
   }

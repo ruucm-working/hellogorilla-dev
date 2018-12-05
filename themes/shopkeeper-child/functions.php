@@ -543,8 +543,6 @@ function get_current_lang_api_hooks() {
 
 	$current_lang = pll_current_language();
 
-	logw('current_lang : ');
-	logw_a($current_lang);
 	register_rest_route(
 			'custom', '/current-lang/',
 			array(
@@ -558,13 +556,9 @@ function get_current_lang_api_hooks() {
 }
 function get_current_lang( $param ) {
 
-	logw('param : ');
-	logw_a($param);
 
 	$current_lang = getProtectedValue($param, 'attributes')['args']['current_lang'];;
 
-	logw('current_lang2 : ');
-	logw_a($current_lang);
 
 	// $user_email = wp_get_current_user();
 	// logw('user_email : ');

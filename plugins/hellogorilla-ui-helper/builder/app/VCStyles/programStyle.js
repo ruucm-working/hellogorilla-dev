@@ -103,8 +103,11 @@ const prgramStyle = css`
       line-height: 2;
       color: #231f20;
       margin-bottom: unset;
-      position: absolute;
-      bottom: 4%;
+      /* position: absolute; */
+      /* bottom: 4%; */
+
+      position: relative;
+      margin-top: 40px;
       ${media.tablet`
         font-size: 12px;
         position: unset;
