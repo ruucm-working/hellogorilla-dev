@@ -93,7 +93,7 @@ const _t = (current_lang, key) => {
     '￦': '$',
 
     // My Page
-    '계정 상세': 'Account',
+    '계정 상세': 'Profile',
     로그아웃: 'Logout',
     성: 'Last Name',
     '보여질 이름': 'Display Name',

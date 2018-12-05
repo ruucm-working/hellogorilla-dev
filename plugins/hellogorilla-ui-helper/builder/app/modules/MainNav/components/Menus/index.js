@@ -6,7 +6,7 @@
 
 import React from 'react'
 import { compose, lifecycle, withHandlers, withState } from 'recompose'
-import { log } from 'ruucm-util'
+import { log, getParameterByName } from 'ruucm-util'
 import { map } from 'lodash'
 import { Row, Column, EmptySpace } from 'ruucm-blocks/layouts'
 import media from 'ruucm-blocks/tools/media'
@@ -120,6 +120,9 @@ const SubMenuItem = styled.a`
       font-weight: 700;
     `};
 `
+const CartWrap = styled.div`
+  display: inline-block;
+`
 
 const CartCount = styled.div`
   display: inline-block;
@@ -170,6 +173,9 @@ const Menus = ({
   showSub,
   setShowSub,
   getCartCounts,
+
+  // woocommerce
+  updateFixedCart,
   ...props
 }) => {
   let contents = props[props.wpType + '_' + props.sort + '_wpData']
@@ -265,14 +271,21 @@ const Menus = ({
                 href="/"
                 className="beerspick beerspick-beerspick_logo_header"
               /> */}
-                <CartCount>
-                  <span className="hellogorilla-cart-count">
-                    {getCartCounts(cartContenst)}
-                  </span>
-                </CartCount>
-                <a href={_u(current_lang, '/cart')}>
-                  <span className="hellogorilla hellogorilla-icon-cart-61" />
-                </a>
+                <CartWrap
+                  onClick={() => {
+                    log('click!!!')
+                    updateFixedCart(cartContenst)
+                  }}
+                >
+                  <CartCount>
+                    <span className="hellogorilla-cart-count">
+                      {getCartCounts(cartContenst)}
+                    </span>
+                  </CartCount>
+                  <a href={_u(current_lang, '/cart')}>
+                    <span className="hellogorilla hellogorilla-icon-cart-61" />
+                  </a>
+                </CartWrap>
 
                 {log('location.pathname', location.pathname)}
                 <MenuItem
@@ -362,12 +375,16 @@ const enhance = compose(
   }),
   lifecycle({
     componentDidMount() {
-      this.props.getCartItems(() => {
+      this.props.getCartItems(result => {
         log('this.props(Menus)', this.props)
+
+        // Cart Fix on CartPage
+        // if (location.pathname == '/cart/') this.props.updateFixedCart(result)
       })
       this.props.getDatas ? this.props.getDatas() : ''
 
       this.props.getMe()
+
       this.props.getCurrentLang(() => {
         // fixMypageEn
 

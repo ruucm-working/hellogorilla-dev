@@ -23,8 +23,9 @@ import { isString } from 'lodash'
 
 // import WPAPI from 'wpapi'
 import WooCommerceAPI from 'woocommerce-api'
+import WPAPI from 'wpapi'
 
-import { DATA_BASE_URL } from '../../consts'
+import { DATA_BASE_URL, WP_ADMIN_ID, WP_ADMIN_PW } from '../../consts'
 
 const WooCommerce = props => {
   return (
@@ -68,14 +69,20 @@ const enhance = compose(
       wpAPI: true,
       version: 'wc/v2',
     }),
+    wp: new WPAPI({
+      endpoint: DATA_BASE_URL + 'wp-json',
+      // This assumes you are using basic auth, as described further below
+      username: WP_ADMIN_ID,
+      password: WP_ADMIN_PW,
+    }),
   }),
-  // mapProps(({ wp, ...rest }) => {
-  //   wp.harbor_curation = wp.registerRoute('wp/v2', '/harbor_curation/(?P<id>)')
-  //   return {
-  //     wp: wp,
-  //     ...rest,
-  //   }
-  // }),
+  mapProps(({ wp, ...rest }) => {
+    wp.updateFixedCart = wp.registerRoute('custom', '/update-fixed-cart')
+    return {
+      wp: wp,
+      ...rest,
+    }
+  }),
   // withHandlers({
   //   clean: props => () => {
   //     const { dispatch } = props
@@ -107,6 +114,46 @@ const enhance = compose(
       }, 0)
 
       afterSuccess && afterSuccess(result)
+    },
+    getCartItemsByAPI: props => afterSuccess => {
+      const { dispatch, wc } = props
+      log('getCartItemsByAPI!')
+      wc.get('cart', function(err, data, res) {
+        let result = JSON.parse(res)
+        // dispatch(getDatas('cart', result, props.sort, props.category)) // dispatch value with key 'cart'
+        afterSuccess(result)
+      })
+    },
+    updateCartByAPI: props => (
+      cart_item_key,
+      quantity,
+      afterSuccess,
+      isClear
+    ) => {
+      const { dispatch, wc, wcType } = props
+      var newCartItemData = {
+        cart_item_key: cart_item_key,
+        quantity: quantity,
+      }
+
+      const update = () => {
+        wc.post('cart/cart-item', newCartItemData, (err, data, res) => {
+          log('data', data)
+          if (!err) {
+            log('update complete', res)
+            afterSuccess(res)
+          } else log('err', err)
+        })
+      }
+
+      if (quantity == MAX_CART_NUM && !isClear) {
+        // ask once more
+        var r = confirm('장바구니에서 아이템을 삭제 합니다')
+        if (r == true) update()
+      } else if (quantity > 0) {
+        // update! when quantity is not MAX_CART_NUM
+        update()
+      } else if (quantity <= 0) alert('아이템 수량은 최소 한개 입니다.')
     },
   }),
   withHandlers({
@@ -195,6 +242,48 @@ const enhance = compose(
 
         props.dispatch(getDatas('cart', oldItems, props.sort, props.category)) // dispatch value with key 'cart'
         alert('장바구니에 상품이 담겼습니다')
+      })
+    },
+    updateFixedCart: ({ wp, ...props }) => fixedItems => {
+      wp.updateFixedCart()
+        .create({
+          fixedItems: fixedItems,
+        })
+        .then(res => {
+          log('res(updateFixedCart)', res)
+        })
+        .catch(err => {
+          log('err', err)
+        })
+    },
+    addToCartByAPI: ({ getCartItems, ...props }) => (
+      productId,
+      variationId,
+      quantity,
+      isDirectCheckout
+    ) => {
+      const { wc } = props
+      var cartData = {
+        product_id: productId,
+        quantity: quantity,
+        variation_id: variationId,
+      }
+      wc.post('cart/add', cartData, (err, data, res) => {
+        if (!err) {
+          let result = JSON.parse(res)
+          log('result(addToCart)', result)
+
+          if (result.data.status == 500) {
+            if (result.code == 'wc_cart_rest_product_out_of_stock')
+              alert('에러 - 해당 상품의 재고가 부족합니다')
+            else alert('에러 - ' + result.message)
+          } else {
+            getCartItems(() => void 0)
+            isDirectCheckout
+              ? (window.location = '/cnyttan-cart')
+              : alert('장바구니에 상품이 담겼습니다')
+          }
+        } else log('err', err)
       })
     },
     createOrder: props => (orderData, successMessage) => {

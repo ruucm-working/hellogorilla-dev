@@ -758,3 +758,32 @@ function change_password_by_api( $param ) {
 	return true;
 
 }
+
+
+
+/**
+ * Update Fixed Cart API
+ */
+add_action( 'rest_api_init', 'update_fixed_cart_api_hooks' );
+// API custom endpoints for WP-REST API
+function update_fixed_cart_api_hooks() {
+    register_rest_route(
+        'custom', '/update-fixed-cart/',
+        array(
+            'methods'  => 'POST',
+            'callback' => 'update_fixed_cart',
+        )
+		);
+}
+function update_fixed_cart( $param ) {
+	$user_input = getProtectedValue($param, 'params')['JSON'];
+
+	$fixed_items = $user_input['fixedItems'];
+	WC()->cart->empty_cart();
+
+	for ($i=0; $i < sizeof($fixed_items); $i++) { 
+		WC()->cart->add_to_cart( $fixed_items[$i]['id'],  $fixed_items[$i]['quantity']);
+	}
+
+	return 'update_fixed_cart success';
+}
