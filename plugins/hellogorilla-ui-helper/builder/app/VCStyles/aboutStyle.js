@@ -112,12 +112,10 @@ const style = css`
         color: #231f20;
         display: inline-block;
         margin-left: 40px;
-        max-width: 288px;
         &.number2 {
           margin-left: 90px !important;
           margin-top: 40px;
           margin-bottom: 12px;
-          max-width: initial;
         }
         ${media.tablet`
           margin-top: 10px;
@@ -165,6 +163,15 @@ const style = css`
             margin-left: 40px;
           `};
         }
+      }
+    }
+  }
+  /* en */
+  .page-id-377 {
+    /* History */
+    .history-item {
+      .title {
+        max-width: 288px;
       }
     }
   }
