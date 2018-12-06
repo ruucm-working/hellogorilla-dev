@@ -117,6 +117,7 @@ const style = css`
           margin-left: 90px !important;
           margin-top: 40px;
           margin-bottom: 12px;
+          max-width: initial;
         }
         ${media.tablet`
           margin-top: 10px;
