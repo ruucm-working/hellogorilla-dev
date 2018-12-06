@@ -165,6 +165,8 @@ const enhance = compose(
         let optionUrl = options
           ? 'products' + '?category=' + options.category
           : 'products'
+        optionUrl = optionUrl + '?per_page=100'
+
         wc.getAsync(optionUrl)
           .then(result => {
             log('result', result)

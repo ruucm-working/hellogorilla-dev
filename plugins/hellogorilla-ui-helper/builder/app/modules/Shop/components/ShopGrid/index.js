@@ -210,6 +210,7 @@ const enhance = compose(
   withState('contents', 'setContents', null),
   withHandlers({
     filterByLang: props => (lang, contents) => {
+      log('contents', contents)
       var res = []
       var res_en = []
       for (let index = 0; index < contents.length; index++) {
