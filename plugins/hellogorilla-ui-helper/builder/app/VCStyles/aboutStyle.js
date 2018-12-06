@@ -112,6 +112,7 @@ const style = css`
         color: #231f20;
         display: inline-block;
         margin-left: 40px;
+        max-width: 250px;
         &.number2 {
           margin-left: 90px !important;
           margin-top: 40px;

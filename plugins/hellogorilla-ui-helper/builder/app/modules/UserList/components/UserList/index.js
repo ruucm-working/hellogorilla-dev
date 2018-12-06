@@ -198,7 +198,13 @@ const Contents = ({ getDatas, current_lang, ...props }) => {
               {map(contents, (item, id) => (
                 <StyledColumn col="3" key={id}>
                   <UserWrap>
-                    <User href={'/user-profile/?id=' + item.id}>
+                    <User
+                      href={
+                        (current_lang == 'en'
+                          ? '/user-profile-en/?id='
+                          : '/user-profile/?id=') + item.id
+                      }
+                    >
                       <UserImage
                         src={
                           item.meta.img_profile
@@ -209,7 +215,9 @@ const Contents = ({ getDatas, current_lang, ...props }) => {
 
                       <Overlay>
                         <UserInfo>
-                          <UserName>{item.name}</UserName>
+                          <UserName>
+                            {current_lang == 'en' ? item.user_name : item.name}
+                          </UserName>
 
                           {log('item', item)}
                           <UserProducts>
