@@ -68,6 +68,7 @@ const style = css`
       top: 50%;
       transform: translate(-50%, -50%);
       font-size: 16px;
+      white-space: nowrap;
     }
 
     .hello-gorilla-fourth-row {
