@@ -73,6 +73,10 @@ const FileFieldLabel = styled.div`
 const FileFieldLabel2 = styled.div`
   padding: 20px;
 `
+const OptLabel = styled.label`
+  display: inline-block;
+  margin-right: 30px;
+`
 
 const ErrorWrapper = styled.div`
   color: #ee4230;
@@ -118,7 +122,7 @@ const renderDropzoneInput = ({ wpUpload, label, ...field }) => {
           )
         }}
       >
-        <FileFieldLabel2>여기에 이미지 파일을 끌어다 놓으세요</FileFieldLabel2>
+        <FileFieldLabel2>여기에 파일을 끌어다 놓으세요</FileFieldLabel2>
       </Dropzone>
       {field.meta.touched && field.meta.error && (
         <span className="error">{field.meta.error}</span>
@@ -134,6 +138,8 @@ const NewArtist = ({
   // local
   modalOpen,
   setModalOpen,
+  activeOpt,
+  setActiveOpt,
 
   // from parent
   stage,
@@ -254,13 +260,43 @@ const NewArtist = ({
             component={renderDropzoneInput}
             wpUpload={wpUpload}
           />
+          <div>
+            <FileFieldLabel>작가의 영상</FileFieldLabel>
+            <OptLabel>
+              <input
+                type="radio"
+                value="youtube"
+                checked={activeOpt === 'youtube'}
+                onClick={() => setActiveOpt('youtube')}
+              />
+              유튜브
+            </OptLabel>
 
-          <Field
-            name="artist_video"
-            label="영상"
-            component={renderDropzoneInput}
-            wpUpload={wpUpload}
-          />
+            <OptLabel>
+              <input
+                type="radio"
+                value="upload"
+                checked={activeOpt === 'upload'}
+                onClick={() => setActiveOpt('upload')}
+              />
+              업로드
+            </OptLabel>
+          </div>
+          {activeOpt == 'upload' ? (
+            <Field
+              name="artist_video"
+              label=""
+              component={renderDropzoneInput}
+              wpUpload={wpUpload}
+            />
+          ) : (
+            <Field
+              name="artist_video"
+              label="유튜브 영상의 ID를 입력하세요"
+              component={renderField}
+              type="text"
+            />
+          )}
 
           <Field
             name="portfolio_01"
@@ -309,7 +345,10 @@ const NewArtist = ({
 }
 
 // Component enhancer
-const enhance = compose(withState('modalOpen', 'setModalOpen', false))
+const enhance = compose(
+  withState('modalOpen', 'setModalOpen', false),
+  withState('activeOpt', 'setActiveOpt', 'youtube')
+)
 export default enhance(
   reduxForm({
     form: 'HG_NEW_ARTIST_FORM',
