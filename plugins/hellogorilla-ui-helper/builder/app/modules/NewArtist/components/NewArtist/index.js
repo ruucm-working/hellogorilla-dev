@@ -61,10 +61,17 @@ const TextareaFieldLabel = styled.div`
   font-size: 11px;
   color: #231f20;
 `
+
+const TextareaField = styled.textarea`
+  height: 200px;
+`
 const FileFieldLabel = styled.div`
   font-family: 'NanumSquareRoundWeb', sans-serif;
   font-weight: 700;
   margin-bottom: 10px;
+`
+const FileFieldLabel2 = styled.div`
+  padding: 20px;
 `
 
 const ErrorWrapper = styled.div`
@@ -93,7 +100,7 @@ const renderField = ({
 const textareaField = ({ input, label, type, meta: { touched, error } }) => (
   <FieldWrap>
     <TextareaFieldLabel>{label}</TextareaFieldLabel>
-    <input {...input} type={type} />
+    <TextareaField {...input} type={type} />
   </FieldWrap>
 )
 
@@ -111,7 +118,7 @@ const renderDropzoneInput = ({ wpUpload, label, ...field }) => {
           )
         }}
       >
-        <div>여기에 이미지 파일을 끌어다 놓으세요</div>
+        <FileFieldLabel2>여기에 이미지 파일을 끌어다 놓으세요</FileFieldLabel2>
       </Dropzone>
       {field.meta.touched && field.meta.error && (
         <span className="error">{field.meta.error}</span>
@@ -151,7 +158,7 @@ const NewArtist = ({
 }) => {
   return (
     <Wrap>
-      <Title>회원정보</Title>
+      <Title>아티스트 정보</Title>
 
       <Form
         onSubmit={handleSubmit(values => {
