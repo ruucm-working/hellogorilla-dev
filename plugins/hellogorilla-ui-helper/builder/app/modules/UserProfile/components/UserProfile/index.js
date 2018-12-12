@@ -5,7 +5,7 @@
  */
 
 import React from 'react'
-import { compose, lifecycle } from 'recompose'
+import { compose, lifecycle, withHandlers } from 'recompose'
 import styled, { css } from 'styled-components'
 import { log, getParameterByName } from 'ruucm-util'
 
@@ -100,6 +100,10 @@ const LongDesc = styled.div`
   font-size: 14px;
   line-height: 1.86;
   color: #231f20;
+`
+const Embed = styled.iframe`
+  width: 100%;
+  min-height: 26vw;
 `
 
 const Video = styled.video`
@@ -247,7 +251,7 @@ const getFileName = source => {
 }
 
 // component
-const UserProfile = ({ current_lang, ...props }) => {
+const UserProfile = ({ current_lang, IsEmbed, ...props }) => {
   let user = props[props.wpType + '_' + props.sort + '_wpData']
   // log('user', user)
 
@@ -316,9 +320,20 @@ const UserProfile = ({ current_lang, ...props }) => {
               </LongDesc>
 
               {user.meta.artist_video ? (
-                <Video controls>
-                  <VideoSource src={user.meta.artist_video} />
-                </Video>
+                IsEmbed(user.meta.artist_video) ? (
+                  <Embed
+                    src={
+                      'https://www.youtube.com/embed/' + user.meta.artist_video
+                    }
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  />
+                ) : (
+                  <Video controls>
+                    <VideoSource src={user.meta.artist_video} />
+                  </Video>
+                )
               ) : (
                 ''
               )}
@@ -431,6 +446,19 @@ const UserProfile = ({ current_lang, ...props }) => {
 
 // Component enhancer
 const enhance = compose(
+  withHandlers({
+    IsEmbed: props => video_url => {
+      var res = true
+      var pathArray = video_url.split('/')
+      // var protocol = pathArray[0]
+      var host = ''
+
+      if (pathArray.length > 0) host = pathArray[2]
+      if (host == location.host) res = false
+
+      return res
+    },
+  }),
   lifecycle({
     componentDidMount() {
       this.props.getPosts
